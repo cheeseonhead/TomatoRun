@@ -57,7 +57,6 @@
 		34C2DB9F1F633EBF0027EB1F /* CGRect+Anchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Anchor.swift"; sourceTree = "<group>"; };
 		34C2DBA01F633EBF0027EB1F /* GKEntity+Sprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GKEntity+Sprite.swift"; sourceTree = "<group>"; };
 		34C2DBA11F633EBF0027EB1F /* Int+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Random.swift"; sourceTree = "<group>"; };
-		34C2DBA21F633EBF0027EB1F /* Heap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,13 +150,36 @@
 		34C2DB9D1F633E8D0027EB1F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				34C2DBA51F633EE80027EB1F /* Int */,
+				34C2DBA41F633ED90027EB1F /* GKEntity */,
+				34C2DBA31F633ECF0027EB1F /* CGRect */,
 				34C2DB9E1F633EA70027EB1F /* MyUtils.swift */,
-				34C2DB9F1F633EBF0027EB1F /* CGRect+Anchor.swift */,
-				34C2DBA01F633EBF0027EB1F /* GKEntity+Sprite.swift */,
-				34C2DBA21F633EBF0027EB1F /* Heap.swift */,
-				34C2DBA11F633EBF0027EB1F /* Int+Random.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		34C2DBA31F633ECF0027EB1F /* CGRect */ = {
+			isa = PBXGroup;
+			children = (
+				34C2DB9F1F633EBF0027EB1F /* CGRect+Anchor.swift */,
+			);
+			path = CGRect;
+			sourceTree = "<group>";
+		};
+		34C2DBA41F633ED90027EB1F /* GKEntity */ = {
+			isa = PBXGroup;
+			children = (
+				34C2DBA01F633EBF0027EB1F /* GKEntity+Sprite.swift */,
+			);
+			path = GKEntity;
+			sourceTree = "<group>";
+		};
+		34C2DBA51F633EE80027EB1F /* Int */ = {
+			isa = PBXGroup;
+			children = (
+				34C2DBA11F633EBF0027EB1F /* Int+Random.swift */,
+			);
+			path = Int;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
