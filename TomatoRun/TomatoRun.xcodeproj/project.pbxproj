@@ -61,6 +61,10 @@
 		34C2DBA11F633EBF0027EB1F /* Int+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Random.swift"; sourceTree = "<group>"; };
 		34C2DBA71F633F190027EB1F /* SKSpriteNode+Scale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+Scale.swift"; sourceTree = "<group>"; };
 		34C2DBAA1F633F4F0027EB1F /* Array+Swap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Swap.swift"; sourceTree = "<group>"; };
+		34C2DBAD1F633F980027EB1F /* WoodenBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodenBoard.swift; sourceTree = "<group>"; };
+		34C2DBAE1F633F990027EB1F /* EntityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
+		34C2DBAF1F633F990027EB1F /* Tomato.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tomato.swift; sourceTree = "<group>"; };
+		34C2DBB01F633F990027EB1F /* Rope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rope.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,7 @@
 		34C2DB9C1F633D450027EB1F /* RunScene */ = {
 			isa = PBXGroup;
 			children = (
+				34C2DBAC1F633F880027EB1F /* Entities */,
 				34C2DB6A1F633C890027EB1F /* RunScene.sks */,
 				34C2DB6E1F633C890027EB1F /* RunScene.swift */,
 				34C2DB701F633C890027EB1F /* RunViewController.swift */,
@@ -202,6 +207,17 @@
 				34C2DBAA1F633F4F0027EB1F /* Array+Swap.swift */,
 			);
 			path = Array;
+			sourceTree = "<group>";
+		};
+		34C2DBAC1F633F880027EB1F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				34C2DBAE1F633F990027EB1F /* EntityManager.swift */,
+				34C2DBB01F633F990027EB1F /* Rope.swift */,
+				34C2DBAF1F633F990027EB1F /* Tomato.swift */,
+				34C2DBAD1F633F980027EB1F /* WoodenBoard.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
