@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		34C2DB691F633C890027EB1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB681F633C890027EB1F /* AppDelegate.swift */; };
-		34C2DB6B1F633C890027EB1F /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB6A1F633C890027EB1F /* GameScene.sks */; };
+		34C2DB6B1F633C890027EB1F /* RunScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB6A1F633C890027EB1F /* RunScene.sks */; };
 		34C2DB6D1F633C890027EB1F /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB6C1F633C890027EB1F /* Actions.sks */; };
-		34C2DB6F1F633C890027EB1F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB6E1F633C890027EB1F /* GameScene.swift */; };
+		34C2DB6F1F633C890027EB1F /* RunScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB6E1F633C890027EB1F /* RunScene.swift */; };
 		34C2DB711F633C890027EB1F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB701F633C890027EB1F /* GameViewController.swift */; };
 		34C2DB741F633C890027EB1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB721F633C890027EB1F /* Main.storyboard */; };
 		34C2DB761F633C890027EB1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB751F633C890027EB1F /* Assets.xcassets */; };
@@ -39,9 +39,9 @@
 /* Begin PBXFileReference section */
 		34C2DB651F633C890027EB1F /* TomatoRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TomatoRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C2DB681F633C890027EB1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		34C2DB6A1F633C890027EB1F /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		34C2DB6A1F633C890027EB1F /* RunScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RunScene.sks; sourceTree = "<group>"; };
 		34C2DB6C1F633C890027EB1F /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		34C2DB6E1F633C890027EB1F /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		34C2DB6E1F633C890027EB1F /* RunScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunScene.swift; sourceTree = "<group>"; };
 		34C2DB701F633C890027EB1F /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		34C2DB731F633C890027EB1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		34C2DB751F633C890027EB1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,10 +103,9 @@
 		34C2DB671F633C890027EB1F /* TomatoRun */ = {
 			isa = PBXGroup;
 			children = (
+				34C2DB9C1F633D450027EB1F /* RunScene */,
 				34C2DB681F633C890027EB1F /* AppDelegate.swift */,
-				34C2DB6A1F633C890027EB1F /* GameScene.sks */,
 				34C2DB6C1F633C890027EB1F /* Actions.sks */,
-				34C2DB6E1F633C890027EB1F /* GameScene.swift */,
 				34C2DB701F633C890027EB1F /* GameViewController.swift */,
 				34C2DB721F633C890027EB1F /* Main.storyboard */,
 				34C2DB751F633C890027EB1F /* Assets.xcassets */,
@@ -132,6 +131,15 @@
 				34C2DB901F633C890027EB1F /* Info.plist */,
 			);
 			path = TomatoRunUITests;
+			sourceTree = "<group>";
+		};
+		34C2DB9C1F633D450027EB1F /* RunScene */ = {
+			isa = PBXGroup;
+			children = (
+				34C2DB6A1F633C890027EB1F /* RunScene.sks */,
+				34C2DB6E1F633C890027EB1F /* RunScene.swift */,
+			);
+			path = RunScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,7 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34C2DB741F633C890027EB1F /* Main.storyboard in Resources */,
-				34C2DB6B1F633C890027EB1F /* GameScene.sks in Resources */,
+				34C2DB6B1F633C890027EB1F /* RunScene.sks in Resources */,
 				34C2DB761F633C890027EB1F /* Assets.xcassets in Resources */,
 				34C2DB791F633C890027EB1F /* LaunchScreen.storyboard in Resources */,
 				34C2DB6D1F633C890027EB1F /* Actions.sks in Resources */,
@@ -270,7 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34C2DB6F1F633C890027EB1F /* GameScene.swift in Sources */,
+				34C2DB6F1F633C890027EB1F /* RunScene.swift in Sources */,
 				34C2DB711F633C890027EB1F /* GameViewController.swift in Sources */,
 				34C2DB691F633C890027EB1F /* AppDelegate.swift in Sources */,
 			);
@@ -441,6 +449,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9QWSV3PV48;
 				INFOPLIST_FILE = TomatoRun/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.okAyStudios.TomatoRun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -456,6 +465,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9QWSV3PV48;
 				INFOPLIST_FILE = TomatoRun/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.okAyStudios.TomatoRun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
