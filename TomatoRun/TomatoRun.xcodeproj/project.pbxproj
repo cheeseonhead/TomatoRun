@@ -53,6 +53,7 @@
 		34C2DB8A1F633C890027EB1F /* TomatoRunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TomatoRunUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C2DB8E1F633C890027EB1F /* TomatoRunUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoRunUITests.swift; sourceTree = "<group>"; };
 		34C2DB901F633C890027EB1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34C2DB9E1F633EA70027EB1F /* MyUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				34C2DB9C1F633D450027EB1F /* RunScene */,
+				34C2DB9D1F633E8D0027EB1F /* Shared */,
 				34C2DB681F633C890027EB1F /* AppDelegate.swift */,
 				34C2DB6C1F633C890027EB1F /* Actions.sks */,
 				34C2DB721F633C890027EB1F /* Main.storyboard */,
@@ -140,6 +142,14 @@
 				34C2DB701F633C890027EB1F /* RunViewController.swift */,
 			);
 			path = RunScene;
+			sourceTree = "<group>";
+		};
+		34C2DB9D1F633E8D0027EB1F /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				34C2DB9E1F633EA70027EB1F /* MyUtils.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
