@@ -16,15 +16,3 @@ extension Int
         return Int(arc4random_uniform(upperBound)) + min
     }
 }
-
-
-
-extension Array
-{
-    mutating func swapAt(_ a: Int, _ b: Int)
-    {
-        let temp = self[a]
-        self[a] = self[b]
-        self[b] = temp
-    }
-}

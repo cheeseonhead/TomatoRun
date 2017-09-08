@@ -18,6 +18,7 @@
 		34C2DB841F633C890027EB1F /* TomatoRunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB831F633C890027EB1F /* TomatoRunTests.swift */; };
 		34C2DB8F1F633C890027EB1F /* TomatoRunUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB8E1F633C890027EB1F /* TomatoRunUITests.swift */; };
 		34C2DBA81F633F190027EB1F /* SKSpriteNode+Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DBA71F633F190027EB1F /* SKSpriteNode+Scale.swift */; };
+		34C2DBAB1F633F4F0027EB1F /* Array+Swap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DBAA1F633F4F0027EB1F /* Array+Swap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		34C2DBA01F633EBF0027EB1F /* GKEntity+Sprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GKEntity+Sprite.swift"; sourceTree = "<group>"; };
 		34C2DBA11F633EBF0027EB1F /* Int+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Random.swift"; sourceTree = "<group>"; };
 		34C2DBA71F633F190027EB1F /* SKSpriteNode+Scale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+Scale.swift"; sourceTree = "<group>"; };
+		34C2DBAA1F633F4F0027EB1F /* Array+Swap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Swap.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 		34C2DB9D1F633E8D0027EB1F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				34C2DBA91F633F3D0027EB1F /* Array */,
 				34C2DBA61F633F080027EB1F /* SKSpriteNode */,
 				34C2DBA31F633ECF0027EB1F /* CGRect */,
 				34C2DBA41F633ED90027EB1F /* GKEntity */,
@@ -191,6 +194,14 @@
 				34C2DBA71F633F190027EB1F /* SKSpriteNode+Scale.swift */,
 			);
 			path = SKSpriteNode;
+			sourceTree = "<group>";
+		};
+		34C2DBA91F633F3D0027EB1F /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				34C2DBAA1F633F4F0027EB1F /* Array+Swap.swift */,
+			);
+			path = Array;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34C2DBAB1F633F4F0027EB1F /* Array+Swap.swift in Sources */,
 				34C2DB6F1F633C890027EB1F /* RunScene.swift in Sources */,
 				34C2DBA81F633F190027EB1F /* SKSpriteNode+Scale.swift in Sources */,
 				34C2DB711F633C890027EB1F /* RunViewController.swift in Sources */,
