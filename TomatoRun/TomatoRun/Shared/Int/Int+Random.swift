@@ -17,16 +17,7 @@ extension Int
     }
 }
 
-extension SKSpriteNode
-{
-    func scale(toWidth width: CGFloat)
-    {
-        let ratio = size.height/size.width
-        let newHeight = ratio * width
 
-        size = CGSize(width: width, height: newHeight)
-    }
-}
 
 extension Array
 {
