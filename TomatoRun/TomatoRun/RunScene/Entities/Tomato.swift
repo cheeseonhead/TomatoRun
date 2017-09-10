@@ -9,11 +9,11 @@ import SpriteKit
 class Tomato: GKEntity {
     var stateMachine: MoveStateMachine!
 
-    init(entityManager: EntityManager) {
+    init(speed: CGFloat, fittingWidth: CGFloat, entityManager: EntityManager) {
         super.init()
 
         initStateMachine()
-        initComponents(entityManager)
+        initComponents(speed: speed, fittingWidth: fittingWidth, entityManager)
     }
 
     required init?(coder _: NSCoder) {
@@ -23,14 +23,14 @@ class Tomato: GKEntity {
 
 // MARK: Initialization
 private extension Tomato {
-    func initComponents(_ entityManager: EntityManager) {
-        let texture = SKTexture(imageNamed: "Spaceship")
+    func initComponents(speed: CGFloat, fittingWidth: CGFloat, _ entityManager: EntityManager) {
+        let texture = SKTexture(imageNamed: ImageConstants.TomatoImageName)
         let spriteComponent = SpriteComponent(texture: texture)
 
-        spriteComponent.node.scale(toWidth: 150)
+        spriteComponent.node.scale(toWidth: fittingWidth)
 
         addComponent(spriteComponent)
-        addComponent(MoveComponent(speed: 300, stateMachine: stateMachine, entityManager: entityManager))
+        addComponent(MoveComponent(speed: speed, stateMachine: stateMachine, entityManager: entityManager))
     }
 
     func initStateMachine() {

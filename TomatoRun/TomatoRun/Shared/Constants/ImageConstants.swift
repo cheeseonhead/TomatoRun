@@ -10,4 +10,5 @@ import Foundation
 
 enum ImageConstants {
     static let RopeImageName = "Rope"
+    static let TomatoImageName = "Spaceship"
 }

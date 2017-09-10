@@ -78,7 +78,7 @@ private extension RunScene {
         //        let ropeNumber = Int.random(min: 0, max: numberOfRopes)
         let ropeNumber = 2
 
-        tomato = Tomato(entityManager: entityManager)
+        tomato = Tomato(speed: 300, fittingWidth: 150, entityManager: entityManager)
         if let spriteComponent = tomato.component(ofType: SpriteComponent.self) {
             let xPos = ropeXPos(forIndex: ropeNumber)
             spriteComponent.node.position = CGPoint(x: xPos, y: tomatoBottomPadding)
