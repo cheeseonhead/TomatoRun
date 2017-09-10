@@ -12,7 +12,7 @@
 		3400D9481F65FE8300ECD456 /* Tomato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DBAF1F633F990027EB1F /* Tomato.swift */; };
 		3400D9491F65FE8500ECD456 /* WoodenBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DBAD1F633F980027EB1F /* WoodenBoard.swift */; };
 		3400D95A1F65FEE600ECD456 /* Framable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9571F65FED800ECD456 /* Framable.swift */; };
-		3400D95B1F65FEE600ECD456 /* PositionalComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9581F65FED800ECD456 /* PositionalComponent.swift */; };
+		3400D95B1F65FEE600ECD456 /* Positional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9581F65FED800ECD456 /* Positional.swift */; };
 		3400D95C1F65FEE600ECD456 /* ContinuousSpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9521F65FED800ECD456 /* ContinuousSpriteComponent.swift */; };
 		3400D95D1F65FEE600ECD456 /* IntersectionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9531F65FED800ECD456 /* IntersectionComponent.swift */; };
 		3400D95E1F65FEE600ECD456 /* MoveBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9541F65FED800ECD456 /* MoveBehavior.swift */; };
@@ -67,7 +67,7 @@
 		3400D9541F65FED800ECD456 /* MoveBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveBehavior.swift; sourceTree = "<group>"; };
 		3400D9551F65FED800ECD456 /* MoveComponentV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveComponentV2.swift; sourceTree = "<group>"; };
 		3400D9571F65FED800ECD456 /* Framable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Framable.swift; sourceTree = "<group>"; };
-		3400D9581F65FED800ECD456 /* PositionalComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionalComponent.swift; sourceTree = "<group>"; };
+		3400D9581F65FED800ECD456 /* Positional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Positional.swift; sourceTree = "<group>"; };
 		3400D9591F65FED800ECD456 /* SpriteComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
 		3400D9621F65FF2800ECD456 /* MoveStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveStateMachine.swift; sourceTree = "<group>"; };
 		3400D9641F65FF2800ECD456 /* DuringTravelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuringTravelState.swift; sourceTree = "<group>"; };
@@ -154,7 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				3400D9571F65FED800ECD456 /* Framable.swift */,
-				3400D9581F65FED800ECD456 /* PositionalComponent.swift */,
+				3400D9581F65FED800ECD456 /* Positional.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -469,7 +469,7 @@
 				3400D96D1F65FF3000ECD456 /* WanderingState.swift in Sources */,
 				3400D95E1F65FEE600ECD456 /* MoveBehavior.swift in Sources */,
 				3400D95D1F65FEE600ECD456 /* IntersectionComponent.swift in Sources */,
-				3400D95B1F65FEE600ECD456 /* PositionalComponent.swift in Sources */,
+				3400D95B1F65FEE600ECD456 /* Positional.swift in Sources */,
 				3400D96B1F65FF3000ECD456 /* IdleState.swift in Sources */,
 				3400D9771F65FF5600ECD456 /* Int+Random.swift in Sources */,
 				3400D9491F65FE8500ECD456 /* WoodenBoard.swift in Sources */,
