@@ -42,12 +42,6 @@ class RunScene: SKScene {
         entityManager.update(deltaTime)
         positionCamera()
     }
-
-    override func touchesBegan(_ touches: Set<UITouch>, with _: UIEvent?) {
-        for touch in touches {
-            print("Touch: \(touch.location(in: self))")
-        }
-    }
 }
 
 extension RunScene {

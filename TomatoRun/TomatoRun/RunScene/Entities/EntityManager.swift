@@ -6,8 +6,7 @@
 import SpriteKit
 import GameplayKit
 
-class EntityManager
-{
+class EntityManager {
     weak var scene: SKScene?
 
     var entities = Set<GKEntity>()
@@ -23,8 +22,7 @@ class EntityManager
         self.scene = scene
     }
 
-    func update(_ deltaTime: CFTimeInterval)
-    {
+    func update(_ deltaTime: CFTimeInterval) {
         for componentSystem in componentSystems {
             componentSystem.update(deltaTime: deltaTime)
         }
@@ -41,14 +39,11 @@ class EntityManager
 }
 
 // MARK: Editing
-extension EntityManager
-{
-    func add(_ entity: GKEntity)
-    {
+extension EntityManager {
+    func add(_ entity: GKEntity) {
         entities.insert(entity)
 
-        if let spriteNode = entity.component(ofType: SpriteComponent.self)?.node
-        {
+        if let spriteNode = entity.component(ofType: SpriteComponent.self)?.node {
             scene?.addChild(spriteNode)
         }
 
@@ -57,8 +52,7 @@ extension EntityManager
         }
     }
 
-    func remove(_ entity: GKEntity)
-    {
+    func remove(_ entity: GKEntity) {
         if let spriteNode = entity.component(ofType: SpriteComponent.self)?.node {
             spriteNode.removeFromParent()
         }
@@ -71,10 +65,8 @@ extension EntityManager
 }
 
 // MARK: Access
-extension EntityManager
-{
-    func entities<EntityType>(ofType type: EntityType.Type) -> [EntityType]
-    {
+extension EntityManager {
+    func entities<EntityType>(ofType _: EntityType.Type) -> [EntityType] {
         return entities.flatMap { entity in
             if let matched = entity as? EntityType {
                 return matched
@@ -84,9 +76,8 @@ extension EntityManager
         }
     }
 
-    func entities<EntityType>(ofType type: EntityType.Type, compare: (EntityType, EntityType?) -> Bool) -> EntityType?
-    {
-        var target: EntityType? = nil
+    func entity<EntityType>(ofType _: EntityType.Type, compare: (EntityType, EntityType?) -> Bool) -> EntityType? {
+        var target: EntityType?
 
         for entity in entities {
             if let matched = entity as? EntityType {
@@ -99,8 +90,7 @@ extension EntityManager
         return target
     }
 
-    func components<ComponentType: GKComponent>(ofType type: ComponentType.Type) -> Set<ComponentType>
-    {
+    func components<ComponentType: GKComponent>(ofType _: ComponentType.Type) -> Set<ComponentType> {
         var components = Set<ComponentType>()
 
         for entity in entities {
