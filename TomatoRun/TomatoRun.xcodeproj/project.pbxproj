@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3400D9331F65FD7900ECD456 /* ImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9321F65FD7900ECD456 /* ImageConstants.swift */; };
 		34C2DB691F633C890027EB1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB681F633C890027EB1F /* AppDelegate.swift */; };
 		34C2DB6B1F633C890027EB1F /* RunScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB6A1F633C890027EB1F /* RunScene.sks */; };
 		34C2DB6D1F633C890027EB1F /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB6C1F633C890027EB1F /* Actions.sks */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3400D9321F65FD7900ECD456 /* ImageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConstants.swift; sourceTree = "<group>"; };
 		34C2DB651F633C890027EB1F /* TomatoRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TomatoRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C2DB681F633C890027EB1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34C2DB6A1F633C890027EB1F /* RunScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RunScene.sks; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3400D92F1F65FD4300ECD456 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3400D9321F65FD7900ECD456 /* ImageConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		34C2DB5C1F633C890027EB1F = {
 			isa = PBXGroup;
 			children = (
@@ -159,11 +169,12 @@
 		34C2DB9D1F633E8D0027EB1F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				3400D92F1F65FD4300ECD456 /* Constants */,
 				34C2DBA91F633F3D0027EB1F /* Array */,
-				34C2DBA61F633F080027EB1F /* SKSpriteNode */,
 				34C2DBA31F633ECF0027EB1F /* CGRect */,
 				34C2DBA41F633ED90027EB1F /* GKEntity */,
 				34C2DBA51F633EE80027EB1F /* Int */,
+				34C2DBA61F633F080027EB1F /* SKSpriteNode */,
 				34C2DB9E1F633EA70027EB1F /* MyUtils.swift */,
 			);
 			path = Shared;
@@ -357,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34C2DBAB1F633F4F0027EB1F /* Array+Swap.swift in Sources */,
+				3400D9331F65FD7900ECD456 /* ImageConstants.swift in Sources */,
 				34C2DB6F1F633C890027EB1F /* RunScene.swift in Sources */,
 				34C2DBA81F633F190027EB1F /* SKSpriteNode+Scale.swift in Sources */,
 				34C2DB711F633C890027EB1F /* RunViewController.swift in Sources */,
