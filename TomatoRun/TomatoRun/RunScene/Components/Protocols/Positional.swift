@@ -5,6 +5,6 @@
 
 import SpriteKit
 
-protocol PositionalComponent {
+protocol Positional {
     func getPosition() -> CGPoint
 }

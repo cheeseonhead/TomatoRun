@@ -28,7 +28,7 @@
 		3400D98F1F6604B200ECD456 /* SpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9881F6604B100ECD456 /* SpriteComponent.swift */; };
 		3400D9901F6604B200ECD456 /* ContinuousSpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9891F6604B100ECD456 /* ContinuousSpriteComponent.swift */; };
 		3400D9911F6604B200ECD456 /* Framable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D98A1F6604B200ECD456 /* Framable.swift */; };
-		3400D9921F6604B200ECD456 /* PositionalComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D98B1F6604B200ECD456 /* PositionalComponent.swift */; };
+		3400D9921F6604B200ECD456 /* Positional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D98B1F6604B200ECD456 /* Positional.swift */; };
 		3400D9931F6604B200ECD456 /* IntersectionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D98C1F6604B200ECD456 /* IntersectionComponent.swift */; };
 		3400D9941F6604B200ECD456 /* MoveComponentV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D98D1F6604B200ECD456 /* MoveComponentV2.swift */; };
 		34C2DB691F633C890027EB1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB681F633C890027EB1F /* AppDelegate.swift */; };
@@ -72,7 +72,7 @@
 		3400D9881F6604B100ECD456 /* SpriteComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
 		3400D9891F6604B100ECD456 /* ContinuousSpriteComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuousSpriteComponent.swift; sourceTree = "<group>"; };
 		3400D98A1F6604B200ECD456 /* Framable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Framable.swift; sourceTree = "<group>"; };
-		3400D98B1F6604B200ECD456 /* PositionalComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionalComponent.swift; sourceTree = "<group>"; };
+		3400D98B1F6604B200ECD456 /* Positional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Positional.swift; sourceTree = "<group>"; };
 		3400D98C1F6604B200ECD456 /* IntersectionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntersectionComponent.swift; sourceTree = "<group>"; };
 		3400D98D1F6604B200ECD456 /* MoveComponentV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveComponentV2.swift; sourceTree = "<group>"; };
 		34C2DB651F633C890027EB1F /* TomatoRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TomatoRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,7 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				3400D98A1F6604B200ECD456 /* Framable.swift */,
-				3400D98B1F6604B200ECD456 /* PositionalComponent.swift */,
+				3400D98B1F6604B200ECD456 /* Positional.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -460,7 +460,7 @@
 				3400D9731F65FF5600ECD456 /* ImageConstants.swift in Sources */,
 				3400D9691F65FF3000ECD456 /* DuringTravelState.swift in Sources */,
 				3400D9791F65FF5600ECD456 /* MyUtils.swift in Sources */,
-				3400D9921F6604B200ECD456 /* PositionalComponent.swift in Sources */,
+				3400D9921F6604B200ECD456 /* Positional.swift in Sources */,
 				3400D98F1F6604B200ECD456 /* SpriteComponent.swift in Sources */,
 				34C2DB6F1F633C890027EB1F /* RunScene.swift in Sources */,
 				34C2DB711F633C890027EB1F /* RunViewController.swift in Sources */,

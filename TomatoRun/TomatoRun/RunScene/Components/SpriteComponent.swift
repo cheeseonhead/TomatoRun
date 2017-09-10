@@ -19,7 +19,7 @@ class SpriteComponent: GKComponent {
     }
 }
 
-extension SpriteComponent: PositionalComponent {
+extension SpriteComponent: Positional {
     func getPosition() -> CGPoint {
         return node.position
     }

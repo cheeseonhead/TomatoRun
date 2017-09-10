@@ -104,7 +104,7 @@ private extension ContinuousSpriteComponent {
     }
 }
 
-extension ContinuousSpriteComponent: PositionalComponent {
+extension ContinuousSpriteComponent: Positional {
     func getPosition() -> CGPoint {
         return position
     }
