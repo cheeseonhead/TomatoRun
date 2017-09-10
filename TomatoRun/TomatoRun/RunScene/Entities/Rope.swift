@@ -6,19 +6,17 @@
 import GameplayKit
 import SpriteKit
 
-class Rope: GKEntity
-{
-    init(position: CGPoint, scene: SKScene)
-    {
+class Rope: GKEntity {
+    init(position: CGPoint, scene: SKScene) {
         super.init()
 
-        let texture = SKTexture(imageNamed: "Rope")
+        let texture = SKTexture(imageNamed: ImageConstants.RopeImageName)
         let continuousSprite = ContinuousSpriteComponent(scene: scene, texture: texture, position: position)
 
         addComponent(continuousSprite)
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }

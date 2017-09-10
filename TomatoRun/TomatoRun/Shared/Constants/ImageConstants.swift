@@ -9,5 +9,5 @@
 import Foundation
 
 enum ImageConstants {
-    static let ropeImageName = "Rope"
+    static let RopeImageName = "Rope"
 }
