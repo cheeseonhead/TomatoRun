@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3400D9331F65FD7900ECD456 /* ImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9321F65FD7900ECD456 /* ImageConstants.swift */; };
 		3400D9461F65FE7E00ECD456 /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DBAE1F633F990027EB1F /* EntityManager.swift */; };
 		3400D9471F65FE8100ECD456 /* Rope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DBB01F633F990027EB1F /* Rope.swift */; };
 		3400D9481F65FE8300ECD456 /* Tomato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DBAF1F633F990027EB1F /* Tomato.swift */; };
@@ -25,6 +24,13 @@
 		3400D96C1F65FF3000ECD456 /* TravelToStartState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9671F65FF2800ECD456 /* TravelToStartState.swift */; };
 		3400D96D1F65FF3000ECD456 /* WanderingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9681F65FF2800ECD456 /* WanderingState.swift */; };
 		3400D96E1F65FF3000ECD456 /* MoveStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9621F65FF2800ECD456 /* MoveStateMachine.swift */; };
+		3400D9731F65FF5600ECD456 /* ImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9321F65FD7900ECD456 /* ImageConstants.swift */; };
+		3400D9741F65FF5600ECD456 /* Array+Swap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DBAA1F633F4F0027EB1F /* Array+Swap.swift */; };
+		3400D9751F65FF5600ECD456 /* CGRect+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB9F1F633EBF0027EB1F /* CGRect+Anchor.swift */; };
+		3400D9761F65FF5600ECD456 /* GKEntity+Sprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DBA01F633EBF0027EB1F /* GKEntity+Sprite.swift */; };
+		3400D9771F65FF5600ECD456 /* Int+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DBA11F633EBF0027EB1F /* Int+Random.swift */; };
+		3400D9781F65FF5600ECD456 /* SKSpriteNode+Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DBA71F633F190027EB1F /* SKSpriteNode+Scale.swift */; };
+		3400D9791F65FF5600ECD456 /* MyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB9E1F633EA70027EB1F /* MyUtils.swift */; };
 		34C2DB691F633C890027EB1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB681F633C890027EB1F /* AppDelegate.swift */; };
 		34C2DB6B1F633C890027EB1F /* RunScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB6A1F633C890027EB1F /* RunScene.sks */; };
 		34C2DB6D1F633C890027EB1F /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB6C1F633C890027EB1F /* Actions.sks */; };
@@ -35,8 +41,6 @@
 		34C2DB791F633C890027EB1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB771F633C890027EB1F /* LaunchScreen.storyboard */; };
 		34C2DB841F633C890027EB1F /* TomatoRunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB831F633C890027EB1F /* TomatoRunTests.swift */; };
 		34C2DB8F1F633C890027EB1F /* TomatoRunUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB8E1F633C890027EB1F /* TomatoRunUITests.swift */; };
-		34C2DBA81F633F190027EB1F /* SKSpriteNode+Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DBA71F633F190027EB1F /* SKSpriteNode+Scale.swift */; };
-		34C2DBAB1F633F4F0027EB1F /* Array+Swap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DBAA1F633F4F0027EB1F /* Array+Swap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -443,18 +447,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3400D9741F65FF5600ECD456 /* Array+Swap.swift in Sources */,
+				3400D9781F65FF5600ECD456 /* SKSpriteNode+Scale.swift in Sources */,
 				3400D96C1F65FF3000ECD456 /* TravelToStartState.swift in Sources */,
 				3400D96A1F65FF3000ECD456 /* IdleOnStartState.swift in Sources */,
-				34C2DBAB1F633F4F0027EB1F /* Array+Swap.swift in Sources */,
 				3400D9461F65FE7E00ECD456 /* EntityManager.swift in Sources */,
 				3400D95F1F65FEE600ECD456 /* MoveComponentV2.swift in Sources */,
 				3400D95C1F65FEE600ECD456 /* ContinuousSpriteComponent.swift in Sources */,
-				3400D9331F65FD7900ECD456 /* ImageConstants.swift in Sources */,
+				3400D9751F65FF5600ECD456 /* CGRect+Anchor.swift in Sources */,
 				3400D9471F65FE8100ECD456 /* Rope.swift in Sources */,
 				3400D96E1F65FF3000ECD456 /* MoveStateMachine.swift in Sources */,
+				3400D9761F65FF5600ECD456 /* GKEntity+Sprite.swift in Sources */,
+				3400D9731F65FF5600ECD456 /* ImageConstants.swift in Sources */,
 				3400D9691F65FF3000ECD456 /* DuringTravelState.swift in Sources */,
+				3400D9791F65FF5600ECD456 /* MyUtils.swift in Sources */,
 				34C2DB6F1F633C890027EB1F /* RunScene.swift in Sources */,
-				34C2DBA81F633F190027EB1F /* SKSpriteNode+Scale.swift in Sources */,
 				3400D95A1F65FEE600ECD456 /* Framable.swift in Sources */,
 				3400D9601F65FEF800ECD456 /* SpriteComponent.swift in Sources */,
 				34C2DB711F633C890027EB1F /* RunViewController.swift in Sources */,
@@ -464,6 +471,7 @@
 				3400D95D1F65FEE600ECD456 /* IntersectionComponent.swift in Sources */,
 				3400D95B1F65FEE600ECD456 /* PositionalComponent.swift in Sources */,
 				3400D96B1F65FF3000ECD456 /* IdleState.swift in Sources */,
+				3400D9771F65FF5600ECD456 /* Int+Random.swift in Sources */,
 				3400D9491F65FE8500ECD456 /* WoodenBoard.swift in Sources */,
 				34C2DB691F633C890027EB1F /* AppDelegate.swift in Sources */,
 			);
