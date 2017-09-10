@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		3400D9331F65FD7900ECD456 /* ImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9321F65FD7900ECD456 /* ImageConstants.swift */; };
+		3400D9461F65FE7E00ECD456 /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DBAE1F633F990027EB1F /* EntityManager.swift */; };
+		3400D9471F65FE8100ECD456 /* Rope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DBB01F633F990027EB1F /* Rope.swift */; };
+		3400D9481F65FE8300ECD456 /* Tomato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DBAF1F633F990027EB1F /* Tomato.swift */; };
+		3400D9491F65FE8500ECD456 /* WoodenBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DBAD1F633F980027EB1F /* WoodenBoard.swift */; };
+		3400D95A1F65FEE600ECD456 /* Framable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9571F65FED800ECD456 /* Framable.swift */; };
+		3400D95B1F65FEE600ECD456 /* PositionalComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9581F65FED800ECD456 /* PositionalComponent.swift */; };
+		3400D95C1F65FEE600ECD456 /* ContinuousSpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9521F65FED800ECD456 /* ContinuousSpriteComponent.swift */; };
+		3400D95D1F65FEE600ECD456 /* IntersectionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9531F65FED800ECD456 /* IntersectionComponent.swift */; };
+		3400D95E1F65FEE600ECD456 /* MoveBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9541F65FED800ECD456 /* MoveBehavior.swift */; };
+		3400D95F1F65FEE600ECD456 /* MoveComponentV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9551F65FED800ECD456 /* MoveComponentV2.swift */; };
 		34C2DB691F633C890027EB1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB681F633C890027EB1F /* AppDelegate.swift */; };
 		34C2DB6B1F633C890027EB1F /* RunScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB6A1F633C890027EB1F /* RunScene.sks */; };
 		34C2DB6D1F633C890027EB1F /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB6C1F633C890027EB1F /* Actions.sks */; };
@@ -41,6 +51,13 @@
 
 /* Begin PBXFileReference section */
 		3400D9321F65FD7900ECD456 /* ImageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConstants.swift; sourceTree = "<group>"; };
+		3400D9521F65FED800ECD456 /* ContinuousSpriteComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuousSpriteComponent.swift; sourceTree = "<group>"; };
+		3400D9531F65FED800ECD456 /* IntersectionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntersectionComponent.swift; sourceTree = "<group>"; };
+		3400D9541F65FED800ECD456 /* MoveBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveBehavior.swift; sourceTree = "<group>"; };
+		3400D9551F65FED800ECD456 /* MoveComponentV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveComponentV2.swift; sourceTree = "<group>"; };
+		3400D9571F65FED800ECD456 /* Framable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Framable.swift; sourceTree = "<group>"; };
+		3400D9581F65FED800ECD456 /* PositionalComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionalComponent.swift; sourceTree = "<group>"; };
+		3400D9591F65FED800ECD456 /* SpriteComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
 		34C2DB651F633C890027EB1F /* TomatoRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TomatoRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C2DB681F633C890027EB1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34C2DB6A1F633C890027EB1F /* RunScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RunScene.sks; sourceTree = "<group>"; };
@@ -102,6 +119,29 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		3400D9511F65FED800ECD456 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3400D9561F65FED800ECD456 /* Protocols */,
+				3400D9521F65FED800ECD456 /* ContinuousSpriteComponent.swift */,
+				3400D9531F65FED800ECD456 /* IntersectionComponent.swift */,
+				3400D9541F65FED800ECD456 /* MoveBehavior.swift */,
+				3400D9551F65FED800ECD456 /* MoveComponentV2.swift */,
+				3400D9591F65FED800ECD456 /* SpriteComponent.swift */,
+			);
+			name = Components;
+			path = ../../../../ScrollerTest/ScrollerTest/Components;
+			sourceTree = "<group>";
+		};
+		3400D9561F65FED800ECD456 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3400D9571F65FED800ECD456 /* Framable.swift */,
+				3400D9581F65FED800ECD456 /* PositionalComponent.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		34C2DB5C1F633C890027EB1F = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +198,7 @@
 		34C2DB9C1F633D450027EB1F /* RunScene */ = {
 			isa = PBXGroup;
 			children = (
+				3400D9511F65FED800ECD456 /* Components */,
 				34C2DBAC1F633F880027EB1F /* Entities */,
 				34C2DB6A1F633C890027EB1F /* RunScene.sks */,
 				34C2DB6E1F633C890027EB1F /* RunScene.swift */,
@@ -368,10 +409,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				34C2DBAB1F633F4F0027EB1F /* Array+Swap.swift in Sources */,
+				3400D9461F65FE7E00ECD456 /* EntityManager.swift in Sources */,
+				3400D95F1F65FEE600ECD456 /* MoveComponentV2.swift in Sources */,
+				3400D95C1F65FEE600ECD456 /* ContinuousSpriteComponent.swift in Sources */,
 				3400D9331F65FD7900ECD456 /* ImageConstants.swift in Sources */,
+				3400D9471F65FE8100ECD456 /* Rope.swift in Sources */,
 				34C2DB6F1F633C890027EB1F /* RunScene.swift in Sources */,
 				34C2DBA81F633F190027EB1F /* SKSpriteNode+Scale.swift in Sources */,
+				3400D95A1F65FEE600ECD456 /* Framable.swift in Sources */,
 				34C2DB711F633C890027EB1F /* RunViewController.swift in Sources */,
+				3400D9481F65FE8300ECD456 /* Tomato.swift in Sources */,
+				3400D95E1F65FEE600ECD456 /* MoveBehavior.swift in Sources */,
+				3400D95D1F65FEE600ECD456 /* IntersectionComponent.swift in Sources */,
+				3400D95B1F65FEE600ECD456 /* PositionalComponent.swift in Sources */,
+				3400D9491F65FE8500ECD456 /* WoodenBoard.swift in Sources */,
 				34C2DB691F633C890027EB1F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
