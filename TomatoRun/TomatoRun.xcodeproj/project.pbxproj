@@ -18,6 +18,7 @@
 		3400D95D1F65FEE600ECD456 /* IntersectionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9531F65FED800ECD456 /* IntersectionComponent.swift */; };
 		3400D95E1F65FEE600ECD456 /* MoveBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9541F65FED800ECD456 /* MoveBehavior.swift */; };
 		3400D95F1F65FEE600ECD456 /* MoveComponentV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9551F65FED800ECD456 /* MoveComponentV2.swift */; };
+		3400D9601F65FEF800ECD456 /* SpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9591F65FED800ECD456 /* SpriteComponent.swift */; };
 		34C2DB691F633C890027EB1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB681F633C890027EB1F /* AppDelegate.swift */; };
 		34C2DB6B1F633C890027EB1F /* RunScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB6A1F633C890027EB1F /* RunScene.sks */; };
 		34C2DB6D1F633C890027EB1F /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB6C1F633C890027EB1F /* Actions.sks */; };
@@ -417,6 +418,7 @@
 				34C2DB6F1F633C890027EB1F /* RunScene.swift in Sources */,
 				34C2DBA81F633F190027EB1F /* SKSpriteNode+Scale.swift in Sources */,
 				3400D95A1F65FEE600ECD456 /* Framable.swift in Sources */,
+				3400D9601F65FEF800ECD456 /* SpriteComponent.swift in Sources */,
 				34C2DB711F633C890027EB1F /* RunViewController.swift in Sources */,
 				3400D9481F65FE8300ECD456 /* Tomato.swift in Sources */,
 				3400D95E1F65FEE600ECD456 /* MoveBehavior.swift in Sources */,
