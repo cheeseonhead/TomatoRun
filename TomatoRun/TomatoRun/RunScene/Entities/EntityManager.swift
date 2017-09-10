@@ -12,7 +12,7 @@ class EntityManager {
     var entities = Set<GKEntity>()
     var toRemove = Set<GKEntity>()
     lazy var componentSystems: [GKComponentSystem] = {
-        let moveSystem = GKComponentSystem(componentClass: MoveComponentV2.self)
+        let moveSystem = GKComponentSystem(componentClass: MoveComponent.self)
         let continuousSpriteSystem = GKComponentSystem(componentClass: ContinuousSpriteComponent.self)
         let intersectionSystem = GKComponentSystem(componentClass: IntersectionComponent.self)
         return [intersectionSystem, moveSystem, continuousSpriteSystem]

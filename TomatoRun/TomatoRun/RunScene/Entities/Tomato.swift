@@ -6,39 +6,34 @@
 import GameplayKit
 import SpriteKit
 
-class Tomato: GKEntity
-{
+class Tomato: GKEntity {
     var stateMachine: MoveStateMachine!
-    
-    init(entityManager: EntityManager)
-    {
+
+    init(entityManager: EntityManager) {
         super.init()
-        
+
         initStateMachine()
         initComponents(entityManager)
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
 
 // MARK: Initialization
-private extension Tomato
-{
-    func initComponents(_ entityManager: EntityManager)
-    {
+private extension Tomato {
+    func initComponents(_ entityManager: EntityManager) {
         let texture = SKTexture(imageNamed: "Spaceship")
         let spriteComponent = SpriteComponent(texture: texture)
-        
+
         spriteComponent.node.scale(toWidth: 150)
-        
+
         addComponent(spriteComponent)
-        addComponent(MoveComponentV2(speed: 300, stateMachine: stateMachine, entityManager: entityManager))
+        addComponent(MoveComponent(speed: 300, stateMachine: stateMachine, entityManager: entityManager))
     }
-    
-    func initStateMachine()
-    {
+
+    func initStateMachine() {
         stateMachine = MoveStateMachine()
     }
 }

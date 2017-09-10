@@ -30,7 +30,7 @@
 		3400D9911F6604B200ECD456 /* Framable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D98A1F6604B200ECD456 /* Framable.swift */; };
 		3400D9921F6604B200ECD456 /* Positional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D98B1F6604B200ECD456 /* Positional.swift */; };
 		3400D9931F6604B200ECD456 /* IntersectionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D98C1F6604B200ECD456 /* IntersectionComponent.swift */; };
-		3400D9941F6604B200ECD456 /* MoveComponentV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D98D1F6604B200ECD456 /* MoveComponentV2.swift */; };
+		3400D9941F6604B200ECD456 /* MoveComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D98D1F6604B200ECD456 /* MoveComponent.swift */; };
 		34C2DB691F633C890027EB1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB681F633C890027EB1F /* AppDelegate.swift */; };
 		34C2DB6B1F633C890027EB1F /* RunScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB6A1F633C890027EB1F /* RunScene.sks */; };
 		34C2DB6D1F633C890027EB1F /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB6C1F633C890027EB1F /* Actions.sks */; };
@@ -74,7 +74,7 @@
 		3400D98A1F6604B200ECD456 /* Framable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Framable.swift; sourceTree = "<group>"; };
 		3400D98B1F6604B200ECD456 /* Positional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Positional.swift; sourceTree = "<group>"; };
 		3400D98C1F6604B200ECD456 /* IntersectionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntersectionComponent.swift; sourceTree = "<group>"; };
-		3400D98D1F6604B200ECD456 /* MoveComponentV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveComponentV2.swift; sourceTree = "<group>"; };
+		3400D98D1F6604B200ECD456 /* MoveComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveComponent.swift; sourceTree = "<group>"; };
 		34C2DB651F633C890027EB1F /* TomatoRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TomatoRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C2DB681F633C890027EB1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34C2DB6A1F633C890027EB1F /* RunScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RunScene.sks; sourceTree = "<group>"; };
@@ -164,7 +164,7 @@
 				3400D9891F6604B100ECD456 /* ContinuousSpriteComponent.swift */,
 				3400D98C1F6604B200ECD456 /* IntersectionComponent.swift */,
 				3400D9871F6604B100ECD456 /* MoveBehavior.swift */,
-				3400D98D1F6604B200ECD456 /* MoveComponentV2.swift */,
+				3400D98D1F6604B200ECD456 /* MoveComponent.swift */,
 				3400D9881F6604B100ECD456 /* SpriteComponent.swift */,
 			);
 			path = Components;
@@ -448,7 +448,7 @@
 			files = (
 				3400D9741F65FF5600ECD456 /* Array+Swap.swift in Sources */,
 				3400D9781F65FF5600ECD456 /* SKSpriteNode+Scale.swift in Sources */,
-				3400D9941F6604B200ECD456 /* MoveComponentV2.swift in Sources */,
+				3400D9941F6604B200ECD456 /* MoveComponent.swift in Sources */,
 				3400D96C1F65FF3000ECD456 /* TravelToStartState.swift in Sources */,
 				3400D9911F6604B200ECD456 /* Framable.swift in Sources */,
 				3400D96A1F65FF3000ECD456 /* IdleOnStartState.swift in Sources */,

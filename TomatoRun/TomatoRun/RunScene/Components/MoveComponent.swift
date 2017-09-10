@@ -6,7 +6,7 @@
 import SpriteKit
 import GameplayKit
 
-class MoveComponentV2: GKComponent {
+class MoveComponent: GKComponent {
     let entityManager: EntityManager
     let stateMachine: MoveStateMachine
 
@@ -75,7 +75,7 @@ class MoveComponentV2: GKComponent {
 }
 
 // MARK: Helpers
-private extension MoveComponentV2 {
+private extension MoveComponent {
     func redirect(node: SKSpriteNode, toPosition position: CGPoint, completion block: @escaping () -> Swift.Void) {
         let curPosition = node.position
         let distance = (position - curPosition).length()
