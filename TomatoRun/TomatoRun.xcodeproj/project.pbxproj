@@ -31,6 +31,7 @@
 		3400D9921F6604B200ECD456 /* Positional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D98B1F6604B200ECD456 /* Positional.swift */; };
 		3400D9931F6604B200ECD456 /* IntersectionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D98C1F6604B200ECD456 /* IntersectionComponent.swift */; };
 		3400D9941F6604B200ECD456 /* MoveComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D98D1F6604B200ECD456 /* MoveComponent.swift */; };
+		3400D9991F6609CD00ECD456 /* RunSceneConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9981F6609CD00ECD456 /* RunSceneConstants.swift */; };
 		34C2DB691F633C890027EB1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB681F633C890027EB1F /* AppDelegate.swift */; };
 		34C2DB6B1F633C890027EB1F /* RunScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB6A1F633C890027EB1F /* RunScene.sks */; };
 		34C2DB6D1F633C890027EB1F /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB6C1F633C890027EB1F /* Actions.sks */; };
@@ -75,6 +76,7 @@
 		3400D98B1F6604B200ECD456 /* Positional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Positional.swift; sourceTree = "<group>"; };
 		3400D98C1F6604B200ECD456 /* IntersectionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntersectionComponent.swift; sourceTree = "<group>"; };
 		3400D98D1F6604B200ECD456 /* MoveComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveComponent.swift; sourceTree = "<group>"; };
+		3400D9981F6609CD00ECD456 /* RunSceneConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunSceneConstants.swift; sourceTree = "<group>"; };
 		34C2DB651F633C890027EB1F /* TomatoRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TomatoRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C2DB681F633C890027EB1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34C2DB6A1F633C890027EB1F /* RunScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RunScene.sks; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				3400D9611F65FF2800ECD456 /* StateMachine */,
 				34C2DB6A1F633C890027EB1F /* RunScene.sks */,
 				34C2DB6E1F633C890027EB1F /* RunScene.swift */,
+				3400D9981F6609CD00ECD456 /* RunSceneConstants.swift */,
 				34C2DB701F633C890027EB1F /* RunViewController.swift */,
 			);
 			path = RunScene;
@@ -452,6 +455,7 @@
 				3400D96C1F65FF3000ECD456 /* TravelToStartState.swift in Sources */,
 				3400D9911F6604B200ECD456 /* Framable.swift in Sources */,
 				3400D96A1F65FF3000ECD456 /* IdleOnStartState.swift in Sources */,
+				3400D9991F6609CD00ECD456 /* RunSceneConstants.swift in Sources */,
 				3400D9461F65FE7E00ECD456 /* EntityManager.swift in Sources */,
 				3400D9751F65FF5600ECD456 /* CGRect+Anchor.swift in Sources */,
 				3400D9471F65FE8100ECD456 /* Rope.swift in Sources */,

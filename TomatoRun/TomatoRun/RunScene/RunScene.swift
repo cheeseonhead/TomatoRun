@@ -10,7 +10,7 @@ import SpriteKit
 import GameplayKit
 
 class RunScene: SKScene {
-    let numberOfRopes = 4
+    let numberOfRopes = RunSceneConstants.NumOfRopes
     let tomatoBottomPadding = CGFloat(150)
 
     var entities = [GKEntity]()
