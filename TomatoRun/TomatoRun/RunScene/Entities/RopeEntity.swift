@@ -6,7 +6,7 @@
 import GameplayKit
 import SpriteKit
 
-class Rope: GKEntity {
+class RopeEntity: GKEntity {
     init(position: CGPoint, scene: SKScene) {
         super.init()
 

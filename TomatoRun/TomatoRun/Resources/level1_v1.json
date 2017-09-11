@@ -1,0 +1,19 @@
+{
+    "wooden_boards": [{
+        "height": 200,
+        "rope": 0
+    }, {
+        "height": 450,
+        "rope": 1
+    }, {
+        "height": 330,
+        "rope": 1
+    }, {
+        "height": 250,
+        "rope": 2
+    }, {
+        "height": 350,
+        "rope": 2
+    }],
+    "length": 500
+}

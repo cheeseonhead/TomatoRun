@@ -7,7 +7,7 @@ import GameplayKit
 import SpriteKit
 
 class ContinuousSpriteComponent: GKComponent {
-    weak var scene: SKScene?
+    unowned let scene: SKScene
 
     let texture: SKTexture
     let position: CGPoint
@@ -56,11 +56,10 @@ extension ContinuousSpriteComponent {
 // MARK: Sprite Manipulation
 private extension ContinuousSpriteComponent {
     func fillScreenWithSprites() {
-        guard let scene = scene,
-            let camera = scene.camera else {
-            return
-        }
-        let maxY = camera.position.y + camera.yScale * scene.size.height / 2
+
+        guard let renderedFrame = scene.camera?.renderedFrame() else { return }
+
+        let maxY = renderedFrame.position(forAnchor: CGPoint(x: 0.5, y: 1.0)).y
 
         while nextRopeYPos <= maxY {
             addSprite(at: CGPoint(x: position.x, y: nextRopeYPos))
@@ -75,7 +74,7 @@ private extension ContinuousSpriteComponent {
             unusedNodes.remove(newNode)
         } else {
             newNode = createSprite()
-            scene?.addChild(newNode)
+            scene.addChild(newNode)
         }
 
         newNode.position = CGPoint(x: position.x, y: nextRopeYPos)
@@ -91,7 +90,7 @@ private extension ContinuousSpriteComponent {
     }
 
     func removeOffScreenSprites() {
-        guard let camera = scene?.camera else {
+        guard let camera = scene.camera else {
             return
         }
 

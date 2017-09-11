@@ -6,7 +6,7 @@
 import GameplayKit
 import SpriteKit
 
-class Tomato: GKEntity {
+class TomatoEntity: GKEntity {
     var stateMachine: MoveStateMachine!
 
     init(speed: CGFloat, fittingWidth: CGFloat, entityManager: EntityManager) {
@@ -22,7 +22,7 @@ class Tomato: GKEntity {
 }
 
 // MARK: Initialization
-private extension Tomato {
+private extension TomatoEntity {
     func initComponents(speed: CGFloat, fittingWidth: CGFloat, _ entityManager: EntityManager) {
         let texture = SKTexture(imageNamed: ImageConstants.TomatoImageName)
         let spriteComponent = SpriteComponent(texture: texture)

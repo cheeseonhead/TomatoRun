@@ -7,7 +7,7 @@ import SpriteKit
 import GameplayKit
 
 class EntityManager {
-    weak var scene: SKScene?
+    unowned let scene: SKScene
 
     var entities = Set<GKEntity>()
     var toRemove = Set<GKEntity>()
@@ -44,7 +44,7 @@ extension EntityManager {
         entities.insert(entity)
 
         if let spriteNode = entity.component(ofType: SpriteComponent.self)?.node {
-            scene?.addChild(spriteNode)
+            scene.addChild(spriteNode)
         }
 
         for componentSystem in componentSystems {

@@ -6,7 +6,7 @@
 import GameplayKit
 import SpriteKit
 
-class WoodenBoard: GKEntity {
+class WoodenBoardEntity: GKEntity {
     let intersectionAnchors = [CGPoint(x: 0, y: 0.5), CGPoint(x: 1, y: 0.5)]
 
     init(fittingWidth: CGFloat) {
