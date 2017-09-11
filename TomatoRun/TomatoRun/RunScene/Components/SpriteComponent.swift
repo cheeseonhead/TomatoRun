@@ -12,12 +12,14 @@ class SpriteComponent: GKComponent {
     init(texture: SKTexture) {
         node = SKSpriteNode(texture: texture, color: .white, size: texture.size())
         super.init()
-
-        node.entity = entity
     }
 
     required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    override func didAddToEntity() {
+        node.entity = entity
     }
 }
 
