@@ -13,6 +13,10 @@ private let levelFileVersion = "v1"
 class SegmentFileParser {
     let decoder = JSONDecoder()
 
+    func getSegment(number: Int) -> Segment? {
+        return parseFile(named: "level\(number)")
+    }
+
     func parseFile(named name: String) -> Segment? {
         if let url = url(forFile: name),
             let jsonData = try? Data(contentsOf: url),
