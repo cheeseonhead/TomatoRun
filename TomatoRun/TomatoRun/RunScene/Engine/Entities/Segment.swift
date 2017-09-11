@@ -6,12 +6,14 @@
 //  Copyright © 2017 okAy Studios. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct Segment: Codable {
     var woodenBoards: [WoodenBoard]
+    var length: CGFloat?
 
     enum CodingKeys: String, CodingKey {
         case woodenBoards = "wooden_boards"
+        case length
     }
 }
