@@ -46,7 +46,7 @@ class RunScene: SKScene {
             guard let entity = node.entity,
                 let touchComponent = entity.component(ofType: TouchComponent.self) else { continue }
 
-            touchComponent.touched = true
+            touchComponent.handler()
         }
     }
 

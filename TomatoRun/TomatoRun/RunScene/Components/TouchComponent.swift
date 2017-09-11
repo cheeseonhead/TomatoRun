@@ -9,9 +9,15 @@
 import GameplayKit
 
 class TouchComponent: GKComponent {
-    var touched: Bool = false
+    let handler: () -> Void
 
-    override func update(deltaTime _: TimeInterval) {
-        touched = false
+    init(handler: @escaping () -> Void) {
+        self.handler = handler
+
+        super.init()
+    }
+
+    required init?(coder _: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
