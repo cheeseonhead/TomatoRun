@@ -22,11 +22,23 @@ extension SKCameraNode {
 
 private extension SKCameraNode {
     func renderSize() -> CGSize? {
-        guard let scene = scene else { return nil }
+        guard let scene = scene, let viewSize = scene.view?.frame.size else { return nil }
 
-        let height = yScale * scene.size.height
-        let width = xScale * scene.size.width
+        switch scene.scaleMode {
+        case .aspectFill:
+            // Find width or height is the fitting one
+            let sceneRatio = scene.size.height / scene.size.width
+            let viewRatio = viewSize.height / viewSize.width
 
-        return CGSize(width: width, height: height)
+            if sceneRatio >= viewRatio {
+                let height = viewRatio * scene.size.width
+                return CGSize(width: scene.size.width, height: height)
+            } else {
+                let width = viewSize.width / viewSize.height * scene.size.height
+                return CGSize(width: width, height: scene.size.height)
+            }
+        default:
+            return nil
+        }
     }
 }
