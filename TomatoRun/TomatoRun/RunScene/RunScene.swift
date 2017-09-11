@@ -46,6 +46,7 @@ class RunScene: SKScene {
 
         entityManager.update(deltaTime)
         positionCamera()
+        segmentRenderer.update(currentTime)
     }
 }
 

@@ -16,4 +16,7 @@ class SegmentRenderer {
     init(scene: RunScene) {
         self.scene = scene
     }
+
+    func update(_: TimeInterval) {
+    }
 }
