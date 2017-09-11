@@ -7,7 +7,7 @@ import SpriteKit
 import GameplayKit
 
 class EntityManager {
-    weak var scene: SKScene?
+    unowned let scene: SKScene
 
     var entities = Set<GKEntity>()
     var toRemove = Set<GKEntity>()
