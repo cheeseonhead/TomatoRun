@@ -6,9 +6,10 @@
 //  Copyright © 2017 okAy Studios. All rights reserved.
 //
 
-import Foundation
+import SpriteKit
 
 enum RunSceneConstants {
     static let NumOfRopes = 4
-    //    static let
+    static let TomatoWidth = CGFloat(150)
+    static let TomatoBottomPadding = TomatoWidth
 }

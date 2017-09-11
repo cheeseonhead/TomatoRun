@@ -11,12 +11,12 @@ import GameplayKit
 
 class RunScene: SKScene {
     let numberOfRopes = RunSceneConstants.NumOfRopes
-    let tomatoBottomPadding = CGFloat(150)
 
     var entities = [GKEntity]()
     var graphs = [String: GKGraph]()
 
     var entityManager: EntityManager!
+    var tomatoBottomPadding: CGFloat!
 
     var cameraNode: SKCameraNode!
     var tomato: Tomato!
@@ -27,12 +27,13 @@ class RunScene: SKScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
 
+        tomatoBottomPadding = RunSceneConstants.TomatoBottomPadding
         entityManager = EntityManager(scene: self)
 
         addRopes()
         addCamera()
         addTomato()
-        addBoards()
+        initialAddBoards()
     }
 
     override func update(_ currentTime: TimeInterval) {
@@ -78,7 +79,7 @@ private extension RunScene {
         //        let ropeNumber = Int.random(min: 0, max: numberOfRopes)
         let ropeNumber = 2
 
-        tomato = Tomato(speed: 300, fittingWidth: 150, entityManager: entityManager)
+        tomato = Tomato(speed: 300, fittingWidth: RunSceneConstants.TomatoWidth, entityManager: entityManager)
         if let spriteComponent = tomato.component(ofType: SpriteComponent.self) {
             let xPos = ropeXPos(forIndex: ropeNumber)
             spriteComponent.node.position = CGPoint(x: xPos, y: tomatoBottomPadding)
@@ -88,15 +89,16 @@ private extension RunScene {
         entityManager.add(tomato)
     }
 
-    func addBoards() {
-        let height: [CGFloat] = [200, 450, 2000, 250, 300]
-        let index = [0, 1, 1, 2, 2]
+    func addBoards(atHeights heights: [CGFloat], ropeIndex: [Int]) {
+        guard heights.count == ropeIndex.count else { return }
 
-        for i in 0 ..< 5 {
+        for i in 0 ..< heights.count {
             let board = WoodenBoard(fittingWidth: ropeSpacing())
 
-            let xPos = ropeXPos(forIndex: index[i])
-            board.setPosition(CGPoint(x: xPos, y: height[i]))
+            guard ropeIndex[i] < numberOfRopes else { continue }
+
+            let xPos = ropeXPos(forIndex: ropeIndex[i])
+            board.setPosition(CGPoint(x: xPos, y: heights[i]))
 
             entityManager.add(board)
         }
@@ -114,5 +116,15 @@ private extension RunScene {
         let leftSpacing = spacing / 2
 
         return leftSpacing + spacing * CGFloat(index)
+    }
+}
+
+// MARK: Temperary Helpers
+private extension RunScene {
+    func initialAddBoards() {
+        let height: [CGFloat] = [200, 450, 2000, 250, 300]
+        let index = [0, 1, 1, 2, 2]
+
+        addBoards(atHeights: height, ropeIndex: index)
     }
 }
