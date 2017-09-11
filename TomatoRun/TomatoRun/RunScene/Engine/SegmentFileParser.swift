@@ -1,5 +1,5 @@
 //
-//  LevelFileParser.swift
+//  SegmentFileParser.swift
 //  TomatoRun
 //
 //  Created by Cheese Onhead on 9/10/17.
@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class SegmentFileParser {
+    //    func parseFile(named: String) -> Level {
+    //
+    //    }
+}
