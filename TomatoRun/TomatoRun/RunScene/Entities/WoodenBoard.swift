@@ -6,15 +6,13 @@
 import GameplayKit
 import SpriteKit
 
-class WoodenBoard: GKEntity
-{
+class WoodenBoard: GKEntity {
     let intersectionAnchors = [CGPoint(x: 0, y: 0.5), CGPoint(x: 1, y: 0.5)]
-    
-    init(fittingWidth: CGFloat)
-    {
+
+    init(fittingWidth: CGFloat) {
         super.init()
 
-        let texture = SKTexture(imageNamed: "WoodenBoard")
+        let texture = SKTexture(imageNamed: ImageConstants.WoodenBoardImageName)
 
         let spriteComponent = SpriteComponent(texture: texture)
 
@@ -22,15 +20,14 @@ class WoodenBoard: GKEntity
         spriteComponent.node.scale(toWidth: fittingWidth)
 
         addComponent(spriteComponent)
-        addComponent(IntersectionComponent(anchors:intersectionAnchors))
+        addComponent(IntersectionComponent(anchors: intersectionAnchors))
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func setPosition(_ position: CGPoint)
-    {
+    func setPosition(_ position: CGPoint) {
         guard let spriteNode = component(ofType: SpriteComponent.self)?.node else {
             return
         }
