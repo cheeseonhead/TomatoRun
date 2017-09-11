@@ -37,6 +37,19 @@ class RunScene: SKScene {
         addTomato()
     }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with _: UIEvent?) {
+        guard let touch = touches.first else { return }
+
+        let touchedNodes = nodes(at: touch.location(in: self))
+
+        for node in touchedNodes {
+            guard let entity = node.entity,
+                let touchComponent = entity.component(ofType: TouchComponent.self) else { continue }
+
+            touchComponent.touched = true
+        }
+    }
+
     override func update(_ currentTime: TimeInterval) {
         let deltaTime = currentTime - lastUpdateTimeInterval
         lastUpdateTimeInterval = currentTime
