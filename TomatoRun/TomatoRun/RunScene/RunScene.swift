@@ -49,8 +49,8 @@ class RunScene: SKScene {
 
 extension RunScene {
     func positionCamera() {
-        guard let tomatoY = tomato.getPosition()?.y else { return }
-        let screenHeight = size.height
+        guard let tomatoY = tomato.getPosition()?.y,
+            let screenHeight = cameraNode.renderSize()?.height else { return }
 
         let finalYPos = tomatoY + 0.5 * screenHeight - tomatoBottomPadding
         cameraNode.position.y = finalYPos
