@@ -17,6 +17,7 @@ class RunScene: SKScene {
 
     var entityManager: EntityManager!
     var tomatoBottomPadding: CGFloat!
+    var segmentManager: SegmentManager!
 
     var cameraNode: SKCameraNode!
     var tomato: TomatoEntity!
@@ -28,6 +29,7 @@ class RunScene: SKScene {
         super.didMove(to: view)
 
         tomatoBottomPadding = RunSceneConstants.TomatoBottomPadding
+        segmentManager = SegmentManager()
         entityManager = EntityManager(scene: self)
 
         addRopes()

@@ -10,7 +10,7 @@ import UIKit
 
 struct Segment: Codable {
     var woodenBoards: [WoodenBoard]
-    var length: CGFloat?
+    var length: CGFloat
 
     enum CodingKeys: String, CodingKey {
         case woodenBoards = "wooden_boards"

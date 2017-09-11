@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+let numberOfSegments = 1
+
+class SegmentManager {
+    let segmentFileParser = SegmentFileParser()
+
+    func getNextSegment() -> Segment? {
+        return segmentFileParser.getSegment(number: 1)
+    }
+}
