@@ -1,5 +1,5 @@
 //
-//  Segment.swift
+//  WoodenBoard.swift
 //  TomatoRun
 //
 //  Created by Cheese Onhead on 9/10/17.
@@ -7,7 +7,3 @@
 //
 
 import Foundation
-
-class Segment {
-    //    var woodenBoards
-}
