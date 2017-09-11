@@ -15,7 +15,8 @@ class EntityManager {
         let moveSystem = GKComponentSystem(componentClass: MoveComponent.self)
         let continuousSpriteSystem = GKComponentSystem(componentClass: ContinuousSpriteComponent.self)
         let intersectionSystem = GKComponentSystem(componentClass: IntersectionComponent.self)
-        return [intersectionSystem, moveSystem, continuousSpriteSystem]
+        let touchSystem = GKComponentSystem(componentClass: TouchComponent.self)
+        return [intersectionSystem, moveSystem, continuousSpriteSystem, touchSystem]
     }()
 
     init(scene: SKScene) {

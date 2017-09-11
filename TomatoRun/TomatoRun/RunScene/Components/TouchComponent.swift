@@ -10,4 +10,8 @@ import GameplayKit
 
 class TouchComponent: GKComponent {
     var touched: Bool = false
+
+    override func update(deltaTime _: TimeInterval) {
+        touched = false
+    }
 }
