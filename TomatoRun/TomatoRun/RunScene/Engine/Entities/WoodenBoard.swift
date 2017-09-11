@@ -6,4 +6,9 @@
 //  Copyright © 2017 okAy Studios. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+struct WoodenBoard {
+    let height: CGFloat
+    let rope: Int
+}
