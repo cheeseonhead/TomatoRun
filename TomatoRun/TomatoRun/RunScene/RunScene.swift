@@ -19,7 +19,7 @@ class RunScene: SKScene {
     var tomatoBottomPadding: CGFloat!
 
     var cameraNode: SKCameraNode!
-    var tomato: Tomato!
+    var tomato: TomatoEntity!
 
     // Update time
     var lastUpdateTimeInterval: TimeInterval = 0
@@ -61,7 +61,7 @@ private extension RunScene {
         for i in 0 ..< numberOfRopes {
             let xPos = ropeXPos(forIndex: i)
 
-            let rope = Rope(position: CGPoint(x: xPos, y: 0), scene: self)
+            let rope = RopeEntity(position: CGPoint(x: xPos, y: 0), scene: self)
             entityManager.add(rope)
         }
     }
@@ -79,7 +79,7 @@ private extension RunScene {
         //        let ropeNumber = Int.random(min: 0, max: numberOfRopes)
         let ropeNumber = 2
 
-        tomato = Tomato(speed: 300, fittingWidth: RunSceneConstants.TomatoWidth, entityManager: entityManager)
+        tomato = TomatoEntity(speed: 300, fittingWidth: RunSceneConstants.TomatoWidth, entityManager: entityManager)
         if let spriteComponent = tomato.component(ofType: SpriteComponent.self) {
             let xPos = ropeXPos(forIndex: ropeNumber)
             spriteComponent.node.position = CGPoint(x: xPos, y: tomatoBottomPadding)
@@ -93,7 +93,7 @@ private extension RunScene {
         guard heights.count == ropeIndex.count else { return }
 
         for i in 0 ..< heights.count {
-            let board = WoodenBoard(fittingWidth: ropeSpacing())
+            let board = WoodenBoardEntity(fittingWidth: ropeSpacing())
 
             guard ropeIndex[i] < numberOfRopes else { continue }
 
