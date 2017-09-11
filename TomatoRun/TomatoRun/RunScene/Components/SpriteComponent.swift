@@ -19,6 +19,7 @@ class SpriteComponent: GKComponent {
     }
 
     override func didAddToEntity() {
+        super.didAddToEntity()
         node.entity = entity
     }
 }
