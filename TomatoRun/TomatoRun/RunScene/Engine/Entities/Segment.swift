@@ -8,6 +8,10 @@
 
 import Foundation
 
-struct Segment {
+struct Segment: Codable {
     var woodenBoards: [WoodenBoard]
+
+    enum CodingKeys: String, CodingKey {
+        case woodenBoards = "wooden_boards"
+    }
 }
