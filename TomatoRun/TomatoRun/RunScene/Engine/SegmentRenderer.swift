@@ -9,9 +9,11 @@
 import SpriteKit
 
 class SegmentRenderer {
-    let scene: SKScene
+    let segmentManager = SegmentManager()
 
-    init(scene: SKScene) {
+    unowned let scene: RunScene
+
+    init(scene: RunScene) {
         self.scene = scene
     }
 }
