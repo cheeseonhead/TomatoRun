@@ -110,8 +110,12 @@ private extension MoveComponent {
             for intersection in intersectionComponent.intersections {
                 let roundedIntersectX = intersection.x.rounded(.toNearestOrAwayFromZero)
                 let roundedPositionX = curPosition.x.rounded(.toNearestOrAwayFromZero)
-                if roundedIntersectX == roundedPositionX, intersection.y > curPosition.y {
-                    if bestPoint == nil || intersection.y < bestPoint!.y {
+
+                let roundedIntersectY = intersection.y.rounded(.toNearestOrAwayFromZero)
+                let roundedPositionY = curPosition.y.rounded(.toNearestOrAwayFromZero)
+
+                if roundedIntersectX == roundedPositionX, roundedIntersectY >= roundedPositionY {
+                    if bestPoint == nil || roundedIntersectY < bestPoint!.y {
                         bestPoint = intersection
                         bestIntersectionComponent = intersectionComponent
                     }
