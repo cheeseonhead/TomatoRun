@@ -6,7 +6,7 @@
         "height": 450,
         "rope": 1
     }, {
-        "height": 2000,
+        "height": 330,
         "rope": 1
     }, {
         "height": 250,
@@ -15,5 +15,5 @@
         "height": 300,
         "rope": 2
     }],
-    "length": 2100
+    "length": 500
 }
