@@ -18,27 +18,31 @@ extension SKCameraNode {
 
         return CGRect(x: xPos, y: yPos, width: renderSize.width, height: renderSize.height)
     }
-}
 
-private extension SKCameraNode {
     func renderSize() -> CGSize? {
         guard let scene = scene, let viewSize = scene.view?.frame.size else { return nil }
 
         switch scene.scaleMode {
         case .aspectFill:
-            // Find width or height is the fitting one
-            let sceneRatio = scene.size.height / scene.size.width
-            let viewRatio = viewSize.height / viewSize.width
-
-            if sceneRatio >= viewRatio {
-                let height = viewRatio * scene.size.width
-                return CGSize(width: scene.size.width, height: height)
-            } else {
-                let width = viewSize.width / viewSize.height * scene.size.height
-                return CGSize(width: width, height: scene.size.height)
-            }
+            return aspectFillSize(scene, viewSize)
         default:
             return nil
+        }
+    }
+}
+
+private extension SKCameraNode {
+    func aspectFillSize(_ scene: SKScene, _ viewSize: CGSize) -> CGSize {
+        // Find width or height is the fitting one
+        let sceneRatio = scene.size.height / scene.size.width
+        let viewRatio = viewSize.height / viewSize.width
+
+        if sceneRatio >= viewRatio {
+            let height = viewRatio * scene.size.width
+            return CGSize(width: scene.size.width, height: height)
+        } else {
+            let width = viewSize.width / viewSize.height * scene.size.height
+            return CGSize(width: width, height: scene.size.height)
         }
     }
 }
