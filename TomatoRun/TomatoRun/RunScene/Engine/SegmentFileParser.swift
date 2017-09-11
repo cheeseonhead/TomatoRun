@@ -8,8 +8,29 @@
 
 import Foundation
 
+private let levelFileVersion = "v1"
+
 class SegmentFileParser {
-    //    func parseFile(named: String) -> Level {
-    //
-    //    }
+    let decoder = JSONDecoder()
+
+    func parseFile(named name: String) -> Segment? {
+        if let url = url(forFile: name),
+            let jsonData = try? Data(contentsOf: url),
+            let segment = try? decoder.decode(Segment.self, from: jsonData) {
+            return segment
+        }
+
+        return nil
+    }
+}
+
+// MARK: Helpers
+extension SegmentFileParser {
+    func url(forFile fileName: String) -> URL? {
+        if let urlString = Bundle.main.path(forResource: "\(fileName)_\(levelFileVersion)", ofType: "json") {
+            return URL(fileURLWithPath: urlString)
+        }
+
+        return nil
+    }
 }
