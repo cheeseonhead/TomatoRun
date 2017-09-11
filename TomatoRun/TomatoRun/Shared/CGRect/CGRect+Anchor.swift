@@ -23,7 +23,7 @@ extension CGRect {
         return CGPoint(x: anchorX, y: anchorY)
     }
 
-    func position(forType type: PointType) {
+    func position(forType type: PointType) -> CGPoint {
         switch type {
         case .topRight:
             return position(forAnchor: CGPoint(x: 1, y: 1))
