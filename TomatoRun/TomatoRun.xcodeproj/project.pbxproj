@@ -32,6 +32,7 @@
 		3400D9931F6604B200ECD456 /* IntersectionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D98C1F6604B200ECD456 /* IntersectionComponent.swift */; };
 		3400D9941F6604B200ECD456 /* MoveComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D98D1F6604B200ECD456 /* MoveComponent.swift */; };
 		3400D9991F6609CD00ECD456 /* RunSceneConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9981F6609CD00ECD456 /* RunSceneConstants.swift */; };
+		3400D99D1F66178500ECD456 /* LevelFileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D99C1F66178500ECD456 /* LevelFileParser.swift */; };
 		34C2DB691F633C890027EB1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB681F633C890027EB1F /* AppDelegate.swift */; };
 		34C2DB6B1F633C890027EB1F /* RunScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB6A1F633C890027EB1F /* RunScene.sks */; };
 		34C2DB6D1F633C890027EB1F /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB6C1F633C890027EB1F /* Actions.sks */; };
@@ -77,6 +78,7 @@
 		3400D98C1F6604B200ECD456 /* IntersectionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntersectionComponent.swift; sourceTree = "<group>"; };
 		3400D98D1F6604B200ECD456 /* MoveComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveComponent.swift; sourceTree = "<group>"; };
 		3400D9981F6609CD00ECD456 /* RunSceneConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunSceneConstants.swift; sourceTree = "<group>"; };
+		3400D99C1F66178500ECD456 /* LevelFileParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelFileParser.swift; sourceTree = "<group>"; };
 		34C2DB651F633C890027EB1F /* TomatoRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TomatoRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C2DB681F633C890027EB1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34C2DB6A1F633C890027EB1F /* RunScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RunScene.sks; sourceTree = "<group>"; };
@@ -188,6 +190,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		3400D99B1F66143100ECD456 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				3400D99C1F66178500ECD456 /* LevelFileParser.swift */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
 		34C2DB5C1F633C890027EB1F = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +255,7 @@
 		34C2DB9C1F633D450027EB1F /* RunScene */ = {
 			isa = PBXGroup;
 			children = (
+				3400D99B1F66143100ECD456 /* Engine */,
 				3400D9961F6604DA00ECD456 /* Components */,
 				34C2DBAC1F633F880027EB1F /* Entities */,
 				3400D9611F65FF2800ECD456 /* StateMachine */,
@@ -457,6 +468,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3400D99D1F66178500ECD456 /* LevelFileParser.swift in Sources */,
 				3400D9741F65FF5600ECD456 /* Array+Swap.swift in Sources */,
 				3400D9781F65FF5600ECD456 /* SKSpriteNode+Scale.swift in Sources */,
 				3400D9941F6604B200ECD456 /* MoveComponent.swift in Sources */,
