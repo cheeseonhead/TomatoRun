@@ -61,7 +61,8 @@ class MoveComponent: GKComponent {
             }
         } else {
             if bestPoint != curDestination {
-                assert(stateMachine.enter(TravelToStartState.self))
+                guard stateMachine.enter(TravelToStartState.self) else { return }
+
                 curDestination = bestPoint
 
                 curPathToTravel = bestIntersectionComponent!.pathToTravel(withStarting: curDestination!)
@@ -111,11 +112,8 @@ private extension MoveComponent {
                 let roundedIntersectX = intersection.x.rounded(.toNearestOrAwayFromZero)
                 let roundedPositionX = curPosition.x.rounded(.toNearestOrAwayFromZero)
 
-                let roundedIntersectY = intersection.y.rounded(.toNearestOrAwayFromZero)
-                let roundedPositionY = curPosition.y.rounded(.toNearestOrAwayFromZero)
-
-                if roundedIntersectX == roundedPositionX, roundedIntersectY > roundedPositionY {
-                    if bestPoint == nil || roundedIntersectY < bestPoint!.y {
+                if roundedIntersectX == roundedPositionX, intersection.y > curPosition.y {
+                    if bestPoint == nil || intersection.y < bestPoint!.y {
                         bestPoint = intersection
                         bestIntersectionComponent = intersectionComponent
                     }
