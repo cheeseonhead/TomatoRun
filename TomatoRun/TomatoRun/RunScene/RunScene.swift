@@ -17,7 +17,7 @@ class RunScene: SKScene {
 
     var entityManager: EntityManager!
     var tomatoBottomPadding: CGFloat!
-    var segmentManager: SegmentManager!
+    var segmentRenderer: SegmentRenderer!
 
     var cameraNode: SKCameraNode!
     var tomato: TomatoEntity!
@@ -29,13 +29,15 @@ class RunScene: SKScene {
         super.didMove(to: view)
 
         tomatoBottomPadding = RunSceneConstants.TomatoBottomPadding
-        segmentManager = SegmentManager()
         entityManager = EntityManager(scene: self)
+        segmentRenderer = SegmentRenderer(scene: self)
 
         addRopes()
         addCamera()
         addTomato()
         initialAddBoards()
+
+        temp()
     }
 
     override func update(_ currentTime: TimeInterval) {
@@ -128,5 +130,8 @@ private extension RunScene {
         let index = [0, 1, 1, 2, 2]
 
         addBoards(atHeights: height, ropeIndex: index)
+    }
+
+    func temp() {
     }
 }
