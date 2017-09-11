@@ -8,6 +8,6 @@
 
 import Foundation
 
-class Segment {
-    //    var woodenBoards
+struct Segment {
+    var woodenBoards: [WoodenBoard]
 }
