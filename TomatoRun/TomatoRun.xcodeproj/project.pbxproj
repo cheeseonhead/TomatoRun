@@ -181,6 +181,13 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		3400D99A1F660F4300ECD456 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		34C2DB5C1F633C890027EB1F = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +213,7 @@
 			children = (
 				34C2DB9C1F633D450027EB1F /* RunScene */,
 				34C2DB9D1F633E8D0027EB1F /* Shared */,
+				3400D99A1F660F4300ECD456 /* Resources */,
 				34C2DB681F633C890027EB1F /* AppDelegate.swift */,
 				34C2DB6C1F633C890027EB1F /* Actions.sks */,
 				34C2DB721F633C890027EB1F /* Main.storyboard */,
