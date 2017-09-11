@@ -35,9 +35,6 @@ class RunScene: SKScene {
         addRopes()
         addCamera()
         addTomato()
-        initialAddBoards()
-
-        temp()
     }
 
     override func update(_ currentTime: TimeInterval) {
@@ -61,6 +58,23 @@ extension RunScene {
 }
 
 // MARK: Adding Entities
+extension RunScene {
+    func addBoards(atHeights heights: [CGFloat], ropeIndex: [Int]) {
+        guard heights.count == ropeIndex.count else { return }
+
+        for i in 0 ..< heights.count {
+            let board = WoodenBoardEntity(fittingWidth: ropeSpacing())
+
+            guard ropeIndex[i] < numberOfRopes else { continue }
+
+            let xPos = ropeXPos(forIndex: ropeIndex[i])
+            board.setPosition(CGPoint(x: xPos, y: heights[i]))
+
+            entityManager.add(board)
+        }
+    }
+}
+
 private extension RunScene {
     func addRopes() {
         for i in 0 ..< numberOfRopes {
@@ -81,8 +95,7 @@ private extension RunScene {
     }
 
     func addTomato() {
-        //        let ropeNumber = Int.random(min: 0, max: numberOfRopes)
-        let ropeNumber = 2
+        let ropeNumber = Int.random(min: 0, max: numberOfRopes)
 
         tomato = TomatoEntity(speed: 300, fittingWidth: RunSceneConstants.TomatoWidth, entityManager: entityManager)
         if let spriteComponent = tomato.component(ofType: SpriteComponent.self) {
@@ -92,21 +105,6 @@ private extension RunScene {
         }
 
         entityManager.add(tomato)
-    }
-
-    func addBoards(atHeights heights: [CGFloat], ropeIndex: [Int]) {
-        guard heights.count == ropeIndex.count else { return }
-
-        for i in 0 ..< heights.count {
-            let board = WoodenBoardEntity(fittingWidth: ropeSpacing())
-
-            guard ropeIndex[i] < numberOfRopes else { continue }
-
-            let xPos = ropeXPos(forIndex: ropeIndex[i])
-            board.setPosition(CGPoint(x: xPos, y: heights[i]))
-
-            entityManager.add(board)
-        }
     }
 }
 
@@ -121,18 +119,5 @@ private extension RunScene {
         let leftSpacing = spacing / 2
 
         return leftSpacing + spacing * CGFloat(index)
-    }
-}
-
-// MARK: Temperary Helpers
-private extension RunScene {
-    func initialAddBoards() {
-        let height: [CGFloat] = [200, 450, 2000, 250, 300]
-        let index = [0, 1, 1, 2, 2]
-
-        addBoards(atHeights: height, ropeIndex: index)
-    }
-
-    func temp() {
     }
 }
