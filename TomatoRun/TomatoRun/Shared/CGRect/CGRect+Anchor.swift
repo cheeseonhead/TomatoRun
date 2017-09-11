@@ -8,16 +8,25 @@
 
 import UIKit
 
-extension CGRect
-{
-    func position(forAnchor anchor: CGPoint) -> CGPoint
-    {
+enum PointType {
+    case topRight
+}
+
+extension CGRect {
+    func position(forAnchor anchor: CGPoint) -> CGPoint {
         let xOffset = anchor.x * size.width
         let yOffset = anchor.y * size.height
-        
+
         let anchorX = origin.x + xOffset
         let anchorY = origin.y + yOffset
-        
+
         return CGPoint(x: anchorX, y: anchorY)
+    }
+
+    func position(forType type: PointType) {
+        switch type {
+        case .topRight:
+            return position(forAnchor: CGPoint(x: 1, y: 1))
+        }
     }
 }
