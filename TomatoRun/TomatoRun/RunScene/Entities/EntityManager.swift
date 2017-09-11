@@ -44,7 +44,7 @@ extension EntityManager {
         entities.insert(entity)
 
         if let spriteNode = entity.component(ofType: SpriteComponent.self)?.node {
-            scene?.addChild(spriteNode)
+            scene.addChild(spriteNode)
         }
 
         for componentSystem in componentSystems {
