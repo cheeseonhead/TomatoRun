@@ -10,7 +10,7 @@ import SpriteKit
 
 extension SKCameraNode {
     // Frame puts the origin on the bottom left
-    func renderFrame() -> CGRect? {
+    func renderedFrame() -> CGRect? {
         guard let renderSize = renderSize() else { return nil }
 
         let xPos = position.x - renderSize.width / 2
