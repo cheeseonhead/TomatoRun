@@ -9,7 +9,7 @@ import SpriteKit
 class WoodenBoardEntity: GKEntity {
     let intersectionAnchors = [CGPoint(x: 0, y: 0.5), CGPoint(x: 1, y: 0.5)]
 
-    init(fittingWidth: CGFloat) {
+    init(fittingWidth: CGFloat, entityManager: EntityManager) {
         super.init()
 
         let texture = SKTexture(imageNamed: ImageConstants.WoodenBoardImageName)
@@ -21,6 +21,9 @@ class WoodenBoardEntity: GKEntity {
 
         addComponent(spriteComponent)
         addComponent(IntersectionComponent(anchors: intersectionAnchors))
+        addComponent(TouchComponent(handler: { [unowned self] in
+            entityManager.remove(self)
+        }))
     }
 
     required init?(coder _: NSCoder) {

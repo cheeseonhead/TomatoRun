@@ -76,7 +76,7 @@ extension RunScene {
         guard heights.count == ropeIndex.count else { return }
 
         for i in 0 ..< heights.count {
-            let board = WoodenBoardEntity(fittingWidth: ropeSpacing())
+            let board = WoodenBoardEntity(fittingWidth: ropeSpacing(), entityManager: entityManager)
 
             guard ropeIndex[i] < numberOfRopes else { continue }
 
