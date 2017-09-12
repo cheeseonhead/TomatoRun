@@ -11,6 +11,7 @@ import GameplayKit
 class TravelToStartState: GKState {
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
         return stateClass == IdleState.self ||
-            stateClass == IdleOnStartState.self
+            stateClass == IdleOnStartState.self ||
+            stateClass == TravelToStartState.self
     }
 }

@@ -37,6 +37,19 @@ class RunScene: SKScene {
         addTomato()
     }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with _: UIEvent?) {
+        guard let touch = touches.first else { return }
+
+        let touchedNodes = nodes(at: touch.location(in: self))
+
+        for node in touchedNodes {
+            guard let entity = node.entity,
+                let touchComponent = entity.component(ofType: TouchComponent.self) else { continue }
+
+            touchComponent.handler()
+        }
+    }
+
     override func update(_ currentTime: TimeInterval) {
         let deltaTime = currentTime - lastUpdateTimeInterval
         lastUpdateTimeInterval = currentTime
@@ -63,7 +76,7 @@ extension RunScene {
         guard heights.count == ropeIndex.count else { return }
 
         for i in 0 ..< heights.count {
-            let board = WoodenBoardEntity(fittingWidth: ropeSpacing())
+            let board = WoodenBoardEntity(fittingWidth: ropeSpacing(), entityManager: entityManager)
 
             guard ropeIndex[i] < numberOfRopes else { continue }
 
@@ -97,7 +110,7 @@ private extension RunScene {
     func addTomato() {
         let ropeNumber = Int.random(min: 0, max: numberOfRopes)
 
-        tomato = TomatoEntity(speed: 300, fittingWidth: RunSceneConstants.TomatoWidth, entityManager: entityManager)
+        tomato = TomatoEntity(speed: 100, fittingWidth: RunSceneConstants.TomatoWidth, entityManager: entityManager)
         if let spriteComponent = tomato.component(ofType: SpriteComponent.self) {
             let xPos = ropeXPos(forIndex: ropeNumber)
             spriteComponent.node.position = CGPoint(x: xPos, y: tomatoBottomPadding)

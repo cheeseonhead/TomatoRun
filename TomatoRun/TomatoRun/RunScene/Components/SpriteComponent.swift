@@ -17,6 +17,11 @@ class SpriteComponent: GKComponent {
     required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+    override func didAddToEntity() {
+        super.didAddToEntity()
+        node.entity = entity
+    }
 }
 
 extension SpriteComponent: Positional {
