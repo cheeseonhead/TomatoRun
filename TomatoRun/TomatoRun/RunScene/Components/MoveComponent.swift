@@ -11,7 +11,7 @@ class MoveComponent: GKComponent {
     let stateMachine: MoveStateMachine
 
     var curDestination: CGPoint?
-    var curPathToTravel: [CGPoint]?
+    var curIntersectionComponent: IntersectionComponent?
     var speed: CGFloat
 
     init(speed: CGFloat, stateMachine: MoveStateMachine, entityManager: EntityManager) {
@@ -36,7 +36,8 @@ class MoveComponent: GKComponent {
         let curPosition = node.position
         let intersectionComponents = entityManager.components(ofType: IntersectionComponent.self)
 
-        if stateMachine.currentState is IdleOnStartState, let path = curPathToTravel {
+        if stateMachine.currentState is IdleOnStartState, let startPoint = curDestination,
+            let path = curIntersectionComponent?.pathToTravel(withStarting: startPoint) {
             redirect(node: node, onPath: path, completion: {
                 assert(self.stateMachine.enter(IdleState.self))
             })
@@ -65,7 +66,7 @@ class MoveComponent: GKComponent {
 
                 curDestination = bestPoint
 
-                curPathToTravel = bestIntersectionComponent!.pathToTravel(withStarting: curDestination!)
+                curIntersectionComponent = bestIntersectionComponent
 
                 redirect(node: node, toPosition: curDestination!, completion: {
                     assert(self.stateMachine.enter(IdleOnStartState.self))
