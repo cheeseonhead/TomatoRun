@@ -12,4 +12,5 @@ enum ImageConstants {
     static let RopeImageName = "Rope"
     static let TomatoImageName = "Spaceship"
     static let WoodenBoardImageName = "WoodenBoard"
+    static let SpiderImageName = "Spider"
 }
