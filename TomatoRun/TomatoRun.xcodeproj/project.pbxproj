@@ -44,6 +44,7 @@
 		34898C281F67496D00135FA6 /* TouchComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34898C271F67496D00135FA6 /* TouchComponent.swift */; };
 		34BCB2171F69E59600F16629 /* ScoreComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BCB2161F69E59600F16629 /* ScoreComponent.swift */; };
 		34BCB21A1F69E8A400F16629 /* Double+Rounding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BCB2191F69E8A400F16629 /* Double+Rounding.swift */; };
+		34BCB21C1F69EAE400F16629 /* ScoreLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BCB21B1F69EAE400F16629 /* ScoreLabelNode.swift */; };
 		34C2DB691F633C890027EB1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB681F633C890027EB1F /* AppDelegate.swift */; };
 		34C2DB6B1F633C890027EB1F /* RunScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB6A1F633C890027EB1F /* RunScene.sks */; };
 		34C2DB6D1F633C890027EB1F /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB6C1F633C890027EB1F /* Actions.sks */; };
@@ -106,6 +107,7 @@
 		34898C271F67496D00135FA6 /* TouchComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchComponent.swift; sourceTree = "<group>"; };
 		34BCB2161F69E59600F16629 /* ScoreComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreComponent.swift; sourceTree = "<group>"; };
 		34BCB2191F69E8A400F16629 /* Double+Rounding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Rounding.swift"; sourceTree = "<group>"; };
+		34BCB21B1F69EAE400F16629 /* ScoreLabelNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreLabelNode.swift; sourceTree = "<group>"; };
 		34C2DB651F633C890027EB1F /* TomatoRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TomatoRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C2DB681F633C890027EB1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34C2DB6A1F633C890027EB1F /* RunScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RunScene.sks; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				34621D011F69AAD800D04A98 /* PauseNode.swift */,
+				34BCB21B1F69EAE400F16629 /* ScoreLabelNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -566,6 +569,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3400D99D1F66178500ECD456 /* SegmentFileParser.swift in Sources */,
+				34BCB21C1F69EAE400F16629 /* ScoreLabelNode.swift in Sources */,
 				34BCB2171F69E59600F16629 /* ScoreComponent.swift in Sources */,
 				3400D9A01F661B2700ECD456 /* Segment.swift in Sources */,
 				3400D9741F65FF5600ECD456 /* Array+Swap.swift in Sources */,
