@@ -51,7 +51,8 @@
 		34C2DB841F633C890027EB1F /* TomatoRunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB831F633C890027EB1F /* TomatoRunTests.swift */; };
 		34C2DB8F1F633C890027EB1F /* TomatoRunUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB8E1F633C890027EB1F /* TomatoRunUITests.swift */; };
 		34E6E98F1F698C9100D38AB6 /* SpiderEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6E98E1F698C9100D38AB6 /* SpiderEntity.swift */; };
-		34E6E9911F698D6F00D38AB6 /* GKEntity+Positional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6E9901F698D6F00D38AB6 /* GKEntity+Positional.swift */; };
+		34E6E9911F698D6F00D38AB6 /* GKEntity+Positionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6E9901F698D6F00D38AB6 /* GKEntity+Positionable.swift */; };
+		34E6E9931F698ED200D38AB6 /* Positionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6E9921F698ED200D38AB6 /* Positionable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,7 +123,8 @@
 		34C2DBAF1F633F990027EB1F /* TomatoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoEntity.swift; sourceTree = "<group>"; };
 		34C2DBB01F633F990027EB1F /* RopeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RopeEntity.swift; sourceTree = "<group>"; };
 		34E6E98E1F698C9100D38AB6 /* SpiderEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiderEntity.swift; sourceTree = "<group>"; };
-		34E6E9901F698D6F00D38AB6 /* GKEntity+Positional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GKEntity+Positional.swift"; sourceTree = "<group>"; };
+		34E6E9901F698D6F00D38AB6 /* GKEntity+Positionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GKEntity+Positionable.swift"; sourceTree = "<group>"; };
+		34E6E9921F698ED200D38AB6 /* Positionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Positionable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 			children = (
 				3400D98A1F6604B200ECD456 /* Framable.swift */,
 				3400D98B1F6604B200ECD456 /* Positional.swift */,
+				34E6E9921F698ED200D38AB6 /* Positionable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -334,7 +337,7 @@
 			isa = PBXGroup;
 			children = (
 				34C2DBA01F633EBF0027EB1F /* GKEntity+Sprite.swift */,
-				34E6E9901F698D6F00D38AB6 /* GKEntity+Positional.swift */,
+				34E6E9901F698D6F00D38AB6 /* GKEntity+Positionable.swift */,
 			);
 			path = GKEntity;
 			sourceTree = "<group>";
@@ -524,7 +527,7 @@
 				34E6E98F1F698C9100D38AB6 /* SpiderEntity.swift in Sources */,
 				3400D9991F6609CD00ECD456 /* RunSceneConstants.swift in Sources */,
 				3400D9461F65FE7E00ECD456 /* EntityManager.swift in Sources */,
-				34E6E9911F698D6F00D38AB6 /* GKEntity+Positional.swift in Sources */,
+				34E6E9911F698D6F00D38AB6 /* GKEntity+Positionable.swift in Sources */,
 				3400D9751F65FF5600ECD456 /* CGRect+Anchor.swift in Sources */,
 				3400D9471F65FE8100ECD456 /* RopeEntity.swift in Sources */,
 				3400D96E1F65FF3000ECD456 /* MoveStateMachine.swift in Sources */,
@@ -546,6 +549,7 @@
 				3400D96B1F65FF3000ECD456 /* IdleState.swift in Sources */,
 				3400D9A81F663BBD00ECD456 /* SegmentRenderer.swift in Sources */,
 				3400D9771F65FF5600ECD456 /* Int+Random.swift in Sources */,
+				34E6E9931F698ED200D38AB6 /* Positionable.swift in Sources */,
 				3400D9A61F66383800ECD456 /* SegmentManager.swift in Sources */,
 				3400D9491F65FE8500ECD456 /* WoodenBoardEntity.swift in Sources */,
 				34C2DB691F633C890027EB1F /* AppDelegate.swift in Sources */,

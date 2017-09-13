@@ -1,5 +1,5 @@
 //
-//  GKEntity+Positional.swift
+//  GKEntity+Positionable.swift
 //  TomatoRun
 //
 //  Created by Jeffrey Wu on 2017-09-13.
@@ -8,12 +8,20 @@
 
 import GameplayKit
 
-extension Positional where Self: GKEntity {
+extension Positionable where Self: GKEntity {
     func setPosition(_ position: CGPoint) {
         guard let spriteNode = component(ofType: SpriteComponent.self)?.node else {
             return
         }
 
         spriteNode.position = position
+    }
+    
+    func getPosition() -> CGPoint {
+        guard let spriteNode = component(ofType: SpriteComponent.self)?.node else {
+            return CGPoint.zero
+        }
+        
+        return spriteNode.position
     }
 }
