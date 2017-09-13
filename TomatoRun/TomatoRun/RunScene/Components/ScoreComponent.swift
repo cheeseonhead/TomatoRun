@@ -8,6 +8,12 @@
 
 import GameplayKit
 
-class ScoreComponent {
+class ScoreComponent: GKComponent {
     var score = 0
+    var lastTimestamp: TimeInterval?
+
+    override func update(deltaTime seconds: TimeInterval) {
+        let addScore = (seconds * RunSceneConstants.ScoreRate).roundedToInt(.toNearestOrAwayFromZero)
+        score += addScore
+    }
 }
