@@ -11,6 +11,7 @@ class IntersectionComponent: GKComponent {
     var intersections = [CGPoint]()
     var entityPosition = CGPoint(x: 0, y: 0)
     var previousFrame: CGRect?
+    var canBreak: Bool = true
 
     init(anchors: [CGPoint]) {
         intersectAnchors = anchors
