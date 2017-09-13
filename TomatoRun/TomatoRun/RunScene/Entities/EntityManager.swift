@@ -29,6 +29,13 @@ class EntityManager {
         }
 
         for currentRemove in toRemove {
+            if let spriteNode = currentRemove.component(ofType: SpriteComponent.self)?.node {
+                spriteNode.removeFromParent()
+            }
+            if let component = currentRemove.component(ofType: ContinuousSpriteComponent.self) {
+                component.removeFromParent()
+            }
+
             entities.remove(currentRemove)
             for componentSystem in componentSystems {
                 componentSystem.removeComponent(foundIn: currentRemove)
@@ -54,13 +61,6 @@ extension EntityManager {
     }
 
     func remove(_ entity: GKEntity) {
-        if let spriteNode = entity.component(ofType: SpriteComponent.self)?.node {
-            spriteNode.removeFromParent()
-        }
-        if let component = entity.component(ofType: ContinuousSpriteComponent.self) {
-            component.removeFromParent()
-        }
-
         toRemove.insert(entity)
     }
 }
