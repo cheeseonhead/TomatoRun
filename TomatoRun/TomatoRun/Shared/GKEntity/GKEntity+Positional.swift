@@ -6,4 +6,14 @@
 //  Copyright © 2017 okAy Studios. All rights reserved.
 //
 
-import Foundation
+import GameplayKit
+
+extension Positional where Self: GKEntity {
+    func setPosition(_ position: CGPoint) {
+        guard let spriteNode = component(ofType: SpriteComponent.self)?.node else {
+            return
+        }
+
+        spriteNode.position = position
+    }
+}
