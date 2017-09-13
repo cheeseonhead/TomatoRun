@@ -16,7 +16,7 @@ enum RunSceneConstants {
     static let TomatoBottomPadding = TomatoWidth
 
     // MARK: Rates
-    static let ScoreRate = 100 // Score per time unit
+    static let ScoreRate = 1000.0 // Score per second
 
     enum ZPositions {
         static let UIZPosition = CGFloat(1100)
