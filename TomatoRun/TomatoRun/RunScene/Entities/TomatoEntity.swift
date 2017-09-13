@@ -32,6 +32,7 @@ private extension TomatoEntity {
 
         addComponent(spriteComponent)
         addComponent(MoveComponent(speed: speed, stateMachine: stateMachine, entityManager: entityManager))
+        addComponent(ScoreComponent())
     }
 
     func initStateMachine() {
