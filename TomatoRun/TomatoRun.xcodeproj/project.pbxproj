@@ -50,6 +50,8 @@
 		34C2DB791F633C890027EB1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB771F633C890027EB1F /* LaunchScreen.storyboard */; };
 		34C2DB841F633C890027EB1F /* TomatoRunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB831F633C890027EB1F /* TomatoRunTests.swift */; };
 		34C2DB8F1F633C890027EB1F /* TomatoRunUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB8E1F633C890027EB1F /* TomatoRunUITests.swift */; };
+		34E6E98F1F698C9100D38AB6 /* SpiderEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6E98E1F698C9100D38AB6 /* SpiderEntity.swift */; };
+		34E6E9911F698D6F00D38AB6 /* GKEntity+Positional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6E9901F698D6F00D38AB6 /* GKEntity+Positional.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +121,8 @@
 		34C2DBAE1F633F990027EB1F /* EntityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
 		34C2DBAF1F633F990027EB1F /* TomatoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoEntity.swift; sourceTree = "<group>"; };
 		34C2DBB01F633F990027EB1F /* RopeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RopeEntity.swift; sourceTree = "<group>"; };
+		34E6E98E1F698C9100D38AB6 /* SpiderEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiderEntity.swift; sourceTree = "<group>"; };
+		34E6E9901F698D6F00D38AB6 /* GKEntity+Positional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GKEntity+Positional.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				34C2DBA01F633EBF0027EB1F /* GKEntity+Sprite.swift */,
+				34E6E9901F698D6F00D38AB6 /* GKEntity+Positional.swift */,
 			);
 			path = GKEntity;
 			sourceTree = "<group>";
@@ -365,6 +370,7 @@
 				34C2DBB01F633F990027EB1F /* RopeEntity.swift */,
 				34C2DBAF1F633F990027EB1F /* TomatoEntity.swift */,
 				34C2DBAD1F633F980027EB1F /* WoodenBoardEntity.swift */,
+				34E6E98E1F698C9100D38AB6 /* SpiderEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -515,8 +521,10 @@
 				3400D96C1F65FF3000ECD456 /* TravelToStartState.swift in Sources */,
 				3400D9911F6604B200ECD456 /* Framable.swift in Sources */,
 				3400D96A1F65FF3000ECD456 /* IdleOnStartState.swift in Sources */,
+				34E6E98F1F698C9100D38AB6 /* SpiderEntity.swift in Sources */,
 				3400D9991F6609CD00ECD456 /* RunSceneConstants.swift in Sources */,
 				3400D9461F65FE7E00ECD456 /* EntityManager.swift in Sources */,
+				34E6E9911F698D6F00D38AB6 /* GKEntity+Positional.swift in Sources */,
 				3400D9751F65FF5600ECD456 /* CGRect+Anchor.swift in Sources */,
 				3400D9471F65FE8100ECD456 /* RopeEntity.swift in Sources */,
 				3400D96E1F65FF3000ECD456 /* MoveStateMachine.swift in Sources */,
