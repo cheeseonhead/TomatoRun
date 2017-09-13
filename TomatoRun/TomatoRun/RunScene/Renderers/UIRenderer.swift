@@ -14,4 +14,7 @@ class UIRenderer {
     init(scene: RunScene) {
         self.scene = scene
     }
+
+    func addUINodes() {
+    }
 }
