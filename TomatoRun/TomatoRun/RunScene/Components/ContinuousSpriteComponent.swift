@@ -11,16 +11,18 @@ class ContinuousSpriteComponent: GKComponent {
 
     let texture: SKTexture
     let position: CGPoint
+    let zPosition: CGFloat
 
     // MARK: States
     var visibleNodes = Set<SKSpriteNode>()
     var unusedNodes = Set<SKSpriteNode>()
     var nextRopeYPos: CGFloat
 
-    init(scene: SKScene, texture: SKTexture, position: CGPoint) {
+    init(scene: SKScene, texture: SKTexture, position: CGPoint, zPosition: CGFloat) {
         self.scene = scene
         self.texture = texture
         self.position = position
+        self.zPosition = zPosition
 
         nextRopeYPos = self.position.y
 
@@ -85,6 +87,7 @@ private extension ContinuousSpriteComponent {
     func createSprite() -> SKSpriteNode {
         let node = SKSpriteNode(texture: texture)
         node.anchorPoint = CGPoint(x: 0.5, y: 0)
+        node.zPosition = zPosition
 
         return node
     }

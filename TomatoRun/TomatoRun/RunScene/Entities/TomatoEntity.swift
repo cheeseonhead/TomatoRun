@@ -28,6 +28,7 @@ private extension TomatoEntity {
         let spriteComponent = SpriteComponent(texture: texture)
 
         spriteComponent.node.scale(toWidth: fittingWidth)
+        spriteComponent.node.zPosition = RunSceneConstants.ZPositions.Tomato
 
         addComponent(spriteComponent)
         addComponent(MoveComponent(speed: speed, stateMachine: stateMachine, entityManager: entityManager))

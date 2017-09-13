@@ -12,4 +12,11 @@ enum RunSceneConstants {
     static let NumOfRopes = 4
     static let TomatoWidth = CGFloat(150)
     static let TomatoBottomPadding = TomatoWidth
+
+    enum ZPositions {
+        static let Tomato = CGFloat(1000)
+        static let Boards = CGFloat(900)
+        static let Spiders = CGFloat(950)
+        static let Rope = CGFloat(500)
+    }
 }
