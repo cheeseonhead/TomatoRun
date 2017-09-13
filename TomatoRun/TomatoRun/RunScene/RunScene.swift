@@ -78,12 +78,17 @@ extension RunScene {
         for i in 0 ..< heights.count {
             let board = WoodenBoardEntity(fittingWidth: ropeSpacing(), entityManager: entityManager)
 
-            guard ropeIndex[i] < numberOfRopes else { continue }
+            addEntity(board, toRope: ropeIndex[i], atHeight: heights[i])
+        }
+    }
 
-            let xPos = ropeXPos(forIndex: ropeIndex[i])
-            board.setPosition(CGPoint(x: xPos, y: heights[i]))
+    func addSpiders(atHeights heights: [CGFloat], ropeIndex: [Int]) {
+        guard heights.count == ropeIndex.count else { return }
 
-            entityManager.add(board)
+        for i in 0 ..< heights.count {
+            let spider = SpiderEntity(fittingWidth: size.width * 0.1)
+
+            addEntity(spider, toRope: ropeIndex[i], atHeight: heights[i])
         }
     }
 }
@@ -111,11 +116,8 @@ private extension RunScene {
         let ropeNumber = Int.random(min: 0, max: numberOfRopes)
 
         tomato = TomatoEntity(speed: 100, fittingWidth: RunSceneConstants.TomatoWidth, entityManager: entityManager)
-        if let spriteComponent = tomato.component(ofType: SpriteComponent.self) {
-            let xPos = ropeXPos(forIndex: ropeNumber)
-            spriteComponent.node.position = CGPoint(x: xPos, y: tomatoBottomPadding)
-            spriteComponent.node.zPosition = 3
-        }
+        let xPos = ropeXPos(forIndex: ropeNumber)
+        tomato.setPosition(CGPoint(x: xPos, y: tomatoBottomPadding))
 
         entityManager.add(tomato)
     }
@@ -132,5 +134,14 @@ private extension RunScene {
         let leftSpacing = spacing / 2
 
         return leftSpacing + spacing * CGFloat(index)
+    }
+
+    func addEntity<T: GKEntity & Positionable>(_ entity: T, toRope rope: Int, atHeight height: CGFloat) {
+        guard rope < numberOfRopes else { return }
+
+        let xPos = ropeXPos(forIndex: rope)
+        entity.setPosition(CGPoint(x: xPos, y: height))
+
+        entityManager.add(entity)
     }
 }

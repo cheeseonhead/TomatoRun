@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct WoodenBoard: Codable {
+struct WoodenBoard: Ropable, Codable {
     let height: CGFloat
     let rope: Int
 }

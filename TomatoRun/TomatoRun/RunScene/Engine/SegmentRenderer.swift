@@ -33,15 +33,27 @@ class SegmentRenderer {
     }
 
     func addSegment(_ segment: Segment) {
+        var result = getHeightsAndRopes(segment.woodenBoards)
+        scene.addBoards(atHeights: result.heights, ropeIndex: result.ropes)
+
+        result = getHeightsAndRopes(segment.spiders)
+        scene.addSpiders(atHeights: result.heights, ropeIndex: result.ropes)
+
+        currentSegmentEnd += segment.length
+    }
+}
+
+// MARK: Adding entities
+private extension SegmentRenderer {
+    func getHeightsAndRopes(_ entities: [Ropable]) -> (heights: [CGFloat], ropes: [Int]) {
         var heights = [CGFloat]()
         var rope = [Int]()
 
-        for board in segment.woodenBoards {
-            heights.append(currentSegmentEnd + board.height)
-            rope.append(board.rope)
+        entities.forEach { entity in
+            heights.append(entity.height + currentSegmentEnd)
+            rope.append(entity.rope)
         }
 
-        scene.addBoards(atHeights: heights, ropeIndex: rope)
-        currentSegmentEnd += segment.length
+        return (heights, rope)
     }
 }

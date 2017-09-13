@@ -6,7 +6,7 @@
 import GameplayKit
 import SpriteKit
 
-class WoodenBoardEntity: GKEntity {
+class WoodenBoardEntity: GKEntity, Positionable {
     let intersectionAnchors = [CGPoint(x: 0, y: 0.5), CGPoint(x: 1, y: 0.5)]
 
     init(fittingWidth: CGFloat, entityManager: EntityManager) {
@@ -18,6 +18,7 @@ class WoodenBoardEntity: GKEntity {
 
         spriteComponent.node.anchorPoint = CGPoint(x: 0, y: 0.5)
         spriteComponent.node.scale(toWidth: fittingWidth)
+        spriteComponent.node.zPosition = RunSceneConstants.ZPositions.Boards
 
         addComponent(spriteComponent)
         addComponent(IntersectionComponent(anchors: intersectionAnchors))
@@ -31,13 +32,5 @@ class WoodenBoardEntity: GKEntity {
 
     required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-
-    func setPosition(_ position: CGPoint) {
-        guard let spriteNode = component(ofType: SpriteComponent.self)?.node else {
-            return
-        }
-
-        spriteNode.position = position
     }
 }

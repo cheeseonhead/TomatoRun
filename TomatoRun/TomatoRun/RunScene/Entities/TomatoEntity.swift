@@ -6,7 +6,7 @@
 import GameplayKit
 import SpriteKit
 
-class TomatoEntity: GKEntity {
+class TomatoEntity: GKEntity, Positionable {
     var stateMachine: MoveStateMachine!
 
     init(speed: CGFloat, fittingWidth: CGFloat, entityManager: EntityManager) {
@@ -28,6 +28,7 @@ private extension TomatoEntity {
         let spriteComponent = SpriteComponent(texture: texture)
 
         spriteComponent.node.scale(toWidth: fittingWidth)
+        spriteComponent.node.zPosition = RunSceneConstants.ZPositions.Tomato
 
         addComponent(spriteComponent)
         addComponent(MoveComponent(speed: speed, stateMachine: stateMachine, entityManager: entityManager))
