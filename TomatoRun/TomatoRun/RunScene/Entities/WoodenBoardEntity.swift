@@ -22,6 +22,9 @@ class WoodenBoardEntity: GKEntity {
         addComponent(spriteComponent)
         addComponent(IntersectionComponent(anchors: intersectionAnchors))
         addComponent(TouchComponent(handler: { [unowned self] in
+            guard let intersection = self.component(ofType: IntersectionComponent.self),
+                intersection.canBreak else { return }
+
             entityManager.remove(self)
         }))
     }
