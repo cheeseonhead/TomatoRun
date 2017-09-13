@@ -14,6 +14,7 @@ enum RunSceneConstants {
     static let TomatoBottomPadding = TomatoWidth
 
     enum ZPositions {
+        static let UIZPosition = CGFloat(1100)
         static let Tomato = CGFloat(1000)
         static let Boards = CGFloat(900)
         static let Spiders = CGFloat(950)
