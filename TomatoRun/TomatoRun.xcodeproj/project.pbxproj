@@ -53,6 +53,7 @@
 		34E6E98F1F698C9100D38AB6 /* SpiderEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6E98E1F698C9100D38AB6 /* SpiderEntity.swift */; };
 		34E6E9911F698D6F00D38AB6 /* GKEntity+Positionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6E9901F698D6F00D38AB6 /* GKEntity+Positionable.swift */; };
 		34E6E9931F698ED200D38AB6 /* Positionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6E9921F698ED200D38AB6 /* Positionable.swift */; };
+		34E6E9951F6990A600D38AB6 /* Spider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6E9941F6990A600D38AB6 /* Spider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		34E6E98E1F698C9100D38AB6 /* SpiderEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiderEntity.swift; sourceTree = "<group>"; };
 		34E6E9901F698D6F00D38AB6 /* GKEntity+Positionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GKEntity+Positionable.swift"; sourceTree = "<group>"; };
 		34E6E9921F698ED200D38AB6 /* Positionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Positionable.swift; sourceTree = "<group>"; };
+		34E6E9941F6990A600D38AB6 /* Spider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +231,7 @@
 			children = (
 				3400D99F1F661B2700ECD456 /* Segment.swift */,
 				3400D9A11F661C2700ECD456 /* WoodenBoard.swift */,
+				34E6E9941F6990A600D38AB6 /* Spider.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				3400D9941F6604B200ECD456 /* MoveComponent.swift in Sources */,
 				3400D96C1F65FF3000ECD456 /* TravelToStartState.swift in Sources */,
 				3400D9911F6604B200ECD456 /* Framable.swift in Sources */,
+				34E6E9951F6990A600D38AB6 /* Spider.swift in Sources */,
 				3400D96A1F65FF3000ECD456 /* IdleOnStartState.swift in Sources */,
 				34E6E98F1F698C9100D38AB6 /* SpiderEntity.swift in Sources */,
 				3400D9991F6609CD00ECD456 /* RunSceneConstants.swift in Sources */,
