@@ -24,7 +24,11 @@ class SpriteComponent: GKComponent {
     }
 }
 
-extension SpriteComponent: Positional {
+extension SpriteComponent: Positionable {
+    func setPosition(_ position: CGPoint) {
+        node.position = position
+    }
+
     func getPosition() -> CGPoint {
         return node.position
     }
