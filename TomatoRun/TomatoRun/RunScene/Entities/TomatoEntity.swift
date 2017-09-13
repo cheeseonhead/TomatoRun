@@ -6,7 +6,7 @@
 import GameplayKit
 import SpriteKit
 
-class TomatoEntity: GKEntity {
+class TomatoEntity: GKEntity, Positionable {
     var stateMachine: MoveStateMachine!
 
     init(speed: CGFloat, fittingWidth: CGFloat, entityManager: EntityManager) {
