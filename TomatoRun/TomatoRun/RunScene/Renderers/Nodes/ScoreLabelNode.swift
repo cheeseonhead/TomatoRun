@@ -6,4 +6,14 @@
 //  Copyright © 2017 okAy Studios. All rights reserved.
 //
 
-import Foundation
+import SpriteKit
+
+class ScoreLabelNode: SKLabelNode {
+    override init() {
+        super.init(fontNamed: "Helvetica")
+    }
+
+    required init?(coder _: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
