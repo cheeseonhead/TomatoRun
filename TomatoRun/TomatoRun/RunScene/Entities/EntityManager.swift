@@ -24,10 +24,6 @@ class EntityManager {
     }
 
     func update(_ deltaTime: CFTimeInterval) {
-        for componentSystem in componentSystems {
-            componentSystem.update(deltaTime: deltaTime)
-        }
-
         for currentRemove in toRemove {
             if let spriteNode = currentRemove.component(ofType: SpriteComponent.self)?.node {
                 spriteNode.removeFromParent()
@@ -40,6 +36,10 @@ class EntityManager {
             for componentSystem in componentSystems {
                 componentSystem.removeComponent(foundIn: currentRemove)
             }
+        }
+
+        for componentSystem in componentSystems {
+            componentSystem.update(deltaTime: deltaTime)
         }
 
         toRemove.removeAll()
