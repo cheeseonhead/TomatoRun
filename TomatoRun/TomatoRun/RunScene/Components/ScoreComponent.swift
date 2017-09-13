@@ -6,4 +6,8 @@
 //  Copyright © 2017 okAy Studios. All rights reserved.
 //
 
-import Foundation
+import GameplayKit
+
+class ScoreComponent {
+    var score = 0
+}
