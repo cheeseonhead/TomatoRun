@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Spider: Codable {
+struct Spider: Ropable, Codable {
     var height: CGFloat
     var rope: Int
 }

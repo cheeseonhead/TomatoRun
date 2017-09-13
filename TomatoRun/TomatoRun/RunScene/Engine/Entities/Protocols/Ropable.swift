@@ -9,6 +9,6 @@
 import UIKit
 
 protocol Ropable {
-    let height: CGFloat { get set }
-    let rope: Int { get set }
+    var height: CGFloat { get }
+    var rope: Int { get }
 }
