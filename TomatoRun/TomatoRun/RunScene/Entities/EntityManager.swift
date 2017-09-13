@@ -24,15 +24,22 @@ class EntityManager {
     }
 
     func update(_ deltaTime: CFTimeInterval) {
-        for componentSystem in componentSystems {
-            componentSystem.update(deltaTime: deltaTime)
-        }
-
         for currentRemove in toRemove {
+            if let spriteNode = currentRemove.component(ofType: SpriteComponent.self)?.node {
+                spriteNode.removeFromParent()
+            }
+            if let component = currentRemove.component(ofType: ContinuousSpriteComponent.self) {
+                component.removeFromParent()
+            }
+
             entities.remove(currentRemove)
             for componentSystem in componentSystems {
                 componentSystem.removeComponent(foundIn: currentRemove)
             }
+        }
+
+        for componentSystem in componentSystems {
+            componentSystem.update(deltaTime: deltaTime)
         }
 
         toRemove.removeAll()
@@ -54,13 +61,6 @@ extension EntityManager {
     }
 
     func remove(_ entity: GKEntity) {
-        if let spriteNode = entity.component(ofType: SpriteComponent.self)?.node {
-            spriteNode.removeFromParent()
-        }
-        if let component = entity.component(ofType: ContinuousSpriteComponent.self) {
-            component.removeFromParent()
-        }
-
         toRemove.insert(entity)
     }
 }
