@@ -10,7 +10,8 @@ import SpriteKit
 
 class PauseNode: SKSpriteNode {
     init(size: CGSize) {
-        super.init(texture: nil, color: .red, size: size)
+        let texture = SKTexture(imageNamed: ImageConstants.PauseImageName)
+        super.init(texture: texture, color: .red, size: size)
         anchorPoint = CGPoint(x: 1, y: 1)
         zPosition = RunSceneConstants.ZPositions.UIZPosition
     }
