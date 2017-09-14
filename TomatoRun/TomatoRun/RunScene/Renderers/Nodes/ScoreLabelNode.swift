@@ -26,8 +26,12 @@ class ScoreLabelNode: SKLabelNode {
         zPosition = RunSceneConstants.ZPositions.UIZPosition
     }
 
+    override init(fontNamed fontName: String?) {
+        super.init(fontNamed: fontName)
+    }
+
     convenience init(score: Int?) {
-        self.init()
+        self.init(fontNamed: "BabasNeue")
 
         self.score = score
     }
