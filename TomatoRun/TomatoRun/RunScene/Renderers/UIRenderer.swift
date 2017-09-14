@@ -13,6 +13,7 @@ class UIRenderer {
 
     // MARK: Nodes
     var pauseNode: SKSpriteNode!
+    var scoreNode: ScoreLabelNode!
 
     init(scene: RunScene) {
         self.scene = scene
@@ -22,23 +23,42 @@ class UIRenderer {
         guard let camera = scene.camera else { return }
 
         addPauseNode(camera)
+        addScoreLabel(camera)
+    }
+
+    func update(_: TimeInterval) {
+        guard let score = scene.tomato.component(ofType: ScoreComponent.self)?.score else { return }
+        scoreNode.score = score
+        print(scoreNode.frame.size)
     }
 }
 
 // MARK: - Adding Nodes
 private extension UIRenderer {
     func addPauseNode(_ camera: SKCameraNode) {
-        let fittingDimension = scene.size.width * 0.1
+        let fittingDimension = scene.size.width * RunSceneConstants.FittingWidthRatio.PauseNode
+        let padding = scene.size.width * RunSceneConstants.PaddingRatio.PauseNode
+
         pauseNode = PauseNode(size: CGSize(width: fittingDimension, height: fittingDimension))
 
-        guard let renderSize = camera.renderSize() else { return }
+        guard let renderedFrame = camera.renderedFrame() else { return }
+        let topRightInScene = renderedFrame.position(forType: .topRight)
+        let topRightInCamera = camera.convert(topRightInScene, from: scene)
 
-        let frame = CGRect(x: 0, y: 0, width: renderSize.width / 2, height: renderSize.height / 2)
-        let topRight = frame.position(forType: .topRight)
+        pauseNode.position = topRightInCamera - CGPoint(x: padding, y: padding)
 
-        let padding = fittingDimension * 0.7
-
-        pauseNode.position = topRight - CGPoint(x: padding, y: padding)
         camera.addChild(pauseNode)
+    }
+
+    func addScoreLabel(_ camera: SKCameraNode) {
+        let padding = scene.size.width * RunSceneConstants.PaddingRatio.ScoreLabel
+
+        scoreNode = ScoreLabelNode(score: 0)
+
+        guard let topLeftInScene = camera.renderedFrame()?.position(forType: .topLeft) else { return }
+        let topLeftInCamera = camera.convert(topLeftInScene, from: scene)
+
+        scoreNode.position = topLeftInCamera + CGPoint(x: padding, y: -(scoreNode.fontSize + padding))
+        camera.addChild(scoreNode)
     }
 }
