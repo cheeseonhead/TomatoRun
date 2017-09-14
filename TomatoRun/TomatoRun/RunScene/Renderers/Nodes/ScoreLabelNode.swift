@@ -31,8 +31,9 @@ class ScoreLabelNode: SKLabelNode {
     }
 
     convenience init(score: Int?) {
-        self.init(fontNamed: "BabasNeue")
+        self.init(fontNamed: "BebasNeueBold")
 
+        fontSize = FontSize.Large.rawValue
         self.score = score
     }
 
@@ -41,6 +42,6 @@ class ScoreLabelNode: SKLabelNode {
     }
 
     func formattedScore(_ score: Int) -> String {
-        return String(format: "%010d", score)
+        return String(format: "%0\(RunSceneConstants.ScoreLength)d", score)
     }
 }
