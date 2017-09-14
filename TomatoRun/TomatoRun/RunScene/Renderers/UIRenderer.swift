@@ -29,6 +29,9 @@ class UIRenderer {
     func update(_: TimeInterval) {
         guard let score = scene.tomato.component(ofType: ScoreComponent.self)?.score else { return }
         scoreNode.score = score
+
+        guard let camera = scene.camera else { return }
+        positionScoreLabel(camera)
     }
 }
 
@@ -50,14 +53,21 @@ private extension UIRenderer {
     }
 
     func addScoreLabel(_ camera: SKCameraNode) {
-        let padding = scene.size.width * RunSceneConstants.PaddingRatio.ScoreLabel
 
         scoreNode = ScoreLabelNode(score: 0)
+
+        camera.addChild(scoreNode)
+    }
+}
+
+// MARK: - Positioning
+private extension UIRenderer {
+    func positionScoreLabel(_ camera: SKCameraNode) {
+        let padding = scene.size.width * RunSceneConstants.PaddingRatio.ScoreLabel
 
         guard let topLeftInScene = camera.renderedFrame()?.position(forType: .topLeft) else { return }
         let topLeftInCamera = camera.convert(topLeftInScene, from: scene)
 
-        scoreNode.position = topLeftInCamera + CGPoint(x: padding, y: -(scoreNode.fontSize + padding))
-        camera.addChild(scoreNode)
+        scoreNode.position = topLeftInCamera + CGPoint(x: padding, y: -(scoreNode.frame.size.height + padding))
     }
 }
