@@ -10,6 +10,7 @@ import UIKit
 
 enum PointType {
     case topRight
+    case topLeft
 }
 
 extension CGRect {
@@ -27,6 +28,8 @@ extension CGRect {
         switch type {
         case .topRight:
             return position(forAnchor: CGPoint(x: 1, y: 1))
+        case .topLeft:
+            return position(forAnchor: CGPoint(x: 0, y: 1))
         }
     }
 }
