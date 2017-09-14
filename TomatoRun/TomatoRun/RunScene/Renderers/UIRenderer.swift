@@ -29,7 +29,6 @@ class UIRenderer {
     func update(_: TimeInterval) {
         guard let score = scene.tomato.component(ofType: ScoreComponent.self)?.score else { return }
         scoreNode.score = score
-        print(scoreNode.frame.size)
     }
 }
 
