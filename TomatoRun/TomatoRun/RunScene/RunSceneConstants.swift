@@ -25,4 +25,13 @@ enum RunSceneConstants {
         static let Spider = CGFloat(950)
         static let Rope = CGFloat(500)
     }
+
+    enum FittingWidthRatio {
+        static let PauseNode = CGFloat(0.1)
+    }
+
+    enum PaddingRatio {
+        static let PauseNode = CGFloat(0.02)
+        static let ScoreLabel = PauseNode
+    }
 }
