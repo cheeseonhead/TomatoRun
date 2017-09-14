@@ -39,6 +39,7 @@
 		3400D9A61F66383800ECD456 /* SegmentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9A51F66383800ECD456 /* SegmentManager.swift */; };
 		3400D9A81F663BBD00ECD456 /* SegmentRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9A71F663BBD00ECD456 /* SegmentRenderer.swift */; };
 		3400D9AB1F663E4600ECD456 /* SKCameraNode+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9AA1F663E4600ECD456 /* SKCameraNode+Frame.swift */; };
+		3406CD431F6A08EE0027775A /* FontConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406CD421F6A08EE0027775A /* FontConstants.swift */; };
 		34621D001F69A4A100D04A98 /* UIRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34621CFF1F69A4A100D04A98 /* UIRenderer.swift */; };
 		34621D021F69AAD800D04A98 /* PauseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34621D011F69AAD800D04A98 /* PauseNode.swift */; };
 		34898C281F67496D00135FA6 /* TouchComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34898C271F67496D00135FA6 /* TouchComponent.swift */; };
@@ -107,6 +108,7 @@
 		3400D9A51F66383800ECD456 /* SegmentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentManager.swift; sourceTree = "<group>"; };
 		3400D9A71F663BBD00ECD456 /* SegmentRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentRenderer.swift; sourceTree = "<group>"; };
 		3400D9AA1F663E4600ECD456 /* SKCameraNode+Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKCameraNode+Frame.swift"; sourceTree = "<group>"; };
+		3406CD421F6A08EE0027775A /* FontConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontConstants.swift; sourceTree = "<group>"; };
 		34621CFF1F69A4A100D04A98 /* UIRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRenderer.swift; sourceTree = "<group>"; };
 		34621D011F69AAD800D04A98 /* PauseNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseNode.swift; sourceTree = "<group>"; };
 		34898C271F67496D00135FA6 /* TouchComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchComponent.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				3400D9321F65FD7900ECD456 /* ImageConstants.swift */,
+				3406CD421F6A08EE0027775A /* FontConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -596,6 +599,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3406CD431F6A08EE0027775A /* FontConstants.swift in Sources */,
 				3400D99D1F66178500ECD456 /* SegmentFileParser.swift in Sources */,
 				34BCB21C1F69EAE400F16629 /* ScoreLabelNode.swift in Sources */,
 				34BCB2171F69E59600F16629 /* ScoreComponent.swift in Sources */,
