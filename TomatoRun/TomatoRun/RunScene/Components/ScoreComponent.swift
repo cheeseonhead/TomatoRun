@@ -13,6 +13,11 @@ class ScoreComponent: GKComponent {
     var lastTimestamp: TimeInterval?
 
     override func update(deltaTime seconds: TimeInterval) {
+        if lastTimestamp == nil {
+            lastTimestamp = seconds
+            return
+        }
+
         let addScore = (seconds * RunSceneConstants.ScoreRate).roundedToInt(.toNearestOrAwayFromZero)
         score += addScore
     }
