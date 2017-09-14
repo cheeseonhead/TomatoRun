@@ -42,11 +42,11 @@
 		34621D001F69A4A100D04A98 /* UIRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34621CFF1F69A4A100D04A98 /* UIRenderer.swift */; };
 		34621D021F69AAD800D04A98 /* PauseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34621D011F69AAD800D04A98 /* PauseNode.swift */; };
 		34898C281F67496D00135FA6 /* TouchComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34898C271F67496D00135FA6 /* TouchComponent.swift */; };
-		349FB92D1F6A036A00F5FE4B /* BebasNeue Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 349FB92C1F6A036500F5FE4B /* BebasNeue Bold.otf */; };
-		349FB92E1F6A036D00F5FE4B /* BebasNeue Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 349FB9291F6A036400F5FE4B /* BebasNeue Book.otf */; };
-		349FB92F1F6A036D00F5FE4B /* BebasNeue Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 349FB92B1F6A036500F5FE4B /* BebasNeue Light.otf */; };
-		349FB9301F6A036D00F5FE4B /* BebasNeue Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 349FB9281F6A036400F5FE4B /* BebasNeue Regular.otf */; };
-		349FB9311F6A036D00F5FE4B /* BebasNeue Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 349FB92A1F6A036500F5FE4B /* BebasNeue Thin.otf */; };
+		349FB93C1F6A058E00F5FE4B /* BebasNeue-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 349FB9331F6A043A00F5FE4B /* BebasNeue-Bold.ttf */; };
+		349FB93D1F6A058E00F5FE4B /* BebasNeue-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 349FB9341F6A043A00F5FE4B /* BebasNeue-Book.ttf */; };
+		349FB93E1F6A058E00F5FE4B /* BebasNeue-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 349FB9321F6A043A00F5FE4B /* BebasNeue-Light.ttf */; };
+		349FB93F1F6A058E00F5FE4B /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 349FB9351F6A043A00F5FE4B /* BebasNeue-Regular.ttf */; };
+		349FB9401F6A058E00F5FE4B /* BebasNeue-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 349FB9361F6A043B00F5FE4B /* BebasNeue-Thin.ttf */; };
 		34BCB2171F69E59600F16629 /* ScoreComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BCB2161F69E59600F16629 /* ScoreComponent.swift */; };
 		34BCB21A1F69E8A400F16629 /* Double+Rounding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BCB2191F69E8A400F16629 /* Double+Rounding.swift */; };
 		34BCB21C1F69EAE400F16629 /* ScoreLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BCB21B1F69EAE400F16629 /* ScoreLabelNode.swift */; };
@@ -110,11 +110,11 @@
 		34621CFF1F69A4A100D04A98 /* UIRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRenderer.swift; sourceTree = "<group>"; };
 		34621D011F69AAD800D04A98 /* PauseNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseNode.swift; sourceTree = "<group>"; };
 		34898C271F67496D00135FA6 /* TouchComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchComponent.swift; sourceTree = "<group>"; };
-		349FB9281F6A036400F5FE4B /* BebasNeue Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Regular.otf"; sourceTree = "<group>"; };
-		349FB9291F6A036400F5FE4B /* BebasNeue Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Book.otf"; sourceTree = "<group>"; };
-		349FB92A1F6A036500F5FE4B /* BebasNeue Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Thin.otf"; sourceTree = "<group>"; };
-		349FB92B1F6A036500F5FE4B /* BebasNeue Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Light.otf"; sourceTree = "<group>"; };
-		349FB92C1F6A036500F5FE4B /* BebasNeue Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue Bold.otf"; sourceTree = "<group>"; };
+		349FB9321F6A043A00F5FE4B /* BebasNeue-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Light.ttf"; sourceTree = "<group>"; };
+		349FB9331F6A043A00F5FE4B /* BebasNeue-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Bold.ttf"; sourceTree = "<group>"; };
+		349FB9341F6A043A00F5FE4B /* BebasNeue-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Book.ttf"; sourceTree = "<group>"; };
+		349FB9351F6A043A00F5FE4B /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
+		349FB9361F6A043B00F5FE4B /* BebasNeue-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Thin.ttf"; sourceTree = "<group>"; };
 		34BCB2161F69E59600F16629 /* ScoreComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreComponent.swift; sourceTree = "<group>"; };
 		34BCB2191F69E8A400F16629 /* Double+Rounding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Rounding.swift"; sourceTree = "<group>"; };
 		34BCB21B1F69EAE400F16629 /* ScoreLabelNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreLabelNode.swift; sourceTree = "<group>"; };
@@ -290,11 +290,11 @@
 		349FB9271F6A035900F5FE4B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				349FB92C1F6A036500F5FE4B /* BebasNeue Bold.otf */,
-				349FB9291F6A036400F5FE4B /* BebasNeue Book.otf */,
-				349FB92B1F6A036500F5FE4B /* BebasNeue Light.otf */,
-				349FB9281F6A036400F5FE4B /* BebasNeue Regular.otf */,
-				349FB92A1F6A036500F5FE4B /* BebasNeue Thin.otf */,
+				349FB9331F6A043A00F5FE4B /* BebasNeue-Bold.ttf */,
+				349FB9341F6A043A00F5FE4B /* BebasNeue-Book.ttf */,
+				349FB9321F6A043A00F5FE4B /* BebasNeue-Light.ttf */,
+				349FB9351F6A043A00F5FE4B /* BebasNeue-Regular.ttf */,
+				349FB9361F6A043B00F5FE4B /* BebasNeue-Thin.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -561,17 +561,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				349FB9401F6A058E00F5FE4B /* BebasNeue-Thin.ttf in Resources */,
+				349FB93F1F6A058E00F5FE4B /* BebasNeue-Regular.ttf in Resources */,
+				349FB93D1F6A058E00F5FE4B /* BebasNeue-Book.ttf in Resources */,
 				34C2DB741F633C890027EB1F /* Main.storyboard in Resources */,
 				34C2DB6B1F633C890027EB1F /* RunScene.sks in Resources */,
-				349FB92F1F6A036D00F5FE4B /* BebasNeue Light.otf in Resources */,
 				3400D9A41F662D7500ECD456 /* level1_v1.json in Resources */,
 				34C2DB761F633C890027EB1F /* Assets.xcassets in Resources */,
 				34C2DB791F633C890027EB1F /* LaunchScreen.storyboard in Resources */,
-				349FB9301F6A036D00F5FE4B /* BebasNeue Regular.otf in Resources */,
-				349FB92D1F6A036A00F5FE4B /* BebasNeue Bold.otf in Resources */,
-				349FB9311F6A036D00F5FE4B /* BebasNeue Thin.otf in Resources */,
-				349FB92E1F6A036D00F5FE4B /* BebasNeue Book.otf in Resources */,
+				349FB93E1F6A058E00F5FE4B /* BebasNeue-Light.ttf in Resources */,
 				34C2DB6D1F633C890027EB1F /* Actions.sks in Resources */,
+				349FB93C1F6A058E00F5FE4B /* BebasNeue-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
