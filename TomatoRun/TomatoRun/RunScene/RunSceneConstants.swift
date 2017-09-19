@@ -9,14 +9,32 @@
 import SpriteKit
 
 enum RunSceneConstants {
+
+    // MARK: Main Scene
     static let NumOfRopes = 4
     static let TomatoWidth = CGFloat(150)
     static let TomatoBottomPadding = CGFloat(250) // TomatoWidth
 
+    // MARK: Rates
+    static let ScoreRate = 1000.0 // Score per second
+
+    // MARK: Misc
+    static let ScoreLength = 10
+
     enum ZPositions {
+        static let UIZPosition = CGFloat(1100)
         static let Tomato = CGFloat(1000)
         static let Boards = CGFloat(900)
-        static let Spiders = CGFloat(950)
+        static let Spider = CGFloat(950)
         static let Rope = CGFloat(500)
+    }
+
+    enum FittingWidthRatio {
+        static let PauseNode = CGFloat(0.1)
+    }
+
+    enum PaddingRatio {
+        static let PauseNode = CGFloat(0.02)
+        static let ScoreLabel = PauseNode
     }
 }

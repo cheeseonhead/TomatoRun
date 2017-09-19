@@ -18,6 +18,7 @@ class RunScene: SKScene {
     var entityManager: EntityManager!
     var tomatoBottomPadding: CGFloat!
     var segmentRenderer: SegmentRenderer!
+    var uiRenderer: UIRenderer!
 
     var cameraNode: SKCameraNode!
     var tomato: TomatoEntity!
@@ -31,9 +32,11 @@ class RunScene: SKScene {
         tomatoBottomPadding = RunSceneConstants.TomatoBottomPadding
         entityManager = EntityManager(scene: self)
         segmentRenderer = SegmentRenderer(scene: self)
+        uiRenderer = UIRenderer(scene: self)
 
         addRopes()
         addCamera()
+        uiRenderer.addUINodes()
         addTomato()
     }
 
@@ -57,6 +60,7 @@ class RunScene: SKScene {
         entityManager.update(deltaTime)
         positionCamera()
         segmentRenderer.update(currentTime)
+        uiRenderer.update(currentTime)
     }
 }
 
