@@ -11,7 +11,7 @@ import SpriteKit
 enum RunSceneConstants {
     static let NumOfRopes = 4
     static let TomatoWidth = CGFloat(150)
-    static let TomatoBottomPadding = TomatoWidth
+    static let TomatoBottomPadding = CGFloat(250) // TomatoWidth
 
     enum ZPositions {
         static let Tomato = CGFloat(1000)

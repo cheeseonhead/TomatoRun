@@ -113,9 +113,9 @@ private extension RunScene {
     }
 
     func addTomato() {
-        let ropeNumber = Int.random(min: 0, max: numberOfRopes)
+        let ropeNumber = 0 //Int.random(min: 0, max: numberOfRopes)
 
-        tomato = TomatoEntity(speed: 100, fittingWidth: RunSceneConstants.TomatoWidth, entityManager: entityManager)
+        tomato = TomatoEntity(speed: 300, fittingWidth: RunSceneConstants.TomatoWidth, entityManager: entityManager)
         let xPos = ropeXPos(forIndex: ropeNumber)
         tomato.setPosition(CGPoint(x: xPos, y: tomatoBottomPadding))
 

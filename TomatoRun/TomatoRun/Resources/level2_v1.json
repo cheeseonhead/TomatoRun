@@ -1,20 +1,21 @@
 {
     "wooden_boards": [{
-                      "height": 200,
-                      "rope": 0
-                      }, {
-                      "height": 450,
+                      "height": 250,
                       "rope": 1
                       }, {
-                      "height": 750,
+                      "height": 500,
                       "rope": 0
                       }, {
-                      "height": 900,
+                      "height": 500,
                       "rope": 2
+                      }, {
+                      "height": 750,
+                      "rope": 1
                       }],
     "spiders": [{
                 "height": 450,
                 "rope": 2
                 }],
-    "length": 1000
+    "length": 900
 }
+

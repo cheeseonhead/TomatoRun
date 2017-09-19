@@ -9,11 +9,17 @@
 import Foundation
 
 let numberOfSegments = 1
+let maxNumberOfSegments = 4
+var segmentIndex = 0
 
 class SegmentManager {
     let segmentFileParser = SegmentFileParser()
 
     func getNextSegment() -> Segment? {
-        return segmentFileParser.getSegment(number: 1)
+        if segmentIndex>maxNumberOfSegments {
+            segmentIndex=0
+        }
+        segmentIndex+=1
+        return segmentFileParser.getSegment(number: segmentIndex)
     }
 }
