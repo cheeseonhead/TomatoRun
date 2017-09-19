@@ -242,11 +242,7 @@
 		3400D99A1F660F4300ECD456 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
-				9BB60A0F1F70B6930002A5BF /* level0_v1.json */,
-=======
 				349FB9271F6A035900F5FE4B /* Fonts */,
->>>>>>> 9bd3a39b4ac4d2b7e80e34bf06fe4982d5e19651
 				3400D9A31F662D2000ECD456 /* level1_v1.json */,
 				9BB60A111F70B9200002A5BF /* level2_v1.json */,
 				9BCD27A91F69AD83002DA30F /* level3_v1.json */,
@@ -585,15 +581,12 @@
 				34C2DB761F633C890027EB1F /* Assets.xcassets in Resources */,
 				9BB60A101F70B6930002A5BF /* level0_v1.json in Resources */,
 				34C2DB791F633C890027EB1F /* LaunchScreen.storyboard in Resources */,
-<<<<<<< HEAD
 				9BB60A121F70B9200002A5BF /* level2_v1.json in Resources */,
 				34C2DB6D1F633C890027EB1F /* Actions.sks in Resources */,
 				9BCD27AA1F69AD83002DA30F /* level3_v1.json in Resources */,
-=======
 				349FB93E1F6A058E00F5FE4B /* BebasNeue-Light.ttf in Resources */,
 				34C2DB6D1F633C890027EB1F /* Actions.sks in Resources */,
 				349FB93C1F6A058E00F5FE4B /* BebasNeue-Bold.ttf in Resources */,
->>>>>>> 9bd3a39b4ac4d2b7e80e34bf06fe4982d5e19651
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
