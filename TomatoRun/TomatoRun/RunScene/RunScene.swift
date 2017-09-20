@@ -90,7 +90,7 @@ extension RunScene {
         guard heights.count == ropeIndex.count else { return }
 
         for i in 0 ..< heights.count {
-            let spider = SpiderEntity(fittingWidth: size.width * 0.1)
+            let spider = SpiderEntity(fittingWidth: size.width * 0.25)
 
             addEntity(spider, toRope: ropeIndex[i], atHeight: heights[i])
         }
@@ -117,7 +117,7 @@ private extension RunScene {
     }
 
     func addTomato() {
-        let ropeNumber = 0 //Int.random(min: 0, max: numberOfRopes)
+        let ropeNumber = 0 // Int.random(min: 0, max: numberOfRopes)
 
         tomato = TomatoEntity(speed: 300, fittingWidth: RunSceneConstants.TomatoWidth, entityManager: entityManager)
         let xPos = ropeXPos(forIndex: ropeNumber)

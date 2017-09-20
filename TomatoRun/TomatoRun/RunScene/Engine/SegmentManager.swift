@@ -16,6 +16,7 @@ class SegmentManager {
 
     func getNextSegment() -> Segment? {
         segmentIndex = (segmentIndex + 1) % numberOfSegments
+        print(segmentIndex)
         return segmentFileParser.getSegment(number: segmentIndex)
     }
 }
