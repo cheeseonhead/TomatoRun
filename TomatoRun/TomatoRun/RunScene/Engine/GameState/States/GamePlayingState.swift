@@ -9,4 +9,9 @@
 import GameplayKit
 
 class GamePlayingState: GKState {
+    override func isValidNextState(_ stateClass: AnyClass) -> Bool {
+        return stateClass == GameIdleState.self ||
+            stateClass == GamePausedState.self ||
+            stateClass == GameOverState.self
+    }
 }
