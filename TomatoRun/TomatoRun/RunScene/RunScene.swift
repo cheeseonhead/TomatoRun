@@ -37,7 +37,7 @@ class RunScene: SKScene {
         segmentRenderer = SegmentRenderer(scene: self)
         uiRenderer = UIRenderer(scene: self)
         gameStateMachine = GameStateMachine()
-        pauseScene = PauseScene(texture: nil, color: .brown, size: CGSize.zero)
+        pauseScene = PauseScene(size: CGSize.zero, scene: self)
 
         addRopes()
         addCamera()
@@ -65,12 +65,15 @@ class RunScene: SKScene {
         lastUpdateTimeInterval = currentTime
 
         if gameStateMachine.currentState is GamePlayingState {
+            camera?.removeChildren(in: [pauseScene])
+
+            isPaused = false
+
             entityManager.update(deltaTime)
-            positionCamera()
-            segmentRenderer.update(currentTime)
-            uiRenderer.update(currentTime)
         } else if gameStateMachine.currentState is GamePausedState {
             guard let camera = camera, !camera.children.contains(pauseScene), let size = camera.renderSize() else { return }
+
+            isPaused = true
 
             pauseScene.size = size
             pauseScene.position = CGPoint.zero
@@ -78,6 +81,10 @@ class RunScene: SKScene {
 
             camera.addChild(pauseScene)
         }
+
+        segmentRenderer.update(currentTime)
+        uiRenderer.update(currentTime)
+        positionCamera()
     }
 }
 
