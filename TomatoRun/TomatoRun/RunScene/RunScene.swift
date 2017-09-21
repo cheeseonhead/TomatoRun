@@ -20,6 +20,8 @@ class RunScene: SKScene {
     var segmentRenderer: SegmentRenderer!
     var uiRenderer: UIRenderer!
 
+    var gameStateMachine: GameStateMachine!
+
     var cameraNode: SKCameraNode!
     var tomato: TomatoEntity!
 
@@ -33,6 +35,7 @@ class RunScene: SKScene {
         entityManager = EntityManager(scene: self)
         segmentRenderer = SegmentRenderer(scene: self)
         uiRenderer = UIRenderer(scene: self)
+        gameStateMachine = GameStateMachine()
 
         addRopes()
         addCamera()
