@@ -6,4 +6,15 @@
 //  Copyright © 2017 okAy Studios. All rights reserved.
 //
 
-import Foundation
+import GameplayKit
+
+class GameStateMachine: GKStateMachine {
+    init() {
+        super.init(states: [
+            GameIdleState(),
+            GamePlayingState(),
+            GamePausedState(),
+            GameOverState(),
+        ])
+    }
+}
