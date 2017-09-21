@@ -14,6 +14,8 @@ class PauseScene: SKSpriteNode {
 
         let label = SKLabelNode(text: "Resume")
         label.position = CGPoint(x: 0, y: 0)
+
+        addChild(label)
     }
 
     required init?(coder _: NSCoder) {
