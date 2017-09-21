@@ -42,6 +42,7 @@
 		3406CD431F6A08EE0027775A /* FontConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406CD421F6A08EE0027775A /* FontConstants.swift */; };
 		340917A11F735A2800ACCF07 /* GamePlayingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340917A01F735A2800ACCF07 /* GamePlayingState.swift */; };
 		340917A31F735A6300ACCF07 /* GamePausedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340917A21F735A6300ACCF07 /* GamePausedState.swift */; };
+		340917A51F735B5700ACCF07 /* GameOverState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340917A41F735B5700ACCF07 /* GameOverState.swift */; };
 		34621D001F69A4A100D04A98 /* UIRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34621CFF1F69A4A100D04A98 /* UIRenderer.swift */; };
 		34621D021F69AAD800D04A98 /* PauseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34621D011F69AAD800D04A98 /* PauseNode.swift */; };
 		3480A6F31F72191C00688B1C /* GameStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480A6F21F72191C00688B1C /* GameStateMachine.swift */; };
@@ -115,6 +116,7 @@
 		3406CD421F6A08EE0027775A /* FontConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontConstants.swift; sourceTree = "<group>"; };
 		340917A01F735A2800ACCF07 /* GamePlayingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlayingState.swift; sourceTree = "<group>"; };
 		340917A21F735A6300ACCF07 /* GamePausedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePausedState.swift; sourceTree = "<group>"; };
+		340917A41F735B5700ACCF07 /* GameOverState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverState.swift; sourceTree = "<group>"; };
 		34621CFF1F69A4A100D04A98 /* UIRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRenderer.swift; sourceTree = "<group>"; };
 		34621D011F69AAD800D04A98 /* PauseNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseNode.swift; sourceTree = "<group>"; };
 		3480A6F21F72191C00688B1C /* GameStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStateMachine.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				3480A6F51F72195800688B1C /* GameIdleState.swift */,
 				340917A01F735A2800ACCF07 /* GamePlayingState.swift */,
 				340917A21F735A6300ACCF07 /* GamePausedState.swift */,
+				340917A41F735B5700ACCF07 /* GameOverState.swift */,
 			);
 			path = States;
 			sourceTree = "<group>";
@@ -664,6 +667,7 @@
 				34C2DB6F1F633C890027EB1F /* RunScene.swift in Sources */,
 				34C2DB711F633C890027EB1F /* RunViewController.swift in Sources */,
 				3400D9481F65FE8300ECD456 /* TomatoEntity.swift in Sources */,
+				340917A51F735B5700ACCF07 /* GameOverState.swift in Sources */,
 				3400D9931F6604B200ECD456 /* IntersectionComponent.swift in Sources */,
 				34E6E9981F69990100D38AB6 /* Ropable.swift in Sources */,
 				3400D9901F6604B200ECD456 /* ContinuousSpriteComponent.swift in Sources */,
