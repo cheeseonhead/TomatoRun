@@ -39,7 +39,8 @@ class UIRenderer {
 
         let touchedNodes = scene.nodes(at: touch.location(in: scene))
 
-        if touchedNodes.contains(pauseNode) {
+        if touchedNodes.contains(pauseNode), scene.gameStateMachine.canEnterState(GamePausedState.self) {
+            scene.gameStateMachine.enter(GamePausedState.self)
         }
     }
 }

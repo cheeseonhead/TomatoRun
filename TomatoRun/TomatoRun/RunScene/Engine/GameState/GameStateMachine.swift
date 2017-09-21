@@ -17,6 +17,6 @@ class GameStateMachine: GKStateMachine {
             GameOverState(),
         ])
 
-        enter(GameIdleState.self)
+        enter(GamePlayingState.self)
     }
 }

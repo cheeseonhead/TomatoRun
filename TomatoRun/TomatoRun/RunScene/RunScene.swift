@@ -43,7 +43,7 @@ class RunScene: SKScene {
         addTomato()
     }
 
-    override func touchesBegan(_ touches: Set<UITouch>, with _: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
 
         let touchedNodes = nodes(at: touch.location(in: self))
@@ -54,11 +54,17 @@ class RunScene: SKScene {
 
             touchComponent.handler()
         }
+
+        uiRenderer.touchesBegan(touches, with: event)
     }
 
     override func update(_ currentTime: TimeInterval) {
         let deltaTime = currentTime - lastUpdateTimeInterval
         lastUpdateTimeInterval = currentTime
+
+        guard gameStateMachine.currentState is GamePlayingState else {
+            return
+        }
 
         entityManager.update(deltaTime)
         positionCamera()
