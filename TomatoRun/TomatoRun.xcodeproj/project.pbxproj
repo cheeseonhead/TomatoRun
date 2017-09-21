@@ -42,6 +42,8 @@
 		3406CD431F6A08EE0027775A /* FontConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3406CD421F6A08EE0027775A /* FontConstants.swift */; };
 		34621D001F69A4A100D04A98 /* UIRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34621CFF1F69A4A100D04A98 /* UIRenderer.swift */; };
 		34621D021F69AAD800D04A98 /* PauseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34621D011F69AAD800D04A98 /* PauseNode.swift */; };
+		3480A6F31F72191C00688B1C /* GameStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480A6F21F72191C00688B1C /* GameStateMachine.swift */; };
+		3480A6F61F72195800688B1C /* GameIdleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480A6F51F72195800688B1C /* GameIdleState.swift */; };
 		34898C281F67496D00135FA6 /* TouchComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34898C271F67496D00135FA6 /* TouchComponent.swift */; };
 		349FB93C1F6A058E00F5FE4B /* BebasNeue-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 349FB9331F6A043A00F5FE4B /* BebasNeue-Bold.ttf */; };
 		349FB93D1F6A058E00F5FE4B /* BebasNeue-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 349FB9341F6A043A00F5FE4B /* BebasNeue-Book.ttf */; };
@@ -111,6 +113,8 @@
 		3406CD421F6A08EE0027775A /* FontConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontConstants.swift; sourceTree = "<group>"; };
 		34621CFF1F69A4A100D04A98 /* UIRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRenderer.swift; sourceTree = "<group>"; };
 		34621D011F69AAD800D04A98 /* PauseNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseNode.swift; sourceTree = "<group>"; };
+		3480A6F21F72191C00688B1C /* GameStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStateMachine.swift; sourceTree = "<group>"; };
+		3480A6F51F72195800688B1C /* GameIdleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameIdleState.swift; sourceTree = "<group>"; };
 		34898C271F67496D00135FA6 /* TouchComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchComponent.swift; sourceTree = "<group>"; };
 		349FB9321F6A043A00F5FE4B /* BebasNeue-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Light.ttf"; sourceTree = "<group>"; };
 		349FB9331F6A043A00F5FE4B /* BebasNeue-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Bold.ttf"; sourceTree = "<group>"; };
@@ -245,6 +249,7 @@
 		3400D99B1F66143100ECD456 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				3480A6F11F72190D00688B1C /* GameState */,
 				3400D99E1F661B1700ECD456 /* Entities */,
 				3400D99C1F66178500ECD456 /* SegmentFileParser.swift */,
 				3400D9A51F66383800ECD456 /* SegmentManager.swift */,
@@ -288,6 +293,23 @@
 				34BCB21B1F69EAE400F16629 /* ScoreLabelNode.swift */,
 			);
 			path = Nodes;
+			sourceTree = "<group>";
+		};
+		3480A6F11F72190D00688B1C /* GameState */ = {
+			isa = PBXGroup;
+			children = (
+				3480A6F41F72192000688B1C /* States */,
+				3480A6F21F72191C00688B1C /* GameStateMachine.swift */,
+			);
+			path = GameState;
+			sourceTree = "<group>";
+		};
+		3480A6F41F72192000688B1C /* States */ = {
+			isa = PBXGroup;
+			children = (
+				3480A6F51F72195800688B1C /* GameIdleState.swift */,
+			);
+			path = States;
 			sourceTree = "<group>";
 		};
 		349FB9271F6A035900F5FE4B /* Fonts */ = {
@@ -608,6 +630,7 @@
 				3400D9781F65FF5600ECD456 /* SKSpriteNode+Scale.swift in Sources */,
 				3400D9AB1F663E4600ECD456 /* SKCameraNode+Frame.swift in Sources */,
 				3400D9941F6604B200ECD456 /* MoveComponent.swift in Sources */,
+				3480A6F31F72191C00688B1C /* GameStateMachine.swift in Sources */,
 				3400D96C1F65FF3000ECD456 /* TravelToStartState.swift in Sources */,
 				34621D001F69A4A100D04A98 /* UIRenderer.swift in Sources */,
 				3400D9911F6604B200ECD456 /* Framable.swift in Sources */,
@@ -637,6 +660,7 @@
 				34E6E9981F69990100D38AB6 /* Ropable.swift in Sources */,
 				3400D9901F6604B200ECD456 /* ContinuousSpriteComponent.swift in Sources */,
 				3400D96D1F65FF3000ECD456 /* WanderingState.swift in Sources */,
+				3480A6F61F72195800688B1C /* GameIdleState.swift in Sources */,
 				3400D98E1F6604B200ECD456 /* MoveBehavior.swift in Sources */,
 				3400D96B1F65FF3000ECD456 /* IdleState.swift in Sources */,
 				3400D9A81F663BBD00ECD456 /* SegmentRenderer.swift in Sources */,
