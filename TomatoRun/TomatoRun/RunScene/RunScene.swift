@@ -19,6 +19,7 @@ class RunScene: SKScene {
     var tomatoBottomPadding: CGFloat!
     var segmentRenderer: SegmentRenderer!
     var uiRenderer: UIRenderer!
+    var pauseScene: PauseScene!
 
     var gameStateMachine: GameStateMachine!
 
@@ -36,6 +37,7 @@ class RunScene: SKScene {
         segmentRenderer = SegmentRenderer(scene: self)
         uiRenderer = UIRenderer(scene: self)
         gameStateMachine = GameStateMachine()
+        pauseScene = PauseScene(texture: nil, color: .brown, size: CGSize.zero)
 
         addRopes()
         addCamera()
@@ -62,14 +64,20 @@ class RunScene: SKScene {
         let deltaTime = currentTime - lastUpdateTimeInterval
         lastUpdateTimeInterval = currentTime
 
-        guard gameStateMachine.currentState is GamePlayingState else {
-            return
-        }
+        if gameStateMachine.currentState is GamePlayingState {
+            entityManager.update(deltaTime)
+            positionCamera()
+            segmentRenderer.update(currentTime)
+            uiRenderer.update(currentTime)
+        } else if gameStateMachine.currentState is GamePausedState {
+            guard let camera = camera, !camera.children.contains(pauseScene), let size = camera.renderSize() else { return }
 
-        entityManager.update(deltaTime)
-        positionCamera()
-        segmentRenderer.update(currentTime)
-        uiRenderer.update(currentTime)
+            pauseScene.size = size
+            pauseScene.position = CGPoint.zero
+            pauseScene.zPosition = RunSceneConstants.ZPositions.PauseScene
+
+            camera.addChild(pauseScene)
+        }
     }
 }
 
