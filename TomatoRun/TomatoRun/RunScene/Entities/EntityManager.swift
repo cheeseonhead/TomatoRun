@@ -7,7 +7,7 @@ import SpriteKit
 import GameplayKit
 
 class EntityManager {
-    unowned let scene: SKScene
+    unowned let worldNode: SKNode
 
     var entities = Set<GKEntity>()
     var toRemove = Set<GKEntity>()
@@ -20,8 +20,8 @@ class EntityManager {
         return [intersectionSystem, moveSystem, continuousSpriteSystem, touchSystem, scoreSystem]
     }()
 
-    init(scene: SKScene) {
-        self.scene = scene
+    init(worldNode: SKNode) {
+        self.worldNode = worldNode
     }
 
     func update(_ deltaTime: CFTimeInterval) {
@@ -53,7 +53,7 @@ extension EntityManager {
         entities.insert(entity)
 
         if let spriteNode = entity.component(ofType: SpriteComponent.self)?.node {
-            scene.addChild(spriteNode)
+            worldNode.addChild(spriteNode)
         }
 
         for componentSystem in componentSystems {

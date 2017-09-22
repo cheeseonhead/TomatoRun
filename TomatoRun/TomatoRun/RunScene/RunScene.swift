@@ -21,6 +21,8 @@ class RunScene: SKScene {
     var uiRenderer: UIRenderer!
     var pauseScene: PauseScene!
 
+    var worldNode: SKNode!
+
     var gameStateMachine: GameStateMachine!
 
     var cameraNode: SKCameraNode!
@@ -32,8 +34,10 @@ class RunScene: SKScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
 
+        worldNode = SKNode()
+        addChild(worldNode)
         tomatoBottomPadding = RunSceneConstants.TomatoBottomPadding
-        entityManager = EntityManager(scene: self)
+        entityManager = EntityManager(worldNode: worldNode)
         segmentRenderer = SegmentRenderer(scene: self)
         uiRenderer = UIRenderer(scene: self)
         gameStateMachine = GameStateMachine()
