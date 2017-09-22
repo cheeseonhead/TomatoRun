@@ -12,6 +12,8 @@ class DeathComponent: GKComponent {
 
     unowned let entityManager: EntityManager
 
+    var isDead = false
+
     init(entityManager: EntityManager) {
         self.entityManager = entityManager
         super.init()
@@ -22,6 +24,15 @@ class DeathComponent: GKComponent {
     }
 
     override func update(deltaTime _: TimeInterval) {
+        guard let sprite = entity?.component(ofType: SpriteComponent.self)?.node else { return }
+
         let allDangers = entityManager.components(ofType: DangerComponent.self)
+
+        for danger in allDangers {
+            if danger.isTouching(sprite) {
+                isDead = true
+                return
+            }
+        }
     }
 }
