@@ -25,6 +25,10 @@ class RunViewController: UIViewController {
         }
     }
 
+    func presentGameOverScene() {
+        presentScene(fileNamed: "GameOverScene", getSKScene: { gkScene in gkScene.rootNode as? GameOverScene })
+    }
+
     func presentScene<SceneType: SKScene>(fileNamed name: String, getSKScene: (GKScene) -> SceneType?) {
         if let scene = GKScene(fileNamed: name) {
 
