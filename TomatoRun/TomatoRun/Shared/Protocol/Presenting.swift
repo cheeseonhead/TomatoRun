@@ -6,7 +6,7 @@
 //  Copyright © 2017 okAy Studios. All rights reserved.
 //
 
-import Foundation
+import GameplayKit
 
 protocol Presenting {
     func presentScene<SceneType: SKScene>(fileNamed name: String, getSKScene: (GKScene) -> SceneType?)

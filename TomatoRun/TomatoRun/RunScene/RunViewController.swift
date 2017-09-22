@@ -12,12 +12,17 @@ import GameplayKit
 
 class RunViewController: UIViewController {
 
+    var gameStateMachine: GameStateMachine!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        gameStateMachine = GameStateMachine()
 
         presentScene(fileNamed: "RunScene") { gkScene in
             guard let runScene = gkScene.rootNode as? RunScene else { return nil }
 
+            runScene.gameStateMachine = gameStateMachine
             runScene.entities = gkScene.entities
             runScene.graphs = gkScene.graphs
 

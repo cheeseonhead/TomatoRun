@@ -9,4 +9,21 @@
 import SpriteKit
 
 class GameOverScene: SKScene {
+
+    weak var gameStateMachine: GameStateMachine?
+
+    var scoreLabel: ScoreLabelNode!
+
+    override func didMove(to view: SKView) {
+        super.didMove(to: view)
+
+        scoreLabel = ScoreLabelNode(score: 0)
+        if let gameOverState = gameStateMachine?.currentState as? GameOverState,
+            let score = gameOverState.finalScore {
+            scoreLabel.score = score
+        }
+
+        scoreLabel.position = CGPoint.zero
+        addChild(scoreLabel)
+    }
 }
