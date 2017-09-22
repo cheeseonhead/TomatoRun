@@ -9,4 +9,19 @@
 import GameplayKit
 
 class DeathComponent: GKComponent {
+
+    unowned let entityManager: EntityManager
+
+    init(entityManager: EntityManager) {
+        self.entityManager = entityManager
+        super.init()
+    }
+
+    required init?(coder _: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    override func update(deltaTime _: TimeInterval) {
+        let allDangers = entityManager.components(ofType: DangerComponent.self)
+    }
 }
