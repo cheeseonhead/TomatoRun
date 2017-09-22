@@ -15,17 +15,21 @@ class RunViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
-        // including entities and graphs.
-        if let scene = GKScene(fileNamed: "RunScene") {
+        presentScene(fileNamed: "RunScene") { gkScene in
+            guard let runScene = gkScene.rootNode as? RunScene else { return nil }
+
+            runScene.entities = gkScene.entities
+            runScene.graphs = gkScene.graphs
+
+            return runScene
+        }
+    }
+
+    func presentScene<SceneType: SKScene>(fileNamed name: String, getSKScene: (GKScene) -> SceneType?) {
+        if let scene = GKScene(fileNamed: name) {
 
             // Get the SKScene from the loaded GKScene
-            if let sceneNode = scene.rootNode as! RunScene? {
-
-                // Copy gameplay related content over to the scene
-                sceneNode.entities = scene.entities
-                sceneNode.graphs = scene.graphs
-
+            if let sceneNode = getSKScene(scene) {
                 // Set the scale mode to scale to fit the window
                 sceneNode.scaleMode = .aspectFill
 
