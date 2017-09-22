@@ -309,6 +309,22 @@
 			path = Nodes;
 			sourceTree = "<group>";
 		};
+		347543181F75AD06004DA584 /* PlayScene */ = {
+			isa = PBXGroup;
+			children = (
+				34C2DB6A1F633C890027EB1F /* RunScene.sks */,
+				34C2DB6E1F633C890027EB1F /* RunScene.swift */,
+			);
+			path = PlayScene;
+			sourceTree = "<group>";
+		};
+		347543191F75AD16004DA584 /* GameOverScene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GameOverScene;
+			sourceTree = "<group>";
+		};
 		3480A6F11F72190D00688B1C /* GameState */ = {
 			isa = PBXGroup;
 			children = (
@@ -411,8 +427,8 @@
 				3400D9961F6604DA00ECD456 /* Components */,
 				34C2DBAC1F633F880027EB1F /* Entities */,
 				3400D9611F65FF2800ECD456 /* StateMachine */,
-				34C2DB6A1F633C890027EB1F /* RunScene.sks */,
-				34C2DB6E1F633C890027EB1F /* RunScene.swift */,
+				347543181F75AD06004DA584 /* PlayScene */,
+				347543191F75AD16004DA584 /* GameOverScene */,
 				3400D9981F6609CD00ECD456 /* RunSceneConstants.swift */,
 				34C2DB701F633C890027EB1F /* RunViewController.swift */,
 				340917A61F73621C00ACCF07 /* PauseScene.swift */,
