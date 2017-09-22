@@ -71,13 +71,13 @@ class RunScene: SKScene {
         if gameStateMachine.currentState is GamePlayingState {
             camera?.removeChildren(in: [pauseScene])
 
-            isPaused = false
+            worldNode.isPaused = false
 
             entityManager.update(deltaTime)
         } else if gameStateMachine.currentState is GamePausedState {
             guard let camera = camera, !camera.children.contains(pauseScene), let size = camera.renderSize() else { return }
 
-            isPaused = true
+            worldNode.isPaused = true
 
             pauseScene.size = size
             pauseScene.position = CGPoint.zero
