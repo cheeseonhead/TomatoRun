@@ -74,6 +74,10 @@ class RunScene: SKScene {
             worldNode.isPaused = false
 
             entityManager.update(deltaTime)
+
+            if let dead = tomato.component(ofType: DeathComponent.self)?.isDead, dead {
+                gameStateMachine.enter(GameOverState.self)
+            }
         } else if gameStateMachine.currentState is GamePausedState {
             guard let camera = camera, !camera.children.contains(pauseScene), let size = camera.renderSize() else { return }
 
@@ -84,6 +88,9 @@ class RunScene: SKScene {
             pauseScene.zPosition = RunSceneConstants.ZPositions.PauseScene
 
             camera.addChild(pauseScene)
+        } else if gameStateMachine.currentState is GameOverState {
+            worldNode.isPaused = true
+            print("Game over")
         }
 
         segmentRenderer.update(currentTime)
