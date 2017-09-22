@@ -19,6 +19,11 @@ class RunScene: SKScene {
     var tomatoBottomPadding: CGFloat!
     var segmentRenderer: SegmentRenderer!
     var uiRenderer: UIRenderer!
+    var pauseScene: PauseScene!
+
+    var worldNode: SKNode!
+
+    var gameStateMachine: GameStateMachine!
 
     var cameraNode: SKCameraNode!
     var tomato: TomatoEntity!
@@ -29,10 +34,14 @@ class RunScene: SKScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
 
+        worldNode = SKNode()
+        addChild(worldNode)
         tomatoBottomPadding = RunSceneConstants.TomatoBottomPadding
-        entityManager = EntityManager(scene: self)
+        entityManager = EntityManager(worldNode: worldNode)
         segmentRenderer = SegmentRenderer(scene: self)
         uiRenderer = UIRenderer(scene: self)
+        gameStateMachine = GameStateMachine()
+        pauseScene = PauseScene(size: CGSize.zero, scene: self)
 
         addRopes()
         addCamera()
@@ -40,7 +49,7 @@ class RunScene: SKScene {
         addTomato()
     }
 
-    override func touchesBegan(_ touches: Set<UITouch>, with _: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
 
         let touchedNodes = nodes(at: touch.location(in: self))
@@ -51,16 +60,35 @@ class RunScene: SKScene {
 
             touchComponent.handler()
         }
+
+        uiRenderer.touchesBegan(touches, with: event)
     }
 
     override func update(_ currentTime: TimeInterval) {
         let deltaTime = currentTime - lastUpdateTimeInterval
         lastUpdateTimeInterval = currentTime
 
-        entityManager.update(deltaTime)
-        positionCamera()
+        if gameStateMachine.currentState is GamePlayingState {
+            camera?.removeChildren(in: [pauseScene])
+
+            worldNode.isPaused = false
+
+            entityManager.update(deltaTime)
+        } else if gameStateMachine.currentState is GamePausedState {
+            guard let camera = camera, !camera.children.contains(pauseScene), let size = camera.renderSize() else { return }
+
+            worldNode.isPaused = true
+
+            pauseScene.size = size
+            pauseScene.position = CGPoint.zero
+            pauseScene.zPosition = RunSceneConstants.ZPositions.PauseScene
+
+            camera.addChild(pauseScene)
+        }
+
         segmentRenderer.update(currentTime)
         uiRenderer.update(currentTime)
+        positionCamera()
     }
 }
 
