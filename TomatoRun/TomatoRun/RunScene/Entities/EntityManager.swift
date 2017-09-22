@@ -17,7 +17,8 @@ class EntityManager {
         let intersectionSystem = GKComponentSystem(componentClass: IntersectionComponent.self)
         let touchSystem = GKComponentSystem(componentClass: TouchComponent.self)
         let scoreSystem = GKComponentSystem(componentClass: ScoreComponent.self)
-        return [intersectionSystem, moveSystem, continuousSpriteSystem, touchSystem, scoreSystem]
+        let deathSystem = GKComponentSystem(componentClass: DeathComponent.self)
+        return [intersectionSystem, moveSystem, deathSystem, continuousSpriteSystem, touchSystem, scoreSystem]
     }()
 
     init(worldNode: SKNode) {
