@@ -90,7 +90,8 @@ class RunScene: SKScene {
             camera.addChild(pauseScene)
         } else if gameStateMachine.currentState is GameOverState {
             worldNode.isPaused = true
-            print("Game over")
+
+            presentScene(fileNamed: "GameOverScene", getSKScene: { gkScene in gkScene.rootNode as? GameOverScene })
         }
 
         segmentRenderer.update(currentTime)
