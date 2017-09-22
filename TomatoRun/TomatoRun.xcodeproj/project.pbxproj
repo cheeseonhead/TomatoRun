@@ -49,6 +49,7 @@
 		347543151F75A801004DA584 /* DeathComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347543141F75A801004DA584 /* DeathComponent.swift */; };
 		347543171F75A868004DA584 /* DangerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347543161F75A868004DA584 /* DangerComponent.swift */; };
 		3475431B1F75AD3B004DA584 /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3475431A1F75AD3B004DA584 /* GameOverScene.sks */; };
+		3475431D1F75ADC8004DA584 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3475431C1F75ADC8004DA584 /* GameOverScene.swift */; };
 		3480A6F31F72191C00688B1C /* GameStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480A6F21F72191C00688B1C /* GameStateMachine.swift */; };
 		3480A6F61F72195800688B1C /* GameIdleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480A6F51F72195800688B1C /* GameIdleState.swift */; };
 		34898C281F67496D00135FA6 /* TouchComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34898C271F67496D00135FA6 /* TouchComponent.swift */; };
@@ -127,6 +128,7 @@
 		347543141F75A801004DA584 /* DeathComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathComponent.swift; sourceTree = "<group>"; };
 		347543161F75A868004DA584 /* DangerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangerComponent.swift; sourceTree = "<group>"; };
 		3475431A1F75AD3B004DA584 /* GameOverScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOverScene.sks; sourceTree = "<group>"; };
+		3475431C1F75ADC8004DA584 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		3480A6F21F72191C00688B1C /* GameStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStateMachine.swift; sourceTree = "<group>"; };
 		3480A6F51F72195800688B1C /* GameIdleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameIdleState.swift; sourceTree = "<group>"; };
 		34898C271F67496D00135FA6 /* TouchComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchComponent.swift; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				3475431A1F75AD3B004DA584 /* GameOverScene.sks */,
+				3475431C1F75ADC8004DA584 /* GameOverScene.swift */,
 			);
 			path = GameOverScene;
 			sourceTree = "<group>";
@@ -694,6 +697,7 @@
 				3400D9691F65FF3000ECD456 /* DuringTravelState.swift in Sources */,
 				3400D9791F65FF5600ECD456 /* MyUtils.swift in Sources */,
 				3400D9921F6604B200ECD456 /* Positional.swift in Sources */,
+				3475431D1F75ADC8004DA584 /* GameOverScene.swift in Sources */,
 				3400D98F1F6604B200ECD456 /* SpriteComponent.swift in Sources */,
 				34C2DB6F1F633C890027EB1F /* RunScene.swift in Sources */,
 				34C2DB711F633C890027EB1F /* RunViewController.swift in Sources */,
