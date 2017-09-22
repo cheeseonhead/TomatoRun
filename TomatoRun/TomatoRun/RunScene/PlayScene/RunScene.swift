@@ -40,7 +40,6 @@ class RunScene: SKScene {
         entityManager = EntityManager(worldNode: worldNode)
         segmentRenderer = SegmentRenderer(scene: self)
         uiRenderer = UIRenderer(scene: self)
-        gameStateMachine = GameStateMachine()
         pauseScene = PauseScene(size: CGSize.zero, scene: self)
 
         addRopes()
@@ -88,9 +87,20 @@ class RunScene: SKScene {
             pauseScene.zPosition = RunSceneConstants.ZPositions.PauseScene
 
             camera.addChild(pauseScene)
-        } else if gameStateMachine.currentState is GameOverState {
+        } else if let curState = gameStateMachine.currentState as? GameOverState {
             worldNode.isPaused = true
-            print("Game over")
+
+            guard let score = tomato.component(ofType: ScoreComponent.self)?.score else { return }
+
+            curState.finalScore = score
+
+            presentScene(fileNamed: "GameOverScene", getSKScene: { gkScene in
+                guard let scene = gkScene.rootNode as? GameOverScene else { return nil }
+
+                scene.gameStateMachine = gameStateMachine
+
+                return scene
+            })
         }
 
         segmentRenderer.update(currentTime)
