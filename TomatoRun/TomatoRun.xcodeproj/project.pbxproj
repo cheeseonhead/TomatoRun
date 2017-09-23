@@ -53,6 +53,8 @@
 		347543201F75B4E6004DA584 /* Presenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3475431F1F75B4E6004DA584 /* Presenting.swift */; };
 		3478491F1F772201003A146D /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3478491E1F772201003A146D /* MainMenuScene.swift */; };
 		347849231F772233003A146D /* MainMenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 347849221F772233003A146D /* MainMenuScene.sks */; };
+		347849251F7727D0003A146D /* TextButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347849241F7727D0003A146D /* TextButtonNode.swift */; };
+		347849281F772968003A146D /* SKNode+Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347849271F772968003A146D /* SKNode+Child.swift */; };
 		3480A6F31F72191C00688B1C /* GameStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480A6F21F72191C00688B1C /* GameStateMachine.swift */; };
 		3480A6F61F72195800688B1C /* GameIdleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480A6F51F72195800688B1C /* GameIdleState.swift */; };
 		34898C281F67496D00135FA6 /* TouchComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34898C271F67496D00135FA6 /* TouchComponent.swift */; };
@@ -135,6 +137,8 @@
 		3475431F1F75B4E6004DA584 /* Presenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenting.swift; sourceTree = "<group>"; };
 		3478491E1F772201003A146D /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
 		347849221F772233003A146D /* MainMenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenuScene.sks; sourceTree = "<group>"; };
+		347849241F7727D0003A146D /* TextButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButtonNode.swift; sourceTree = "<group>"; };
+		347849271F772968003A146D /* SKNode+Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+Child.swift"; sourceTree = "<group>"; };
 		3480A6F21F72191C00688B1C /* GameStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStateMachine.swift; sourceTree = "<group>"; };
 		3480A6F51F72195800688B1C /* GameIdleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameIdleState.swift; sourceTree = "<group>"; };
 		34898C271F67496D00135FA6 /* TouchComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchComponent.swift; sourceTree = "<group>"; };
@@ -315,6 +319,7 @@
 			children = (
 				34621D011F69AAD800D04A98 /* PauseNode.swift */,
 				34BCB21B1F69EAE400F16629 /* ScoreLabelNode.swift */,
+				347849241F7727D0003A146D /* TextButtonNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -362,6 +367,15 @@
 				347849201F772209003A146D /* MainMenuScene */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		347849261F772952003A146D /* SKNode */ = {
+			isa = PBXGroup;
+			children = (
+				347849271F772968003A146D /* SKNode+Child.swift */,
+			);
+			name = SKNode;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		3480A6F11F72190D00688B1C /* GameState */ = {
@@ -485,6 +499,7 @@
 				34C2DBA51F633EE80027EB1F /* Int */,
 				3475431E1F75B4C5004DA584 /* Protocol */,
 				3400D9A91F663E2800ECD456 /* SKCameraNode */,
+				347849261F772952003A146D /* SKNode */,
 				34C2DBA61F633F080027EB1F /* SKSpriteNode */,
 				34C2DB9E1F633EA70027EB1F /* MyUtils.swift */,
 			);
@@ -708,6 +723,7 @@
 				3400D9AB1F663E4600ECD456 /* SKCameraNode+Frame.swift in Sources */,
 				3400D9941F6604B200ECD456 /* MoveComponent.swift in Sources */,
 				3480A6F31F72191C00688B1C /* GameStateMachine.swift in Sources */,
+				347849251F7727D0003A146D /* TextButtonNode.swift in Sources */,
 				3400D96C1F65FF3000ECD456 /* TravelToStartState.swift in Sources */,
 				34621D001F69A4A100D04A98 /* UIRenderer.swift in Sources */,
 				3400D9911F6604B200ECD456 /* Framable.swift in Sources */,
@@ -751,6 +767,7 @@
 				3400D9771F65FF5600ECD456 /* Int+Random.swift in Sources */,
 				34E6E9931F698ED200D38AB6 /* Positionable.swift in Sources */,
 				3400D9A61F66383800ECD456 /* SegmentManager.swift in Sources */,
+				347849281F772968003A146D /* SKNode+Child.swift in Sources */,
 				3400D9491F65FE8500ECD456 /* WoodenBoardEntity.swift in Sources */,
 				34C2DB691F633C890027EB1F /* AppDelegate.swift in Sources */,
 			);
