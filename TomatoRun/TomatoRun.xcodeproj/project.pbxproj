@@ -51,6 +51,7 @@
 		3475431B1F75AD3B004DA584 /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3475431A1F75AD3B004DA584 /* GameOverScene.sks */; };
 		3475431D1F75ADC8004DA584 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3475431C1F75ADC8004DA584 /* GameOverScene.swift */; };
 		347543201F75B4E6004DA584 /* Presenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3475431F1F75B4E6004DA584 /* Presenting.swift */; };
+		3478491F1F772201003A146D /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3478491E1F772201003A146D /* MainMenuScene.swift */; };
 		3480A6F31F72191C00688B1C /* GameStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480A6F21F72191C00688B1C /* GameStateMachine.swift */; };
 		3480A6F61F72195800688B1C /* GameIdleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480A6F51F72195800688B1C /* GameIdleState.swift */; };
 		34898C281F67496D00135FA6 /* TouchComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34898C271F67496D00135FA6 /* TouchComponent.swift */; };
@@ -131,6 +132,7 @@
 		3475431A1F75AD3B004DA584 /* GameOverScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOverScene.sks; sourceTree = "<group>"; };
 		3475431C1F75ADC8004DA584 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		3475431F1F75B4E6004DA584 /* Presenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenting.swift; sourceTree = "<group>"; };
+		3478491E1F772201003A146D /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
 		3480A6F21F72191C00688B1C /* GameStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStateMachine.swift; sourceTree = "<group>"; };
 		3480A6F51F72195800688B1C /* GameIdleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameIdleState.swift; sourceTree = "<group>"; };
 		34898C271F67496D00135FA6 /* TouchComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchComponent.swift; sourceTree = "<group>"; };
@@ -341,6 +343,24 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		347849201F772209003A146D /* MainMenuScene */ = {
+			isa = PBXGroup;
+			children = (
+				3478491E1F772201003A146D /* MainMenuScene.swift */,
+			);
+			path = MainMenuScene;
+			sourceTree = "<group>";
+		};
+		347849211F772211003A146D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				347543181F75AD06004DA584 /* PlayScene */,
+				347543191F75AD16004DA584 /* GameOverScene */,
+				347849201F772209003A146D /* MainMenuScene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		3480A6F11F72190D00688B1C /* GameState */ = {
 			isa = PBXGroup;
 			children = (
@@ -443,8 +463,7 @@
 				3400D9961F6604DA00ECD456 /* Components */,
 				34C2DBAC1F633F880027EB1F /* Entities */,
 				3400D9611F65FF2800ECD456 /* StateMachine */,
-				347543181F75AD06004DA584 /* PlayScene */,
-				347543191F75AD16004DA584 /* GameOverScene */,
+				347849211F772211003A146D /* Scenes */,
 				3400D9981F6609CD00ECD456 /* RunSceneConstants.swift */,
 				34C2DB701F633C890027EB1F /* RunViewController.swift */,
 				340917A61F73621C00ACCF07 /* PauseScene.swift */,
@@ -673,6 +692,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3478491F1F772201003A146D /* MainMenuScene.swift in Sources */,
 				3406CD431F6A08EE0027775A /* FontConstants.swift in Sources */,
 				3400D99D1F66178500ECD456 /* SegmentFileParser.swift in Sources */,
 				347543171F75A868004DA584 /* DangerComponent.swift in Sources */,
