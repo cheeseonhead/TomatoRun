@@ -13,19 +13,17 @@ class TextButtonNode: SKNode {
     let label: SKLabelNode
     let backgroundNode: SKSpriteNode
 
-    init(text: Stringk, size: CGSize) {
-        super.init()
+    required init(text: String, size: CGSize) {
+
+        backgroundNode = SKSpriteNode(texture: SKTexture(imageNamed: "WoodenBoard"), color: .red, size: size)
+        backgroundNode.zPosition = 0
 
         label = SKLabelNode(text: text)
         label.zPosition = 500
-        backgroundNode = SKSpriteNode(texture: SKTexture(imageNamed: "WoodenBoard"), color: .red, size: size)
-        label.zPosition = 0
+
+        super.init()
 
         addChildren([label, backgroundNode])
-    }
-
-    override init() {
-        self.init(text: "")
     }
 
     required init?(coder _: NSCoder) {
