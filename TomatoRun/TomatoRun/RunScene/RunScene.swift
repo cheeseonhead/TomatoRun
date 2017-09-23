@@ -90,7 +90,7 @@ extension RunScene {
         guard heights.count == ropeIndex.count else { return }
 
         for i in 0 ..< heights.count {
-            let spider = SpiderEntity(fittingWidth: size.width * 0.25)
+            let spider = SpiderEntity(fittingWidth: size.width * 0.1)
 
             addEntity(spider, toRope: ropeIndex[i], atHeight: heights[i])
         }
