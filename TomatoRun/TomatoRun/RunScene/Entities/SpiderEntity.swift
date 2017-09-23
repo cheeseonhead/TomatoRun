@@ -19,6 +19,7 @@ class SpiderEntity: GKEntity, Positionable {
         spriteComponent.node.zPosition = RunSceneConstants.ZPositions.Spider
 
         addComponent(spriteComponent)
+        addComponent(DangerComponent())
     }
 
     required init?(coder _: NSCoder) {

@@ -33,6 +33,16 @@ class UIRenderer {
         guard let camera = scene.camera else { return }
         positionScoreLabel(camera)
     }
+
+    func touchesBegan(_ touches: Set<UITouch>, with _: UIEvent?) {
+        guard let touch = touches.first else { return }
+
+        let touchedNodes = scene.nodes(at: touch.location(in: scene))
+
+        if touchedNodes.contains(pauseNode), scene.gameStateMachine.canEnterState(GamePausedState.self) {
+            scene.gameStateMachine.enter(GamePausedState.self)
+        }
+    }
 }
 
 // MARK: - Adding Nodes
