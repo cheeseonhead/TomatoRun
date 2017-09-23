@@ -6,4 +6,12 @@
 //  Copyright © 2017 okAy Studios. All rights reserved.
 //
 
-import Foundation
+import SpriteKit
+
+extension SKNode {
+    func addChildren(_ nodes: [SKNode]) {
+        for node in nodes {
+            addChild(node)
+        }
+    }
+}
