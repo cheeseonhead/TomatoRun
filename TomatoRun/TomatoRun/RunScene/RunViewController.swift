@@ -19,6 +19,18 @@ class RunViewController: UIViewController {
 
         gameStateMachine = GameStateMachine()
 
+        presentMainMenuScene()
+    }
+
+    func presentMainMenuScene() {
+        presentScene(fileNamed: "MainMenuScene", getSKScene: { gkScene in gkScene.rootNode as? SKScene })
+    }
+
+    func presentGameOverScene() {
+        presentScene(fileNamed: "GameOverScene", getSKScene: { gkScene in gkScene.rootNode as? SKScene })
+    }
+
+    func presentRunScene() {
         presentScene(fileNamed: "RunScene") { gkScene in
             guard let runScene = gkScene.rootNode as? RunScene else { return nil }
 
@@ -30,11 +42,7 @@ class RunViewController: UIViewController {
         }
     }
 
-    func presentGameOverScene() {
-        presentScene(fileNamed: "GameOverScene", getSKScene: { gkScene in gkScene.rootNode as? GameOverScene })
-    }
-
-    func presentScene<SceneType: SKScene>(fileNamed name: String, getSKScene: (GKScene) -> SceneType?) {
+    func presentScene(fileNamed name: String, getSKScene: (GKScene) -> SKScene?) {
         if let scene = GKScene(fileNamed: name) {
 
             // Get the SKScene from the loaded GKScene

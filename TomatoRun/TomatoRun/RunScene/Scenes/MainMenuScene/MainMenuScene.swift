@@ -6,4 +6,7 @@
 //  Copyright © 2017 okAy Studios. All rights reserved.
 //
 
-import Foundation
+import GameplayKit
+
+class MainMenuScene: SKScene {
+}
