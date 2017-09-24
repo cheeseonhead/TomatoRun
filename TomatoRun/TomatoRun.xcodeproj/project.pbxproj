@@ -68,6 +68,7 @@
 		34BCB2171F69E59600F16629 /* ScoreComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BCB2161F69E59600F16629 /* ScoreComponent.swift */; };
 		34BCB21A1F69E8A400F16629 /* Double+Rounding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BCB2191F69E8A400F16629 /* Double+Rounding.swift */; };
 		34BCB21C1F69EAE400F16629 /* ScoreLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BCB21B1F69EAE400F16629 /* ScoreLabelNode.swift */; };
+		34BF4C151F773B1200DFD233 /* RunPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BF4C141F773B1200DFD233 /* RunPresentable.swift */; };
 		34C2DB691F633C890027EB1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB681F633C890027EB1F /* AppDelegate.swift */; };
 		34C2DB6B1F633C890027EB1F /* RunScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB6A1F633C890027EB1F /* RunScene.sks */; };
 		34C2DB6D1F633C890027EB1F /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB6C1F633C890027EB1F /* Actions.sks */; };
@@ -156,6 +157,7 @@
 		34BCB2161F69E59600F16629 /* ScoreComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreComponent.swift; sourceTree = "<group>"; };
 		34BCB2191F69E8A400F16629 /* Double+Rounding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Rounding.swift"; sourceTree = "<group>"; };
 		34BCB21B1F69EAE400F16629 /* ScoreLabelNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreLabelNode.swift; sourceTree = "<group>"; };
+		34BF4C141F773B1200DFD233 /* RunPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunPresentable.swift; sourceTree = "<group>"; };
 		34C2DB651F633C890027EB1F /* TomatoRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TomatoRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C2DB681F633C890027EB1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34C2DB6A1F633C890027EB1F /* RunScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RunScene.sks; sourceTree = "<group>"; };
@@ -380,6 +382,7 @@
 		347849211F772211003A146D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				34BF4C141F773B1200DFD233 /* RunPresentable.swift */,
 				347543181F75AD06004DA584 /* PlayScene */,
 				347543191F75AD16004DA584 /* GameOverScene */,
 				347849201F772209003A146D /* MainMenuScene */,
@@ -761,6 +764,7 @@
 				340917A11F735A2800ACCF07 /* GamePlayingState.swift in Sources */,
 				34BCB21A1F69E8A400F16629 /* Double+Rounding.swift in Sources */,
 				3400D9751F65FF5600ECD456 /* CGRect+Anchor.swift in Sources */,
+				34BF4C151F773B1200DFD233 /* RunPresentable.swift in Sources */,
 				3400D9471F65FE8100ECD456 /* RopeEntity.swift in Sources */,
 				3400D96E1F65FF3000ECD456 /* MoveStateMachine.swift in Sources */,
 				3400D9761F65FF5600ECD456 /* GKEntity+Sprite.swift in Sources */,

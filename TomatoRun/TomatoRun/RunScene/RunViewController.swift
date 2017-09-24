@@ -10,11 +10,6 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-protocol RunPresentable {
-    weak var runViewController: RunViewController? { get set }
-    var gameStateMachine: GameStateMachine! { get set }
-}
-
 class RunViewController: UIViewController {
 
     var gameStateMachine: GameStateMachine!
