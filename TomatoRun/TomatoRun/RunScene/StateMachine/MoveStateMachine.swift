@@ -8,7 +8,7 @@
 
 import GameplayKit
 
-struct MoveState {
+struct Target {
     let startPoint: CGPoint
     let targetIntersection: IntersectionComponent
 }

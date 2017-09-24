@@ -9,7 +9,7 @@
 import GameplayKit
 
 class WanderingState: GKState {
-    var moveState: MoveState?
+    var moveState: Target?
 
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
         if stateClass == TravelToStartState.self {
