@@ -11,16 +11,11 @@ import GameplayKit
 class TravelingToStartState: MoveMachineState {
 
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
-        if stateClass == IdleOnStartState.self {
-            return target != nil
+        if target != nil {
+            return stateClass == IdleOnStartState.self ||
+                stateClass == StartFoundState.self
         }
 
         return stateClass == WanderingState.self
-    }
-
-    override func willExit(to nextState: GKState) {
-        target?.targetIntersection.canBreak = false
-
-        super.willExit(to: nextState)
     }
 }

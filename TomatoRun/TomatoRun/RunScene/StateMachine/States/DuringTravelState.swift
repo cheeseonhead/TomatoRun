@@ -13,10 +13,4 @@ class DuringTravelState: MoveMachineState {
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
         return stateClass == WanderingState.self
     }
-
-    override func willExit(to _: GKState) {
-        target?.targetIntersection.canBreak = true
-
-        target = nil
-    }
 }
