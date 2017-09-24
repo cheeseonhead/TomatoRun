@@ -9,6 +9,7 @@
 import GameplayKit
 
 class IdleOnStartState: GKState {
+    weak var targetPoint: CGPoint?
     weak var targetIntersectionComponent: IntersectionComponent?
 
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {

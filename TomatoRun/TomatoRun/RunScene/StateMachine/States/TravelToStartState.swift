@@ -9,6 +9,7 @@
 import GameplayKit
 
 class TravelToStartState: GKState {
+    weak var targetPoint: CGPoint?
     weak var targetIntersectionComponent: IntersectionComponent?
 
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
@@ -19,6 +20,7 @@ class TravelToStartState: GKState {
     override func willExit(to nextState: GKState) {
         guard let idleOnStart = nextState as? IdleOnStartState else { return }
 
+        idleOnStart.targetPoint = targetPoint
         idleOnStart.targetIntersectionComponent = targetIntersectionComponent
     }
 }
