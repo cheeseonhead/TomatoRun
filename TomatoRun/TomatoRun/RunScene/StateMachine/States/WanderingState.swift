@@ -12,7 +12,10 @@ class WanderingState: GKState {
     var target: Target?
 
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
-        return stateClass == StartFoundState.self
+        if stateClass == StartFoundState.self {
+            return target != nil
+        }
+        return nil
     }
 
     override func willExit(to nextState: GKState) {
