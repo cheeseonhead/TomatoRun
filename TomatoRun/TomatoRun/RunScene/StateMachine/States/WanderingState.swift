@@ -12,8 +12,8 @@ class MoveMachineState: GKState {
     var target: Target?
 
     override func willExit(to nextState: GKState) {
-        if let nextState == nextState as? MoveMachineState {
-            nextState.target = target
+        if let state = nextState as? MoveMachineState {
+            state.target = target
         }
 
         target = nil

@@ -19,7 +19,7 @@ class TravelingToStartState: MoveMachineState {
     }
 
     override func willExit(to nextState: GKState) {
-        moveState.targetIntersection.canBreak = false
+        target?.targetIntersection.canBreak = false
 
         super.willExit(to: nextState)
     }
