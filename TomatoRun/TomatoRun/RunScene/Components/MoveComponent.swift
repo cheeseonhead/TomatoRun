@@ -6,9 +6,6 @@
 import SpriteKit
 import GameplayKit
 
-private let actionName = "MoveAction"
-private var actionIndex = 0
-
 class MoveComponent: GKComponent {
     let entityManager: EntityManager
     let stateMachine: MoveStateMachine
