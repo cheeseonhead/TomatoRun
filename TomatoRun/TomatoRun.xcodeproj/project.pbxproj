@@ -44,6 +44,7 @@
 		340917A31F735A6300ACCF07 /* GamePausedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340917A21F735A6300ACCF07 /* GamePausedState.swift */; };
 		340917A51F735B5700ACCF07 /* GameOverState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340917A41F735B5700ACCF07 /* GameOverState.swift */; };
 		340917A71F73621C00ACCF07 /* PauseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340917A61F73621C00ACCF07 /* PauseScene.swift */; };
+		342DD91F1F772E56006D09E3 /* CGSize+Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DD91E1F772E56006D09E3 /* CGSize+Padding.swift */; };
 		34621D001F69A4A100D04A98 /* UIRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34621CFF1F69A4A100D04A98 /* UIRenderer.swift */; };
 		34621D021F69AAD800D04A98 /* PauseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34621D011F69AAD800D04A98 /* PauseNode.swift */; };
 		347543151F75A801004DA584 /* DeathComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347543141F75A801004DA584 /* DeathComponent.swift */; };
@@ -128,6 +129,7 @@
 		340917A21F735A6300ACCF07 /* GamePausedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePausedState.swift; sourceTree = "<group>"; };
 		340917A41F735B5700ACCF07 /* GameOverState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverState.swift; sourceTree = "<group>"; };
 		340917A61F73621C00ACCF07 /* PauseScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseScene.swift; sourceTree = "<group>"; };
+		342DD91E1F772E56006D09E3 /* CGSize+Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Padding.swift"; sourceTree = "<group>"; };
 		34621CFF1F69A4A100D04A98 /* UIRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRenderer.swift; sourceTree = "<group>"; };
 		34621D011F69AAD800D04A98 /* PauseNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseNode.swift; sourceTree = "<group>"; };
 		347543141F75A801004DA584 /* DeathComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathComponent.swift; sourceTree = "<group>"; };
@@ -303,6 +305,14 @@
 				3400D9AA1F663E4600ECD456 /* SKCameraNode+Frame.swift */,
 			);
 			path = SKCameraNode;
+			sourceTree = "<group>";
+		};
+		342DD91D1F772E41006D09E3 /* CGSize */ = {
+			isa = PBXGroup;
+			children = (
+				342DD91E1F772E56006D09E3 /* CGSize+Padding.swift */,
+			);
+			path = CGSize;
 			sourceTree = "<group>";
 		};
 		34621CFE1F69A48900D04A98 /* Renderers */ = {
@@ -494,6 +504,7 @@
 				3400D92F1F65FD4300ECD456 /* Constants */,
 				34C2DBA91F633F3D0027EB1F /* Array */,
 				34C2DBA31F633ECF0027EB1F /* CGRect */,
+				342DD91D1F772E41006D09E3 /* CGSize */,
 				34BCB2181F69E89300F16629 /* Double */,
 				34C2DBA41F633ED90027EB1F /* GKEntity */,
 				34C2DBA51F633EE80027EB1F /* Int */,
@@ -765,6 +776,7 @@
 				3400D96B1F65FF3000ECD456 /* IdleState.swift in Sources */,
 				3400D9A81F663BBD00ECD456 /* SegmentRenderer.swift in Sources */,
 				3400D9771F65FF5600ECD456 /* Int+Random.swift in Sources */,
+				342DD91F1F772E56006D09E3 /* CGSize+Padding.swift in Sources */,
 				34E6E9931F698ED200D38AB6 /* Positionable.swift in Sources */,
 				3400D9A61F66383800ECD456 /* SegmentManager.swift in Sources */,
 				347849281F772968003A146D /* SKNode+Child.swift in Sources */,
