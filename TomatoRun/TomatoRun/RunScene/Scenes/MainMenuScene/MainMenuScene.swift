@@ -9,11 +9,26 @@
 import GameplayKit
 
 class MainMenuScene: SKScene {
+    weak var runViewController: RunViewController?
     var playButton: TextButtonNode!
 
     override func didMove(to _: SKView) {
         playButton = TextButtonNode(text: "Play", fontSize: .Large)
 
         addChild(playButton)
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else { return }
+
+        let touchedNodes = getTouchedChildren(touch, with: event)
+
+        if touchedNodes.contains(playButton) {
+            startGame()
+        }
+    }
+
+    func startGame() {
+        runViewController?.presentRunScene()
     }
 }
