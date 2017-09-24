@@ -6,6 +6,9 @@
 import SpriteKit
 import GameplayKit
 
+private let actionName = "MoveAction"
+private var actionIndex = 0
+
 class MoveComponent: GKComponent {
     let entityManager: EntityManager
     let stateMachine: MoveStateMachine
@@ -83,8 +86,12 @@ private extension MoveComponent {
         let distance = (position - curPosition).length()
         let action = SKAction.move(to: position, duration: Double(distance / speed))
 
-        node.removeAllActions()
-        node.run(action, completion: block)
+        actionIndex += 1
+        print("Going to run action")
+        node.run(action, withKey: "\(actionName)\(actionIndex)", completion: block)
+        print("Ran action")
+        node.removeAction(forKey: "\(actionName)\(actionIndex - 1)")
+        print("Removed previous action")
     }
 
     func redirect(node: SKSpriteNode, onPath path: [CGPoint], completion block: @escaping () -> Swift.Void) {
