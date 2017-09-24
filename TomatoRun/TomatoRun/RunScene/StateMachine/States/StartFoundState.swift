@@ -14,4 +14,10 @@ class StartFoundState: GKState {
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
         return stateClass == TravelingToStartState.self
     }
+
+    override func willExit(to nextState: GKState) {
+        if let travelToStart = nextState as? TravelingToStartState {
+            travelToStart.target = target
+        }
+    }
 }
