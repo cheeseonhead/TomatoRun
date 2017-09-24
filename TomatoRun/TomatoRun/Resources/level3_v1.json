@@ -3,14 +3,14 @@
                       "height": 200,
                       "rope": 0
                       }, {
-                      "height": 450,
+                      "height": 200,
+                      "rope": 2
+                      }, {
+                      "height": 550,
                       "rope": 1
                       }, {
-                      "height": 750,
+                      "height": 850,
                       "rope": 0
-                      }, {
-                      "height": 900,
-                      "rope": 2
                       }],
     "spiders": [{
                 "height": 450,
@@ -18,3 +18,4 @@
                 }],
     "length": 1000
 }
+
