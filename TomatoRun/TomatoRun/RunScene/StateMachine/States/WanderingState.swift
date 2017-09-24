@@ -8,9 +8,23 @@
 
 import GameplayKit
 
-class WanderingState: GKState {
+class MoveMachineState: GKState {
+    var target: Target?
+
+    override func willExit(to nextState: GKState) {
+        if let state = nextState as? MoveMachineState {
+            state.target = target
+        }
+
+        target = nil
+    }
+}
+
+class WanderingState: MoveMachineState {
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
-        return stateClass == TravelToStartState.self ||
-            stateClass == IdleState.self
+        if stateClass == StartFoundState.self {
+            return target != nil
+        }
+        return false
     }
 }

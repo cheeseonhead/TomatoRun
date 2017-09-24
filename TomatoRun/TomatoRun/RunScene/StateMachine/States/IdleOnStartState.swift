@@ -8,7 +8,8 @@
 
 import GameplayKit
 
-class IdleOnStartState: GKState {
+class IdleOnStartState: MoveMachineState {
+
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
         return stateClass == DuringTravelState.self
     }

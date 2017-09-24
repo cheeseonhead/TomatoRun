@@ -11,13 +11,13 @@ import GameplayKit
 class MoveStateMachine: GKStateMachine {
     init() {
         super.init(states: [
-            IdleState(),
-            IdleOnStartState(),
             WanderingState(),
-            TravelToStartState(),
+            StartFoundState(),
+            IdleOnStartState(),
+            TravelingToStartState(),
             DuringTravelState(),
         ])
 
-        enter(IdleState.self)
+        enter(WanderingState.self)
     }
 }

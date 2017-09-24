@@ -29,55 +29,49 @@ class MoveComponent: GKComponent {
     override func update(deltaTime seconds: TimeInterval) {
         super.update(deltaTime: seconds)
 
-        guard !(stateMachine.currentState is DuringTravelState) else { return }
-
         guard let node = entity?.component(ofType: SpriteComponent.self)?.node else { return }
 
-        let curPosition = node.position
         let intersectionComponents = entityManager.components(ofType: IntersectionComponent.self)
 
-        if stateMachine.currentState is IdleOnStartState, let startPoint = curDestination,
-            let curIntersection = curIntersectionComponent {
-            let path = curIntersection.pathToTravel(withStarting: startPoint)
+        // Finding the appropriate intersection to go to
+        let bestTarget = findBestIntersection(curPosition: node.position, components: intersectionComponents)
 
-            curIntersection.canBreak = false
+        // Move to the correct state
+        if let state = stateMachine.currentState as? WanderingState {
+            state.target = bestTarget
+            if stateMachine.canEnterState(StartFoundState.self) {
+                stateMachine.enter(StartFoundState.self)
+            }
+        } else if let state = stateMachine.currentState as? TravelingToStartState {
+            if state.target != bestTarget {
+                state.target = bestTarget
 
-            redirect(node: node, onPath: path, completion: {
-                curIntersection.canBreak = true
-                assert(self.stateMachine.enter(IdleState.self))
-            })
-            return
+                if bestTarget != nil {
+                    stateMachine.enter(StartFoundState.self)
+                } else {
+                    stateMachine.enter(WanderingState.self)
+                }
+            }
         }
 
-        // Finding the appropriate intersection to go to
-        var bestIntersectionComponent: IntersectionComponent?
-        var bestPoint: CGPoint?
+        // Process using the state
+        if stateMachine.currentState is WanderingState, !node.hasActions() {
+            let pointToGo = CGPoint(x: node.position.x, y: node.position.y + 1000)
+            redirect(node: node, toPosition: pointToGo, completion: {})
+        } else if let state = stateMachine.currentState as? StartFoundState, let target = state.target {
+            stateMachine.enter(TravelingToStartState.self)
+            redirect(node: node, toPosition: target.startPoint, completion: {
+                target.targetIntersection.canBreak = false
+                self.stateMachine.enter(IdleOnStartState.self)
+            })
+        } else if let state = stateMachine.currentState as? IdleOnStartState, let target = state.target {
+            let path = target.targetIntersection.pathToTravel(withStarting: target.startPoint)
 
-        (bestPoint, bestIntersectionComponent) = findBestIntersection(curPosition: curPosition, components: intersectionComponents)
-
-        if bestPoint == nil {
-            if !(stateMachine.currentState is WanderingState) {
-                assert(stateMachine.enter(WanderingState.self))
-                curDestination = nil
-
-                let pointToGo = CGPoint(x: curPosition.x, y: curPosition.y + 1000)
-                redirect(node: node, toPosition: pointToGo, completion: {
-                    assert(self.stateMachine.enter(IdleState.self))
-                })
-            }
-        } else {
-            if bestPoint != curDestination {
-                guard stateMachine.enter(TravelToStartState.self) else { return }
-
-                curDestination = bestPoint
-
-                curIntersectionComponent = bestIntersectionComponent
-
-                redirect(node: node, toPosition: curDestination!, completion: {
-                    self.curIntersectionComponent?.canBreak = false
-                    assert(self.stateMachine.enter(IdleOnStartState.self))
-                })
-            }
+            stateMachine.enter(DuringTravelState.self)
+            redirect(node: node, onPath: path, completion: {
+                target.targetIntersection.canBreak = true
+                self.stateMachine.enter(WanderingState.self)
+            })
         }
     }
 }
@@ -110,7 +104,7 @@ private extension MoveComponent {
         node.run(SKAction.sequence(actionSequence), completion: block)
     }
 
-    func findBestIntersection(curPosition: CGPoint, components: Set<IntersectionComponent>) -> (CGPoint?, IntersectionComponent?) {
+    func findBestIntersection(curPosition: CGPoint, components: Set<IntersectionComponent>) -> Target? {
         var bestIntersectionComponent: IntersectionComponent?
         var bestPoint: CGPoint?
 
@@ -129,6 +123,8 @@ private extension MoveComponent {
             }
         }
 
-        return (bestPoint, bestIntersectionComponent)
+        guard let point = bestPoint, let intersection = bestIntersectionComponent else { return nil }
+
+        return Target(startPoint: point, targetIntersection: intersection)
     }
 }

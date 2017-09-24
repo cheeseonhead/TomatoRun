@@ -8,10 +8,14 @@
 
 import GameplayKit
 
-class TravelToStartState: GKState {
+class TravelingToStartState: MoveMachineState {
+
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
-        return stateClass == IdleState.self ||
-            stateClass == IdleOnStartState.self ||
-            stateClass == TravelToStartState.self
+        if target != nil {
+            return stateClass == IdleOnStartState.self ||
+                stateClass == StartFoundState.self
+        }
+
+        return stateClass == WanderingState.self
     }
 }
