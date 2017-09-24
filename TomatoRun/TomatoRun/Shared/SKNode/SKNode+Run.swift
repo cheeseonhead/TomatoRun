@@ -9,13 +9,13 @@
 import SpriteKit
 
 extension SKNode {
-    func run(_ action: SKAction, withKey key: String, completion: () -> Void) {
+    func run(_ action: SKAction, withKey key: String, completion: @escaping () -> Void) {
 
         let finalAction = SKAction.run {
             completion()
         }
-        let sequence = SKAction.sequence([action, completion])
+        let sequence = SKAction.sequence([action, finalAction])
 
-        run(action, withKey: key)
+        run(sequence, withKey: key)
     }
 }
