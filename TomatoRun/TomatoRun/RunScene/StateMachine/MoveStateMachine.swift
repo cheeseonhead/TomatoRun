@@ -11,8 +11,9 @@ import GameplayKit
 class MoveStateMachine: GKStateMachine {
     init() {
         super.init(states: [
-            IdleOnStartState(),
             WanderingState(),
+            StartFoundState(),
+            IdleOnStartState(),
             TravelingToStartState(),
             DuringTravelState(),
         ])
