@@ -110,7 +110,7 @@ private extension MoveComponent {
         node.run(SKAction.sequence(actionSequence), completion: block)
     }
 
-    func findBestIntersection(curPosition: CGPoint, components: Set<IntersectionComponent>) -> (CGPoint?, IntersectionComponent?) {
+    func findBestIntersection(curPosition: CGPoint, components: Set<IntersectionComponent>) -> MoveState? {
         var bestIntersectionComponent: IntersectionComponent?
         var bestPoint: CGPoint?
 
@@ -129,6 +129,8 @@ private extension MoveComponent {
             }
         }
 
-        return (bestPoint, bestIntersectionComponent)
+        guard let point = bestPoint, let intersection = bestIntersectionComponent else { return }
+        
+        return MoveState(startPoint: point, targetIntersection: intersection)
     }
 }
