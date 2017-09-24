@@ -9,7 +9,7 @@
 import SpriteKit
 import GameplayKit
 
-class RunScene: SKScene {
+class RunScene: SKScene, RunPresentable {
     let numberOfRopes = RunSceneConstants.NumOfRopes
 
     var entities = [GKEntity]()
@@ -24,6 +24,7 @@ class RunScene: SKScene {
     var worldNode: SKNode!
 
     var gameStateMachine: GameStateMachine!
+    weak var runViewController: RunViewController?
 
     var cameraNode: SKCameraNode!
     var tomato: TomatoEntity!
@@ -94,13 +95,7 @@ class RunScene: SKScene {
 
             curState.finalScore = score
 
-            presentScene(fileNamed: "GameOverScene", getSKScene: { gkScene in
-                guard let scene = gkScene.rootNode as? GameOverScene else { return nil }
-
-                scene.gameStateMachine = gameStateMachine
-
-                return scene
-            })
+            runViewController?.presentGameOverScene()
         }
 
         segmentRenderer.update(currentTime)

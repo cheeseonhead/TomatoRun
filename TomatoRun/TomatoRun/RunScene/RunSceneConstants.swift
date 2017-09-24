@@ -34,8 +34,12 @@ enum RunSceneConstants {
         static let PauseNode = CGFloat(0.1)
     }
 
+    // MARK: Padding
     enum PaddingRatio {
         static let PauseNode = CGFloat(0.02)
         static let ScoreLabel = PauseNode
+    }
+    enum Padding {
+        static let ButtonInside = CGFloat(20)
     }
 }

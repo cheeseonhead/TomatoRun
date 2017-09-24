@@ -19,7 +19,19 @@ class RunViewController: UIViewController {
 
         gameStateMachine = GameStateMachine()
 
-        presentScene(fileNamed: "RunScene") { gkScene in
+        presentMainMenuScene()
+    }
+
+    func presentMainMenuScene() {
+        presentScene(fileNamed: "MainMenuScene", getSKScene: { gkScene -> MainMenuScene? in gkScene.rootNode as? MainMenuScene })
+    }
+
+    func presentGameOverScene() {
+        presentScene(fileNamed: "GameOverScene", getSKScene: { gkScene -> GameOverScene? in gkScene.rootNode as? GameOverScene })
+    }
+
+    func presentRunScene() {
+        presentScene(fileNamed: "RunScene") { gkScene -> RunScene? in
             guard let runScene = gkScene.rootNode as? RunScene else { return nil }
 
             runScene.gameStateMachine = gameStateMachine
@@ -30,17 +42,15 @@ class RunViewController: UIViewController {
         }
     }
 
-    func presentGameOverScene() {
-        presentScene(fileNamed: "GameOverScene", getSKScene: { gkScene in gkScene.rootNode as? GameOverScene })
-    }
-
-    func presentScene<SceneType: SKScene>(fileNamed name: String, getSKScene: (GKScene) -> SceneType?) {
+    func presentScene<SceneType: SKScene & RunPresentable>(fileNamed name: String, getSKScene: (GKScene) -> SceneType?) {
         if let scene = GKScene(fileNamed: name) {
 
             // Get the SKScene from the loaded GKScene
-            if let sceneNode = getSKScene(scene) {
+            if var sceneNode = getSKScene(scene) {
                 // Set the scale mode to scale to fit the window
                 sceneNode.scaleMode = .aspectFill
+                sceneNode.runViewController = self
+                sceneNode.gameStateMachine = gameStateMachine
 
                 // Present the scene
                 if let view = self.view as! SKView? {

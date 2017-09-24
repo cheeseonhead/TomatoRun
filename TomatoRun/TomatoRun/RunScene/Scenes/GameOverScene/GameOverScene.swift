@@ -8,9 +8,10 @@
 
 import SpriteKit
 
-class GameOverScene: SKScene {
+class GameOverScene: SKScene, RunPresentable {
 
-    weak var gameStateMachine: GameStateMachine?
+    weak var runViewController: RunViewController?
+    var gameStateMachine: GameStateMachine!
 
     var scoreLabel: ScoreLabelNode!
 
