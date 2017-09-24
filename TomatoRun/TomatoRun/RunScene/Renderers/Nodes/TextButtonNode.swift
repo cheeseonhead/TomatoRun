@@ -13,14 +13,16 @@ class TextButtonNode: SKNode {
     let label: SKLabelNode
     let backgroundNode: SKSpriteNode
 
-    required init(text: String, fontSize: FontSize, size: CGSize) {
-
-        backgroundNode = SKSpriteNode(texture: SKTexture(imageNamed: "WoodenBoard"), color: .red, size: size)
-        backgroundNode.zPosition = 0
+    required init(text: String, fontSize: FontSize) {
 
         label = SKLabelNode(text: text)
         label.fontSize = fontSize.rawValue
+        label.verticalAlignmentMode = .center
         label.zPosition = 500
+
+        backgroundNode = SKSpriteNode(texture: SKTexture(imageNamed: "WoodenBoard"), color: .red,
+                                      size: label.frame.size.addedPadding(RunSceneConstants.Padding.ButtonInside))
+        backgroundNode.zPosition = 0
 
         super.init()
 
