@@ -10,6 +10,6 @@ import GameplayKit
 
 class DuringTravelState: GKState {
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
-        return stateClass == IdleState.self
+        return stateClass == WanderingState.self
     }
 }

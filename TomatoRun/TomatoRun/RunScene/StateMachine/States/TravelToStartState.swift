@@ -9,9 +9,10 @@
 import GameplayKit
 
 class TravelToStartState: GKState {
+    weak var targetIntersectionComponent: IntersectionComponent?
+
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
-        return stateClass == IdleState.self ||
-            stateClass == IdleOnStartState.self ||
-            stateClass == TravelToStartState.self
+        return stateClass == IdleOnStartState.self ||
+            stateClass == WanderingState.self
     }
 }
