@@ -8,15 +8,14 @@
 
 import GameplayKit
 
-class DuringTravelState: GKState {
-    var target: Target!
+class DuringTravelState: MoveMachineState {
 
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
         return stateClass == WanderingState.self
     }
 
     override func willExit(to _: GKState) {
-        target.targetIntersection.canBreak = true
+        target?.targetIntersection.canBreak = true
 
         target = nil
     }

@@ -8,8 +8,7 @@
 
 import GameplayKit
 
-class TravelingToStartState: GKState {
-    var target: Target?
+class TravelingToStartState: MoveMachineState {
 
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
         if stateClass == IdleOnStartState.self {
@@ -20,12 +19,8 @@ class TravelingToStartState: GKState {
     }
 
     override func willExit(to nextState: GKState) {
-        guard let idleOnStart = nextState as? IdleOnStartState,
-            let moveState = target else { return }
-
         moveState.targetIntersection.canBreak = false
-        idleOnStart.target = moveState
 
-        target = nil
+        super.willExit(to: nextState)
     }
 }
