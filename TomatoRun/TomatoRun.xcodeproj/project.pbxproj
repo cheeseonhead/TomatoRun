@@ -70,7 +70,6 @@
 		34BF4C151F773B1200DFD233 /* RunPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BF4C141F773B1200DFD233 /* RunPresentable.swift */; };
 		34C2DB691F633C890027EB1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB681F633C890027EB1F /* AppDelegate.swift */; };
 		34C2DB6B1F633C890027EB1F /* RunScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB6A1F633C890027EB1F /* RunScene.sks */; };
-		34C2DB6D1F633C890027EB1F /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB6C1F633C890027EB1F /* Actions.sks */; };
 		34C2DB6F1F633C890027EB1F /* RunScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB6E1F633C890027EB1F /* RunScene.swift */; };
 		34C2DB711F633C890027EB1F /* RunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB701F633C890027EB1F /* RunViewController.swift */; };
 		34C2DB741F633C890027EB1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB721F633C890027EB1F /* Main.storyboard */; };
@@ -705,10 +704,8 @@
 				34C2DB761F633C890027EB1F /* Assets.xcassets in Resources */,
 				34C2DB791F633C890027EB1F /* LaunchScreen.storyboard in Resources */,
 				9BB60A121F70B9200002A5BF /* level2_v1.json in Resources */,
-				34C2DB6D1F633C890027EB1F /* Actions.sks in Resources */,
 				9BCD27AA1F69AD83002DA30F /* level3_v1.json in Resources */,
 				349FB93E1F6A058E00F5FE4B /* BebasNeue-Light.ttf in Resources */,
-				34C2DB6D1F633C890027EB1F /* Actions.sks in Resources */,
 				349FB93C1F6A058E00F5FE4B /* BebasNeue-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
