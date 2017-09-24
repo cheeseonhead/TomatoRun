@@ -55,17 +55,21 @@ class MoveComponent: GKComponent {
         }
 
         // Process using the state
-        if stateMachine.currentState is WanderingState {
+        if stateMachine.currentState is WanderingState, !node.hasActions() {
             let pointToGo = CGPoint(x: node.position.x, y: node.position.y + 1000)
             redirect(node: node, toPosition: pointToGo, completion: {})
         } else if let state = stateMachine.currentState as? StartFoundState, let target = state.target {
+            stateMachine.enter(TravelingToStartState.self)
             redirect(node: node, toPosition: target.startPoint, completion: {
+                target.targetIntersection.canBreak = false
                 self.stateMachine.enter(IdleOnStartState.self)
             })
         } else if let state = stateMachine.currentState as? IdleOnStartState, let target = state.target {
             let path = target.targetIntersection.pathToTravel(withStarting: target.startPoint)
 
+            stateMachine.enter(DuringTravelState.self)
             redirect(node: node, onPath: path, completion: {
+                target.targetIntersection.canBreak = true
                 self.stateMachine.enter(WanderingState.self)
             })
         }
