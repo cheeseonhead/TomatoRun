@@ -9,7 +9,7 @@
 import SpriteKit
 import GameplayKit
 
-class RunScene: SKScene {
+class RunScene: SKScene, RunPresentable {
     let numberOfRopes = RunSceneConstants.NumOfRopes
 
     var entities = [GKEntity]()

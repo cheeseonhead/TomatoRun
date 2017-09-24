@@ -10,6 +10,11 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
+protocol RunPresentable {
+    weak var runViewController: RunViewController? { get set }
+    var gameStateMachine: GameStateMachine! { get set }
+}
+
 class RunViewController: UIViewController {
 
     var gameStateMachine: GameStateMachine!
@@ -23,21 +28,15 @@ class RunViewController: UIViewController {
     }
 
     func presentMainMenuScene() {
-        presentScene(fileNamed: "MainMenuScene", getSKScene: { gkScene in
-            guard let mainMenu = gkScene.rootNode as? MainMenuScene else { return nil }
-
-            mainMenu.runViewController = self
-
-            return mainMenu
-        })
+        presentScene(fileNamed: "MainMenuScene", getSKScene: { gkScene -> MainMenuScene? in gkScene.rootNode as? MainMenuScene })
     }
 
     func presentGameOverScene() {
-        presentScene(fileNamed: "GameOverScene", getSKScene: { gkScene in gkScene.rootNode as? SKScene })
+        presentScene(fileNamed: "MainMenuScene", getSKScene: { gkScene -> GameOverScene? in gkScene.rootNode as? GameOverScene })
     }
 
     func presentRunScene() {
-        presentScene(fileNamed: "RunScene") { gkScene in
+        presentScene(fileNamed: "RunScene") { gkScene -> RunScene? in
             guard let runScene = gkScene.rootNode as? RunScene else { return nil }
 
             runScene.gameStateMachine = gameStateMachine
@@ -48,13 +47,15 @@ class RunViewController: UIViewController {
         }
     }
 
-    func presentScene(fileNamed name: String, getSKScene: (GKScene) -> SKScene?) {
+    func presentScene<SceneType: SKScene & RunPresentable>(fileNamed name: String, getSKScene: (GKScene) -> SceneType?) {
         if let scene = GKScene(fileNamed: name) {
 
             // Get the SKScene from the loaded GKScene
-            if let sceneNode = getSKScene(scene) {
+            if var sceneNode = getSKScene(scene) {
                 // Set the scale mode to scale to fit the window
                 sceneNode.scaleMode = .aspectFill
+                sceneNode.runViewController = self
+                sceneNode.gameStateMachine = gameStateMachine
 
                 // Present the scene
                 if let view = self.view as! SKView? {

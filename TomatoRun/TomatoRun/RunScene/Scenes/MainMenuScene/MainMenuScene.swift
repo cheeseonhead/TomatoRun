@@ -8,8 +8,11 @@
 
 import GameplayKit
 
-class MainMenuScene: SKScene {
+class MainMenuScene: SKScene, RunPresentable {
+
     weak var runViewController: RunViewController?
+    var gameStateMachine: GameStateMachine!
+
     var playButton: TextButtonNode!
 
     override func didMove(to _: SKView) {

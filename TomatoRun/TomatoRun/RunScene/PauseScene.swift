@@ -34,7 +34,7 @@ class PauseScene: SKSpriteNode {
         let touchedNodes = scene.nodes(at: touch.location(in: scene))
 
         if touchedNodes.contains(resumeLabel), runScene.gameStateMachine.canEnterState(GamePlayingState.self) {
-            runScene.gameStateMachine.enter(GamePlayingState.self)
+            runScene.gameStateMachine?.enter(GamePlayingState.self)
         }
     }
 
