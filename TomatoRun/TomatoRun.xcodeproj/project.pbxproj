@@ -77,6 +77,7 @@
 		34C2DB791F633C890027EB1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB771F633C890027EB1F /* LaunchScreen.storyboard */; };
 		34C2DB841F633C890027EB1F /* TomatoRunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB831F633C890027EB1F /* TomatoRunTests.swift */; };
 		34C2DB8F1F633C890027EB1F /* TomatoRunUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB8E1F633C890027EB1F /* TomatoRunUITests.swift */; };
+		34CC6D421F7765C400686819 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CC6D411F7765C400686819 /* Target.swift */; };
 		34E6E98F1F698C9100D38AB6 /* SpiderEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6E98E1F698C9100D38AB6 /* SpiderEntity.swift */; };
 		34E6E9911F698D6F00D38AB6 /* GKEntity+Positionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6E9901F698D6F00D38AB6 /* GKEntity+Positionable.swift */; };
 		34E6E9931F698ED200D38AB6 /* Positionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6E9921F698ED200D38AB6 /* Positionable.swift */; };
@@ -181,6 +182,7 @@
 		34C2DBAE1F633F990027EB1F /* EntityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
 		34C2DBAF1F633F990027EB1F /* TomatoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoEntity.swift; sourceTree = "<group>"; };
 		34C2DBB01F633F990027EB1F /* RopeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RopeEntity.swift; sourceTree = "<group>"; };
+		34CC6D411F7765C400686819 /* Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
 		34E6E98E1F698C9100D38AB6 /* SpiderEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiderEntity.swift; sourceTree = "<group>"; };
 		34E6E9901F698D6F00D38AB6 /* GKEntity+Positionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GKEntity+Positionable.swift"; sourceTree = "<group>"; };
 		34E6E9921F698ED200D38AB6 /* Positionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Positionable.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 			children = (
 				3400D9631F65FF2800ECD456 /* States */,
 				3400D9621F65FF2800ECD456 /* MoveStateMachine.swift */,
+				34CC6D411F7765C400686819 /* Target.swift */,
 			);
 			path = StateMachine;
 			sourceTree = "<group>";
@@ -731,6 +734,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34CC6D421F7765C400686819 /* Target.swift in Sources */,
 				3478491F1F772201003A146D /* MainMenuScene.swift in Sources */,
 				3406CD431F6A08EE0027775A /* FontConstants.swift in Sources */,
 				3400D99D1F66178500ECD456 /* SegmentFileParser.swift in Sources */,
