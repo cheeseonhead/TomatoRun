@@ -27,7 +27,6 @@ class MainMenuScene: SKScene, RunPresentable {
         let touchedNodes = getTouchedChildren(touch, with: event)
 
         if touchedNodes.contains(playButton) {
-            print("Play pressed")
             startGame()
         }
     }

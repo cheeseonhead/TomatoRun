@@ -20,6 +20,5 @@ class ScoreComponent: GKComponent {
 
         let addScore = (seconds * RunSceneConstants.ScoreRate).roundedToInt(.toNearestOrAwayFromZero)
         score += addScore
-        print("Score: \(score)")
     }
 }
