@@ -100,6 +100,10 @@ class RunScene: SKScene, RunPresentable {
 
         segmentRenderer.update(currentTime)
         uiRenderer.update(currentTime)
+    }
+
+    override func didFinishUpdate() {
+        super.didFinishUpdate()
         positionCamera()
     }
 }
