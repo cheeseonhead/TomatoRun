@@ -17,5 +17,7 @@ class DuringTravelState: GKState {
 
     override func willExit(to _: GKState) {
         target.targetIntersection.canBreak = true
+
+        target = nil
     }
 }

@@ -19,5 +19,7 @@ class StartFoundState: GKState {
         if let travelToStart = nextState as? TravelingToStartState {
             travelToStart.target = target
         }
+
+        target = nil
     }
 }

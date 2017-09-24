@@ -15,12 +15,14 @@ class WanderingState: GKState {
         if stateClass == StartFoundState.self {
             return target != nil
         }
-        return nil
+        return false
     }
 
     override func willExit(to nextState: GKState) {
         if let nextState = nextState as? StartFoundState {
             nextState.target = target
         }
+
+        target = nil
     }
 }

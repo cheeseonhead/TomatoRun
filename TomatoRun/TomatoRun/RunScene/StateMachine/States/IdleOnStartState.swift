@@ -19,5 +19,7 @@ class IdleOnStartState: GKState {
         guard let duringTravel = nextState as? DuringTravelState else { return }
 
         duringTravel.target = target
+
+        target = nil
     }
 }

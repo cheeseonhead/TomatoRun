@@ -25,5 +25,7 @@ class TravelingToStartState: GKState {
 
         moveState.targetIntersection.canBreak = false
         idleOnStart.target = moveState
+
+        target = nil
     }
 }
