@@ -8,6 +8,11 @@
 
 import GameplayKit
 
+struct MoveState {
+    let startPoint: CGPoint
+    let targetIntersection: IntersectionComponent
+}
+
 class MoveStateMachine: GKStateMachine {
     init() {
         super.init(states: [

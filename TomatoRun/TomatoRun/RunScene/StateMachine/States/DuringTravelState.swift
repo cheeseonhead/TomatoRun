@@ -9,7 +9,13 @@
 import GameplayKit
 
 class DuringTravelState: GKState {
+    var moveState: MoveState!
+
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
         return stateClass == WanderingState.self
+    }
+
+    override func willExit(to _: GKState) {
+        moveState.targetIntersection.canBreak = true
     }
 }

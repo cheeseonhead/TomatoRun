@@ -9,10 +9,15 @@
 import GameplayKit
 
 class IdleOnStartState: GKState {
-    var targetPoint: CGPoint?
-    weak var targetIntersectionComponent: IntersectionComponent?
+    var moveState: MoveState?
 
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
         return stateClass == DuringTravelState.self
+    }
+
+    override func willExit(to nextState: GKState) {
+        guard let duringTravel = nextState as? DuringTravelState else { return }
+
+        duringTravel.moveState = moveState
     }
 }
