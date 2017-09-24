@@ -32,12 +32,6 @@ class RunScene: SKScene, RunPresentable {
     // Update time
     var lastUpdateTimeInterval: TimeInterval = 0
 
-    func setup(gameStateMachine: GameStateMachine, entities: [GKEntity], graphs: [String: GKGraph]) {
-        self.gameStateMachine = gameStateMachine
-        self.entities = entities
-        self.graphs = graphs
-    }
-
     override func didMove(to view: SKView) {
         super.didMove(to: view)
 
