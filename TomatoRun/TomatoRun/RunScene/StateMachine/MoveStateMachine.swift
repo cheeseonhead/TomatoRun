@@ -13,7 +13,7 @@ class MoveStateMachine: GKStateMachine {
         super.init(states: [
             IdleOnStartState(),
             WanderingState(),
-            TravelToStartState(),
+            TravelingToStartState(),
             DuringTravelState(),
         ])
 

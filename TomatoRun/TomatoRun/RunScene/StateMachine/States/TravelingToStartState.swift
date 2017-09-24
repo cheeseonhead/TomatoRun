@@ -8,7 +8,7 @@
 
 import GameplayKit
 
-class TravelToStartState: GKState {
+class TravelingToStartState: GKState {
     var target: Target?
 
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {

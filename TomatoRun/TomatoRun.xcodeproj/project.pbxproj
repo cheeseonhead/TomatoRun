@@ -13,7 +13,7 @@
 		3400D9491F65FE8500ECD456 /* WoodenBoardEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DBAD1F633F980027EB1F /* WoodenBoardEntity.swift */; };
 		3400D9691F65FF3000ECD456 /* DuringTravelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9641F65FF2800ECD456 /* DuringTravelState.swift */; };
 		3400D96A1F65FF3000ECD456 /* IdleOnStartState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9651F65FF2800ECD456 /* IdleOnStartState.swift */; };
-		3400D96C1F65FF3000ECD456 /* TravelToStartState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9671F65FF2800ECD456 /* TravelToStartState.swift */; };
+		3400D96C1F65FF3000ECD456 /* TravelingToStartState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9671F65FF2800ECD456 /* TravelingToStartState.swift */; };
 		3400D96D1F65FF3000ECD456 /* WanderingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9681F65FF2800ECD456 /* WanderingState.swift */; };
 		3400D96E1F65FF3000ECD456 /* MoveStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9621F65FF2800ECD456 /* MoveStateMachine.swift */; };
 		3400D9731F65FF5600ECD456 /* ImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9321F65FD7900ECD456 /* ImageConstants.swift */; };
@@ -78,6 +78,7 @@
 		34C2DB841F633C890027EB1F /* TomatoRunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB831F633C890027EB1F /* TomatoRunTests.swift */; };
 		34C2DB8F1F633C890027EB1F /* TomatoRunUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB8E1F633C890027EB1F /* TomatoRunUITests.swift */; };
 		34CC6D421F7765C400686819 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CC6D411F7765C400686819 /* Target.swift */; };
+		34CC6D471F7768CB00686819 /* StartFoundState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CC6D461F7768CB00686819 /* StartFoundState.swift */; };
 		34E6E98F1F698C9100D38AB6 /* SpiderEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6E98E1F698C9100D38AB6 /* SpiderEntity.swift */; };
 		34E6E9911F698D6F00D38AB6 /* GKEntity+Positionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6E9901F698D6F00D38AB6 /* GKEntity+Positionable.swift */; };
 		34E6E9931F698ED200D38AB6 /* Positionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6E9921F698ED200D38AB6 /* Positionable.swift */; };
@@ -109,7 +110,7 @@
 		3400D9621F65FF2800ECD456 /* MoveStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveStateMachine.swift; sourceTree = "<group>"; };
 		3400D9641F65FF2800ECD456 /* DuringTravelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuringTravelState.swift; sourceTree = "<group>"; };
 		3400D9651F65FF2800ECD456 /* IdleOnStartState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleOnStartState.swift; sourceTree = "<group>"; };
-		3400D9671F65FF2800ECD456 /* TravelToStartState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelToStartState.swift; sourceTree = "<group>"; };
+		3400D9671F65FF2800ECD456 /* TravelingToStartState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelingToStartState.swift; sourceTree = "<group>"; };
 		3400D9681F65FF2800ECD456 /* WanderingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WanderingState.swift; sourceTree = "<group>"; };
 		3400D9871F6604B100ECD456 /* MoveBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveBehavior.swift; sourceTree = "<group>"; };
 		3400D9881F6604B100ECD456 /* SpriteComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
@@ -183,6 +184,7 @@
 		34C2DBAF1F633F990027EB1F /* TomatoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoEntity.swift; sourceTree = "<group>"; };
 		34C2DBB01F633F990027EB1F /* RopeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RopeEntity.swift; sourceTree = "<group>"; };
 		34CC6D411F7765C400686819 /* Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
+		34CC6D461F7768CB00686819 /* StartFoundState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartFoundState.swift; sourceTree = "<group>"; };
 		34E6E98E1F698C9100D38AB6 /* SpiderEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiderEntity.swift; sourceTree = "<group>"; };
 		34E6E9901F698D6F00D38AB6 /* GKEntity+Positionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GKEntity+Positionable.swift"; sourceTree = "<group>"; };
 		34E6E9921F698ED200D38AB6 /* Positionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Positionable.swift; sourceTree = "<group>"; };
@@ -240,7 +242,8 @@
 			isa = PBXGroup;
 			children = (
 				3400D9681F65FF2800ECD456 /* WanderingState.swift */,
-				3400D9671F65FF2800ECD456 /* TravelToStartState.swift */,
+				34CC6D461F7768CB00686819 /* StartFoundState.swift */,
+				3400D9671F65FF2800ECD456 /* TravelingToStartState.swift */,
 				3400D9651F65FF2800ECD456 /* IdleOnStartState.swift */,
 				3400D9641F65FF2800ECD456 /* DuringTravelState.swift */,
 			);
@@ -748,7 +751,7 @@
 				3400D9941F6604B200ECD456 /* MoveComponent.swift in Sources */,
 				3480A6F31F72191C00688B1C /* GameStateMachine.swift in Sources */,
 				347849251F7727D0003A146D /* TextButtonNode.swift in Sources */,
-				3400D96C1F65FF3000ECD456 /* TravelToStartState.swift in Sources */,
+				3400D96C1F65FF3000ECD456 /* TravelingToStartState.swift in Sources */,
 				34621D001F69A4A100D04A98 /* UIRenderer.swift in Sources */,
 				3400D9911F6604B200ECD456 /* Framable.swift in Sources */,
 				34E6E9951F6990A600D38AB6 /* Spider.swift in Sources */,
@@ -759,6 +762,7 @@
 				3400D9991F6609CD00ECD456 /* RunSceneConstants.swift in Sources */,
 				3400D9461F65FE7E00ECD456 /* EntityManager.swift in Sources */,
 				34E6E9911F698D6F00D38AB6 /* GKEntity+Positionable.swift in Sources */,
+				34CC6D471F7768CB00686819 /* StartFoundState.swift in Sources */,
 				340917A11F735A2800ACCF07 /* GamePlayingState.swift in Sources */,
 				34BCB21A1F69E8A400F16629 /* Double+Rounding.swift in Sources */,
 				3400D9751F65FF5600ECD456 /* CGRect+Anchor.swift in Sources */,
