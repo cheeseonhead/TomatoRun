@@ -103,6 +103,7 @@ class RunScene: SKScene, RunPresentable {
     }
 
     override func didFinishUpdate() {
+        super.didFinishUpdate()
         positionCamera()
     }
 }

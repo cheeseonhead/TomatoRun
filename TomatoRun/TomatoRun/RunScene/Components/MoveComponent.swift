@@ -86,12 +86,8 @@ private extension MoveComponent {
         let distance = (position - curPosition).length()
         let action = SKAction.move(to: position, duration: Double(distance / speed))
 
-        actionIndex += 1
-        print("Going to run action")
-        node.run(action, withKey: "\(actionName)\(actionIndex)", completion: block)
-        print("Ran action")
-        node.removeAction(forKey: "\(actionName)\(actionIndex - 1)")
-        print("Removed previous action")
+        node.removeAllActions()
+        node.run(action, completion: block)
     }
 
     func redirect(node: SKSpriteNode, onPath path: [CGPoint], completion block: @escaping () -> Swift.Void) {
