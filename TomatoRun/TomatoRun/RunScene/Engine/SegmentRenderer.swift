@@ -15,7 +15,7 @@ class SegmentRenderer {
     unowned let scene: RunScene
 
     // MARK: State
-    var currentSegmentEnd = CGFloat(0)
+    var currentSegmentEnd = CGFloat(400)
 
     init(scene: RunScene) {
         self.scene = scene

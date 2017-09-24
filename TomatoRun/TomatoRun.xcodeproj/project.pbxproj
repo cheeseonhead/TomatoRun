@@ -77,6 +77,8 @@
 		34E6E9931F698ED200D38AB6 /* Positionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6E9921F698ED200D38AB6 /* Positionable.swift */; };
 		34E6E9951F6990A600D38AB6 /* Spider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6E9941F6990A600D38AB6 /* Spider.swift */; };
 		34E6E9981F69990100D38AB6 /* Ropable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6E9971F69990100D38AB6 /* Ropable.swift */; };
+		9BB60A121F70B9200002A5BF /* level2_v1.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BB60A111F70B9200002A5BF /* level2_v1.json */; };
+		9BCD27AA1F69AD83002DA30F /* level3_v1.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BCD27A91F69AD83002DA30F /* level3_v1.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +175,8 @@
 		34E6E9921F698ED200D38AB6 /* Positionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Positionable.swift; sourceTree = "<group>"; };
 		34E6E9941F6990A600D38AB6 /* Spider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spider.swift; sourceTree = "<group>"; };
 		34E6E9971F69990100D38AB6 /* Ropable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ropable.swift; sourceTree = "<group>"; };
+		9BB60A111F70B9200002A5BF /* level2_v1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level2_v1.json; sourceTree = "<group>"; };
+		9BCD27A91F69AD83002DA30F /* level3_v1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level3_v1.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +266,8 @@
 			children = (
 				349FB9271F6A035900F5FE4B /* Fonts */,
 				3400D9A31F662D2000ECD456 /* level1_v1.json */,
+				9BB60A111F70B9200002A5BF /* level2_v1.json */,
+				9BCD27A91F69AD83002DA30F /* level3_v1.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -646,6 +652,9 @@
 				3400D9A41F662D7500ECD456 /* level1_v1.json in Resources */,
 				34C2DB761F633C890027EB1F /* Assets.xcassets in Resources */,
 				34C2DB791F633C890027EB1F /* LaunchScreen.storyboard in Resources */,
+				9BB60A121F70B9200002A5BF /* level2_v1.json in Resources */,
+				34C2DB6D1F633C890027EB1F /* Actions.sks in Resources */,
+				9BCD27AA1F69AD83002DA30F /* level3_v1.json in Resources */,
 				349FB93E1F6A058E00F5FE4B /* BebasNeue-Light.ttf in Resources */,
 				34C2DB6D1F633C890027EB1F /* Actions.sks in Resources */,
 				349FB93C1F6A058E00F5FE4B /* BebasNeue-Bold.ttf in Resources */,
@@ -960,12 +969,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9QWSV3PV48;
+				DEVELOPMENT_TEAM = EBV669NNE7;
 				INFOPLIST_FILE = TomatoRunUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.okAyStudios.TomatoRunUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = TomatoRun;
@@ -976,12 +987,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9QWSV3PV48;
+				DEVELOPMENT_TEAM = EBV669NNE7;
 				INFOPLIST_FILE = TomatoRunUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.okAyStudios.TomatoRunUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = TomatoRun;

@@ -13,7 +13,7 @@ enum RunSceneConstants {
     // MARK: Main Scene
     static let NumOfRopes = 4
     static let TomatoWidth = CGFloat(150)
-    static let TomatoBottomPadding = TomatoWidth
+    static let TomatoBottomPadding = CGFloat(250) // TomatoWidth
 
     // MARK: Rates
     static let ScoreRate = 1000.0 // Score per second
