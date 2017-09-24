@@ -12,7 +12,7 @@ class MainMenuScene: SKScene {
     var playButton: TextButtonNode!
 
     override func didMove(to _: SKView) {
-        playButton = TextButtonNode(text: "Play", fontSize: .Large, size: CGSize(width: 200, height: 100))
+        playButton = TextButtonNode(text: "Play", fontSize: .Large)
 
         addChild(playButton)
     }

@@ -9,7 +9,7 @@
 import UIKit
 
 extension CGSize {
-    func addedPadding(_ padding: CGFloat) {
+    func addedPadding(_ padding: CGFloat) -> CGSize {
         return CGSize(width: width + (padding * 2), height: height + (padding * 2))
     }
 }
