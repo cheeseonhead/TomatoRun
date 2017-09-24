@@ -524,6 +524,7 @@
 		34C2DB9D1F633E8D0027EB1F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				347AFA5E1F777991002823AE /* SKAction */,
 				3400D92F1F65FD4300ECD456 /* Constants */,
 				34C2DBA91F633F3D0027EB1F /* Array */,
 				34C2DBA31F633ECF0027EB1F /* CGRect */,
