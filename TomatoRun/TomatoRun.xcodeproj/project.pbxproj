@@ -238,8 +238,8 @@
 			isa = PBXGroup;
 			children = (
 				3400D9641F65FF2800ECD456 /* DuringTravelState.swift */,
-				3400D9651F65FF2800ECD456 /* IdleOnStartState.swift */,
 				3400D9671F65FF2800ECD456 /* TravelToStartState.swift */,
+				3400D9651F65FF2800ECD456 /* IdleOnStartState.swift */,
 				3400D9681F65FF2800ECD456 /* WanderingState.swift */,
 			);
 			path = States;
