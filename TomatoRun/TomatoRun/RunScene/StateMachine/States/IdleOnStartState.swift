@@ -9,6 +9,8 @@
 import GameplayKit
 
 class IdleOnStartState: GKState {
+    weak var targetIntersectionComponent: IntersectionComponent?
+
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
         return stateClass == DuringTravelState.self
     }

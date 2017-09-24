@@ -15,4 +15,10 @@ class TravelToStartState: GKState {
         return stateClass == IdleOnStartState.self ||
             stateClass == WanderingState.self
     }
+
+    override func willExit(to nextState: GKState) {
+        guard let idleOnStart = nextState as? IdleOnStartState else { return }
+
+        idleOnStart.targetIntersectionComponent = targetIntersectionComponent
+    }
 }
