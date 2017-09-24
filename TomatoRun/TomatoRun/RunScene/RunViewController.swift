@@ -32,7 +32,7 @@ class RunViewController: UIViewController {
     }
 
     func presentGameOverScene() {
-        presentScene(fileNamed: "MainMenuScene", getSKScene: { gkScene -> GameOverScene? in gkScene.rootNode as? GameOverScene })
+        presentScene(fileNamed: "GameOverScene", getSKScene: { gkScene -> GameOverScene? in gkScene.rootNode as? GameOverScene })
     }
 
     func presentRunScene() {
