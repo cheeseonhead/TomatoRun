@@ -9,11 +9,11 @@
 import GameplayKit
 
 class TravelToStartState: GKState {
-    var moveState: Target?
+    var target: Target?
 
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
         if stateClass == IdleOnStartState.self {
-            return moveState != nil
+            return target != nil
         }
 
         return stateClass == WanderingState.self
@@ -21,9 +21,9 @@ class TravelToStartState: GKState {
 
     override func willExit(to nextState: GKState) {
         guard let idleOnStart = nextState as? IdleOnStartState,
-            let moveState = moveState else { return }
+            let moveState = target else { return }
 
         moveState.targetIntersection.canBreak = false
-        idleOnStart.moveState = moveState
+        idleOnStart.target = moveState
     }
 }
