@@ -19,3 +19,15 @@ func chooseBest<T>(from set: Set<T>, compare: (T, T) -> T) -> T? {
 
     return set.reduce(first) { compare($0, $1) }
 }
+
+struct Box<T> {
+    let value: T
+    init(_ value: T) {
+        self.value = value
+    }
+}
+
+enum Result<T> {
+    case success(Box<T>)
+    case failure(String)
+}
