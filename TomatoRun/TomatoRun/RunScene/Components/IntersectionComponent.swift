@@ -49,6 +49,34 @@ class IntersectionComponent: GKComponent {
     }
 }
 
+// MARK: - IntersectionComponent Filters
+extension IntersectionComponent {
+    typealias ComponentFilter = (IntersectionComponent) -> Bool
+
+    // MARK: Derived
+    static func component(aheadAndOnPathOf curPosition: CGPoint) -> ComponentFilter {
+        return filterUnion(component(aheadOf: curPosition), component(onPathOf: curPosition))
+    }
+
+    // MARK: Primitives
+    static func component(aheadOf curPosition: CGPoint) -> ComponentFilter {
+        return component(filter: IntersectionComponent.intersection(aheadOf: curPosition))
+    }
+
+    static func component(onPathOf curPosition: CGPoint) -> ComponentFilter {
+        return component(filter: IntersectionComponent.intersection(onPathOf: curPosition))
+    }
+
+    // MARK: Generic
+    static func component(filter: @escaping IntersectionComponent.IntersectionFilter) -> ComponentFilter {
+        return { component in
+            component.intersections.reduce(true, { (_, intersection) -> Bool in
+                filter(intersection)
+            })
+        }
+    }
+}
+
 // MARK: - Intersection Filters
 extension IntersectionComponent {
     typealias IntersectionFilter = (_ intersection: CGPoint) -> Bool
