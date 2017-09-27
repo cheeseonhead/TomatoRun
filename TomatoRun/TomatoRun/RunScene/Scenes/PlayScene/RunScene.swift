@@ -153,10 +153,10 @@ private extension RunScene {
     }
 
     func addSidebar() {
-        let sideBar_left = SidebarEntity(position: CGPoint(x: 0, y: 0), scene: self)
-        entityManager.add(sideBar_left)
-        let sideBar_right = SidebarEntity(position: CGPoint(x: size.width, y: 0), scene: self)
-        entityManager.add(sideBar_right)
+        let sidebarLeft = SidebarEntity(position: CGPoint(x: 0, y: 0), scene: self)
+        entityManager.add(sidebarLeft)
+        let sidebarRight = SidebarEntity(position: CGPoint(x: size.width, y: 0), scene: self)
+        entityManager.add(sidebarRight)
     }
 
     func addCamera() {
