@@ -45,6 +45,7 @@
 		340917A71F73621C00ACCF07 /* PauseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340917A61F73621C00ACCF07 /* PauseScene.swift */; };
 		342DD91F1F772E56006D09E3 /* CGSize+Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DD91E1F772E56006D09E3 /* CGSize+Padding.swift */; };
 		342DD9231F7730A4006D09E3 /* SKNode+Touch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DD9221F7730A4006D09E3 /* SKNode+Touch.swift */; };
+		343BA4251F7BBADC00C905A7 /* FPFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343BA4241F7BBADC00C905A7 /* FPFunctions.swift */; };
 		34621D001F69A4A100D04A98 /* UIRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34621CFF1F69A4A100D04A98 /* UIRenderer.swift */; };
 		34621D021F69AAD800D04A98 /* PauseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34621D011F69AAD800D04A98 /* PauseNode.swift */; };
 		347543151F75A801004DA584 /* DeathComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347543141F75A801004DA584 /* DeathComponent.swift */; };
@@ -135,6 +136,7 @@
 		340917A61F73621C00ACCF07 /* PauseScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseScene.swift; sourceTree = "<group>"; };
 		342DD91E1F772E56006D09E3 /* CGSize+Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Padding.swift"; sourceTree = "<group>"; };
 		342DD9221F7730A4006D09E3 /* SKNode+Touch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+Touch.swift"; sourceTree = "<group>"; };
+		343BA4241F7BBADC00C905A7 /* FPFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPFunctions.swift; sourceTree = "<group>"; };
 		34621CFF1F69A4A100D04A98 /* UIRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRenderer.swift; sourceTree = "<group>"; };
 		34621D011F69AAD800D04A98 /* PauseNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseNode.swift; sourceTree = "<group>"; };
 		347543141F75A801004DA584 /* DeathComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathComponent.swift; sourceTree = "<group>"; };
@@ -524,7 +526,6 @@
 		34C2DB9D1F633E8D0027EB1F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				347AFA5E1F777991002823AE /* SKAction */,
 				3400D92F1F65FD4300ECD456 /* Constants */,
 				34C2DBA91F633F3D0027EB1F /* Array */,
 				34C2DBA31F633ECF0027EB1F /* CGRect */,
@@ -538,6 +539,7 @@
 				347849261F772952003A146D /* SKNode */,
 				34C2DBA61F633F080027EB1F /* SKSpriteNode */,
 				34C2DB9E1F633EA70027EB1F /* MyUtils.swift */,
+				343BA4241F7BBADC00C905A7 /* FPFunctions.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -812,6 +814,7 @@
 				347849281F772968003A146D /* SKNode+Child.swift in Sources */,
 				3400D9491F65FE8500ECD456 /* WoodenBoardEntity.swift in Sources */,
 				34C2DB691F633C890027EB1F /* AppDelegate.swift in Sources */,
+				343BA4251F7BBADC00C905A7 /* FPFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
