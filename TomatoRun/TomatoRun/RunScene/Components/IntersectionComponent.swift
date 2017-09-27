@@ -48,3 +48,52 @@ class IntersectionComponent: GKComponent {
         return []
     }
 }
+
+// MARK: - IntersectionComponent Filters
+extension IntersectionComponent {
+    typealias ComponentFilter = (IntersectionComponent) -> Bool
+
+    // MARK: Derived
+    static func component(aheadAndOnPathOf curPosition: CGPoint) -> ComponentFilter {
+        return filterUnion(component(aheadOf: curPosition), component(onPathOf: curPosition))
+    }
+
+    // MARK: Primitives
+    static func component(aheadOf curPosition: CGPoint) -> ComponentFilter {
+        return component(filter: IntersectionComponent.intersection(aheadOf: curPosition))
+    }
+
+    static func component(onPathOf curPosition: CGPoint) -> ComponentFilter {
+        return component(filter: IntersectionComponent.intersection(onPathOf: curPosition))
+    }
+
+    // MARK: Generic
+    static func component(filter: @escaping IntersectionComponent.IntersectionFilter) -> ComponentFilter {
+        return { component in
+            component.intersections.reduce(false) { $0 || filter($1) }
+        }
+    }
+}
+
+// MARK: - Intersection Filters
+extension IntersectionComponent {
+    typealias IntersectionFilter = (_ intersection: CGPoint) -> Bool
+
+    // MARK: Primitives
+    static func intersection(aheadOf curPosition: CGPoint) -> IntersectionFilter {
+        return { intersection in
+            let roundedIntersectY = intersection.y.rounded(.toNearestOrAwayFromZero)
+
+            return roundedIntersectY > curPosition.y
+        }
+    }
+
+    static func intersection(onPathOf curPosition: CGPoint) -> IntersectionFilter {
+        return { intersection in
+            let roundedIntersectX = intersection.x.rounded(.toNearestOrAwayFromZero)
+            let roundedPositionX = curPosition.x.rounded(.toNearestOrAwayFromZero)
+
+            return roundedPositionX == roundedIntersectX
+        }
+    }
+}

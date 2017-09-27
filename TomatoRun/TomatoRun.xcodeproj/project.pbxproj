@@ -45,6 +45,7 @@
 		340917A71F73621C00ACCF07 /* PauseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340917A61F73621C00ACCF07 /* PauseScene.swift */; };
 		342DD91F1F772E56006D09E3 /* CGSize+Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DD91E1F772E56006D09E3 /* CGSize+Padding.swift */; };
 		342DD9231F7730A4006D09E3 /* SKNode+Touch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DD9221F7730A4006D09E3 /* SKNode+Touch.swift */; };
+		343BA4251F7BBADC00C905A7 /* FPFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343BA4241F7BBADC00C905A7 /* FPFunctions.swift */; };
 		34621D001F69A4A100D04A98 /* UIRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34621CFF1F69A4A100D04A98 /* UIRenderer.swift */; };
 		34621D021F69AAD800D04A98 /* PauseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34621D011F69AAD800D04A98 /* PauseNode.swift */; };
 		347543151F75A801004DA584 /* DeathComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347543141F75A801004DA584 /* DeathComponent.swift */; };
@@ -60,6 +61,8 @@
 		3480A6F31F72191C00688B1C /* GameStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480A6F21F72191C00688B1C /* GameStateMachine.swift */; };
 		3480A6F61F72195800688B1C /* GameIdleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480A6F51F72195800688B1C /* GameIdleState.swift */; };
 		34898C281F67496D00135FA6 /* TouchComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34898C271F67496D00135FA6 /* TouchComponent.swift */; };
+		349E51D81F7BFDA800D94B5F /* IntersectionComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349E51D71F7BFDA800D94B5F /* IntersectionComponentTests.swift */; };
+		349E51DB1F7C01D700D94B5F /* QuickCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349E51DA1F7C01D700D94B5F /* QuickCheck.swift */; };
 		349FB93C1F6A058E00F5FE4B /* BebasNeue-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 349FB9331F6A043A00F5FE4B /* BebasNeue-Bold.ttf */; };
 		349FB93D1F6A058E00F5FE4B /* BebasNeue-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 349FB9341F6A043A00F5FE4B /* BebasNeue-Book.ttf */; };
 		349FB93E1F6A058E00F5FE4B /* BebasNeue-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 349FB9321F6A043A00F5FE4B /* BebasNeue-Light.ttf */; };
@@ -136,6 +139,7 @@
 		340917A61F73621C00ACCF07 /* PauseScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseScene.swift; sourceTree = "<group>"; };
 		342DD91E1F772E56006D09E3 /* CGSize+Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Padding.swift"; sourceTree = "<group>"; };
 		342DD9221F7730A4006D09E3 /* SKNode+Touch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+Touch.swift"; sourceTree = "<group>"; };
+		343BA4241F7BBADC00C905A7 /* FPFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPFunctions.swift; sourceTree = "<group>"; };
 		34621CFF1F69A4A100D04A98 /* UIRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRenderer.swift; sourceTree = "<group>"; };
 		34621D011F69AAD800D04A98 /* PauseNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseNode.swift; sourceTree = "<group>"; };
 		347543141F75A801004DA584 /* DeathComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathComponent.swift; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 		3480A6F21F72191C00688B1C /* GameStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStateMachine.swift; sourceTree = "<group>"; };
 		3480A6F51F72195800688B1C /* GameIdleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameIdleState.swift; sourceTree = "<group>"; };
 		34898C271F67496D00135FA6 /* TouchComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchComponent.swift; sourceTree = "<group>"; };
+		349E51D71F7BFDA800D94B5F /* IntersectionComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntersectionComponentTests.swift; sourceTree = "<group>"; };
+		349E51DA1F7C01D700D94B5F /* QuickCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickCheck.swift; sourceTree = "<group>"; };
 		349FB9321F6A043A00F5FE4B /* BebasNeue-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Light.ttf"; sourceTree = "<group>"; };
 		349FB9331F6A043A00F5FE4B /* BebasNeue-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Bold.ttf"; sourceTree = "<group>"; };
 		349FB9341F6A043A00F5FE4B /* BebasNeue-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Book.ttf"; sourceTree = "<group>"; };
@@ -433,6 +439,14 @@
 			path = States;
 			sourceTree = "<group>";
 		};
+		349E51D91F7C01C900D94B5F /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				349E51DA1F7C01D700D94B5F /* QuickCheck.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		349FB9271F6A035900F5FE4B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,8 +506,10 @@
 		34C2DB821F633C890027EB1F /* TomatoRunTests */ = {
 			isa = PBXGroup;
 			children = (
+				349E51D91F7C01C900D94B5F /* Shared */,
 				34C2DB831F633C890027EB1F /* TomatoRunTests.swift */,
 				34C2DB851F633C890027EB1F /* Info.plist */,
+				349E51D71F7BFDA800D94B5F /* IntersectionComponentTests.swift */,
 			);
 			path = TomatoRunTests;
 			sourceTree = "<group>";
@@ -540,6 +556,7 @@
 				347849261F772952003A146D /* SKNode */,
 				34C2DBA61F633F080027EB1F /* SKSpriteNode */,
 				34C2DB9E1F633EA70027EB1F /* MyUtils.swift */,
+				343BA4241F7BBADC00C905A7 /* FPFunctions.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -823,6 +840,7 @@
 				347849281F772968003A146D /* SKNode+Child.swift in Sources */,
 				3400D9491F65FE8500ECD456 /* WoodenBoardEntity.swift in Sources */,
 				34C2DB691F633C890027EB1F /* AppDelegate.swift in Sources */,
+				343BA4251F7BBADC00C905A7 /* FPFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -830,6 +848,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				349E51DB1F7C01D700D94B5F /* QuickCheck.swift in Sources */,
+				349E51D81F7BFDA800D94B5F /* IntersectionComponentTests.swift in Sources */,
 				34C2DB841F633C890027EB1F /* TomatoRunTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1022,7 +1042,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9QWSV3PV48;
+				DEVELOPMENT_TEAM = PL469KE6KQ;
 				INFOPLIST_FILE = TomatoRunTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.okAyStudios.TomatoRunTests;
@@ -1039,7 +1059,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9QWSV3PV48;
+				DEVELOPMENT_TEAM = PL469KE6KQ;
 				INFOPLIST_FILE = TomatoRunTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.okAyStudios.TomatoRunTests;
