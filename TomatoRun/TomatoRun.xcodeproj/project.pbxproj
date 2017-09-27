@@ -68,7 +68,6 @@
 		349FB93E1F6A058E00F5FE4B /* BebasNeue-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 349FB9321F6A043A00F5FE4B /* BebasNeue-Light.ttf */; };
 		349FB93F1F6A058E00F5FE4B /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 349FB9351F6A043A00F5FE4B /* BebasNeue-Regular.ttf */; };
 		349FB9401F6A058E00F5FE4B /* BebasNeue-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 349FB9361F6A043B00F5FE4B /* BebasNeue-Thin.ttf */; };
-		34ABA2CA1F7C5A8700E5C362 /* CGRect+Rounding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34ABA2C91F7C5A8700E5C362 /* CGRect+Rounding.swift */; };
 		34BCB2171F69E59600F16629 /* ScoreComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BCB2161F69E59600F16629 /* ScoreComponent.swift */; };
 		34BCB21A1F69E8A400F16629 /* Double+Rounding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BCB2191F69E8A400F16629 /* Double+Rounding.swift */; };
 		34BCB21C1F69EAE400F16629 /* ScoreLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BCB21B1F69EAE400F16629 /* ScoreLabelNode.swift */; };
@@ -164,7 +163,6 @@
 		349FB9341F6A043A00F5FE4B /* BebasNeue-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Book.ttf"; sourceTree = "<group>"; };
 		349FB9351F6A043A00F5FE4B /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
 		349FB9361F6A043B00F5FE4B /* BebasNeue-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Thin.ttf"; sourceTree = "<group>"; };
-		34ABA2C91F7C5A8700E5C362 /* CGRect+Rounding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Rounding.swift"; sourceTree = "<group>"; };
 		34BCB2161F69E59600F16629 /* ScoreComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreComponent.swift; sourceTree = "<group>"; };
 		34BCB2191F69E8A400F16629 /* Double+Rounding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Rounding.swift"; sourceTree = "<group>"; };
 		34BCB21B1F69EAE400F16629 /* ScoreLabelNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreLabelNode.swift; sourceTree = "<group>"; };
@@ -569,7 +567,6 @@
 			isa = PBXGroup;
 			children = (
 				34C2DB9F1F633EBF0027EB1F /* CGRect+Anchor.swift */,
-				34ABA2C91F7C5A8700E5C362 /* CGRect+Rounding.swift */,
 			);
 			path = CGRect;
 			sourceTree = "<group>";
@@ -830,7 +827,6 @@
 				34C2DB711F633C890027EB1F /* RunViewController.swift in Sources */,
 				3400D9481F65FE8300ECD456 /* TomatoEntity.swift in Sources */,
 				340917A51F735B5700ACCF07 /* GameOverState.swift in Sources */,
-				34ABA2CA1F7C5A8700E5C362 /* CGRect+Rounding.swift in Sources */,
 				3400D9931F6604B200ECD456 /* IntersectionComponent.swift in Sources */,
 				34E6E9981F69990100D38AB6 /* Ropable.swift in Sources */,
 				342DD9231F7730A4006D09E3 /* SKNode+Touch.swift in Sources */,
