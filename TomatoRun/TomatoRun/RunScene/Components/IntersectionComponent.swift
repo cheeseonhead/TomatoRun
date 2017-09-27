@@ -82,9 +82,7 @@ extension IntersectionComponent {
     // MARK: Primitives
     static func intersection(aheadOf curPosition: CGPoint) -> IntersectionFilter {
         return { intersection in
-            let roundedIntersectY = intersection.y.rounded(.toNearestOrAwayFromZero)
-
-            return roundedIntersectY > curPosition.y
+            intersection.y > curPosition.y
         }
     }
 

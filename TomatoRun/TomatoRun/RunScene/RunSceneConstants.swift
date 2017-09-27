@@ -14,6 +14,7 @@ enum RunSceneConstants {
     static let NumOfRopes = 4
     static let TomatoWidth = CGFloat(150)
     static let TomatoBottomPadding = CGFloat(250) // TomatoWidth
+    static let TomatoSpeed = CGFloat(300)
 
     // MARK: Rates
     static let ScoreRate = 1000.0 // Score per second
@@ -28,10 +29,12 @@ enum RunSceneConstants {
         static let Spider = CGFloat(950)
         static let Rope = CGFloat(500)
         static let PauseScene = CGFloat(1200)
+        static let Sidebar = CGFloat(300)
     }
 
-    enum FittingWidthRatio {
+    enum WidthRatio {
         static let PauseNode = CGFloat(0.1)
+        static let RopeSpacing = CGFloat(0.9)
     }
 
     // MARK: Padding
