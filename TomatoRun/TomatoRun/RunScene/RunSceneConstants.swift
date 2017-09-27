@@ -28,6 +28,7 @@ enum RunSceneConstants {
         static let Spider = CGFloat(950)
         static let Rope = CGFloat(500)
         static let PauseScene = CGFloat(1200)
+        static let Sidebar = CGFloat(300)
     }
 
     enum FittingWidthRatio {
