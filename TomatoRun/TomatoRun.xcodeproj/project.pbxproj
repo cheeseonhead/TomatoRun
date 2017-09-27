@@ -85,6 +85,7 @@
 		34E6E9931F698ED200D38AB6 /* Positionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6E9921F698ED200D38AB6 /* Positionable.swift */; };
 		34E6E9951F6990A600D38AB6 /* Spider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6E9941F6990A600D38AB6 /* Spider.swift */; };
 		34E6E9981F69990100D38AB6 /* Ropable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6E9971F69990100D38AB6 /* Ropable.swift */; };
+		9B5C1B341F7C0EAE00FD2F7A /* UIEdgeInsets+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C1B331F7C0EAE00FD2F7A /* UIEdgeInsets+Init.swift */; };
 		9BB60A121F70B9200002A5BF /* level2_v1.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BB60A111F70B9200002A5BF /* level2_v1.json */; };
 		9BCD27AA1F69AD83002DA30F /* level3_v1.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BCD27A91F69AD83002DA30F /* level3_v1.json */; };
 /* End PBXBuildFile section */
@@ -192,6 +193,7 @@
 		34E6E9921F698ED200D38AB6 /* Positionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Positionable.swift; sourceTree = "<group>"; };
 		34E6E9941F6990A600D38AB6 /* Spider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spider.swift; sourceTree = "<group>"; };
 		34E6E9971F69990100D38AB6 /* Ropable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ropable.swift; sourceTree = "<group>"; };
+		9B5C1B331F7C0EAE00FD2F7A /* UIEdgeInsets+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Init.swift"; sourceTree = "<group>"; };
 		9BB60A111F70B9200002A5BF /* level2_v1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level2_v1.json; sourceTree = "<group>"; };
 		9BCD27A91F69AD83002DA30F /* level3_v1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level3_v1.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -524,7 +526,7 @@
 		34C2DB9D1F633E8D0027EB1F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				347AFA5E1F777991002823AE /* SKAction */,
+				9B5C1B321F7C0E9F00FD2F7A /* UIEdgeInsets */,
 				3400D92F1F65FD4300ECD456 /* Constants */,
 				34C2DBA91F633F3D0027EB1F /* Array */,
 				34C2DBA31F633ECF0027EB1F /* CGRect */,
@@ -601,6 +603,14 @@
 				34E6E9971F69990100D38AB6 /* Ropable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9B5C1B321F7C0E9F00FD2F7A /* UIEdgeInsets */ = {
+			isa = PBXGroup;
+			children = (
+				9B5C1B331F7C0EAE00FD2F7A /* UIEdgeInsets+Init.swift */,
+			);
+			path = UIEdgeInsets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -800,6 +810,7 @@
 				34E6E9981F69990100D38AB6 /* Ropable.swift in Sources */,
 				342DD9231F7730A4006D09E3 /* SKNode+Touch.swift in Sources */,
 				3400D9901F6604B200ECD456 /* ContinuousSpriteComponent.swift in Sources */,
+				9B5C1B341F7C0EAE00FD2F7A /* UIEdgeInsets+Init.swift in Sources */,
 				3400D96D1F65FF3000ECD456 /* WanderingState.swift in Sources */,
 				3480A6F61F72195800688B1C /* GameIdleState.swift in Sources */,
 				340917A71F73621C00ACCF07 /* PauseScene.swift in Sources */,
