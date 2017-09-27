@@ -11,39 +11,39 @@ import SpriteKit
 enum RunSceneConstants {
 
     // MARK: Main Scene
-    static let NumOfRopes = 4
-    static let TomatoBottomPadding = CGFloat(250) // TomatoWidth
-    static let TomatoSpeed = CGFloat(300)
+    static let numOfRopes = 4
+    static let tomatoBottomPadding = CGFloat(250) // TomatoWidth
+    static let tomatoSpeed = CGFloat(300)
 
     // MARK: Rates
-    static let ScoreRate = 1000.0 // Score per second
+    static let scoreRate = 1000.0 // Score per second
 
     // MARK: Misc
-    static let ScoreLength = 10
+    static let scoreLength = 10
 
     enum ZPositions {
-        static let UIZPosition = CGFloat(1100)
-        static let Tomato = CGFloat(1000)
-        static let Boards = CGFloat(900)
-        static let Spider = CGFloat(950)
-        static let Rope = CGFloat(500)
-        static let PauseScene = CGFloat(1200)
-        static let Sidebar = CGFloat(300)
+        static let uiZPosition = CGFloat(1100)
+        static let tomato = CGFloat(1000)
+        static let boards = CGFloat(900)
+        static let spider = CGFloat(950)
+        static let rope = CGFloat(500)
+        static let pauseScene = CGFloat(1200)
+        static let sidebar = CGFloat(300)
     }
 
     enum WidthRatio {
-        static let PauseNode = CGFloat(0.1)
-        static let RopeSpacing = CGFloat(0.9)
-        static let Spider = CGFloat(0.7)
-        static let Tomato = CGFloat(0.7)
+        static let pauseNode = CGFloat(0.1)
+        static let ropeSpacing = CGFloat(0.9)
+        static let spider = CGFloat(0.7)
+        static let tomato = CGFloat(0.7)
     }
 
     // MARK: Padding
     enum PaddingRatio {
-        static let PauseNode = CGFloat(0.02)
-        static let ScoreLabel = PauseNode
+        static let pauseNode = CGFloat(0.02)
+        static let scoreLabel = pauseNode
     }
     enum Padding {
-        static let ButtonInside = CGFloat(20)
+        static let buttonInside = CGFloat(20)
     }
 }
