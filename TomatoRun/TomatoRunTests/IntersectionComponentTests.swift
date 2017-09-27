@@ -14,6 +14,7 @@ class IntersectionComponentTests: XCTestCase {
 
 // MARK: - ComponentFilter by intersection works
 extension IntersectionComponentTests {
+
     func testComponentPassesGenericFilter() {
         let intersectionFilter = intersection(equalTo: CGPoint.zero)
         let targetComponent = IntersectionComponent(anchors: [])

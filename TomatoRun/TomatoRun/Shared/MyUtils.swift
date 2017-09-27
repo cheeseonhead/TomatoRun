@@ -25,6 +25,7 @@ import CoreGraphics
 import GameplayKit
 
 infix operator ~=: ComparisonPrecedence
+
 func ~= (left: CGFloat, right: CGFloat) -> Bool {
     let roundedLeft = left.rounded(.toNearestOrAwayFromZero)
     let roundedRight = right.rounded(.toNearestOrAwayFromZero)
