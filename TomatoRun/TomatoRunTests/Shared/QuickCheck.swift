@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+protocol Arbitrary {
+    static func arbitrary() -> Self
+}
+
+extension Int: Arbitrary {
+    static func arbitrary() -> Int {
+        return Int(arc4random())
+    }
+}
