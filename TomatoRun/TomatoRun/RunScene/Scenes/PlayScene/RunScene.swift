@@ -43,6 +43,7 @@ class RunScene: SKScene, RunPresentable {
         uiRenderer = UIRenderer(scene: self)
         pauseScene = PauseScene(size: CGSize.zero, scene: self)
 
+        addSidebar()
         addRopes()
         addCamera()
         uiRenderer.addUINodes()
@@ -149,6 +150,13 @@ private extension RunScene {
             let rope = RopeEntity(position: CGPoint(x: xPos, y: 0), scene: self)
             entityManager.add(rope)
         }
+    }
+    
+    func addSidebar() {
+        let sideBar_left = SidebarEntity(position: CGPoint(x: 0, y: 0), scene: self)
+        entityManager.add(sideBar_left)
+        let sideBar_right = SidebarEntity(position: CGPoint(x: size.width, y: 0), scene: self)
+        entityManager.add(sideBar_right)
     }
 
     func addCamera() {
