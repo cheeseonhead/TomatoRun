@@ -14,5 +14,4 @@ enum ImageConstants {
     static let WoodenBoardImageName = "WoodenBoard"
     static let SpiderImageName = "Spider"
     static let PauseImageName = "Pause"
-    static let SidebarImageName = "Sidebar"
 }
