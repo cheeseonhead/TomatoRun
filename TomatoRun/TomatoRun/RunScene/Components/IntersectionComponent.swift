@@ -70,9 +70,7 @@ extension IntersectionComponent {
     // MARK: Generic
     static func component(filter: @escaping IntersectionComponent.IntersectionFilter) -> ComponentFilter {
         return { component in
-            component.intersections.reduce(true, { (_, intersection) -> Bool in
-                filter(intersection)
-            })
+            component.intersections.reduce(true) { $0 && filter($1) }
         }
     }
 }
