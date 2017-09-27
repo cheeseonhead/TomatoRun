@@ -48,3 +48,26 @@ class IntersectionComponent: GKComponent {
         return []
     }
 }
+
+// MARK: - Intersection Filters
+extension IntersectionComponent {
+    typealias IntersectionFilter = (_ intersection: CGPoint) -> Bool
+
+    // MARK: Primitives
+    static func intersection(aheadOf curPosition: CGPoint) -> IntersectionFilter {
+        return { intersection in
+            let roundedIntersectY = intersection.y.rounded(.toNearestOrAwayFromZero)
+
+            return roundedIntersectY > curPosition.y
+        }
+    }
+
+    static func intersection(onPathOf curPosition: CGPoint) -> IntersectionFilter {
+        return { intersection in
+            let roundedIntersectX = intersection.x.rounded(.toNearestOrAwayFromZero)
+            let roundedPositionX = curPosition.x.rounded(.toNearestOrAwayFromZero)
+
+            return roundedPositionX == roundedIntersectX
+        }
+    }
+}
