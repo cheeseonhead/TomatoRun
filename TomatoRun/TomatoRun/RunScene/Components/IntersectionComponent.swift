@@ -33,7 +33,7 @@ class IntersectionComponent: GKComponent {
 
         intersections = [CGPoint]()
         for anchor in intersectAnchors {
-            let anchorPosition = frame.position(forAnchor: anchor)
+            let anchorPosition = frame.rounded(.toNearestOrAwayFromZero).position(forAnchor: anchor)
 
             intersections.append(anchorPosition)
         }
