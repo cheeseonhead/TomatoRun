@@ -12,6 +12,11 @@ class TextButtonNode: SKNode {
 
     let label: SKLabelNode
     let backgroundNode: SKSpriteNode
+    var inset: UIEdgeInsets {
+        didSet {
+            backgroundNode.size = label.frame.size.addedInsets(inset)
+        }
+    }
 
     required init(text: String, fontSize: FontSize) {
 
@@ -20,8 +25,9 @@ class TextButtonNode: SKNode {
         label.verticalAlignmentMode = .center
         label.zPosition = 500
 
-        backgroundNode = SKSpriteNode(texture: SKTexture(imageNamed: "WoodenBoard"), color: .red,
-                                      size: label.frame.size.addedPadding(RunSceneConstants.Padding.ButtonInside))
+        inset = UIEdgeInsets(inset: RunSceneConstants.Padding.ButtonInside)
+
+        backgroundNode = SKSpriteNode(texture: SKTexture(imageNamed: "WoodenBoard"))
         backgroundNode.zPosition = 0
 
         super.init()

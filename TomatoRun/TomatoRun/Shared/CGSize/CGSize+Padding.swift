@@ -10,6 +10,10 @@ import UIKit
 
 extension CGSize {
     func addedPadding(_ padding: CGFloat) -> CGSize {
-        return CGSize(width: width + (padding * 2), height: height + (padding * 2))
+        return addedInsets(UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding))
+    }
+
+    func addedInsets(_ inset: UIEdgeInsets) -> CGSize {
+        return CGSize(width: width + inset.left + inset.right, height: width + inset.top + inset.bottom)
     }
 }

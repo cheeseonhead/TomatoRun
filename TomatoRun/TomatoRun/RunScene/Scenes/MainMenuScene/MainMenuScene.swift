@@ -17,7 +17,6 @@ class MainMenuScene: SKScene, RunPresentable {
 
     override func didMove(to _: SKView) {
         playButton = TextButtonNode(text: "Play", fontSize: .Large)
-
         addChild(playButton)
     }
 
