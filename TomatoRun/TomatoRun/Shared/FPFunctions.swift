@@ -17,7 +17,5 @@ func filterUnion<T>(_ filter1: @escaping (T) -> Bool, _ filter2: @escaping (T) -
 func chooseBest<T>(from set: Set<T>, compare: (T, T) -> T) -> T? {
     guard let first = set.first else { return nil }
 
-    return set.reduce(first, { (curBest, curItem) -> T in
-        compare(curBest, curItem)
-    })
+    return set.reduce(first) { compare($0, $1) }
 }
