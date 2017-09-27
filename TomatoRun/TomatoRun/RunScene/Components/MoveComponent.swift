@@ -111,7 +111,10 @@ private extension MoveComponent {
 
     func bestTargetFrom(_ components: Set<IntersectionComponent>, curPosition: CGPoint) -> Target? {
         guard let targetComponent = bestComponentFrom(components, curPosition: curPosition) else { return nil }
-        return Target(startPoint: curPosition, targetIntersection: targetComponent)
+
+        let startPoint = targetComponent.intersections.filter { $0.x ~= curPosition.x }[0]
+
+        return Target(startPoint: startPoint, targetIntersection: targetComponent)
     }
 
     func bestComponentFrom(_ components: Set<IntersectionComponent>, curPosition: CGPoint) -> IntersectionComponent? {
@@ -123,6 +126,14 @@ private extension MoveComponent {
     // Compare function
     func lower(left: IntersectionComponent, right: IntersectionComponent) -> IntersectionComponent {
         if left.intersections[0].y <= right.intersections[0].y {
+            return left
+        } else {
+            return right
+        }
+    }
+
+    func lower(left: CGPoint, right: CGPoint) -> CGPoint {
+        if left.y <= right.y {
             return left
         } else {
             return right
