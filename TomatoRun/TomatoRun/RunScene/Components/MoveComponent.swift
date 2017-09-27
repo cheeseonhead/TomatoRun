@@ -34,7 +34,7 @@ class MoveComponent: GKComponent {
         let intersectionComponents = entityManager.components(ofType: IntersectionComponent.self)
 
         // Finding the appropriate intersection to go to
-        let bestTarget = findBestIntersection(curPosition: node.position, components: intersectionComponents)
+        let bestTarget = bestTargetFrom(intersectionComponents, curPosition: node.position)
 
         // Move to the correct state
         if let state = stateMachine.currentState as? WanderingState {
@@ -103,28 +103,29 @@ private extension MoveComponent {
         stateMachine.enter(DuringTravelState.self)
         node.run(SKAction.sequence(actionSequence), completion: block)
     }
+}
 
-    func findBestIntersection(curPosition: CGPoint, components: Set<IntersectionComponent>) -> Target? {
-        var bestIntersectionComponent: IntersectionComponent?
-        var bestPoint: CGPoint?
+// MARK: - Best
+private extension MoveComponent {
+    typealias BestComponent = (_ components: Set<IntersectionComponent>) -> IntersectionComponent?
 
-        for intersectionComponent in components {
-            for intersection in intersectionComponent.intersections {
-                let roundedIntersectX = intersection.x.rounded(.toNearestOrAwayFromZero)
-                let roundedPositionX = curPosition.x.rounded(.toNearestOrAwayFromZero)
-                let roundedIntersectY = intersection.y.rounded(.toNearestOrAwayFromZero)
+    func bestTargetFrom(_ components: Set<IntersectionComponent>, curPosition: CGPoint) -> Target? {
+        guard let targetComponent = bestComponentFrom(components, curPosition: curPosition) else { return nil }
+        return Target(startPoint: curPosition, targetIntersection: targetComponent)
+    }
 
-                if roundedIntersectX == roundedPositionX, roundedIntersectY > curPosition.y {
-                    if bestPoint == nil || roundedIntersectY < bestPoint!.y {
-                        bestPoint = intersection
-                        bestIntersectionComponent = intersectionComponent
-                    }
-                }
-            }
+    func bestComponentFrom(_ components: Set<IntersectionComponent>, curPosition: CGPoint) -> IntersectionComponent? {
+        let componentFilter = IntersectionComponent.component(aheadAndOnPathOf: curPosition)
+        let filteredComponents = components.filter(componentFilter)
+        return chooseBest(from: filteredComponents, compare: lower)
+    }
+
+    // Compare function
+    func lower(left: IntersectionComponent, right: IntersectionComponent) -> IntersectionComponent {
+        if left.intersections[0].y <= right.intersections[0].y {
+            return left
+        } else {
+            return right
         }
-
-        guard let point = bestPoint, let intersection = bestIntersectionComponent else { return nil }
-
-        return Target(startPoint: point, targetIntersection: intersection)
     }
 }
