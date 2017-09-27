@@ -34,8 +34,8 @@ enum RunSceneConstants {
     enum WidthRatio {
         static let PauseNode = CGFloat(0.1)
         static let RopeSpacing = CGFloat(0.9)
-        static let Spider = CGFloat(0.5)
-        static let Tomato = CGFloat(0.5)
+        static let Spider = CGFloat(0.7)
+        static let Tomato = CGFloat(0.7)
     }
 
     // MARK: Padding
