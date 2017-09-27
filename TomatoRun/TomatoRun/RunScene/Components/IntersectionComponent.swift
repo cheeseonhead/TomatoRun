@@ -33,9 +33,10 @@ class IntersectionComponent: GKComponent {
 
         intersections = [CGPoint]()
         for anchor in intersectAnchors {
-            let anchorPosition = frame.rounded(.toNearestOrAwayFromZero).position(forAnchor: anchor)
+            let anchorPosition = frame.position(forAnchor: anchor)
+            let anchorPositionRoundedY = CGPoint(x: anchorPosition.x, y: anchorPosition.y.rounded(.toNearestOrAwayFromZero))
 
-            intersections.append(anchorPosition)
+            intersections.append(anchorPositionRoundedY)
         }
     }
 
@@ -81,9 +82,7 @@ extension IntersectionComponent {
 
     // MARK: Primitives
     static func intersection(aheadOf curPosition: CGPoint) -> IntersectionFilter {
-        return { intersection in
-            intersection.y > curPosition.y
-        }
+        return { $0.y > curPosition.y }
     }
 
     static func intersection(onPathOf curPosition: CGPoint) -> IntersectionFilter {
