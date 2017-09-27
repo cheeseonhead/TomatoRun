@@ -151,7 +151,7 @@ private extension RunScene {
             entityManager.add(rope)
         }
     }
-    
+
     func addSidebar() {
         let sideBar_left = SidebarEntity(position: CGPoint(x: 0, y: 0), scene: self)
         entityManager.add(sideBar_left)
@@ -171,7 +171,7 @@ private extension RunScene {
     func addTomato() {
         let ropeNumber = 0 // Int.random(min: 0, max: numberOfRopes)
 
-        tomato = TomatoEntity(speed: 300, fittingWidth: RunSceneConstants.TomatoWidth, entityManager: entityManager)
+        tomato = TomatoEntity(speed: RunSceneConstants.TomatoSpeed, fittingWidth: RunSceneConstants.TomatoWidth, entityManager: entityManager)
         let xPos = ropeXPos(forIndex: ropeNumber)
         tomato.setPosition(CGPoint(x: xPos, y: tomatoBottomPadding))
 
@@ -182,12 +182,12 @@ private extension RunScene {
 // MARK: Helpers
 private extension RunScene {
     func ropeSpacing() -> CGFloat {
-        return size.width / CGFloat(numberOfRopes)
+        return size.width * RunSceneConstants.WidthRatio.RopeSpacing / CGFloat(numberOfRopes)
     }
 
     func ropeXPos(forIndex index: Int) -> CGFloat {
         let spacing = ropeSpacing()
-        let leftSpacing = spacing / 2
+        let leftSpacing = (size.width - spacing * CGFloat(numberOfRopes - 1)) / 2
 
         return leftSpacing + spacing * CGFloat(index)
     }
