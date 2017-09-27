@@ -11,7 +11,7 @@ class RopeEntity: GKEntity {
         super.init()
 
         let texture = SKTexture(imageNamed: ImageConstants.RopeImageName)
-        let continuousSprite = ContinuousSpriteComponent(scene: scene, texture: texture, position: position, zPosition: RunSceneConstants.ZPositions.Rope)
+        let continuousSprite = ContinuousSpriteComponent(scene: scene, texture: texture, position: position, zPosition: RunSceneConstants.ZPositions.rope)
 
         addComponent(continuousSprite)
     }

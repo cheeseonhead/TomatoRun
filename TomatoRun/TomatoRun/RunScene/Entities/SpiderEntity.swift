@@ -16,7 +16,7 @@ class SpiderEntity: GKEntity, Positionable {
         let spriteComponent = SpriteComponent(texture: texture)
 
         spriteComponent.node.scale(toWidth: fittingWidth)
-        spriteComponent.node.zPosition = RunSceneConstants.ZPositions.Spider
+        spriteComponent.node.zPosition = RunSceneConstants.ZPositions.spider
 
         addComponent(spriteComponent)
         addComponent(DangerComponent())
