@@ -11,7 +11,7 @@ import UIKit
 extension CGRect {
 
     func rounded(_ rule: FloatingPointRoundingRule) -> CGRect {
-        return CGRect(x: x.rounded(rule), y: y.rounded(rule),
+        return CGRect(x: minX.rounded(rule), y: minY.rounded(rule),
                       width: width.rounded(rule), height: height.rounded(rule))
     }
 }
