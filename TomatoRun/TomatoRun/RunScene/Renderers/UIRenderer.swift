@@ -48,7 +48,7 @@ class UIRenderer {
 // MARK: - Adding Nodes
 private extension UIRenderer {
     func addPauseNode(_ camera: SKCameraNode) {
-        let fittingDimension = scene.size.width * RunSceneConstants.FittingWidthRatio.PauseNode
+        let fittingDimension = scene.size.width * RunSceneConstants.WidthRatio.PauseNode
         let padding = scene.size.width * RunSceneConstants.PaddingRatio.PauseNode
 
         pauseNode = PauseNode(size: CGSize(width: fittingDimension, height: fittingDimension))
