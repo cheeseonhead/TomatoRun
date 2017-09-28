@@ -9,6 +9,11 @@
 import UIKit
 
 struct Spider: Ropable, Codable {
-    var height: CGFloat
+    var heightRatio: CGFloat
     var rope: Int
+
+    enum CodingKeys: String, CodingKey {
+        case heightRatio = "height_ratio"
+        case rope
+    }
 }
