@@ -21,6 +21,7 @@ struct Segment: Codable {
 }
 
 extension Segment {
+
     static func infoFor(_ segment: Segment) -> (Ropable) -> (CGFloat, Int) {
         return { ropable in
             (segment.length * ropable.heightRatio, ropable.rope)
