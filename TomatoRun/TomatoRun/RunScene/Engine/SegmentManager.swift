@@ -12,14 +12,14 @@ let numberOfSegments = 4
 var segmentIndex = 0
 
 class SegmentManager {
-    let levelFileParser = LevelFileParser()
 
     static func getNextSegment(forHeight height: CGFloat) -> Result<Segment> {
         return levelNumber(forHeight: height) ==> LevelFileParser.getLevel ==> chooseSegment
     }
 
     static func levelNumber(forHeight _: CGFloat) -> Result<Int> {
-        return .success(Box(1))
+        let levelNum = Int.random(min: 1, max: 3)
+        return .success(Box(levelNum))
     }
 
     static let chooseSegment: (Level) -> Result<Segment> = { level in
