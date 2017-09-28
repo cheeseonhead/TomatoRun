@@ -38,4 +38,20 @@ extension LevelFileParser {
         let url = URL(fileURLWithPath: urlString)
         return .success(Box(url))
     }
+
+    func jsonDataFrom(_ url: URL) -> Result<Data> {
+        guard let jsonData = try? Data(contentsOf: url) else {
+            return .failure("Could not get JSON Data")
+        }
+
+        return .success(Box(jsonData))
+    }
+
+    func decoderFrom<T: Decodable>(_ type: T.Type, decoder: JSONDecoder) -> (Data) -> Result<T> {
+        return { jsonData in
+            guard let t = try? decoder.decode(type, from: jsonData) else { return .failure("Cannot parse \(T) object") }
+
+            return .success(Box(t))
+        }
+    }
 }
