@@ -41,3 +41,10 @@ func ==><T, U>(_ result: Result<T>, _ f: (T) -> Result<U>) -> Result<U> {
         return .failure(str)
     }
 }
+
+func ==><T>(_ result: Result<T>, _ f: @escaping (T) -> Void) -> Void {
+    _ = result ==> { t -> Result<Bool> in
+        f(t)
+        return .success(Box(true))
+    }
+}
