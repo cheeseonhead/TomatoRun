@@ -7,12 +7,11 @@ import Foundation
 import SpriteKit
 import GameplayKit
 
-extension Int
-{
-    static func random(min: Int, max: Int) -> Int
-    {
+extension Int {
+
+    static func random(min: Int, max: Int) -> Int {
         assert(max > min)
-        let upperBound = UInt32(max - min)
+        let upperBound = UInt32(max + 1 - min)
         return Int(arc4random_uniform(upperBound)) + min
     }
 }

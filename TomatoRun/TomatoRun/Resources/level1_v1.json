@@ -1,4 +1,4 @@
-{
+[{
     "wooden_boards": [{
                       "height": 200,
                       "rope": 0
@@ -17,4 +17,4 @@
                 "rope": 2
                 }],
     "length": 1000
-}
+}]
