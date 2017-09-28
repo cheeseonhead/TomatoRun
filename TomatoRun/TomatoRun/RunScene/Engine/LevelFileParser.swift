@@ -9,29 +9,25 @@
 import Foundation
 
 private let levelFileVersion = "v1"
+typealias Level = [Segment]
 
 class LevelFileParser {
     let decoder = JSONDecoder()
-
-    func getSegment(number: Int) -> Segment? {
-        return parseFile(named: "level\(number)")
-    }
-
-    func parseFile(named name: String) -> Segment? {
-        if let url = url(forFile: name),
-            let jsonData = try? Data(contentsOf: url),
-            let segment = try? decoder.decode(Segment.self, from: jsonData) {
-            return segment
-        }
-
-        return nil
+    
+    func getLevel(_ number: Int) -> Result<Level> {
+        let decode = decoderFrom(Level.self, decoder: decoder)
+        return fileName(for: number) ==> urlString ==> jsonDataFrom ==> decode
     }
 }
 
 // MARK: Helpers
 extension LevelFileParser {
+    func fileName(for levelNumber: Int) -> Result<String> {
+        return .success(Box("level\(levelNumber)_\(levelFileVersion)"))
+    }
+    
     func urlString(forFile fileName: String) -> Result<URL> {
-        guard let urlString = Bundle.main.path(forResource: "\(fileName)_\(levelFileVersion)", ofType: "json") else {
+        guard let urlString = Bundle.main.path(forResource: fileName, ofType: "json") else {
             return .failure("Could not create URL from: \(fileName)")
         }
 
