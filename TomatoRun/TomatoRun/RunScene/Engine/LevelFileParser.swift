@@ -12,7 +12,7 @@ private let levelFileVersion = "v1"
 typealias Level = [Segment]
 
 class LevelFileParser {
-    let decoder = JSONDecoder()
+    static let decoder = JSONDecoder()
 
     static func getLevel(_ number: Int) -> Result<Level> {
         let decode = decoderFrom(Level.self, decoder: decoder)
@@ -21,7 +21,7 @@ class LevelFileParser {
 }
 
 // MARK: Helpers
-extension LevelFileParser {
+private extension LevelFileParser {
     static func fileName(for levelNumber: Int) -> Result<String> {
         return .success(Box("level\(levelNumber)_\(levelFileVersion)"))
     }
