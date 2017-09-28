@@ -14,7 +14,7 @@ class SidebarEntity: GKEntity {
         super.init()
 
         let texture = SKTexture(imageNamed: ImageConstants.SidebarImageName)
-        let continuousSprite = ContinuousSpriteComponent(scene: scene, texture: texture, position: position, zPosition: RunSceneConstants.ZPositions.Sidebar)
+        let continuousSprite = ContinuousSpriteComponent(scene: scene, texture: texture, position: position, zPosition: RunSceneConstants.ZPositions.sidebar)
 
         addComponent(continuousSprite)
     }

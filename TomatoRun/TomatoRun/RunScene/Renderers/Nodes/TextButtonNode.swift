@@ -25,7 +25,7 @@ class TextButtonNode: SKNode {
         label.verticalAlignmentMode = .center
         label.zPosition = 500
 
-        inset = UIEdgeInsets(inset: RunSceneConstants.Padding.ButtonInside)
+        inset = UIEdgeInsets(inset: RunSceneConstants.Padding.buttonInside)
 
         backgroundNode = SKSpriteNode(texture: SKTexture(imageNamed: "WoodenBoard"))
         backgroundNode.zPosition = 0

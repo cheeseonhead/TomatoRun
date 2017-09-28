@@ -48,8 +48,8 @@ class UIRenderer {
 // MARK: - Adding Nodes
 private extension UIRenderer {
     func addPauseNode(_ camera: SKCameraNode) {
-        let fittingDimension = scene.size.width * RunSceneConstants.WidthRatio.PauseNode
-        let padding = scene.size.width * RunSceneConstants.PaddingRatio.PauseNode
+        let fittingDimension = scene.size.width * RunSceneConstants.WidthRatio.pauseNode
+        let padding = scene.size.width * RunSceneConstants.PaddingRatio.pauseNode
 
         pauseNode = PauseNode(size: CGSize(width: fittingDimension, height: fittingDimension))
 
@@ -73,7 +73,7 @@ private extension UIRenderer {
 // MARK: - Positioning
 private extension UIRenderer {
     func positionScoreLabel(_ camera: SKCameraNode) {
-        let padding = scene.size.width * RunSceneConstants.PaddingRatio.ScoreLabel
+        let padding = scene.size.width * RunSceneConstants.PaddingRatio.scoreLabel
 
         guard let topLeftInScene = camera.renderedFrame()?.position(forType: .topLeft) else { return }
         let topLeftInCamera = camera.convert(topLeftInScene, from: scene)

@@ -23,7 +23,7 @@ class ScoreLabelNode: SKLabelNode {
         verticalAlignmentMode = .baseline
         horizontalAlignmentMode = .left
 
-        zPosition = RunSceneConstants.ZPositions.UIZPosition
+        zPosition = RunSceneConstants.ZPositions.uiZPosition
     }
 
     override init(fontNamed fontName: String?) {
@@ -42,6 +42,6 @@ class ScoreLabelNode: SKLabelNode {
     }
 
     func formattedScore(_ score: Int) -> String {
-        return String(format: "%0\(RunSceneConstants.ScoreLength)d", score)
+        return String(format: "%0\(RunSceneConstants.scoreLength)d", score)
     }
 }

@@ -18,7 +18,7 @@ class WoodenBoardEntity: GKEntity, Positionable {
 
         spriteComponent.node.anchorPoint = CGPoint(x: 0, y: 0.5)
         spriteComponent.node.scale(toWidth: fittingWidth)
-        spriteComponent.node.zPosition = RunSceneConstants.ZPositions.Boards
+        spriteComponent.node.zPosition = RunSceneConstants.ZPositions.boards
 
         addComponent(spriteComponent)
         addComponent(IntersectionComponent(anchors: intersectionAnchors))
