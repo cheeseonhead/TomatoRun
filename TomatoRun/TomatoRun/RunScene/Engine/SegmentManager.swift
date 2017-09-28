@@ -18,4 +18,10 @@ class SegmentManager {
         segmentIndex = (segmentIndex + 1) % numberOfSegments
         return segmentFileParser.getSegment(number: segmentIndex)
     }
+
+    var chooseSegment: (Level) -> Result<Segment> = { level in
+        guard level.count > 0 else { return .failure("Level is empty") }
+
+        return .success(Box(level[0]))
+    }
 }
