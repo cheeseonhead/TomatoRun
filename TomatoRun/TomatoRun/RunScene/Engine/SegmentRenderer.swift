@@ -26,8 +26,8 @@ class SegmentRenderer {
 
         let maxY = renderedFrame.position(forType: .topRight).y
         while currentSegmentEnd < maxY + renderBuffer {
-            if let newSegment = SegmentManager.getNextSegment(forHeight: currentSegmentEnd) {
-                addSegment(newSegment)
+            SegmentManager.getNextSegment(forHeight: currentSegmentEnd) ==> { newSegment -> Void in
+                self.addSegment(newSegment)
             }
         }
     }
