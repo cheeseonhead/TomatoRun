@@ -14,7 +14,7 @@ typealias Level = [Segment]
 class LevelFileParser {
     let decoder = JSONDecoder()
 
-    func getLevel(_ number: Int) -> Result<Level> {
+    static func getLevel(_ number: Int) -> Result<Level> {
         let decode = decoderFrom(Level.self, decoder: decoder)
         return fileName(for: number) ==> urlString ==> jsonDataFrom ==> decode
     }
@@ -22,11 +22,11 @@ class LevelFileParser {
 
 // MARK: Helpers
 extension LevelFileParser {
-    func fileName(for levelNumber: Int) -> Result<String> {
+    static func fileName(for levelNumber: Int) -> Result<String> {
         return .success(Box("level\(levelNumber)_\(levelFileVersion)"))
     }
 
-    func urlString(forFile fileName: String) -> Result<URL> {
+    static func urlString(forFile fileName: String) -> Result<URL> {
         guard let urlString = Bundle.main.path(forResource: fileName, ofType: "json") else {
             return .failure("Could not create URL from: \(fileName)")
         }
@@ -35,7 +35,7 @@ extension LevelFileParser {
         return .success(Box(url))
     }
 
-    func jsonDataFrom(_ url: URL) -> Result<Data> {
+    static func jsonDataFrom(_ url: URL) -> Result<Data> {
         guard let jsonData = try? Data(contentsOf: url) else {
             return .failure("Could not get JSON Data")
         }
@@ -43,7 +43,7 @@ extension LevelFileParser {
         return .success(Box(jsonData))
     }
 
-    func decoderFrom<T: Decodable>(_ type: T.Type, decoder: JSONDecoder) -> (Data) -> Result<T> {
+    static func decoderFrom<T: Decodable>(_ type: T.Type, decoder: JSONDecoder) -> (Data) -> Result<T> {
         return { jsonData in
             guard let t = try? decoder.decode(type, from: jsonData) else { return .failure("Cannot parse object") }
 
