@@ -10,7 +10,7 @@ import Foundation
 
 private let levelFileVersion = "v1"
 
-class SegmentFileParser {
+class LevelFileParser {
     let decoder = JSONDecoder()
 
     func getSegment(number: Int) -> Segment? {
@@ -29,12 +29,13 @@ class SegmentFileParser {
 }
 
 // MARK: Helpers
-extension SegmentFileParser {
-    func url(forFile fileName: String) -> URL? {
-        if let urlString = Bundle.main.path(forResource: "\(fileName)_\(levelFileVersion)", ofType: "json") {
-            return URL(fileURLWithPath: urlString)
+extension LevelFileParser {
+    func urlString(forFile fileName: String) -> Result<URL> {
+        guard let urlString = Bundle.main.path(forResource: "\(fileName)_\(levelFileVersion)", ofType: "json") else {
+            return .failure("Could not create URL from: \(fileName)")
         }
 
-        return nil
+        let url = URL(fileURLWithPath: urlString)
+        return .success(Box(url))
     }
 }

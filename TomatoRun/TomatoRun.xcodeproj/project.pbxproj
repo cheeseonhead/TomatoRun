@@ -33,7 +33,7 @@
 		3400D9931F6604B200ECD456 /* IntersectionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D98C1F6604B200ECD456 /* IntersectionComponent.swift */; };
 		3400D9941F6604B200ECD456 /* MoveComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D98D1F6604B200ECD456 /* MoveComponent.swift */; };
 		3400D9991F6609CD00ECD456 /* RunSceneConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9981F6609CD00ECD456 /* RunSceneConstants.swift */; };
-		3400D99D1F66178500ECD456 /* SegmentFileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D99C1F66178500ECD456 /* SegmentFileParser.swift */; };
+		3400D99D1F66178500ECD456 /* LevelFileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D99C1F66178500ECD456 /* LevelFileParser.swift */; };
 		3400D9A01F661B2700ECD456 /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D99F1F661B2700ECD456 /* Segment.swift */; };
 		3400D9A21F661C2700ECD456 /* WoodenBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9A11F661C2700ECD456 /* WoodenBoard.swift */; };
 		3400D9A41F662D7500ECD456 /* level1_v1.json in Resources */ = {isa = PBXBuildFile; fileRef = 3400D9A31F662D2000ECD456 /* level1_v1.json */; };
@@ -122,7 +122,7 @@
 
 /* Begin PBXFileReference section */
 		16C4F1EC93C3C6244698D752 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		20CE63C5F127963B120C7F9D /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BuddyBuildSDK.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
+		20CE63C5F127963B120C7F9D /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
 		3400D9321F65FD7900ECD456 /* ImageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConstants.swift; sourceTree = "<group>"; };
 		3400D9621F65FF2800ECD456 /* MoveStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveStateMachine.swift; sourceTree = "<group>"; };
 		3400D9641F65FF2800ECD456 /* DuringTravelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuringTravelState.swift; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 		3400D98C1F6604B200ECD456 /* IntersectionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntersectionComponent.swift; sourceTree = "<group>"; };
 		3400D98D1F6604B200ECD456 /* MoveComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveComponent.swift; sourceTree = "<group>"; };
 		3400D9981F6609CD00ECD456 /* RunSceneConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunSceneConstants.swift; sourceTree = "<group>"; };
-		3400D99C1F66178500ECD456 /* SegmentFileParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentFileParser.swift; sourceTree = "<group>"; };
+		3400D99C1F66178500ECD456 /* LevelFileParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelFileParser.swift; sourceTree = "<group>"; };
 		3400D99F1F661B2700ECD456 /* Segment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segment.swift; sourceTree = "<group>"; };
 		3400D9A11F661C2700ECD456 /* WoodenBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodenBoard.swift; sourceTree = "<group>"; };
 		3400D9A31F662D2000ECD456 /* level1_v1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = level1_v1.json; sourceTree = "<group>"; };
@@ -333,7 +333,7 @@
 			children = (
 				3480A6F11F72190D00688B1C /* GameState */,
 				3400D99E1F661B1700ECD456 /* Entities */,
-				3400D99C1F66178500ECD456 /* SegmentFileParser.swift */,
+				3400D99C1F66178500ECD456 /* LevelFileParser.swift */,
 				3400D9A51F66383800ECD456 /* SegmentManager.swift */,
 				3400D9A71F663BBD00ECD456 /* SegmentRenderer.swift */,
 			);
@@ -827,7 +827,7 @@
 				34CC6D421F7765C400686819 /* Target.swift in Sources */,
 				3478491F1F772201003A146D /* MainMenuScene.swift in Sources */,
 				3406CD431F6A08EE0027775A /* FontConstants.swift in Sources */,
-				3400D99D1F66178500ECD456 /* SegmentFileParser.swift in Sources */,
+				3400D99D1F66178500ECD456 /* LevelFileParser.swift in Sources */,
 				347543171F75A868004DA584 /* DangerComponent.swift in Sources */,
 				34BCB21C1F69EAE400F16629 /* ScoreLabelNode.swift in Sources */,
 				34BCB2171F69E59600F16629 /* ScoreComponent.swift in Sources */,
