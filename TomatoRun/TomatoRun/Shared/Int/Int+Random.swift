@@ -8,6 +8,7 @@ import SpriteKit
 import GameplayKit
 
 extension Int {
+
     static func random(min: Int, max: Int) -> Int {
         assert(max > min)
         let upperBound = UInt32(max + 1 - min)

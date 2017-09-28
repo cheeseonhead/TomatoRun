@@ -33,6 +33,7 @@ enum Result<T> {
 }
 
 infix operator ==>: AdditionPrecedence
+
 func ==><T, U>(_ result: Result<T>, _ f: (T) -> Result<U>) -> Result<U> {
     switch result {
     case let .success(box):

@@ -22,6 +22,7 @@ class LevelFileParser {
 
 // MARK: Helpers
 private extension LevelFileParser {
+
     static func fileName(for levelNumber: Int) -> Result<String> {
         return .success(Box("level\(levelNumber)_\(levelFileVersion)"))
     }
