@@ -12,7 +12,7 @@ let numberOfSegments = 4
 var segmentIndex = 0
 
 class SegmentManager {
-    let segmentFileParser = SegmentFileParser()
+    let segmentFileParser = LevelFileParser()
 
     func getNextSegment() -> Segment? {
         segmentIndex = (segmentIndex + 1) % numberOfSegments
