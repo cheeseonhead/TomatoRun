@@ -31,3 +31,13 @@ enum Result<T> {
     case success(Box<T>)
     case failure(String)
 }
+
+infix operator ==>: AdditionPrecedence
+func ==><T, U>(_ result: Result<T>, _ f: (T) -> Result<U>) -> Result<U> {
+    switch result {
+    case let .success(box):
+        return f(box.value)
+    case let .failure(str):
+        return .failure(str)
+    }
+}
