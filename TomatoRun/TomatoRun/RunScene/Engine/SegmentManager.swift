@@ -18,13 +18,13 @@ class SegmentManager {
     }
 
     static func levelNumber(forHeight _: CGFloat) -> Result<Int> {
-        let levelNum = Int.random(min: 1, max: 3)
+        let levelNum = Int.random(min: 1, includingMax: 3)
         return .success(Box(levelNum))
     }
 
     static let chooseSegment: (Level) -> Result<Segment> = { level in
         guard level.count > 0 else { return .failure("Level is empty") }
-
-        return .success(Box(level[0]))
+        let segNum = Int.random(min: 0, includingMax: level.count - 1)
+        return .success(Box(level[segNum]))
     }
 }

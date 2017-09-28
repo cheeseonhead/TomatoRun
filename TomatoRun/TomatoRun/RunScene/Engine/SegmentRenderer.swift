@@ -26,34 +26,36 @@ class SegmentRenderer {
 
         let maxY = renderedFrame.position(forType: .topRight).y
         while currentSegmentEnd < maxY + renderBuffer {
-            SegmentManager.getNextSegment(forHeight: currentSegmentEnd) ==> { newSegment -> Void in
+            let result = SegmentManager.getNextSegment(forHeight: currentSegmentEnd)
+
+            switch result {
+            case let .failure(str):
+                print(str)
+            default: break
+            }
+
+            result ==> { newSegment -> Void in
                 self.addSegment(newSegment)
             }
         }
     }
 
     func addSegment(_ segment: Segment) {
-        var result = getHeightsAndRopes(segment.woodenBoards)
-        scene.addBoards(atHeights: result.heights, ropeIndex: result.ropes)
+        let infos = Segment.infoFor(segment)
+        let offset = offsetHeight(currentSegmentEnd)
 
-        result = getHeightsAndRopes(segment.spiders)
-        scene.addSpiders(atHeights: result.heights, ropeIndex: result.ropes)
+        let boardInfos = segment.woodenBoards => infos => offset
+        scene.addBoards(boardInfos)
+
+        let spiderInfos = segment.spiders => infos => offset
+        scene.addSpiders(spiderInfos)
 
         currentSegmentEnd += segment.length
     }
-}
 
-// MARK: Adding entities
-private extension SegmentRenderer {
-    func getHeightsAndRopes(_ entities: [Ropable]) -> (heights: [CGFloat], ropes: [Int]) {
-        var heights = [CGFloat]()
-        var rope = [Int]()
-
-        entities.forEach { entity in
-            heights.append(entity.height + currentSegmentEnd)
-            rope.append(entity.rope)
+    func offsetHeight(_ offset: CGFloat) -> (CGFloat, Int) -> (CGFloat, Int) {
+        return { height, index in
+            (height + offset, index)
         }
-
-        return (heights, rope)
     }
 }

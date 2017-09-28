@@ -19,3 +19,12 @@ struct Segment: Codable {
         case spiders
     }
 }
+
+extension Segment {
+
+    static func infoFor(_ segment: Segment) -> (Ropable) -> (CGFloat, Int) {
+        return { ropable in
+            (segment.length * ropable.heightRatio, ropable.rope)
+        }
+    }
+}

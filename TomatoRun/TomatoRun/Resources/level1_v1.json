@@ -1,20 +1,39 @@
 [{
     "wooden_boards": [{
-                      "height": 200,
-                      "rope": 0
-                      }, {
-                      "height": 450,
-                      "rope": 1
-                      }, {
-                      "height": 750,
-                      "rope": 0
-                      }, {
-                      "height": 900,
-                      "rope": 2
-                      }],
+        "height_ratio": 0.2,
+        "rope": 0
+    }, {
+        "height_ratio": 0.45,
+        "rope": 1
+    }, {
+        "height_ratio": 0.75,
+        "rope": 0
+    }, {
+        "height_ratio": 0.9,
+        "rope": 2
+    }],
     "spiders": [{
-                "height": 600,
-                "rope": 2
-                }],
+        "height_ratio": 0.6,
+        "rope": 2
+    }],
     "length": 1000
+}, {
+    "wooden_boards": [{
+        "height_ratio": 0.278,
+        "rope": 1
+    }, {
+        "height_ratio": 0.556,
+        "rope": 0
+    }, {
+        "height_ratio": 0.556,
+        "rope": 2
+    }, {
+        "height_ratio": 0.833,
+        "rope": 1
+    }],
+    "spiders": [{
+        "height_ratio": 0.5,
+        "rope": 2
+    }],
+    "length": 900
 }]

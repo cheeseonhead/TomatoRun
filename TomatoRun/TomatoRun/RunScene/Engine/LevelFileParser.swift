@@ -46,9 +46,12 @@ private extension LevelFileParser {
 
     static func decoderFrom<T: Decodable>(_ type: T.Type, decoder: JSONDecoder) -> (Data) -> Result<T> {
         return { jsonData in
-            guard let t = try? decoder.decode(type, from: jsonData) else { return .failure("Cannot parse object") }
-
-            return .success(Box(t))
+            do {
+                let t = try decoder.decode(type, from: jsonData)
+                return .success(Box(t))
+            } catch {
+                return .failure(error.localizedDescription)
+            }
         }
     }
 }
