@@ -12,14 +12,17 @@ let numberOfSegments = 4
 var segmentIndex = 0
 
 class SegmentManager {
-    let segmentFileParser = LevelFileParser()
+    let levelFileParser = LevelFileParser()
 
-    func getNextSegment() -> Segment? {
-        segmentIndex = (segmentIndex + 1) % numberOfSegments
-        return segmentFileParser.getSegment(number: segmentIndex)
+    static func getNextSegment(forHeight height: CGFloat) -> Result<Segment> {
+        return levelNumber(forHeight: height) ==> LevelFileParser.getLevel ==> chooseSegment
     }
 
-    var chooseSegment: (Level) -> Result<Segment> = { level in
+    static func levelNumber(forHeight _: CGFloat) -> Result<Int> {
+        return .success(Box(1))
+    }
+
+    static let chooseSegment: (Level) -> Result<Segment> = { level in
         guard level.count > 0 else { return .failure("Level is empty") }
 
         return .success(Box(level[0]))
