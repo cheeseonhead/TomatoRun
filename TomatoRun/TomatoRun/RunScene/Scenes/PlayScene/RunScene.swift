@@ -121,23 +121,19 @@ extension RunScene {
 
 // MARK: Adding Entities
 extension RunScene {
-    func addBoards(atHeights heights: [CGFloat], ropeIndex: [Int]) {
-        guard heights.count == ropeIndex.count else { return }
-
-        for i in 0 ..< heights.count {
+    func addBoards(_ infos: [(CGFloat, Int)]) {
+        infos.forEach { height, ropeIndex in
             let board = WoodenBoardEntity(fittingWidth: ropeSpacing(), entityManager: entityManager)
 
-            addEntity(board, toRope: ropeIndex[i], atHeight: heights[i])
+            addEntity(board, toRope: ropeIndex, atHeight: height)
         }
     }
 
-    func addSpiders(atHeights heights: [CGFloat], ropeIndex: [Int]) {
-        guard heights.count == ropeIndex.count else { return }
-
-        for i in 0 ..< heights.count {
+    func addSpiders(_ infos: [(CGFloat, Int)]) {
+        infos.forEach { height, ropeIndex in
             let spider = SpiderEntity(fittingWidth: ropeSpacing() * RunSceneConstants.WidthRatio.spider)
 
-            addEntity(spider, toRope: ropeIndex[i], atHeight: heights[i])
+            addEntity(spider, toRope: ropeIndex, atHeight: height)
         }
     }
 }
