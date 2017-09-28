@@ -110,6 +110,7 @@ class RunScene: SKScene, RunPresentable {
 }
 
 extension RunScene {
+
     func positionCamera() {
         guard let tomatoY = tomato.getPosition()?.y,
             let screenHeight = cameraNode.renderSize()?.height else { return }
@@ -121,6 +122,7 @@ extension RunScene {
 
 // MARK: Adding Entities
 extension RunScene {
+
     func addBoards(_ infos: [(CGFloat, Int)]) {
         infos.forEach { height, ropeIndex in
             let board = WoodenBoardEntity(fittingWidth: ropeSpacing(), entityManager: entityManager)
@@ -139,6 +141,7 @@ extension RunScene {
 }
 
 private extension RunScene {
+
     func addRopes() {
         for i in 0 ..< numberOfRopes {
             let xPos = ropeXPos(forIndex: i)
@@ -177,6 +180,7 @@ private extension RunScene {
 
 // MARK: Helpers
 private extension RunScene {
+
     func ropeSpacing() -> CGFloat {
         return size.width * RunSceneConstants.WidthRatio.ropeSpacing / CGFloat(numberOfRopes)
     }
