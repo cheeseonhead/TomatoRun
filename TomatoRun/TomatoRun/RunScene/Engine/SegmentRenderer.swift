@@ -33,14 +33,21 @@ class SegmentRenderer {
     }
 
     func addSegment(_ segment: Segment) {
-        let infosFor = Segment.infoFor(segment)
+        let infos = Segment.infoFor(segment)
+        let offset = offsetHeight(currentSegmentEnd)
 
-        let boardInfos = segment.woodenBoards.map(infosFor)
+        let boardInfos = segment.woodenBoards => infos => offset
         scene.addBoards(boardInfos)
 
-        let spiderInfos = segment.spiders.map(infosFor)
+        let spiderInfos = segment.spiders => infos => offset
         scene.addSpiders(spiderInfos)
 
         currentSegmentEnd += segment.length
+    }
+
+    func offsetHeight(_ offset: CGFloat) -> (CGFloat, Int) -> (CGFloat, Int) {
+        return { height, index in
+            (height + offset, index)
+        }
     }
 }

@@ -49,3 +49,11 @@ func ==><T>(_ result: Result<T>, _ f: @escaping (T) -> Void) -> Void {
         return .success(Box(true))
     }
 }
+
+infix operator =>: AdditionPrecedence
+
+func =><T, U>(_ array: [T], _ f: (T) -> U) -> [U] {
+    return array.map { t in
+        f(t)
+    }
+}
