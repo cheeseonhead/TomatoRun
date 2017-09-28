@@ -24,7 +24,7 @@ class SegmentManager {
 
     static let chooseSegment: (Level) -> Result<Segment> = { level in
         guard level.count > 0 else { return .failure("Level is empty") }
-
-        return .success(Box(level[0]))
+        let segNum = Int.random(min: 0, max: level.count - 1)
+        return .success(Box(level[segNum]))
     }
 }
