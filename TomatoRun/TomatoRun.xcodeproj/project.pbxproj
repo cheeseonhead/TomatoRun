@@ -82,7 +82,6 @@
 		34C2DB761F633C890027EB1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB751F633C890027EB1F /* Assets.xcassets */; };
 		34C2DB791F633C890027EB1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB771F633C890027EB1F /* LaunchScreen.storyboard */; };
 		34C2DB841F633C890027EB1F /* TomatoRunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB831F633C890027EB1F /* TomatoRunTests.swift */; };
-		34C2DB8F1F633C890027EB1F /* TomatoRunUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB8E1F633C890027EB1F /* TomatoRunUITests.swift */; };
 		34CC6D421F7765C400686819 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CC6D411F7765C400686819 /* Target.swift */; };
 		34CC6D471F7768CB00686819 /* StartFoundState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CC6D461F7768CB00686819 /* StartFoundState.swift */; };
 		34E6E98F1F698C9100D38AB6 /* SpiderEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E6E98E1F698C9100D38AB6 /* SpiderEntity.swift */; };
@@ -105,13 +104,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		34C2DB801F633C890027EB1F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 34C2DB5D1F633C890027EB1F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 34C2DB641F633C890027EB1F;
-			remoteInfo = TomatoRun;
-		};
-		34C2DB8B1F633C890027EB1F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 34C2DB5D1F633C890027EB1F /* Project object */;
 			proxyType = 1;
@@ -191,7 +183,6 @@
 		34C2DB7F1F633C890027EB1F /* TomatoRunTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TomatoRunTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C2DB831F633C890027EB1F /* TomatoRunTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoRunTests.swift; sourceTree = "<group>"; };
 		34C2DB851F633C890027EB1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		34C2DB8A1F633C890027EB1F /* tomatoRunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tomatoRunUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C2DB8E1F633C890027EB1F /* TomatoRunUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoRunUITests.swift; sourceTree = "<group>"; };
 		34C2DB901F633C890027EB1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34C2DB9E1F633EA70027EB1F /* MyUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUtils.swift; sourceTree = "<group>"; };
@@ -243,13 +234,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		34C2DB7C1F633C890027EB1F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		34C2DB871F633C890027EB1F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -514,7 +498,6 @@
 			children = (
 				34C2DB651F633C890027EB1F /* TomatoRun.app */,
 				34C2DB7F1F633C890027EB1F /* TomatoRunTests.xctest */,
-				34C2DB8A1F633C890027EB1F /* tomatoRunUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -717,24 +700,6 @@
 			productReference = 34C2DB7F1F633C890027EB1F /* TomatoRunTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		34C2DB891F633C890027EB1F /* tomatoRunUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 34C2DB991F633C890027EB1F /* Build configuration list for PBXNativeTarget "tomatoRunUITests" */;
-			buildPhases = (
-				34C2DB861F633C890027EB1F /* Sources */,
-				34C2DB871F633C890027EB1F /* Frameworks */,
-				34C2DB881F633C890027EB1F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				34C2DB8C1F633C890027EB1F /* PBXTargetDependency */,
-			);
-			name = tomatoRunUITests;
-			productName = TomatoRunUITests;
-			productReference = 34C2DB8A1F633C890027EB1F /* tomatoRunUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -750,11 +715,6 @@
 						ProvisioningStyle = Automatic;
 					};
 					34C2DB7E1F633C890027EB1F = {
-						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 34C2DB641F633C890027EB1F;
-					};
-					34C2DB891F633C890027EB1F = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 34C2DB641F633C890027EB1F;
@@ -776,7 +736,6 @@
 			targets = (
 				34C2DB641F633C890027EB1F /* TomatoRun */,
 				34C2DB7E1F633C890027EB1F /* TomatoRunTests */,
-				34C2DB891F633C890027EB1F /* tomatoRunUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -804,13 +763,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		34C2DB7D1F633C890027EB1F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		34C2DB881F633C890027EB1F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -904,14 +856,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		34C2DB861F633C890027EB1F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				34C2DB8F1F633C890027EB1F /* TomatoRunUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -919,11 +863,6 @@
 			isa = PBXTargetDependency;
 			target = 34C2DB641F633C890027EB1F /* TomatoRun */;
 			targetProxy = 34C2DB801F633C890027EB1F /* PBXContainerItemProxy */;
-		};
-		34C2DB8C1F633C890027EB1F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 34C2DB641F633C890027EB1F /* TomatoRun */;
-			targetProxy = 34C2DB8B1F633C890027EB1F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1130,42 +1069,6 @@
 			};
 			name = Release;
 		};
-		34C2DB9A1F633C890027EB1F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PL469KE6KQ;
-				INFOPLIST_FILE = TomatoRunUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.okAyStudios.tomatoRunUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TomatoRun;
-			};
-			name = Debug;
-		};
-		34C2DB9B1F633C890027EB1F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PL469KE6KQ;
-				INFOPLIST_FILE = TomatoRunUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.okAyStudios.tomatoRunUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TomatoRun;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1192,15 +1095,6 @@
 			buildConfigurations = (
 				34C2DB971F633C890027EB1F /* Debug */,
 				34C2DB981F633C890027EB1F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		34C2DB991F633C890027EB1F /* Build configuration list for PBXNativeTarget "tomatoRunUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				34C2DB9A1F633C890027EB1F /* Debug */,
-				34C2DB9B1F633C890027EB1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
