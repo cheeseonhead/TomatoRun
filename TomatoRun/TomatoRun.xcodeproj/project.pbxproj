@@ -1139,7 +1139,7 @@
 				DEVELOPMENT_TEAM = PL469KE6KQ;
 				INFOPLIST_FILE = TomatoRunUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.okAyStudios.TomatoRunUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.okAyStudios.tomatoRunUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -1157,7 +1157,7 @@
 				DEVELOPMENT_TEAM = PL469KE6KQ;
 				INFOPLIST_FILE = TomatoRunUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.okAyStudios.TomatoRunUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.okAyStudios.tomatoRunUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
