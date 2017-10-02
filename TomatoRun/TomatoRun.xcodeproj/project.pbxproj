@@ -191,7 +191,7 @@
 		34C2DB7F1F633C890027EB1F /* TomatoRunTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TomatoRunTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C2DB831F633C890027EB1F /* TomatoRunTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoRunTests.swift; sourceTree = "<group>"; };
 		34C2DB851F633C890027EB1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		34C2DB8A1F633C890027EB1F /* TomatoRunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TomatoRunUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		34C2DB8A1F633C890027EB1F /* tomatoRunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tomatoRunUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C2DB8E1F633C890027EB1F /* TomatoRunUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoRunUITests.swift; sourceTree = "<group>"; };
 		34C2DB901F633C890027EB1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34C2DB9E1F633EA70027EB1F /* MyUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUtils.swift; sourceTree = "<group>"; };
@@ -514,7 +514,7 @@
 			children = (
 				34C2DB651F633C890027EB1F /* TomatoRun.app */,
 				34C2DB7F1F633C890027EB1F /* TomatoRunTests.xctest */,
-				34C2DB8A1F633C890027EB1F /* TomatoRunUITests.xctest */,
+				34C2DB8A1F633C890027EB1F /* tomatoRunUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -717,9 +717,9 @@
 			productReference = 34C2DB7F1F633C890027EB1F /* TomatoRunTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		34C2DB891F633C890027EB1F /* TomatoRunUITests */ = {
+		34C2DB891F633C890027EB1F /* tomatoRunUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 34C2DB991F633C890027EB1F /* Build configuration list for PBXNativeTarget "TomatoRunUITests" */;
+			buildConfigurationList = 34C2DB991F633C890027EB1F /* Build configuration list for PBXNativeTarget "tomatoRunUITests" */;
 			buildPhases = (
 				34C2DB861F633C890027EB1F /* Sources */,
 				34C2DB871F633C890027EB1F /* Frameworks */,
@@ -730,9 +730,9 @@
 			dependencies = (
 				34C2DB8C1F633C890027EB1F /* PBXTargetDependency */,
 			);
-			name = TomatoRunUITests;
+			name = tomatoRunUITests;
 			productName = TomatoRunUITests;
-			productReference = 34C2DB8A1F633C890027EB1F /* TomatoRunUITests.xctest */;
+			productReference = 34C2DB8A1F633C890027EB1F /* tomatoRunUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -776,7 +776,7 @@
 			targets = (
 				34C2DB641F633C890027EB1F /* TomatoRun */,
 				34C2DB7E1F633C890027EB1F /* TomatoRunTests */,
-				34C2DB891F633C890027EB1F /* TomatoRunUITests */,
+				34C2DB891F633C890027EB1F /* tomatoRunUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -1196,7 +1196,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		34C2DB991F633C890027EB1F /* Build configuration list for PBXNativeTarget "TomatoRunUITests" */ = {
+		34C2DB991F633C890027EB1F /* Build configuration list for PBXNativeTarget "tomatoRunUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				34C2DB9A1F633C890027EB1F /* Debug */,

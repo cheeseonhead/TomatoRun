@@ -29,8 +29,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "34C2DB891F633C890027EB1F"
-               BuildableName = "TomatoRunUITests.xctest"
-               BlueprintName = "TomatoRunUITests"
+               BuildableName = "tomatoRunUITests.xctest"
+               BlueprintName = "tomatoRunUITests"
                ReferencedContainer = "container:TomatoRun.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
