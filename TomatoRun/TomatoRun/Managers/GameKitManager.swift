@@ -17,15 +17,13 @@ class GameKitManager: NSObject {
 
     private var isGameCenterEnabled = true
 
-    func authenticateLocalPlayer(_ callback: @escaping (UIViewController?, Error?) -> Void) {
+    func authenticateLocalPlayer() {
         let localPlayer = GKLocalPlayer.localPlayer()
 
-        localPlayer.authenticateHandler = { (viewController, e) -> Void in
+        localPlayer.authenticateHandler = { (_, e) -> Void in
             self.lastError = e
 
-            if let viewController = viewController {
-                callback(viewController, e)
-            } else if GKLocalPlayer.localPlayer().isAuthenticated {
+            if GKLocalPlayer.localPlayer().isAuthenticated {
                 self.isGameCenterEnabled = true
             } else {
                 self.isGameCenterEnabled = false
