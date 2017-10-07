@@ -46,4 +46,11 @@ enum RunSceneConstants {
     enum Padding {
         static let buttonInside = CGFloat(20)
     }
+
+    // MARK: Spacing
+    enum Spacing {
+        enum MainMenu {
+            static let button = CGFloat(20)
+        }
+    }
 }
