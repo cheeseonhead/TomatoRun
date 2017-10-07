@@ -14,10 +14,16 @@ class MainMenuScene: SKScene, RunPresentable {
     var gameStateMachine: GameStateMachine!
 
     var playButton: TextButtonNode!
+    var highscoreButton: TextButtonNode!
 
     override func didMove(to _: SKView) {
         playButton = TextButtonNode(text: "Play", fontSize: .Large)
+        highscoreButton = TextButtonNode(text: "Scores", fontSize: .Large)
+
+        layoutNodes()
+
         addChild(playButton)
+        addChild(highscoreButton)
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -32,5 +38,15 @@ class MainMenuScene: SKScene, RunPresentable {
 
     func startGame() {
         runViewController?.presentRunScene()
+    }
+
+    func layoutNodes() {
+        let playButtonLayout = centered ==> offset(CGPoint(x: 0, y: 30))
+
+        playButton.position = playButtonLayout(self, playButton)
+
+        let buttonLayout = belowCentered ==> offset(CGPoint(x: 0, y: -RunSceneConstants.Spacing.MainMenu.button))
+
+        highscoreButton.position = buttonLayout(playButton, highscoreButton)
     }
 }
