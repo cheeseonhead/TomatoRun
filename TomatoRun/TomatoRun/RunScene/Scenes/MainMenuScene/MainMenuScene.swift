@@ -41,9 +41,7 @@ class MainMenuScene: SKScene, RunPresentable {
     }
 
     func layoutNodes() {
-        let playButtonLayout = centered ==> offset(CGPoint(x: 0, y: 30))
-
-        playButton.position = playButtonLayout(self, playButton)
+        playButton.position = centered(self, playButton)
 
         let buttonLayout = belowCentered ==> offset(CGPoint(x: 0, y: -RunSceneConstants.Spacing.MainMenu.button))
 
