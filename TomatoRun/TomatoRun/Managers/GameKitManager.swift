@@ -12,6 +12,8 @@ class GameKitManager: NSObject {
 
     static let shared = GameKitManager()
 
+    let leaderBoardIdentifier = "com.tomatoRun.highScore"
+
     var authenticationViewController: UIViewController?
     var lastError: Error?
 
@@ -27,6 +29,18 @@ class GameKitManager: NSObject {
                 self.isGameCenterEnabled = true
             } else {
                 self.isGameCenterEnabled = false
+            }
+        }
+    }
+
+    func submitScore(_ score: Int) {
+        let bestScoreInt = GKScore(leaderboardIdentifier: leaderBoardIdentifier)
+        bestScoreInt.value = Int64(score)
+        GKScore.report([bestScoreInt]) { error in
+            if error != nil {
+                print(error!.localizedDescription)
+            } else {
+                print("Best Score submitted to your Leaderboard!")
             }
         }
     }
