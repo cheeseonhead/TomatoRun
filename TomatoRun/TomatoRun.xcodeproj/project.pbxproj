@@ -74,6 +74,7 @@
 		34BCB21A1F69E8A400F16629 /* Double+Rounding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BCB2191F69E8A400F16629 /* Double+Rounding.swift */; };
 		34BCB21C1F69EAE400F16629 /* ScoreLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BCB21B1F69EAE400F16629 /* ScoreLabelNode.swift */; };
 		34BDBC201F88748E0096C67F /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34BDBC1F1F88748E0096C67F /* GameKit.framework */; };
+		34BDBC231F8875E10096C67F /* GameKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BDBC221F8875E10096C67F /* GameKitManager.swift */; };
 		34BF4C151F773B1200DFD233 /* RunPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BF4C141F773B1200DFD233 /* RunPresentable.swift */; };
 		34C2DB691F633C890027EB1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C2DB681F633C890027EB1F /* AppDelegate.swift */; };
 		34C2DB6B1F633C890027EB1F /* RunScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 34C2DB6A1F633C890027EB1F /* RunScene.sks */; };
@@ -171,6 +172,7 @@
 		34BCB2191F69E8A400F16629 /* Double+Rounding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Rounding.swift"; sourceTree = "<group>"; };
 		34BCB21B1F69EAE400F16629 /* ScoreLabelNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreLabelNode.swift; sourceTree = "<group>"; };
 		34BDBC1F1F88748E0096C67F /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		34BDBC221F8875E10096C67F /* GameKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameKitManager.swift; sourceTree = "<group>"; };
 		34BF4C141F773B1200DFD233 /* RunPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunPresentable.swift; sourceTree = "<group>"; };
 		34C2DB651F633C890027EB1F /* TomatoRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TomatoRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C2DB681F633C890027EB1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -484,6 +486,14 @@
 			path = Double;
 			sourceTree = "<group>";
 		};
+		34BDBC211F8875C60096C67F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				34BDBC221F8875E10096C67F /* GameKitManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		34C2DB5C1F633C890027EB1F = {
 			isa = PBXGroup;
 			children = (
@@ -508,6 +518,7 @@
 		34C2DB671F633C890027EB1F /* TomatoRun */ = {
 			isa = PBXGroup;
 			children = (
+				34BDBC211F8875C60096C67F /* Managers */,
 				34C2DB9C1F633D450027EB1F /* RunScene */,
 				34C2DB9D1F633E8D0027EB1F /* Shared */,
 				3400D99A1F660F4300ECD456 /* Resources */,
@@ -785,6 +796,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34BDBC231F8875E10096C67F /* GameKitManager.swift in Sources */,
 				34CC6D421F7765C400686819 /* Target.swift in Sources */,
 				3478491F1F772201003A146D /* MainMenuScene.swift in Sources */,
 				3406CD431F6A08EE0027775A /* FontConstants.swift in Sources */,
