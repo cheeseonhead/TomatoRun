@@ -48,6 +48,7 @@
 		342DD91F1F772E56006D09E3 /* CGSize+Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DD91E1F772E56006D09E3 /* CGSize+Padding.swift */; };
 		342DD9231F7730A4006D09E3 /* SKNode+Touch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DD9221F7730A4006D09E3 /* SKNode+Touch.swift */; };
 		343BA4251F7BBADC00C905A7 /* FPFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343BA4241F7BBADC00C905A7 /* FPFunctions.swift */; };
+		3458A4491F8980FC00E4C823 /* SKNode+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3458A4481F8980FC00E4C823 /* SKNode+Layout.swift */; };
 		34621D001F69A4A100D04A98 /* UIRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34621CFF1F69A4A100D04A98 /* UIRenderer.swift */; };
 		34621D021F69AAD800D04A98 /* PauseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34621D011F69AAD800D04A98 /* PauseNode.swift */; };
 		347543151F75A801004DA584 /* DeathComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347543141F75A801004DA584 /* DeathComponent.swift */; };
@@ -146,6 +147,7 @@
 		342DD91E1F772E56006D09E3 /* CGSize+Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Padding.swift"; sourceTree = "<group>"; };
 		342DD9221F7730A4006D09E3 /* SKNode+Touch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+Touch.swift"; sourceTree = "<group>"; };
 		343BA4241F7BBADC00C905A7 /* FPFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPFunctions.swift; sourceTree = "<group>"; };
+		3458A4481F8980FC00E4C823 /* SKNode+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+Layout.swift"; sourceTree = "<group>"; };
 		34621CFF1F69A4A100D04A98 /* UIRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRenderer.swift; sourceTree = "<group>"; };
 		34621D011F69AAD800D04A98 /* PauseNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseNode.swift; sourceTree = "<group>"; };
 		347543141F75A801004DA584 /* DeathComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathComponent.swift; sourceTree = "<group>"; };
@@ -427,6 +429,7 @@
 				347AFA5F1F777A3B002823AE /* SKNode+RunAction.swift */,
 				347849271F772968003A146D /* SKNode+Child.swift */,
 				342DD9221F7730A4006D09E3 /* SKNode+Touch.swift */,
+				3458A4481F8980FC00E4C823 /* SKNode+Layout.swift */,
 			);
 			path = SKNode;
 			sourceTree = "<group>";
@@ -808,6 +811,7 @@
 				3400D9741F65FF5600ECD456 /* Array+Swap.swift in Sources */,
 				347AFA601F777A3B002823AE /* SKNode+RunAction.swift in Sources */,
 				3400D9781F65FF5600ECD456 /* SKSpriteNode+Scale.swift in Sources */,
+				3458A4491F8980FC00E4C823 /* SKNode+Layout.swift in Sources */,
 				3400D9AB1F663E4600ECD456 /* SKCameraNode+Frame.swift in Sources */,
 				3400D9941F6604B200ECD456 /* MoveComponent.swift in Sources */,
 				3480A6F31F72191C00688B1C /* GameStateMachine.swift in Sources */,
