@@ -19,8 +19,7 @@ class GameOverScene: SKScene, RunPresentable {
         super.didMove(to: view)
 
         scoreLabel = ScoreLabelNode(score: 0)
-        if let gameOverState = gameStateMachine?.currentState as? GameOverState,
-            let score = gameOverState.finalScore {
+        gameStateMachine?.getFinalScore { score in
             scoreLabel.score = score
         }
 

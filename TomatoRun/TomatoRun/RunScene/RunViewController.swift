@@ -27,6 +27,9 @@ class RunViewController: UIViewController {
     }
 
     func presentGameOverScene() {
+        gameStateMachine.getFinalScore { score in
+            GameKitManager.shared.submitScore(score)
+        }
         presentScene(fileNamed: "GameOverScene", getSKScene: { gkScene -> GameOverScene? in gkScene.rootNode as? GameOverScene })
     }
 
