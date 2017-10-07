@@ -29,6 +29,7 @@ extension SKNode {
 }
 
 let belowCentered: Layout = SKNode.none() ==> below ==> centerHorizontally
+let centered: Layout = SKNode.none() ==> centerHorizontally ==> centerVertically
 
 func offset(_ offset: CGPoint) -> (@escaping Layout) -> Layout {
     return { layout in { anchor, node in
@@ -52,5 +53,13 @@ func centerHorizontally(_ layout: @escaping Layout) -> Layout {
         let position = layout(anchor, node)
 
         return CGPoint(x: anchor.position.x, y: position.y)
+    }
+}
+
+func centerVertically(_ layout: @escaping Layout) -> Layout {
+    return { anchor, node in
+        let position = layout(anchor, node)
+
+        return CGPoint(x: position.x, y: anchor.position.y)
     }
 }
