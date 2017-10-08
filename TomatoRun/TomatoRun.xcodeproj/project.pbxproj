@@ -93,6 +93,8 @@
 		80A916855A42D0324920E7B0 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3052CE97649701F839B55C6 /* CoreTelephony.framework */; };
 		983C658CB29416B7B9054E5E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F3A9D5C85074FB6AED9C9F8 /* CoreText.framework */; };
 		9B5B2AC01F7C402D000C9AF4 /* SidebarEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5B2ABF1F7C402D000C9AF4 /* SidebarEntity.swift */; };
+		9B5B2AC61F7DF574000C9AF4 /* Pixeled.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B5B2AC51F7DF570000C9AF4 /* Pixeled.ttf */; };
+		9B5B2AC81F7EB384000C9AF4 /* TextLabelComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5B2AC71F7EB384000C9AF4 /* TextLabelComponent.swift */; };
 		9B5C1B341F7C0EAE00FD2F7A /* UIEdgeInsets+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C1B331F7C0EAE00FD2F7A /* UIEdgeInsets+Init.swift */; };
 		9BB60A121F70B9200002A5BF /* level2_v1.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BB60A111F70B9200002A5BF /* level2_v1.json */; };
 		9BCD27AA1F69AD83002DA30F /* level3_v1.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BCD27A91F69AD83002DA30F /* level3_v1.json */; };
@@ -213,6 +215,8 @@
 		34E6E9971F69990100D38AB6 /* Ropable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ropable.swift; sourceTree = "<group>"; };
 		3F3A9D5C85074FB6AED9C9F8 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		9B5B2ABF1F7C402D000C9AF4 /* SidebarEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarEntity.swift; sourceTree = "<group>"; };
+		9B5B2AC51F7DF570000C9AF4 /* Pixeled.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pixeled.ttf; sourceTree = "<group>"; };
+		9B5B2AC71F7EB384000C9AF4 /* TextLabelComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLabelComponent.swift; sourceTree = "<group>"; };
 		9B5C1B331F7C0EAE00FD2F7A /* UIEdgeInsets+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Init.swift"; sourceTree = "<group>"; };
 		9BB60A111F70B9200002A5BF /* level2_v1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level2_v1.json; sourceTree = "<group>"; };
 		9BCD27A91F69AD83002DA30F /* level3_v1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = level3_v1.json; sourceTree = "<group>"; };
@@ -303,6 +307,7 @@
 				34BCB2161F69E59600F16629 /* ScoreComponent.swift */,
 				347543141F75A801004DA584 /* DeathComponent.swift */,
 				347543161F75A868004DA584 /* DangerComponent.swift */,
+				9B5B2AC71F7EB384000C9AF4 /* TextLabelComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -480,6 +485,7 @@
 		349FB9271F6A035900F5FE4B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				9B5B2AC51F7DF570000C9AF4 /* Pixeled.ttf */,
 				349FB9331F6A043A00F5FE4B /* BebasNeue-Bold.ttf */,
 				349FB9341F6A043A00F5FE4B /* BebasNeue-Book.ttf */,
 				349FB9321F6A043A00F5FE4B /* BebasNeue-Light.ttf */,
@@ -799,6 +805,7 @@
 				9BB60A121F70B9200002A5BF /* level2_v1.json in Resources */,
 				9BCD27AA1F69AD83002DA30F /* level3_v1.json in Resources */,
 				349FB93E1F6A058E00F5FE4B /* BebasNeue-Light.ttf in Resources */,
+				9B5B2AC61F7DF574000C9AF4 /* Pixeled.ttf in Resources */,
 				349FB93C1F6A058E00F5FE4B /* BebasNeue-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -851,6 +858,7 @@
 				3400D9461F65FE7E00ECD456 /* EntityManager.swift in Sources */,
 				34E6E9911F698D6F00D38AB6 /* GKEntity+Positionable.swift in Sources */,
 				34CC6D471F7768CB00686819 /* StartFoundState.swift in Sources */,
+				9B5B2AC81F7EB384000C9AF4 /* TextLabelComponent.swift in Sources */,
 				340917A11F735A2800ACCF07 /* GamePlayingState.swift in Sources */,
 				34BCB21A1F69E8A400F16629 /* Double+Rounding.swift in Sources */,
 				3400D9751F65FF5600ECD456 /* CGRect+Anchor.swift in Sources */,
