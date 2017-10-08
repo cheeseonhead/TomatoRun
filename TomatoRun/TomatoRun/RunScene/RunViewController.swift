@@ -21,6 +21,20 @@ class RunViewController: UIViewController {
 
         presentMainMenuScene()
     }
+}
+
+// MARK: - View controllers
+extension RunViewController {
+
+    func presentLeaderboard() {
+        guard let gameCenterVC = GameKitManager.shared.gameCenterViewController() else { return }
+
+        present(gameCenterVC, animated: true, completion: nil)
+    }
+}
+
+// MARK: - Scenes
+extension RunViewController {
 
     func presentMainMenuScene() {
         presentScene(fileNamed: "MainMenuScene", getSKScene: { gkScene -> MainMenuScene? in gkScene.rootNode as? MainMenuScene })

@@ -33,11 +33,17 @@ class MainMenuScene: SKScene, RunPresentable {
 
         if touchedNodes.contains(playButton) {
             startGame()
+        } else if touchedNodes.contains(highscoreButton) {
+            showHighscore()
         }
     }
 
     func startGame() {
         runViewController?.presentRunScene()
+    }
+
+    func showHighscore() {
+        runViewController?.presentLeaderboard()
     }
 
     func layoutNodes() {

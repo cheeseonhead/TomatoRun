@@ -8,7 +8,7 @@
 
 import GameKit
 
-class GameKitManager: NSObject {
+class GameKitManager: NSObject, GKGameCenterControllerDelegate {
 
     static let shared = GameKitManager()
 
@@ -43,5 +43,20 @@ class GameKitManager: NSObject {
                 print("Best Score submitted to your Leaderboard!")
             }
         }
+    }
+
+    func gameCenterViewController() -> UIViewController? {
+        if isGameCenterEnabled {
+            let gcVC = GKGameCenterViewController()
+            gcVC.gameCenterDelegate = self
+            gcVC.viewState = .leaderboards
+            gcVC.leaderboardIdentifier = leaderBoardIdentifier
+            return gcVC
+        }
+        return nil
+    }
+
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+        gameCenterViewController.dismiss(animated: true, completion: nil)
     }
 }
