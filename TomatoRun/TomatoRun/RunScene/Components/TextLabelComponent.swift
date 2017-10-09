@@ -14,6 +14,7 @@ class TextLabelComponent: GKComponent {
 
     init(text: String) {
         node = SKLabelNode(text: text)
+
         super.init()
     }
 
@@ -24,21 +25,5 @@ class TextLabelComponent: GKComponent {
     override func didAddToEntity() {
         super.didAddToEntity()
         node.entity = entity
-    }
-}
-
-extension SpriteComponent: Positionable {
-    func setPosition(_ position: CGPoint) {
-        node.position = position
-    }
-
-    func getPosition() -> CGPoint {
-        return node.position
-    }
-}
-
-extension SpriteComponent: Framable {
-    func frame() -> CGRect {
-        return node.frame
     }
 }
