@@ -19,7 +19,7 @@ class GameStateMachine: GKStateMachine {
 
         enter(GamePlayingState.self)
     }
-    func getFinalScore(_ callback: (Int) -> Void) {
+    func getFinalScore(_ callback:  (Int) -> Void) {
         if let gameOverState = currentState as? GameOverState,
             let score = gameOverState.finalScore {
             callback(score)
