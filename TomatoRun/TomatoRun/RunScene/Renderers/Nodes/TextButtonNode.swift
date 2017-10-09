@@ -10,6 +10,10 @@ import SpriteKit
 
 class TextButtonNode: SKNode {
 
+    override var frame: CGRect {
+        return backgroundNode.frame
+    }
+
     let label: SKLabelNode
     let backgroundNode: SKSpriteNode
     var inset: UIEdgeInsets {
