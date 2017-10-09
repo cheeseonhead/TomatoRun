@@ -9,7 +9,7 @@
 import SpriteKit
 import GameplayKit
 
-class TextLavelComponent: GKComponent {
+class TextLabelComponent: GKComponent {
     let node: SKLabelNode
 
     init(text: String) {
