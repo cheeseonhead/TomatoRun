@@ -35,7 +35,7 @@ class ContinuousSpriteComponent: GKComponent {
 }
 
 // MARK: Updates
-extension ContinuousSpriteComponent {
+extension ContinuousSpriteComponent: Spriteful {
     override func update(deltaTime seconds: TimeInterval) {
         super.update(deltaTime: seconds)
 
