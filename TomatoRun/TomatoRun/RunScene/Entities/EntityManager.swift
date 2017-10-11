@@ -18,7 +18,8 @@ class EntityManager {
         let touchSystem = GKComponentSystem(componentClass: TouchComponent.self)
         let scoreSystem = GKComponentSystem(componentClass: ScoreComponent.self)
         let deathSystem = GKComponentSystem(componentClass: DeathComponent.self)
-        return [intersectionSystem, moveSystem, deathSystem, continuousSpriteSystem, touchSystem, scoreSystem]
+        let textLabelSystem = GKComponentSystem(componentClass: TextLabelComponent.self)
+        return [intersectionSystem, moveSystem, deathSystem, continuousSpriteSystem, textLabelSystem, touchSystem, scoreSystem]
     }()
 
     init(worldNode: SKNode) {
@@ -27,11 +28,9 @@ class EntityManager {
 
     func update(_ deltaTime: CFTimeInterval) {
         for currentRemove in toRemove {
-            if let spriteNode = currentRemove.component(ofType: SpriteComponent.self)?.node {
-                spriteNode.removeFromParent()
-            }
-            if let component = currentRemove.component(ofType: ContinuousSpriteComponent.self) {
-                component.removeFromParent()
+            for component in currentRemove.components {
+                guard let spriteful = component as? Spriteful else { continue }
+                spriteful.removeFromParent()
             }
 
             entities.remove(currentRemove)
