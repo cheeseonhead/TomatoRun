@@ -45,6 +45,7 @@
 		340917A31F735A6300ACCF07 /* GamePausedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340917A21F735A6300ACCF07 /* GamePausedState.swift */; };
 		340917A51F735B5700ACCF07 /* GameOverState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340917A41F735B5700ACCF07 /* GameOverState.swift */; };
 		340917A71F73621C00ACCF07 /* PauseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340917A61F73621C00ACCF07 /* PauseScene.swift */; };
+		3416E5F21F8EDDCA0098FF2D /* SKNode+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3416E5F11F8EDDCA0098FF2D /* SKNode+Position.swift */; };
 		342DD91F1F772E56006D09E3 /* CGSize+Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DD91E1F772E56006D09E3 /* CGSize+Padding.swift */; };
 		342DD9231F7730A4006D09E3 /* SKNode+Touch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DD9221F7730A4006D09E3 /* SKNode+Touch.swift */; };
 		343BA4251F7BBADC00C905A7 /* FPFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343BA4241F7BBADC00C905A7 /* FPFunctions.swift */; };
@@ -146,6 +147,7 @@
 		340917A21F735A6300ACCF07 /* GamePausedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePausedState.swift; sourceTree = "<group>"; };
 		340917A41F735B5700ACCF07 /* GameOverState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverState.swift; sourceTree = "<group>"; };
 		340917A61F73621C00ACCF07 /* PauseScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseScene.swift; sourceTree = "<group>"; };
+		3416E5F11F8EDDCA0098FF2D /* SKNode+Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+Position.swift"; sourceTree = "<group>"; };
 		342DD91E1F772E56006D09E3 /* CGSize+Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Padding.swift"; sourceTree = "<group>"; };
 		342DD9221F7730A4006D09E3 /* SKNode+Touch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+Touch.swift"; sourceTree = "<group>"; };
 		343BA4241F7BBADC00C905A7 /* FPFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPFunctions.swift; sourceTree = "<group>"; };
@@ -435,6 +437,7 @@
 				347849271F772968003A146D /* SKNode+Child.swift */,
 				342DD9221F7730A4006D09E3 /* SKNode+Touch.swift */,
 				3458A4481F8980FC00E4C823 /* SKNode+Layout.swift */,
+				3416E5F11F8EDDCA0098FF2D /* SKNode+Position.swift */,
 			);
 			path = SKNode;
 			sourceTree = "<group>";
@@ -850,6 +853,7 @@
 				3400D9691F65FF3000ECD456 /* DuringTravelState.swift in Sources */,
 				3400D9791F65FF5600ECD456 /* MyUtils.swift in Sources */,
 				9B5B2AC01F7C402D000C9AF4 /* SidebarEntity.swift in Sources */,
+				3416E5F21F8EDDCA0098FF2D /* SKNode+Position.swift in Sources */,
 				347543201F75B4E6004DA584 /* Presenting.swift in Sources */,
 				3400D9921F6604B200ECD456 /* Positional.swift in Sources */,
 				3475431D1F75ADC8004DA584 /* GameOverScene.swift in Sources */,
