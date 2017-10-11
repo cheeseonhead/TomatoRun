@@ -9,14 +9,20 @@
 import SpriteKit
 import GameplayKit
 
-class TextLabelComponent: GKComponent {
+class TextLabelComponent: GKComponent, Spriteful {
 
+    unowned let worldNode: SKNode
     let anchor: CGPoint
-    let node: SKLabelNode
+    var node: SKLabelNode
 
-    init(text: String, anchor: CGPoint) {
+    private var previousAnchorPoint: CGPoint?
+
+    init(text: String, anchor: CGPoint, worldNode: SKNode) {
         node = SKLabelNode(text: text)
         self.anchor = anchor
+        self.worldNode = worldNode
+
+        self.worldNode.addChild(node)
 
         super.init()
     }
@@ -25,8 +31,17 @@ class TextLabelComponent: GKComponent {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func didAddToEntity() {
-        super.didAddToEntity()
-        node.entity = entity
+    override func update(deltaTime _: TimeInterval) {
+        guard let spriteComponent = entity?.component(ofType: SpriteComponent.self) else { return }
+
+        let anchorPoint = spriteComponent.node.frame.position(forAnchor: anchor)
+
+        guard anchorPoint != previousAnchorPoint else { return }
+
+        node.position(anchor: CGPoint(x: 0.5, y: 0), at: anchorPoint)
+    }
+
+    func removeFromParent() {
+        node.removeFromParent()
     }
 }
