@@ -10,10 +10,13 @@ import SpriteKit
 import GameplayKit
 
 class TextLabelComponent: GKComponent {
+
+    let anchor: CGPoint
     let node: SKLabelNode
 
-    init(text: String) {
+    init(text: String, anchor: CGPoint) {
         node = SKLabelNode(text: text)
+        self.anchor = anchor
 
         super.init()
     }
