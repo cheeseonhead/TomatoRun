@@ -10,6 +10,6 @@ import Foundation
 
 extension CGVector {
     func size() -> CGSize {
-        return CGSize(width: x, height: y)
+        return CGSize(width: dx, height: dy)
     }
 }
