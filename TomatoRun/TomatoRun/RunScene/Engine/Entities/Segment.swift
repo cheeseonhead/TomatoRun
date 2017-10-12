@@ -12,11 +12,14 @@ struct Segment: Codable {
     var woodenBoards: [WoodenBoard]
     var spiders: [Spider]
     var length: CGFloat
+    
+    var showText: Bool? = false
 
     enum CodingKeys: String, CodingKey {
         case woodenBoards = "wooden_boards"
         case length
         case spiders
+        case showText
     }
 }
 
