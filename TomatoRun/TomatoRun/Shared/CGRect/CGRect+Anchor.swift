@@ -13,6 +13,9 @@ enum PointType {
     case topLeft
     case topMiddle
     case center
+    case bottomLeft
+    case bottomMiddle
+    case bottomRight
 }
 
 extension CGRect {
@@ -40,6 +43,12 @@ extension CGRect {
             return CGPoint(x: 0.5, y: 1)
         case .center:
             return CGPoint(x: 0.5, y: 0.5)
+        case .bottomLeft:
+            return CGPoint(x: 0, y: 0)
+        case .bottomRight:
+            return CGPoint(x: 1, y: 0)
+        case .bottomMiddle:
+            return CGPoint(x: 0.5, y: 0)
         }
     }
 }
