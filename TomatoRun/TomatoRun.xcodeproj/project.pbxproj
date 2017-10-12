@@ -65,11 +65,11 @@
 		347849251F7727D0003A146D /* TextButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347849241F7727D0003A146D /* TextButtonNode.swift */; };
 		347849281F772968003A146D /* SKNode+Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347849271F772968003A146D /* SKNode+Child.swift */; };
 		347AFA601F777A3B002823AE /* SKNode+RunAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347AFA5F1F777A3B002823AE /* SKNode+RunAction.swift */; };
+		347CC6A51F901C0100D24F92 /* SKNode+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347CC6A41F901C0100D24F92 /* SKNode+Frame.swift */; };
 		3480A6F31F72191C00688B1C /* GameStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480A6F21F72191C00688B1C /* GameStateMachine.swift */; };
 		3480A6F61F72195800688B1C /* GameIdleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480A6F51F72195800688B1C /* GameIdleState.swift */; };
 		34898C281F67496D00135FA6 /* TouchComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34898C271F67496D00135FA6 /* TouchComponent.swift */; };
 		348EBE841F8FBC3E00029ADE /* SignSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348EBE831F8FBC3E00029ADE /* SignSpriteNode.swift */; };
-		348EBE871F8FBE3C00029ADE /* Diagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348EBE861F8FBE3C00029ADE /* Diagram.swift */; };
 		348EBE891F8FC0CC00029ADE /* CGSize+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348EBE881F8FC0CC00029ADE /* CGSize+Math.swift */; };
 		348EBE8C1F8FC3CD00029ADE /* CGVector+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348EBE8B1F8FC3CD00029ADE /* CGVector+Size.swift */; };
 		348EBE8E1F8FC4B000029ADE /* CGSize+Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348EBE8D1F8FC4B000029ADE /* CGSize+Point.swift */; };
@@ -176,11 +176,11 @@
 		347849241F7727D0003A146D /* TextButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButtonNode.swift; sourceTree = "<group>"; };
 		347849271F772968003A146D /* SKNode+Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+Child.swift"; sourceTree = "<group>"; };
 		347AFA5F1F777A3B002823AE /* SKNode+RunAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+RunAction.swift"; sourceTree = "<group>"; };
+		347CC6A41F901C0100D24F92 /* SKNode+Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+Frame.swift"; sourceTree = "<group>"; };
 		3480A6F21F72191C00688B1C /* GameStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStateMachine.swift; sourceTree = "<group>"; };
 		3480A6F51F72195800688B1C /* GameIdleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameIdleState.swift; sourceTree = "<group>"; };
 		34898C271F67496D00135FA6 /* TouchComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchComponent.swift; sourceTree = "<group>"; };
 		348EBE831F8FBC3E00029ADE /* SignSpriteNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignSpriteNode.swift; sourceTree = "<group>"; };
-		348EBE861F8FBE3C00029ADE /* Diagram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Diagram.swift; path = TomatoRun/RunScene/Renderers/Nodes/Diagram.swift; sourceTree = SOURCE_ROOT; };
 		348EBE881F8FC0CC00029ADE /* CGSize+Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Math.swift"; sourceTree = "<group>"; };
 		348EBE8B1F8FC3CD00029ADE /* CGVector+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGVector+Size.swift"; sourceTree = "<group>"; };
 		348EBE8D1F8FC4B000029ADE /* CGSize+Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Point.swift"; sourceTree = "<group>"; };
@@ -470,6 +470,7 @@
 				342DD9221F7730A4006D09E3 /* SKNode+Touch.swift */,
 				3458A4481F8980FC00E4C823 /* SKNode+Layout.swift */,
 				3416E5F11F8EDDCA0098FF2D /* SKNode+Position.swift */,
+				347CC6A41F901C0100D24F92 /* SKNode+Frame.swift */,
 			);
 			path = SKNode;
 			sourceTree = "<group>";
@@ -499,15 +500,6 @@
 				340917A41F735B5700ACCF07 /* GameOverState.swift */,
 			);
 			path = States;
-			sourceTree = "<group>";
-		};
-		348EBE851F8FBD7100029ADE /* Diagram */ = {
-			isa = PBXGroup;
-			children = (
-				348EBE861F8FBE3C00029ADE /* Diagram.swift */,
-			);
-			name = Diagram;
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		348EBE8A1F8FC3C200029ADE /* CGVector */ = {
@@ -633,7 +625,6 @@
 			isa = PBXGroup;
 			children = (
 				348EBE8A1F8FC3C200029ADE /* CGVector */,
-				348EBE851F8FBD7100029ADE /* Diagram */,
 				3400D92F1F65FD4300ECD456 /* Constants */,
 				34C2DBA91F633F3D0027EB1F /* Array */,
 				34C2DBA31F633ECF0027EB1F /* CGRect */,
@@ -868,6 +859,7 @@
 				3400D99D1F66178500ECD456 /* LevelFileParser.swift in Sources */,
 				347543171F75A868004DA584 /* DangerComponent.swift in Sources */,
 				34BCB21C1F69EAE400F16629 /* ScoreLabelNode.swift in Sources */,
+				347CC6A51F901C0100D24F92 /* SKNode+Frame.swift in Sources */,
 				34BCB2171F69E59600F16629 /* ScoreComponent.swift in Sources */,
 				3400D9A01F661B2700ECD456 /* Segment.swift in Sources */,
 				3400D9741F65FF5600ECD456 /* Array+Swap.swift in Sources */,
@@ -930,7 +922,6 @@
 				3400D96D1F65FF3000ECD456 /* WanderingState.swift in Sources */,
 				3480A6F61F72195800688B1C /* GameIdleState.swift in Sources */,
 				340917A71F73621C00ACCF07 /* PauseScene.swift in Sources */,
-				348EBE871F8FBE3C00029ADE /* Diagram.swift in Sources */,
 				3400D98E1F6604B200ECD456 /* MoveBehavior.swift in Sources */,
 				3400D9A81F663BBD00ECD456 /* SegmentRenderer.swift in Sources */,
 				3400D9771F65FF5600ECD456 /* Int+Random.swift in Sources */,
