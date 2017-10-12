@@ -15,4 +15,10 @@ extension SKNode {
 
         position = newPosition
     }
+
+    func position(anchorType type: PointType, at point: CGPoint) {
+        let anchorPoint = CGRect.anchor(forType: type)
+
+        position(anchor: anchorPoint, at: point)
+    }
 }

@@ -11,6 +11,8 @@ import UIKit
 enum PointType {
     case topRight
     case topLeft
+    case topMiddle
+    case center
 }
 
 extension CGRect {
@@ -25,11 +27,19 @@ extension CGRect {
     }
 
     func position(forType type: PointType) -> CGPoint {
+        return position(forAnchor: CGRect.anchor(forType: type))
+    }
+
+    static func anchor(forType type: PointType) -> CGPoint {
         switch type {
         case .topRight:
-            return position(forAnchor: CGPoint(x: 1, y: 1))
+            return CGPoint(x: 1, y: 1)
         case .topLeft:
-            return position(forAnchor: CGPoint(x: 0, y: 1))
+            return CGPoint(x: 0, y: 1)
+        case .topMiddle:
+            return CGPoint(x: 0.5, y: 1)
+        case .center:
+            return CGPoint(x: 0.5, y: 0.5)
         }
     }
 }
