@@ -38,13 +38,18 @@ enum RunSceneConstants {
         static let tomato = CGFloat(0.7)
     }
 
+    enum Size {
+        static let button = CGSize(width: 300.0, height: 90.0)
+    }
+
     // MARK: Padding
     enum PaddingRatio {
         static let pauseNode = CGFloat(0.02)
         static let scoreLabel = pauseNode
     }
+
     enum Padding {
-        static let buttonInside = CGFloat(20)
+        static let buttonInside = CGFloat(30)
     }
 
     // MARK: Spacing
