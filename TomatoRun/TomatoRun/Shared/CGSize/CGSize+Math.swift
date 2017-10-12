@@ -8,6 +8,18 @@
 
 import UIKit
 
+func -(l: CGSize, r: CGSize) -> CGSize {
+    return CGSize(width: l.width - r.width, height: l.height - r.height)
+}
+
+func *(scale: CGFloat, r: CGSize) -> CGSize {
+    return CGSize(width: scale * r.width, height: scale * r.height)
+}
+
+func *(l: CGSize, r: CGSize) -> CGSize {
+    return CGSize(width: l.width * r.width, height: l.height * r.height)
+}
+
 func /(l: CGSize, r: CGSize) -> CGSize {
     return CGSize(width: l.width / r.width, height: l.height / r.height)
 }
