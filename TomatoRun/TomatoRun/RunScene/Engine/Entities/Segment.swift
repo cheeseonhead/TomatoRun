@@ -12,7 +12,7 @@ struct Segment: Codable {
     var woodenBoards: [WoodenBoard]
     var spiders: [Spider]
     var length: CGFloat
-    
+
     var showText: Bool? = false
 
     enum CodingKeys: String, CodingKey {
@@ -25,9 +25,10 @@ struct Segment: Codable {
 
 extension Segment {
 
-    static func infoFor(_ segment: Segment) -> (Ropable) -> (CGFloat, Int) {
+    static func infoFor(_ segment: Segment) -> (Ropable) -> (CGFloat, Int, Bool) {
         return { ropable in
-            (segment.length * ropable.heightRatio, ropable.rope)
+            let showsText = (segment.showText ?? false) && (ropable.hasText ?? false)
+            return (segment.length * ropable.heightRatio, ropable.rope, showsText)
         }
     }
 }

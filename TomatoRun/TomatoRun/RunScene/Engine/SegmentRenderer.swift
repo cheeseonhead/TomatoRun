@@ -26,7 +26,7 @@ class SegmentRenderer {
 
         let maxY = renderedFrame.position(forType: .topRight).y
         while currentSegmentEnd < maxY + renderBuffer {
-            let result = SegmentManager.getNextSegment(forHeight: currentSegmentEnd)
+            let result = segmentManager.getNextSegment(forHeight: currentSegmentEnd)
 
             switch result {
             case let .failure(str):
@@ -53,9 +53,9 @@ class SegmentRenderer {
         currentSegmentEnd += segment.length
     }
 
-    func offsetHeight(_ offset: CGFloat) -> (CGFloat, Int) -> (CGFloat, Int) {
-        return { height, index in
-            (height + offset, index)
+    func offsetHeight(_ offset: CGFloat) -> (CGFloat, Int, Bool) -> (CGFloat, Int, Bool) {
+        return { height, index, hasText in
+            (height + offset, index, hasText)
         }
     }
 }
