@@ -10,10 +10,17 @@ import SpriteKit
 
 class SignSpriteNode: SKSpriteNode {
 
+    var bodyFrame: CGRect {
+        return signBody.frame
+    }
+
+    private let signBody: SKShapeNode
+
     override init(texture _: SKTexture?, color: UIColor, size: CGSize) {
+        signBody = SKShapeNode(rectOf: size)
+
         super.init(texture: nil, color: color, size: size)
 
-        let signBody = SKShapeNode(rectOf: size)
         signBody.fillColor = color
         addChild(signBody)
     }
