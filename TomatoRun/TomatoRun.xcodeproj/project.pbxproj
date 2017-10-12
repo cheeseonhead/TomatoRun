@@ -48,7 +48,7 @@
 		3416E5F21F8EDDCA0098FF2D /* SKNode+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3416E5F11F8EDDCA0098FF2D /* SKNode+Position.swift */; };
 		3416E5F61F8EE5890098FF2D /* Spriteful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3416E5F51F8EE5890098FF2D /* Spriteful.swift */; };
 		3416E5F91F8EFA010098FF2D /* UIFont+Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3416E5F81F8EFA010098FF2D /* UIFont+Print.swift */; };
-		3416E5FB1F8EFAA70098FF2D /* TextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3416E5FA1F8EFAA70098FF2D /* TextLabel.swift */; };
+		3416E5FB1F8EFAA70098FF2D /* TextLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3416E5FA1F8EFAA70098FF2D /* TextLabelNode.swift */; };
 		342DD91F1F772E56006D09E3 /* CGSize+Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DD91E1F772E56006D09E3 /* CGSize+Padding.swift */; };
 		342DD9231F7730A4006D09E3 /* SKNode+Touch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DD9221F7730A4006D09E3 /* SKNode+Touch.swift */; };
 		343BA4251F7BBADC00C905A7 /* FPFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343BA4241F7BBADC00C905A7 /* FPFunctions.swift */; };
@@ -153,7 +153,7 @@
 		3416E5F11F8EDDCA0098FF2D /* SKNode+Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+Position.swift"; sourceTree = "<group>"; };
 		3416E5F51F8EE5890098FF2D /* Spriteful.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spriteful.swift; sourceTree = "<group>"; };
 		3416E5F81F8EFA010098FF2D /* UIFont+Print.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Print.swift"; sourceTree = "<group>"; };
-		3416E5FA1F8EFAA70098FF2D /* TextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLabel.swift; sourceTree = "<group>"; };
+		3416E5FA1F8EFAA70098FF2D /* TextLabelNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLabelNode.swift; sourceTree = "<group>"; };
 		342DD91E1F772E56006D09E3 /* CGSize+Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Padding.swift"; sourceTree = "<group>"; };
 		342DD9221F7730A4006D09E3 /* SKNode+Touch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+Touch.swift"; sourceTree = "<group>"; };
 		343BA4241F7BBADC00C905A7 /* FPFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPFunctions.swift; sourceTree = "<group>"; };
@@ -395,7 +395,7 @@
 				34621D011F69AAD800D04A98 /* PauseNode.swift */,
 				34BCB21B1F69EAE400F16629 /* ScoreLabelNode.swift */,
 				347849241F7727D0003A146D /* TextButtonNode.swift */,
-				3416E5FA1F8EFAA70098FF2D /* TextLabel.swift */,
+				3416E5FA1F8EFAA70098FF2D /* TextLabelNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -885,7 +885,7 @@
 				342DD9231F7730A4006D09E3 /* SKNode+Touch.swift in Sources */,
 				3416E5F61F8EE5890098FF2D /* Spriteful.swift in Sources */,
 				3400D9901F6604B200ECD456 /* ContinuousSpriteComponent.swift in Sources */,
-				3416E5FB1F8EFAA70098FF2D /* TextLabel.swift in Sources */,
+				3416E5FB1F8EFAA70098FF2D /* TextLabelNode.swift in Sources */,
 				9B5C1B341F7C0EAE00FD2F7A /* UIEdgeInsets+Init.swift in Sources */,
 				3400D96D1F65FF3000ECD456 /* WanderingState.swift in Sources */,
 				3480A6F61F72195800688B1C /* GameIdleState.swift in Sources */,
