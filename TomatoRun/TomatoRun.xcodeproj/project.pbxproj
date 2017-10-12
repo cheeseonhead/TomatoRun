@@ -68,6 +68,7 @@
 		3480A6F31F72191C00688B1C /* GameStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480A6F21F72191C00688B1C /* GameStateMachine.swift */; };
 		3480A6F61F72195800688B1C /* GameIdleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480A6F51F72195800688B1C /* GameIdleState.swift */; };
 		34898C281F67496D00135FA6 /* TouchComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34898C271F67496D00135FA6 /* TouchComponent.swift */; };
+		348EBE841F8FBC3E00029ADE /* SignSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348EBE831F8FBC3E00029ADE /* SignSpriteNode.swift */; };
 		349E51D81F7BFDA800D94B5F /* IntersectionComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349E51D71F7BFDA800D94B5F /* IntersectionComponentTests.swift */; };
 		349E51DB1F7C01D700D94B5F /* QuickCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349E51DA1F7C01D700D94B5F /* QuickCheck.swift */; };
 		349FB93C1F6A058E00F5FE4B /* BebasNeue-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 349FB9331F6A043A00F5FE4B /* BebasNeue-Bold.ttf */; };
@@ -173,6 +174,7 @@
 		3480A6F21F72191C00688B1C /* GameStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStateMachine.swift; sourceTree = "<group>"; };
 		3480A6F51F72195800688B1C /* GameIdleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameIdleState.swift; sourceTree = "<group>"; };
 		34898C271F67496D00135FA6 /* TouchComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchComponent.swift; sourceTree = "<group>"; };
+		348EBE831F8FBC3E00029ADE /* SignSpriteNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignSpriteNode.swift; sourceTree = "<group>"; };
 		349E51D71F7BFDA800D94B5F /* IntersectionComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntersectionComponentTests.swift; sourceTree = "<group>"; };
 		349E51DA1F7C01D700D94B5F /* QuickCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickCheck.swift; sourceTree = "<group>"; };
 		349FB9321F6A043A00F5FE4B /* BebasNeue-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Light.ttf"; sourceTree = "<group>"; };
@@ -396,6 +398,7 @@
 				34BCB21B1F69EAE400F16629 /* ScoreLabelNode.swift */,
 				347849241F7727D0003A146D /* TextButtonNode.swift */,
 				3416E5FA1F8EFAA70098FF2D /* TextLabelNode.swift */,
+				348EBE831F8FBC3E00029ADE /* SignSpriteNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -854,6 +857,7 @@
 				3400D9991F6609CD00ECD456 /* RunSceneConstants.swift in Sources */,
 				3400D9461F65FE7E00ECD456 /* EntityManager.swift in Sources */,
 				34E6E9911F698D6F00D38AB6 /* GKEntity+Positionable.swift in Sources */,
+				348EBE841F8FBC3E00029ADE /* SignSpriteNode.swift in Sources */,
 				34CC6D471F7768CB00686819 /* StartFoundState.swift in Sources */,
 				9B5B2AC81F7EB384000C9AF4 /* TextLabelComponent.swift in Sources */,
 				340917A11F735A2800ACCF07 /* GamePlayingState.swift in Sources */,
