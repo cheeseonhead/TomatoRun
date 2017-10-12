@@ -1,7 +1,8 @@
 [{
     "wooden_boards": [{
         "height_ratio": 0.2,
-        "rope": 0
+        "rope": 0,
+                      "hasText": true
     }, {
         "height_ratio": 0.45,
         "rope": 1
@@ -20,7 +21,8 @@
 }, {
     "wooden_boards": [{
         "height_ratio": 0.278,
-        "rope": 1
+                      "rope": 1,
+                      "hasText": true
     }, {
         "height_ratio": 0.556,
         "rope": 0

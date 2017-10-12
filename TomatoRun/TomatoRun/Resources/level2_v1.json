@@ -13,7 +13,8 @@
          "rope": 1
      }, {
          "height_ratio": 0.1,
-         "rope": 2
+                       "rope": 2,
+                       "hasText": true
      }, {
          "height_ratio": 0.2,
          "rope": 2
