@@ -37,6 +37,7 @@ class TextLabelComponent: GKComponent, Spriteful {
         let anchorPoint = spriteComponent.node.frame.position(forAnchor: anchor)
 
         guard anchorPoint != previousAnchorPoint else { return }
+        previousAnchorPoint = anchorPoint
 
         node.position(anchor: CGPoint(x: 0.5, y: 0), at: anchorPoint)
     }
