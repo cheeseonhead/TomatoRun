@@ -13,12 +13,12 @@ class TextLabelComponent: GKComponent, Spriteful {
 
     unowned let worldNode: SKNode
     let anchor: CGPoint
-    var node: TextLabelNode
+    var node: SignNode
 
     private var previousAnchorPoint: CGPoint?
 
-    init(text: String, anchor: CGPoint, worldNode: SKNode) {
-        node = TextLabelNode(text: text, fontSize: .Large)
+    init(text: String, color: UIColor, anchor: CGPoint, worldNode: SKNode) {
+        node = SignNode(text: text, fontSize: .Large, backgroundColor: color)
         self.anchor = anchor
         self.worldNode = worldNode
 

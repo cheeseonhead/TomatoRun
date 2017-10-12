@@ -30,7 +30,7 @@ class WoodenBoardEntity: GKEntity, Positionable {
         }))
 
         if textEnabled {
-            addComponent(TextLabelComponent(text: "Break", anchor: CGPoint(x: 0.5, y: 1), worldNode: entityManager.worldNode))
+            addComponent(TextLabelComponent(text: "Break", anchor: CGPoint(x: 0.5, y: 1), color: UIColor.orange, worldNode: entityManager.worldNode))
         }
     }
 
