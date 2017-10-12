@@ -39,7 +39,7 @@ class TextLabelComponent: GKComponent, Spriteful {
         guard anchorPoint != previousAnchorPoint else { return }
         previousAnchorPoint = anchorPoint
 
-        node.position(anchor: CGPoint(x: 0.5, y: 0), at: anchorPoint)
+        node.position(anchorType: .bottomMiddle, at: anchorPoint)
     }
 
     func removeFromParent() {
