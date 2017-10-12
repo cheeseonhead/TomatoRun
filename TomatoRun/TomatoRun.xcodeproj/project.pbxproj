@@ -73,6 +73,7 @@
 		348EBE891F8FC0CC00029ADE /* CGSize+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348EBE881F8FC0CC00029ADE /* CGSize+Math.swift */; };
 		348EBE8C1F8FC3CD00029ADE /* CGVector+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348EBE8B1F8FC3CD00029ADE /* CGVector+Size.swift */; };
 		348EBE8E1F8FC4B000029ADE /* CGSize+Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348EBE8D1F8FC4B000029ADE /* CGSize+Point.swift */; };
+		348EBE901F8FCE0100029ADE /* SignNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348EBE8F1F8FCE0100029ADE /* SignNode.swift */; };
 		349E51D81F7BFDA800D94B5F /* IntersectionComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349E51D71F7BFDA800D94B5F /* IntersectionComponentTests.swift */; };
 		349E51DB1F7C01D700D94B5F /* QuickCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349E51DA1F7C01D700D94B5F /* QuickCheck.swift */; };
 		349FB93C1F6A058E00F5FE4B /* BebasNeue-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 349FB9331F6A043A00F5FE4B /* BebasNeue-Bold.ttf */; };
@@ -183,6 +184,7 @@
 		348EBE881F8FC0CC00029ADE /* CGSize+Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Math.swift"; sourceTree = "<group>"; };
 		348EBE8B1F8FC3CD00029ADE /* CGVector+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGVector+Size.swift"; sourceTree = "<group>"; };
 		348EBE8D1F8FC4B000029ADE /* CGSize+Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Point.swift"; sourceTree = "<group>"; };
+		348EBE8F1F8FCE0100029ADE /* SignNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignNode.swift; sourceTree = "<group>"; };
 		349E51D71F7BFDA800D94B5F /* IntersectionComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntersectionComponentTests.swift; sourceTree = "<group>"; };
 		349E51DA1F7C01D700D94B5F /* QuickCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickCheck.swift; sourceTree = "<group>"; };
 		349FB9321F6A043A00F5FE4B /* BebasNeue-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Light.ttf"; sourceTree = "<group>"; };
@@ -409,6 +411,7 @@
 				347849241F7727D0003A146D /* TextButtonNode.swift */,
 				3416E5FA1F8EFAA70098FF2D /* TextLabelNode.swift */,
 				348EBE831F8FBC3E00029ADE /* SignSpriteNode.swift */,
+				348EBE8F1F8FCE0100029ADE /* SignNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -922,6 +925,7 @@
 				3416E5F61F8EE5890098FF2D /* Spriteful.swift in Sources */,
 				3400D9901F6604B200ECD456 /* ContinuousSpriteComponent.swift in Sources */,
 				3416E5FB1F8EFAA70098FF2D /* TextLabelNode.swift in Sources */,
+				348EBE901F8FCE0100029ADE /* SignNode.swift in Sources */,
 				9B5C1B341F7C0EAE00FD2F7A /* UIEdgeInsets+Init.swift in Sources */,
 				3400D96D1F65FF3000ECD456 /* WanderingState.swift in Sources */,
 				3480A6F61F72195800688B1C /* GameIdleState.swift in Sources */,
