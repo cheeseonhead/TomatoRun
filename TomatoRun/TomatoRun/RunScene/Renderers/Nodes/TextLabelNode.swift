@@ -9,6 +9,10 @@
 import SpriteKit
 
 class TextLabelNode: SKLabelNode {
+    override init() {
+        super.init()
+    }
+
     required init(text: String, fontSize: FontSize) {
         super.init(fontNamed: "Pixeled")
 
