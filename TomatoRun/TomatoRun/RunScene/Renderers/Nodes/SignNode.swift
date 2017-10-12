@@ -10,6 +10,10 @@ import SpriteKit
 
 class SignNode: SKNode {
 
+    override var frame: CGRect {
+        return background.frame
+    }
+
     let label: TextLabelNode
     let background: SignSpriteNode
 
@@ -17,11 +21,15 @@ class SignNode: SKNode {
 
         label = TextLabelNode(text: text, fontSize: fontSize)
         label.zPosition = 500
+        let labelCenter = label.frame.position(forType: .center)
 
-        background = SignSpriteNode(color: backgroundColor, size: label.frame.size)
+        background = SignSpriteNode(color: backgroundColor, size: label.frame.size.addedInsets(UIEdgeInsets(inset: 5)))
         background.zPosition = 0
+        background.position(anchorType: .center, at: labelCenter)
 
         super.init()
+
+        zPosition = RunSceneConstants.ZPositions.uiZPosition
 
         addChildren([label, background])
     }
