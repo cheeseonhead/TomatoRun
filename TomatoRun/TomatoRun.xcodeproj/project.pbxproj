@@ -71,6 +71,7 @@
 		348EBE841F8FBC3E00029ADE /* SignSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348EBE831F8FBC3E00029ADE /* SignSpriteNode.swift */; };
 		348EBE871F8FBE3C00029ADE /* Diagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348EBE861F8FBE3C00029ADE /* Diagram.swift */; };
 		348EBE891F8FC0CC00029ADE /* CGSize+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348EBE881F8FC0CC00029ADE /* CGSize+Math.swift */; };
+		348EBE8C1F8FC3CD00029ADE /* CGVector+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348EBE8B1F8FC3CD00029ADE /* CGVector+Size.swift */; };
 		349E51D81F7BFDA800D94B5F /* IntersectionComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349E51D71F7BFDA800D94B5F /* IntersectionComponentTests.swift */; };
 		349E51DB1F7C01D700D94B5F /* QuickCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349E51DA1F7C01D700D94B5F /* QuickCheck.swift */; };
 		349FB93C1F6A058E00F5FE4B /* BebasNeue-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 349FB9331F6A043A00F5FE4B /* BebasNeue-Bold.ttf */; };
@@ -179,6 +180,7 @@
 		348EBE831F8FBC3E00029ADE /* SignSpriteNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignSpriteNode.swift; sourceTree = "<group>"; };
 		348EBE861F8FBE3C00029ADE /* Diagram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Diagram.swift; path = TomatoRun/RunScene/Renderers/Nodes/Diagram.swift; sourceTree = SOURCE_ROOT; };
 		348EBE881F8FC0CC00029ADE /* CGSize+Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Math.swift"; sourceTree = "<group>"; };
+		348EBE8B1F8FC3CD00029ADE /* CGVector+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGVector+Size.swift"; sourceTree = "<group>"; };
 		349E51D71F7BFDA800D94B5F /* IntersectionComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntersectionComponentTests.swift; sourceTree = "<group>"; };
 		349E51DA1F7C01D700D94B5F /* QuickCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickCheck.swift; sourceTree = "<group>"; };
 		349FB9321F6A043A00F5FE4B /* BebasNeue-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Light.ttf"; sourceTree = "<group>"; };
@@ -502,6 +504,14 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		348EBE8A1F8FC3C200029ADE /* CGVector */ = {
+			isa = PBXGroup;
+			children = (
+				348EBE8B1F8FC3CD00029ADE /* CGVector+Size.swift */,
+			);
+			path = CGVector;
+			sourceTree = "<group>";
+		};
 		349E51D91F7C01C900D94B5F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -616,6 +626,7 @@
 		34C2DB9D1F633E8D0027EB1F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				348EBE8A1F8FC3C200029ADE /* CGVector */,
 				348EBE851F8FBD7100029ADE /* Diagram */,
 				3400D92F1F65FD4300ECD456 /* Constants */,
 				34C2DBA91F633F3D0027EB1F /* Array */,
@@ -877,6 +888,7 @@
 				9B5B2AC81F7EB384000C9AF4 /* TextLabelComponent.swift in Sources */,
 				340917A11F735A2800ACCF07 /* GamePlayingState.swift in Sources */,
 				34BCB21A1F69E8A400F16629 /* Double+Rounding.swift in Sources */,
+				348EBE8C1F8FC3CD00029ADE /* CGVector+Size.swift in Sources */,
 				3400D9751F65FF5600ECD456 /* CGRect+Anchor.swift in Sources */,
 				348EBE891F8FC0CC00029ADE /* CGSize+Math.swift in Sources */,
 				34BF4C151F773B1200DFD233 /* RunPresentable.swift in Sources */,
