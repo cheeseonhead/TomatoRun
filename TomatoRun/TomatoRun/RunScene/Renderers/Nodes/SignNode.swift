@@ -16,10 +16,14 @@ class SignNode: SKNode {
     required init(text: String, fontSize: FontSize, backgroundColor: UIColor) {
 
         label = TextLabelNode(text: text, fontSize: fontSize)
+        label.zPosition = 500
 
         background = SignSpriteNode(color: backgroundColor, size: label.frame.size)
+        background.zPosition = 0
 
         super.init()
+
+        addChildren([label, background])
     }
 
     required init?(coder _: NSCoder) {
