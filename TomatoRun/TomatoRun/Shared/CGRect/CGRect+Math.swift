@@ -9,7 +9,7 @@
 import UIKit
 
 extension CGRect {
-    convenience init(minX: CGFloat, minY: CGFloat, maxX: CGFloat, maxY: CGFloat) {
+    init(minX: CGFloat, minY: CGFloat, maxX: CGFloat, maxY: CGFloat) {
         let orig = CGPoint(x: minX, y: minY)
         let sz = CGSize(width: maxX - minX, height: maxY - minY)
         self.init(origin: orig, size: sz)
