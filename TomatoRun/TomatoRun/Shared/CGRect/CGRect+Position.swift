@@ -9,8 +9,8 @@
 import UIKit
 
 extension CGRect {
-    func positioned(anchor: CGPoint, at _: CGPoint) -> CGRect {
-        let offset = origin - position(forAnchor: anchor)
+    func positioned(anchor: CGPoint, at point: CGPoint) -> CGRect {
+        let offset = point - position(forAnchor: anchor)
         let newOrigin = origin + offset
 
         return CGRect(origin: newOrigin, size: size)
