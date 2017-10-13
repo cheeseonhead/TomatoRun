@@ -23,7 +23,7 @@ class GameOverScene: SKScene, RunPresentable {
             scoreLabel.score = score
         }
 
-        scoreLabel.position(anchorType: .center, at: CGPoint(x: 0, y: 0))
+        scoreLabel.layoutUsing(CGRect.positioned(anchorType: .center, at: CGPoint.zero))
         addChild(scoreLabel)
     }
 }

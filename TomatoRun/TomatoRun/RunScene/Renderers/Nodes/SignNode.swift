@@ -25,7 +25,7 @@ class SignNode: SKNode {
 
         background = SignSpriteNode(color: backgroundColor, size: label.frame.size.addedInsets(UIEdgeInsets(inset: 5)))
         background.zPosition = 0
-        background.position(anchorType: .center, at: labelCenter)
+        background.layoutUsing(CGRect.positioned(anchorType: .center, at: labelCenter))
 
         super.init()
 
