@@ -132,8 +132,8 @@ extension RunScene {
     }
 
     func addSpiders(_ infos: [(CGFloat, Int, Bool)]) {
-        infos.forEach { height, ropeIndex, _ in
-            let spider = SpiderEntity(fittingWidth: ropeSpacing() * RunSceneConstants.WidthRatio.spider)
+        infos.forEach { height, ropeIndex, hasText in
+            let spider = SpiderEntity(fittingWidth: ropeSpacing() * RunSceneConstants.WidthRatio.spider, textEnabled: hasText, worldNode: worldNode)
 
             addEntity(spider, toRope: ropeIndex, atHeight: height)
         }
