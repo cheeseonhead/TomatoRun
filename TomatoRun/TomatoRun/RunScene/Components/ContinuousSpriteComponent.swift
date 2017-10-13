@@ -61,7 +61,7 @@ private extension ContinuousSpriteComponent {
 
         guard let renderedFrame = scene.camera?.renderedFrame() else { return }
 
-        let maxY = renderedFrame.position(forAnchor: CGPoint(x: 0.5, y: 1.0)).y
+        let maxY = renderedFrame.positionFor(anchor: CGPoint(x: 0.5, y: 1.0)).y
 
         while nextRopeYPos <= maxY {
             addSprite(at: CGPoint(x: position.x, y: nextRopeYPos))

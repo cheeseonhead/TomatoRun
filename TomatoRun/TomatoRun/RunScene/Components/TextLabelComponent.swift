@@ -34,7 +34,7 @@ class TextLabelComponent: GKComponent, Spriteful {
     override func update(deltaTime _: TimeInterval) {
         guard let spriteComponent = entity?.component(ofType: SpriteComponent.self) else { return }
 
-        let anchorPoint = spriteComponent.node.frame.position(forAnchor: anchor)
+        let anchorPoint = spriteComponent.node.frame.positionFor(anchor: anchor)
 
         guard anchorPoint != previousAnchorPoint else { return }
         previousAnchorPoint = anchorPoint

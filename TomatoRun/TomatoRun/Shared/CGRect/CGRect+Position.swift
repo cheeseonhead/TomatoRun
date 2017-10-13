@@ -27,34 +27,41 @@ extension CGRect {
     static func above(frame anchor: CGRect) -> (@escaping Layout) -> Layout {
         return { layout in { frame in
             let result = layout(frame)
-            return result.positioned(edge: .minYEdge, at: anchor.position(forEdge: .maxYEdge))
+            return result.positioned(edge: .minYEdge, at: anchor.positionForEdge(.maxYEdge))
         }
         }
     }
 
     // MARK: - Pure
 
+    static func belowCentered(_ anchor: CGRect) -> Layout {
+        return { frame in
+            frame.positioned(anchorType: .topMiddle, at: anchor.positionFor(anchorType: .bottomMiddle))
+        }
+    }
+
+    static func centered(at anchor: CGRect) -> Layout {
+        return { frame in
+            frame.positioned(anchorType: .center, at: anchor.positionFor(anchorType: .center))
+        }
+    }
+
     static func positioned(anchor: CGPoint, at point: CGPoint) -> Layout {
         return { frame in
-            let offset = point - frame.position(forAnchor: anchor)
-            let newOrigin = frame.origin + offset
-
-            return CGRect(origin: newOrigin, size: frame.size)
+            frame.positioned(anchor: anchor, at: point)
         }
     }
 
     static func positioned(anchorType type: PointType, at point: CGPoint) -> Layout {
 
         return { frame in
-            let anchorPoint = CGRect.anchor(forType: type)
-
-            return positioned(anchor: anchorPoint, at: point)(frame)
+            frame.positioned(anchorType: type, at: point)
         }
     }
 }
 
 infix operator >==: AdditionPrecedence
 // MARK: - Math
-func >==(layout: Layout, f: @escaping (Layout) -> Layout) -> Layout {
+func >==(layout: @escaping Layout, f: @escaping (@escaping Layout) -> Layout) -> Layout {
     return f(layout)
 }

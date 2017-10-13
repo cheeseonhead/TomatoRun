@@ -24,7 +24,7 @@ class SegmentRenderer {
     func update(_: TimeInterval) {
         guard let renderedFrame = scene.camera?.renderedFrame() else { return }
 
-        let maxY = renderedFrame.position(forType: .topRight).y
+        let maxY = renderedFrame.positionFor(anchorType: .topRight).y
         while currentSegmentEnd < maxY + renderBuffer {
             let result = segmentManager.getNextSegment(forHeight: currentSegmentEnd)
 

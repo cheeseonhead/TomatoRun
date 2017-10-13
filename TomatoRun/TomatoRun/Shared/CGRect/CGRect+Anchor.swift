@@ -19,7 +19,7 @@ enum PointType {
 }
 
 extension CGRect {
-    func position(forAnchor anchor: CGPoint) -> CGPoint {
+    func positionFor(anchor: CGPoint) -> CGPoint {
         let xOffset = anchor.x * size.width
         let yOffset = anchor.y * size.height
 
@@ -29,8 +29,8 @@ extension CGRect {
         return CGPoint(x: anchorX, y: anchorY)
     }
 
-    func position(forType type: PointType) -> CGPoint {
-        return position(forAnchor: CGRect.anchor(forType: type))
+    func positionFor(anchorType type: PointType) -> CGPoint {
+        return positionFor(anchor: CGRect.anchor(forType: type))
     }
 
     static func anchor(forType type: PointType) -> CGPoint {
