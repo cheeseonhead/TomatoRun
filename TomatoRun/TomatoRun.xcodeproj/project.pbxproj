@@ -69,6 +69,7 @@
 		3480A6F31F72191C00688B1C /* GameStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480A6F21F72191C00688B1C /* GameStateMachine.swift */; };
 		3480A6F61F72195800688B1C /* GameIdleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480A6F51F72195800688B1C /* GameIdleState.swift */; };
 		3484F1611F9066C500A8E852 /* CGRect+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3484F1601F9066C500A8E852 /* CGRect+Position.swift */; };
+		3484F1631F9076CF00A8E852 /* CGRect+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3484F1621F9076CF00A8E852 /* CGRect+Math.swift */; };
 		34898C281F67496D00135FA6 /* TouchComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34898C271F67496D00135FA6 /* TouchComponent.swift */; };
 		348EBE841F8FBC3E00029ADE /* SignSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348EBE831F8FBC3E00029ADE /* SignSpriteNode.swift */; };
 		348EBE891F8FC0CC00029ADE /* CGSize+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348EBE881F8FC0CC00029ADE /* CGSize+Math.swift */; };
@@ -181,6 +182,7 @@
 		3480A6F21F72191C00688B1C /* GameStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStateMachine.swift; sourceTree = "<group>"; };
 		3480A6F51F72195800688B1C /* GameIdleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameIdleState.swift; sourceTree = "<group>"; };
 		3484F1601F9066C500A8E852 /* CGRect+Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Position.swift"; sourceTree = "<group>"; };
+		3484F1621F9076CF00A8E852 /* CGRect+Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Math.swift"; sourceTree = "<group>"; };
 		34898C271F67496D00135FA6 /* TouchComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchComponent.swift; sourceTree = "<group>"; };
 		348EBE831F8FBC3E00029ADE /* SignSpriteNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignSpriteNode.swift; sourceTree = "<group>"; };
 		348EBE881F8FC0CC00029ADE /* CGSize+Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Math.swift"; sourceTree = "<group>"; };
@@ -652,6 +654,7 @@
 			children = (
 				34C2DB9F1F633EBF0027EB1F /* CGRect+Anchor.swift */,
 				3484F1601F9066C500A8E852 /* CGRect+Position.swift */,
+				3484F1621F9076CF00A8E852 /* CGRect+Math.swift */,
 			);
 			path = CGRect;
 			sourceTree = "<group>";
@@ -884,6 +887,7 @@
 				3400D9991F6609CD00ECD456 /* RunSceneConstants.swift in Sources */,
 				3400D9461F65FE7E00ECD456 /* EntityManager.swift in Sources */,
 				34E6E9911F698D6F00D38AB6 /* GKEntity+Positionable.swift in Sources */,
+				3484F1631F9076CF00A8E852 /* CGRect+Math.swift in Sources */,
 				348EBE841F8FBC3E00029ADE /* SignSpriteNode.swift in Sources */,
 				34CC6D471F7768CB00686819 /* StartFoundState.swift in Sources */,
 				9B5B2AC81F7EB384000C9AF4 /* TextLabelComponent.swift in Sources */,
