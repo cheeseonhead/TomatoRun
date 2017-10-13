@@ -52,7 +52,7 @@ extension CGRect {
         }
     }
 
-    func position(forEdge edge: CGRectEdge) -> CGFloat {
+    func positionFor(edge: CGRectEdge) -> CGFloat {
         switch edge {
         case .minXEdge:
             return origin.x
@@ -78,5 +78,16 @@ extension CGRect {
             newOrigin.y = line - size.height
         }
         return CGRect(origin: newOrigin, size: size)
+    }
+
+    func positioned(anchor: CGPoint, at point: CGPoint) -> CGRect {
+        let offset = point - positionFor(anchor: anchor)
+        let newOrigin = origin + offset
+
+        return CGRect(origin: newOrigin, size: size)
+    }
+
+    func positioned(anchorType type: PointType, at point: CGPoint) -> CGRect {
+        return positioned(anchor: CGRect.anchor(forType: type), at: point)
     }
 }

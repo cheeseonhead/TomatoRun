@@ -27,7 +27,7 @@ extension CGRect {
     static func above(frame anchor: CGRect) -> (@escaping Layout) -> Layout {
         return { layout in { frame in
             let result = layout(frame)
-            return result.positioned(edge: .minYEdge, at: anchor.positionForEdge(.maxYEdge))
+            return result.positioned(edge: .minYEdge, at: anchor.positionFor(edge: .maxYEdge))
         }
         }
     }
