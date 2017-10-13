@@ -21,11 +21,12 @@ class SignNode: SKNode {
 
         label = TextLabelNode(text: text, fontSize: fontSize)
         label.zPosition = 500
-        let labelCenter = label.frame.positionFor(anchorType: .center)
 
-        background = SignSpriteNode(color: backgroundColor, size: label.frame.size.addedInsets(UIEdgeInsets(inset: 5)))
+        background = SignSpriteNode(color: backgroundColor, size: label.frame.size.addedInsets(UIEdgeInsets(inset: 10)))
         background.zPosition = 0
-        background.layoutUsing(CGRect.positioned(anchorType: .center, at: labelCenter))
+
+        let labelLayout = CGRect.centered(at: background.bodyFrame)
+        label.layoutUsing(labelLayout)
 
         super.init()
 
