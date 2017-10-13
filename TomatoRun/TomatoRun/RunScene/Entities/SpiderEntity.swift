@@ -21,7 +21,7 @@ class SpiderEntity: GKEntity, Positionable {
         addComponent(spriteComponent)
         addComponent(DangerComponent())
         if textEnabled {
-            addComponent(TextLabelComponent(text: "Avoid", color: UIColor.red, anchor: CGPoint(x: 0.5, y: 1), worldNode: worldNode))
+            addComponent(TextLabelComponent(text: Text.avoid, color: UIColor.red, anchor: CGPoint(x: 0.5, y: 1), worldNode: worldNode))
         }
     }
 

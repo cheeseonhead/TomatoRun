@@ -59,3 +59,8 @@ enum RunSceneConstants {
         }
     }
 }
+
+class Text {
+    static let avoid = NSLocalizedString("AVOID", comment: "Label Text")
+    static let `break` = NSLocalizedString("BREAK", comment: "Label Text")
+}
