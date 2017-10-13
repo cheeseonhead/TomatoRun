@@ -68,6 +68,7 @@
 		347CC6A51F901C0100D24F92 /* SKNode+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347CC6A41F901C0100D24F92 /* SKNode+Frame.swift */; };
 		3480A6F31F72191C00688B1C /* GameStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480A6F21F72191C00688B1C /* GameStateMachine.swift */; };
 		3480A6F61F72195800688B1C /* GameIdleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480A6F51F72195800688B1C /* GameIdleState.swift */; };
+		3484F1611F9066C500A8E852 /* CGRect+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3484F1601F9066C500A8E852 /* CGRect+Position.swift */; };
 		34898C281F67496D00135FA6 /* TouchComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34898C271F67496D00135FA6 /* TouchComponent.swift */; };
 		348EBE841F8FBC3E00029ADE /* SignSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348EBE831F8FBC3E00029ADE /* SignSpriteNode.swift */; };
 		348EBE891F8FC0CC00029ADE /* CGSize+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348EBE881F8FC0CC00029ADE /* CGSize+Math.swift */; };
@@ -179,6 +180,7 @@
 		347CC6A41F901C0100D24F92 /* SKNode+Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+Frame.swift"; sourceTree = "<group>"; };
 		3480A6F21F72191C00688B1C /* GameStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStateMachine.swift; sourceTree = "<group>"; };
 		3480A6F51F72195800688B1C /* GameIdleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameIdleState.swift; sourceTree = "<group>"; };
+		3484F1601F9066C500A8E852 /* CGRect+Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Position.swift"; sourceTree = "<group>"; };
 		34898C271F67496D00135FA6 /* TouchComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchComponent.swift; sourceTree = "<group>"; };
 		348EBE831F8FBC3E00029ADE /* SignSpriteNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignSpriteNode.swift; sourceTree = "<group>"; };
 		348EBE881F8FC0CC00029ADE /* CGSize+Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Math.swift"; sourceTree = "<group>"; };
@@ -649,6 +651,7 @@
 			isa = PBXGroup;
 			children = (
 				34C2DB9F1F633EBF0027EB1F /* CGRect+Anchor.swift */,
+				3484F1601F9066C500A8E852 /* CGRect+Position.swift */,
 			);
 			path = CGRect;
 			sourceTree = "<group>";
@@ -898,6 +901,7 @@
 				3400D9731F65FF5600ECD456 /* ImageConstants.swift in Sources */,
 				34898C281F67496D00135FA6 /* TouchComponent.swift in Sources */,
 				3400D9691F65FF3000ECD456 /* DuringTravelState.swift in Sources */,
+				3484F1611F9066C500A8E852 /* CGRect+Position.swift in Sources */,
 				3400D9791F65FF5600ECD456 /* MyUtils.swift in Sources */,
 				9B5B2AC01F7C402D000C9AF4 /* SidebarEntity.swift in Sources */,
 				3416E5F21F8EDDCA0098FF2D /* SKNode+Position.swift in Sources */,
