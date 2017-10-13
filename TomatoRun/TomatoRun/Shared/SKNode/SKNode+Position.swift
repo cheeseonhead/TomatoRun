@@ -9,4 +9,10 @@
 import SpriteKit
 
 extension SKNode {
+    func position(atFrame newFrame: CGRect) {
+        assert(newFrame.size == frame.size)
+
+        let offset = newFrame.origin - frame.origin
+        position = position + offset
+    }
 }
