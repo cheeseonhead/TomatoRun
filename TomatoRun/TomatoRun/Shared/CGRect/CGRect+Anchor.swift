@@ -51,4 +51,32 @@ extension CGRect {
             return CGPoint(x: 0.5, y: 0)
         }
     }
+
+    func position(forEdge edge: CGRectEdge) -> CGFloat {
+        switch edge {
+        case .minXEdge:
+            return origin.x
+        case .minYEdge:
+            return origin.y
+        case .maxXEdge:
+            return origin.x + size.width
+        case .maxYEdge:
+            return origin.y + size.height
+        }
+    }
+
+    func positioned(edge: CGRectEdge, at line: CGFloat) -> CGRect {
+        var newOrigin = origin
+        switch edge {
+        case .minXEdge:
+            newOrigin.x = line
+        case .minYEdge:
+            newOrigin.y = line
+        case .maxXEdge:
+            newOrigin.x = line - size.width
+        case .maxYEdge:
+            newOrigin.y = line - size.height
+        }
+        return CGRect(origin: newOrigin, size: size)
+    }
 }
