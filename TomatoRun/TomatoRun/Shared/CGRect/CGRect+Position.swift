@@ -9,16 +9,21 @@
 import UIKit
 
 extension CGRect {
-    func positioned(anchor: CGPoint, at point: CGPoint) -> CGRect {
-        let offset = point - position(forAnchor: anchor)
-        let newOrigin = origin + offset
+    static func positioned(anchor: CGPoint, at point: CGPoint) -> (CGRect) -> CGRect {
+        return { frame in
+            let offset = point - frame.position(forAnchor: anchor)
+            let newOrigin = frame.origin + offset
 
-        return CGRect(origin: newOrigin, size: size)
+            return CGRect(origin: newOrigin, size: frame.size)
+        }
     }
 
-    func positioned(anchorType type: PointType, at point: CGPoint) -> CGRect {
-        let anchorPoint = CGRect.anchor(forType: type)
+    static func positioned(anchorType type: PointType, at point: CGPoint) -> (CGRect) -> CGRect {
 
-        return positioned(anchor: anchorPoint, at: point)
+        return { frame in
+            let anchorPoint = CGRect.anchor(forType: type)
+
+            return positioned(anchor: anchorPoint, at: point)(frame)
+        }
     }
 }
