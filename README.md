@@ -1,2 +1,2 @@
 # TomatoRun
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/83746b400ed6484a86a94e4f8b173788)](https://www.codacy.com/app/cheeseonhead/TomatoRun?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cheeseonhead/TomatoRun&amp;utm_campaign=Badge_Grade)
+[![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=59cc2210c9e4a00001034177&branch=develop&build=latest)](https://dashboard.buddybuild.com/apps/59cc2210c9e4a00001034177/build/latest?branch=develop)
