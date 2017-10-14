@@ -15,7 +15,7 @@ class GameKitManager: NSObject, GKGameCenterControllerDelegate {
     #if DEBUG
         let leaderBoardIdentifier = "com.tomatoRun.highScore.debug"
     #else
-        let leaderBoardIdentifier = "com.tomatoRun.highScore"
+        let leaderBoardIdentifier = "com.tomatoRun.highScore.release"
     #endif
 
     var authenticationViewController: UIViewController?
