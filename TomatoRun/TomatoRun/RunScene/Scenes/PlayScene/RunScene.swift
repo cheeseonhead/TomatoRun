@@ -106,6 +106,7 @@ class RunScene: SKScene, RunPresentable {
     override func didFinishUpdate() {
         super.didFinishUpdate()
         positionCamera()
+        removeOffScreenSprites()
     }
 }
 
@@ -117,6 +118,17 @@ extension RunScene {
 
         let finalYPos = tomatoY + 0.5 * screenHeight - tomatoBottomPadding
         cameraNode.position.y = finalYPos
+    }
+
+    func removeOffScreenSprites() {
+        for entity in entityManager.entities {
+            guard let spriteNode = entity.component(ofType: SpriteComponent.self)?.node,
+                let curPosition = entity.getPosition() else { continue }
+
+            if !cameraNode.contains(spriteNode), curPosition.y < cameraNode.position.y {
+                entityManager.remove(entity)
+            }
+        }
     }
 }
 
