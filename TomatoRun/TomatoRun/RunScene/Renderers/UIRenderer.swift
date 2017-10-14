@@ -54,7 +54,7 @@ private extension UIRenderer {
         pauseNode = PauseNode(size: CGSize(width: fittingDimension, height: fittingDimension))
 
         guard let renderedFrame = camera.renderedFrame() else { return }
-        let topRightInScene = renderedFrame.position(forType: .topRight)
+        let topRightInScene = renderedFrame.positionFor(anchorType: .topRight)
         let topRightInCamera = camera.convert(topRightInScene, from: scene)
 
         pauseNode.position = topRightInCamera - CGPoint(x: padding, y: padding)
@@ -75,7 +75,7 @@ private extension UIRenderer {
     func positionScoreLabel(_ camera: SKCameraNode) {
         let padding = scene.size.width * RunSceneConstants.PaddingRatio.scoreLabel
 
-        guard let topLeftInScene = camera.renderedFrame()?.position(forType: .topLeft) else { return }
+        guard let topLeftInScene = camera.renderedFrame()?.positionFor(anchorType: .topLeft) else { return }
         let topLeftInCamera = camera.convert(topLeftInScene, from: scene)
 
         scoreNode.position = topLeftInCamera + CGPoint(x: padding, y: -(scoreNode.frame.size.height + padding))

@@ -24,6 +24,10 @@ import Foundation
 import CoreGraphics
 import GameplayKit
 
+private func pointWise(_ f: (CGFloat, CGFloat) -> CGFloat, _ l: CGPoint, _ r: CGVector) -> CGPoint {
+    return CGPoint(x: f(l.x, r.dx), y: f(l.y, r.dy))
+}
+
 infix operator ~=: ComparisonPrecedence
 
 func ~= (left: CGFloat, right: CGFloat) -> Bool {
@@ -35,6 +39,10 @@ func ~= (left: CGFloat, right: CGFloat) -> Bool {
 
 func + (left: CGPoint, right: CGPoint) -> CGPoint {
     return CGPoint(x: left.x + right.x, y: left.y + right.y)
+}
+
+func + (l: CGPoint, r: CGVector) -> CGPoint {
+    return pointWise(+, l, r)
 }
 
 func += (left: inout CGPoint, right: CGPoint) {
@@ -145,6 +153,7 @@ extension CGPoint {
         y = CGFloat(point.y)
     }
 }
+
 extension float2 {
     init(_ point: CGPoint) {
         self.init(x: Float(point.x), y: Float(point.y))

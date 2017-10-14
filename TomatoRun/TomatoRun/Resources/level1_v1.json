@@ -7,7 +7,8 @@
         "rope": 1
     }, {
         "height_ratio": 0.75,
-        "rope": 0
+        "rope": 0,
+        "hasText": true
     }, {
         "height_ratio": 0.9,
         "rope": 2
@@ -26,7 +27,8 @@
         "rope": 0
     }, {
         "height_ratio": 0.556,
-        "rope": 2
+        "rope": 2,
+        "hasText": true
     }, {
         "height_ratio": 0.833,
         "rope": 1

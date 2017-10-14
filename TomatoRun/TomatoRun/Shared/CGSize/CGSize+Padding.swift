@@ -14,6 +14,6 @@ extension CGSize {
     }
 
     func addedInsets(_ inset: UIEdgeInsets) -> CGSize {
-        return CGSize(width: width + inset.left + inset.right, height: width + inset.top + inset.bottom)
+        return CGSize(width: width + inset.left + inset.right, height: height + inset.top + inset.bottom)
     }
 }

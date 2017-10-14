@@ -11,10 +11,15 @@ import UIKit
 enum PointType {
     case topRight
     case topLeft
+    case topMiddle
+    case center
+    case bottomLeft
+    case bottomMiddle
+    case bottomRight
 }
 
 extension CGRect {
-    func position(forAnchor anchor: CGPoint) -> CGPoint {
+    func positionFor(anchor: CGPoint) -> CGPoint {
         let xOffset = anchor.x * size.width
         let yOffset = anchor.y * size.height
 
@@ -24,12 +29,65 @@ extension CGRect {
         return CGPoint(x: anchorX, y: anchorY)
     }
 
-    func position(forType type: PointType) -> CGPoint {
+    func positionFor(anchorType type: PointType) -> CGPoint {
+        return positionFor(anchor: CGRect.anchor(forType: type))
+    }
+
+    static func anchor(forType type: PointType) -> CGPoint {
         switch type {
         case .topRight:
-            return position(forAnchor: CGPoint(x: 1, y: 1))
+            return CGPoint(x: 1, y: 1)
         case .topLeft:
-            return position(forAnchor: CGPoint(x: 0, y: 1))
+            return CGPoint(x: 0, y: 1)
+        case .topMiddle:
+            return CGPoint(x: 0.5, y: 1)
+        case .center:
+            return CGPoint(x: 0.5, y: 0.5)
+        case .bottomLeft:
+            return CGPoint(x: 0, y: 0)
+        case .bottomRight:
+            return CGPoint(x: 1, y: 0)
+        case .bottomMiddle:
+            return CGPoint(x: 0.5, y: 0)
         }
+    }
+
+    func positionFor(edge: CGRectEdge) -> CGFloat {
+        switch edge {
+        case .minXEdge:
+            return origin.x
+        case .minYEdge:
+            return origin.y
+        case .maxXEdge:
+            return origin.x + size.width
+        case .maxYEdge:
+            return origin.y + size.height
+        }
+    }
+
+    func positioned(edge: CGRectEdge, at line: CGFloat) -> CGRect {
+        var newOrigin = origin
+        switch edge {
+        case .minXEdge:
+            newOrigin.x = line
+        case .minYEdge:
+            newOrigin.y = line
+        case .maxXEdge:
+            newOrigin.x = line - size.width
+        case .maxYEdge:
+            newOrigin.y = line - size.height
+        }
+        return CGRect(origin: newOrigin, size: size)
+    }
+
+    func positioned(anchor: CGPoint, at point: CGPoint) -> CGRect {
+        let offset = point - positionFor(anchor: anchor)
+        let newOrigin = origin + offset
+
+        return CGRect(origin: newOrigin, size: size)
+    }
+
+    func positioned(anchorType type: PointType, at point: CGPoint) -> CGRect {
+        return positioned(anchor: CGRect.anchor(forType: type), at: point)
     }
 }

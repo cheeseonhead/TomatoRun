@@ -47,10 +47,10 @@ class MainMenuScene: SKScene, RunPresentable {
     }
 
     func layoutNodes() {
-        playButton.position = centered(self, playButton)
+        playButton.layoutUsing(CGRect.centered(at: frame))
 
-        let buttonLayout = belowCentered ==> offset(CGPoint(x: 0, y: -RunSceneConstants.Spacing.MainMenu.button))
+        let buttonLayout = CGRect.belowCentered(playButton.frame) >== CGRect.offsetted(by: CGVector(dx: 0, dy: -RunSceneConstants.Spacing.MainMenu.button))
 
-        highscoreButton.position = buttonLayout(playButton, highscoreButton)
+        highscoreButton.layoutUsing(buttonLayout)
     }
 }

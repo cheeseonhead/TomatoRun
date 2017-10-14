@@ -12,7 +12,11 @@ class GameKitManager: NSObject, GKGameCenterControllerDelegate {
 
     static let shared = GameKitManager()
 
-    let leaderBoardIdentifier = "com.tomatoRun.highScore"
+    #if DEBUG
+        let leaderBoardIdentifier = "com.tomatoRun.highScore.debug"
+    #else
+        let leaderBoardIdentifier = "com.tomatoRun.highScore"
+    #endif
 
     var authenticationViewController: UIViewController?
     var lastError: Error?
