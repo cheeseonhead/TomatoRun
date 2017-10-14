@@ -9,7 +9,7 @@
 import GameplayKit
 
 class SpiderEntity: GKEntity, Positionable {
-    init(fittingWidth: CGFloat) {
+    init(fittingWidth: CGFloat, textEnabled: Bool, worldNode: SKNode) {
         super.init()
 
         let texture = SKTexture(imageNamed: ImageConstants.SpiderImageName)
@@ -20,6 +20,9 @@ class SpiderEntity: GKEntity, Positionable {
 
         addComponent(spriteComponent)
         addComponent(DangerComponent())
+        if textEnabled {
+            addComponent(TextLabelComponent(text: Text.avoid, color: UIColor.red, anchor: CGPoint(x: 0.5, y: 1), worldNode: worldNode))
+        }
     }
 
     required init?(coder _: NSCoder) {

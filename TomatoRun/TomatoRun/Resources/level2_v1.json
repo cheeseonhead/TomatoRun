@@ -4,7 +4,8 @@
          "rope": 0
      }, {
          "height_ratio": 0.7,
-         "rope": 0
+         "rope": 0,
+         "hasText": true
      }, {
          "height_ratio": 0.4,
          "rope": 1

@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class ScoreLabelNode: SKLabelNode {
+class ScoreLabelNode: TextLabelNode {
     var score: Int? {
         didSet {
             guard let score = score else { return }
@@ -19,6 +19,10 @@ class ScoreLabelNode: SKLabelNode {
 
     override init() {
         super.init()
+    }
+
+    required init(text: String, fontSize: FontSize) {
+        super.init(text: text, fontSize: fontSize)
 
         verticalAlignmentMode = .baseline
         horizontalAlignmentMode = .left
@@ -26,14 +30,8 @@ class ScoreLabelNode: SKLabelNode {
         zPosition = RunSceneConstants.ZPositions.uiZPosition
     }
 
-    override init(fontNamed fontName: String?) {
-        super.init(fontNamed: fontName)
-    }
-
-    convenience init(score: Int?) {
-        self.init(fontNamed: "BebasNeueBold")
-
-        fontSize = FontSize.Large.rawValue
+    convenience init(score: Int) {
+        self.init(text: "", fontSize: .Large)
         self.score = score
     }
 

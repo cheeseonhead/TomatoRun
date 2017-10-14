@@ -39,3 +39,9 @@ extension SpriteComponent: Framable {
         return node.frame
     }
 }
+
+extension SpriteComponent: Spriteful {
+    func removeFromParent() {
+        node.removeFromParent()
+    }
+}

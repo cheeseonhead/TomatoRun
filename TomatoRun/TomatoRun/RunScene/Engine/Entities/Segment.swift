@@ -13,18 +13,22 @@ struct Segment: Codable {
     var spiders: [Spider]
     var length: CGFloat
 
+    var showText: Bool? = false
+
     enum CodingKeys: String, CodingKey {
         case woodenBoards = "wooden_boards"
         case length
         case spiders
+        case showText
     }
 }
 
 extension Segment {
 
-    static func infoFor(_ segment: Segment) -> (Ropable) -> (CGFloat, Int) {
+    static func infoFor(_ segment: Segment) -> (Ropable) -> (CGFloat, Int, Bool) {
         return { ropable in
-            (segment.length * ropable.heightRatio, ropable.rope)
+            let showsText = (segment.showText ?? false) && (ropable.hasText ?? false)
+            return (segment.length * ropable.heightRatio, ropable.rope, showsText)
         }
     }
 }

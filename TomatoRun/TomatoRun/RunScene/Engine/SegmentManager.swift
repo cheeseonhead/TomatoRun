@@ -9,12 +9,22 @@
 import Foundation
 
 let numberOfSegments = 4
-var segmentIndex = 0
 
 class SegmentManager {
 
-    static func getNextSegment(forHeight height: CGFloat) -> Result<Segment> {
-        return levelNumber(forHeight: height) ==> LevelFileParser.getLevel ==> chooseSegment
+    var segmentCount = 0
+
+    func getNextSegment(forHeight height: CGFloat) -> Result<Segment> {
+        segmentCount += 1
+        return SegmentManager.levelNumber(forHeight: height) ==> LevelFileParser.getLevel ==> SegmentManager.chooseSegment ==> shouldSegmentShowText
+    }
+
+    func shouldSegmentShowText(_ segment: Segment) -> Result<Segment> {
+        var mutateSegment = segment
+        if segmentCount == 1 {
+            mutateSegment.showText = true
+        }
+        return .success(Box(mutateSegment))
     }
 
     static func levelNumber(forHeight _: CGFloat) -> Result<Int> {

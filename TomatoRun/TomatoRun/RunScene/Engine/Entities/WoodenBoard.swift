@@ -11,9 +11,11 @@ import UIKit
 struct WoodenBoard: Ropable, Codable {
     let heightRatio: CGFloat
     let rope: Int
+    let hasText: Bool?
 
     enum CodingKeys: String, CodingKey {
         case heightRatio = "height_ratio"
         case rope
+        case hasText
     }
 }

@@ -11,4 +11,5 @@ import UIKit
 protocol Ropable {
     var heightRatio: CGFloat { get }
     var rope: Int { get }
+    var hasText: Bool? { get }
 }
