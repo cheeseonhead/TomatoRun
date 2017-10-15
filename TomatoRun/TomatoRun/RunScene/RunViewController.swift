@@ -48,6 +48,9 @@ extension RunViewController {
     }
 
     func presentRunScene() {
+
+        gameStateMachine = GameStateMachine()
+
         presentScene(fileNamed: "RunScene") { gkScene -> RunScene? in
             guard let runScene = gkScene.rootNode as? RunScene else { return nil }
 
