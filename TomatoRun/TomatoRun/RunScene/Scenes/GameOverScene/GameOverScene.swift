@@ -14,6 +14,7 @@ class GameOverScene: SKScene, RunPresentable {
     var gameStateMachine: GameStateMachine!
 
     var scoreLabel: ScoreLabelNode!
+    var mainMenuButton: TextButtonNode!
 
     override func didMove(to view: SKView) {
         super.didMove(to: view)
@@ -23,7 +24,29 @@ class GameOverScene: SKScene, RunPresentable {
             scoreLabel.score = score
         }
 
+        mainMenuButton = TextButtonNode(text: "MENU", fontSize: .Large)
+
+        layoutNodes()
+
+        addChildren([scoreLabel, mainMenuButton])
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else { return }
+        let touchedChildren = getTouchedChildren(touch, with: event)
+
+        _ = touchedChildren.map { (node) -> Void in
+            if node == mainMenuButton {
+                runViewController?.presentMainMenuScene()
+            }
+        }
+    }
+}
+
+private extension GameOverScene {
+    func layoutNodes() {
         scoreLabel.layoutUsing(CGRect.positioned(anchorType: .center, at: CGPoint.zero))
-        addChild(scoreLabel)
+        let buttonLayout = CGRect.belowCentered(scoreLabel.frame) >== CGRect.offsetted(by: CGVector(dx: 0, dy: -60))
+        mainMenuButton.layoutUsing(buttonLayout)
     }
 }
