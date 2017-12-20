@@ -18,7 +18,7 @@ class PauseScene: SKSpriteNode {
         runScene = scene
         resumeLabel = SKLabelNode(text: "Resume")
 
-        super.init(texture: nil, color: .brown, size: size)
+        super.init(texture: nil, color: .clear, size: size)
 
         isUserInteractionEnabled = true
         alpha = 0.5
