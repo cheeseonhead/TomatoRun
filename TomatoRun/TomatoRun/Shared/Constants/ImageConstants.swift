@@ -10,7 +10,7 @@ import Foundation
 
 enum ImageConstants {
     static let RopeImageName = "Rope"
-    static let RunCharacterImageName = "RunCharacter"
+    static let TomatoImageName = "Spaceship"
     static let WoodenBoardImageName = "WoodenBoard"
     static let SpiderImageName = "Spider"
     static let PauseImageName = "Pause"

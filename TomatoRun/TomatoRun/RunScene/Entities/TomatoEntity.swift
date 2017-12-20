@@ -24,7 +24,7 @@ class TomatoEntity: GKEntity, Positionable {
 // MARK: Initialization
 private extension TomatoEntity {
     func initComponents(speed: CGFloat, fittingWidth: CGFloat, _ entityManager: EntityManager) {
-        let texture = SKTexture(imageNamed: ImageConstants.RunCharacterImageName)
+        let texture = SKTexture(imageNamed: ImageConstants.TomatoImageName)
         let spriteComponent = SpriteComponent(texture: texture)
 
         spriteComponent.node.scale(toWidth: fittingWidth)
