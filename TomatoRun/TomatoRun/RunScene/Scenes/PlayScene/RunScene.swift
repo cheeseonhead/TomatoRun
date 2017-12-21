@@ -56,9 +56,7 @@ class RunScene: SKScene, RunPresentable {
         addRopes()
         addCamera()
         uiRenderer.addUINodes()
-        gameStateMachine.getInitialScore { score in
-            addTomato(initialScore: score)
-        }
+        addTomato(initialScore: gameStateMachine.initialScore)
     }
 
     func initWithBuilder(_ builder: RunSceneBuilder?) {

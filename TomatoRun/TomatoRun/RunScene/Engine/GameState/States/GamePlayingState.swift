@@ -9,14 +9,6 @@
 import GameplayKit
 
 class GamePlayingState: GKState {
-
-    let initialScore: Int
-
-    required init(initialScore: Int) {
-        self.initialScore = initialScore
-        super.init()
-    }
-
     override func isValidNextState(_ stateClass: AnyClass) -> Bool {
         return stateClass == GamePausedState.self ||
             stateClass == GameOverState.self
