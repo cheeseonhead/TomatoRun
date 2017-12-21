@@ -9,10 +9,9 @@
 import GameplayKit
 
 class GameStateMachine: GKStateMachine {
-    init() {
+    init(initialScore: Int) {
         super.init(states: [
-            GameIdleState(),
-            GamePlayingState(),
+            GamePlayingState(initialScore: initialScore),
             GamePausedState(),
             GameOverState(),
         ])
@@ -27,9 +26,9 @@ class GameStateMachine: GKStateMachine {
         }
     }
 
-    func getInitialScore(_ callback: (Int?) -> Void) {
-        if let gameIdleState = currentState as? GameIdleState {
-            callback(gameIdleState.initialScore)
+    func getInitialScore(_ callback: (Int) -> Void) {
+        if let state = currentState as? GamePlayingState {
+            callback(state.initialScore)
         }
     }
 }

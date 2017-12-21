@@ -11,7 +11,6 @@ import GameplayKit
 
 struct RunSceneBuilder {
     let gameStateMachine: GameStateMachine
-    let initialScore: Int
     let entities: [GKEntity]
     let graphs: [String: GKGraph]
 }
@@ -57,7 +56,9 @@ class RunScene: SKScene, RunPresentable {
         addRopes()
         addCamera()
         uiRenderer.addUINodes()
-        addTomato(initialScore: builder.initialScore)
+        gameStateMachine.getInitialScore { score in
+            addTomato(initialScore: score)
+        }
     }
 
     func initWithBuilder(_ builder: RunSceneBuilder?) {
