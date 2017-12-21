@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GameKitManager.shared.authenticateLocalPlayer()
         GADMobileAds.configure(withApplicationID: "ca-app-pub-3516485527550211~5832948285")
 
+        GADRewardBasedVideoAd.sharedInstance().load(GADRequest(), withAdUnitID: GoogleAdsConstants.AdUnitId.reviveAd)
+
         // Override point for customization after application launch.
         return true
     }
