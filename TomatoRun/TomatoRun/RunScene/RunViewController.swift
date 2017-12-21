@@ -54,9 +54,7 @@ extension RunViewController {
         presentScene(fileNamed: "RunScene") { gkScene -> RunScene? in
             guard let runScene = gkScene.rootNode as? RunScene else { return nil }
 
-            runScene.gameStateMachine = gameStateMachine
-            runScene.entities = gkScene.entities
-            runScene.graphs = gkScene.graphs
+            runScene.builder = RunSceneBuilder(gameStateMachine: gameStateMachine, initialScore: 100_000_000, entities: gkScene.entities, graphs: gkScene.graphs)
 
             return runScene
         }

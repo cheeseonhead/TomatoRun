@@ -12,6 +12,20 @@ class ScoreComponent: GKComponent {
     var score = 0
     var lastTimestamp: TimeInterval?
 
+    required override init() {
+        super.init()
+    }
+
+    convenience init(initialScore: Int) {
+        self.init()
+
+        score = initialScore
+    }
+
+    required init?(coder _: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func update(deltaTime seconds: TimeInterval) {
         if lastTimestamp == nil {
             lastTimestamp = seconds
