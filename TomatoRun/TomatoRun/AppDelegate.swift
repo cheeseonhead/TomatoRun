@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         BuddyBuildSDK.setup()
         GameKitManager.shared.authenticateLocalPlayer()
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-3516485527550211~5832948285")
 
         // Override point for customization after application launch.
         return true
