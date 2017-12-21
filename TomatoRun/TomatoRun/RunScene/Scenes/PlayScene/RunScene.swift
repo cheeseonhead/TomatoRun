@@ -115,7 +115,7 @@ class RunScene: SKScene, RunPresentable {
 
             curState.finalScore = score
 
-            runViewController?.presentReviveScene()
+            runViewController?.playerDied()
         }
 
         segmentRenderer.update(currentTime)

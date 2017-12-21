@@ -41,6 +41,14 @@ extension RunViewController {
         presentScene(fileNamed: "MainMenuScene", getSKScene: { gkScene -> MainMenuScene? in gkScene.rootNode as? MainMenuScene })
     }
 
+    func playerDied() {
+        if gameStateMachine.revived == true {
+            presentGameOverScene()
+        } else {
+            presentReviveScene()
+        }
+    }
+
     func presentReviveScene() {
         presentScene(fileNamed: "ReviveScene", getSKScene: { gkScene -> ReviveScene? in gkScene.rootNode as? ReviveScene })
     }
@@ -52,9 +60,13 @@ extension RunViewController {
         presentScene(fileNamed: "GameOverScene", getSKScene: { gkScene -> GameOverScene? in gkScene.rootNode as? GameOverScene })
     }
 
-    func presentRunScene() {
+    func startGame() {
+        presentRunScene(gameStateMachine: GameStateMachine(initialScore: 0, revived: false))
+    }
 
-        gameStateMachine = GameStateMachine(initialScore: 0)
+    func presentRunScene(gameStateMachine: GameStateMachine) {
+
+        self.gameStateMachine = gameStateMachine
 
         presentScene(fileNamed: "RunScene") { gkScene -> RunScene? in
             guard let runScene = gkScene.rootNode as? RunScene else { return nil }
@@ -109,7 +121,10 @@ extension RunViewController: GADRewardBasedVideoAdDelegate {
 
         if reviveRewarded == true {
             reviveRewarded = false
-            presentRunScene()
+
+            gameStateMachine.getFinalScore({ score in
+                presentRunScene(gameStateMachine: GameStateMachine(initialScore: score, revived: true))
+            })
         }
     }
 

@@ -39,7 +39,7 @@ class MainMenuScene: SKScene, RunPresentable {
     }
 
     func startGame() {
-        runViewController?.presentRunScene()
+        runViewController?.startGame()
     }
 
     func showHighscore() {
