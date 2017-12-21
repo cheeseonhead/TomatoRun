@@ -84,6 +84,7 @@
 		349FB93E1F6A058E00F5FE4B /* BebasNeue-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 349FB9321F6A043A00F5FE4B /* BebasNeue-Light.ttf */; };
 		349FB93F1F6A058E00F5FE4B /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 349FB9351F6A043A00F5FE4B /* BebasNeue-Regular.ttf */; };
 		349FB9401F6A058E00F5FE4B /* BebasNeue-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 349FB9361F6A043B00F5FE4B /* BebasNeue-Thin.ttf */; };
+		34B19CDF1FEC506300D9CE4B /* UIAlertController+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B19CDE1FEC506300D9CE4B /* UIAlertController+Convenience.swift */; };
 		34BCB2171F69E59600F16629 /* ScoreComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BCB2161F69E59600F16629 /* ScoreComponent.swift */; };
 		34BCB21A1F69E8A400F16629 /* Double+Rounding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BCB2191F69E8A400F16629 /* Double+Rounding.swift */; };
 		34BCB21C1F69EAE400F16629 /* ScoreLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BCB21B1F69EAE400F16629 /* ScoreLabelNode.swift */; };
@@ -202,6 +203,7 @@
 		349FB9341F6A043A00F5FE4B /* BebasNeue-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Book.ttf"; sourceTree = "<group>"; };
 		349FB9351F6A043A00F5FE4B /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
 		349FB9361F6A043B00F5FE4B /* BebasNeue-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Thin.ttf"; sourceTree = "<group>"; };
+		34B19CDE1FEC506300D9CE4B /* UIAlertController+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Convenience.swift"; sourceTree = "<group>"; };
 		34BCB2161F69E59600F16629 /* ScoreComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreComponent.swift; sourceTree = "<group>"; };
 		34BCB2191F69E8A400F16629 /* Double+Rounding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Rounding.swift"; sourceTree = "<group>"; };
 		34BCB21B1F69EAE400F16629 /* ScoreLabelNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreLabelNode.swift; sourceTree = "<group>"; };
@@ -556,6 +558,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		34B19CDD1FEC504300D9CE4B /* UIAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				34B19CDE1FEC506300D9CE4B /* UIAlertController+Convenience.swift */,
+			);
+			path = UIAlertController;
+			sourceTree = "<group>";
+		};
 		34BCB2181F69E89300F16629 /* Double */ = {
 			isa = PBXGroup;
 			children = (
@@ -663,6 +673,7 @@
 				3400D9A91F663E2800ECD456 /* SKCameraNode */,
 				347849261F772952003A146D /* SKNode */,
 				34C2DBA61F633F080027EB1F /* SKSpriteNode */,
+				34B19CDD1FEC504300D9CE4B /* UIAlertController */,
 				9B5C1B321F7C0E9F00FD2F7A /* UIEdgeInsets */,
 				34C2DB9E1F633EA70027EB1F /* MyUtils.swift */,
 				343BA4241F7BBADC00C905A7 /* FPFunctions.swift */,
@@ -1042,6 +1053,7 @@
 				3400D9471F65FE8100ECD456 /* RopeEntity.swift in Sources */,
 				3400D96E1F65FF3000ECD456 /* MoveStateMachine.swift in Sources */,
 				3400D9761F65FF5600ECD456 /* GKEntity+Sprite.swift in Sources */,
+				34B19CDF1FEC506300D9CE4B /* UIAlertController+Convenience.swift in Sources */,
 				3400D9A21F661C2700ECD456 /* WoodenBoard.swift in Sources */,
 				34621D021F69AAD800D04A98 /* PauseNode.swift in Sources */,
 				3400D9731F65FF5600ECD456 /* ImageConstants.swift in Sources */,
