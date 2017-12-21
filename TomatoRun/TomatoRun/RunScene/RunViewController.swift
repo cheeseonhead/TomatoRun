@@ -38,6 +38,10 @@ extension RunViewController {
         presentScene(fileNamed: "MainMenuScene", getSKScene: { gkScene -> MainMenuScene? in gkScene.rootNode as? MainMenuScene })
     }
 
+    func presentReviveScene() {
+        presentScene(fileNamed: "ReviveScene", getSKScene: { gkScene -> ReviveScene? in gkScene.rootNode as? ReviveScene })
+    }
+
     func presentGameOverScene() {
         gameStateMachine.getFinalScore { score in
             GameKitManager.shared.submitScore(score)
