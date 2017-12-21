@@ -60,7 +60,25 @@ enum RunSceneConstants {
     }
 }
 
-class Text {
+enum Text {
     static let avoid = NSLocalizedString("AVOID", comment: "Label Text")
     static let `break` = NSLocalizedString("TAP", comment: "Label Text")
+}
+
+enum GameKitConstants {
+    #if DEBUG
+    static let leaderBoardIdentifier = "com.tomatoRun.highScore.debug"
+    #else
+    static let leaderBoardIdentifier = "com.tomatoRun.highScore.release"
+    #endif
+}
+
+enum GoogleAdsConstants {
+    enum AdUnitId {
+        #if DEBUG
+        static let reviveAd = "ca-app-pub-3940256099942544/1712485313" // Google's universal test ad
+        #else
+        static let reviveAd = "ca-app-pub-3516485527550211/7097148249"
+        #endif
+    }
 }
