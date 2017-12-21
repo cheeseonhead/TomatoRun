@@ -124,6 +124,8 @@ extension RunViewController: GADRewardBasedVideoAdDelegate {
             gameStateMachine.getFinalScore({ score in
                 presentRunScene(gameStateMachine: GameStateMachine(initialScore: score, revived: true))
             })
+        } else {
+            presentGameOverScene()
         }
     }
 
