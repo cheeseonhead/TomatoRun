@@ -9,15 +9,16 @@
 import UIKit
 import SpriteKit
 import GameplayKit
+import GoogleMobileAds
 
 class RunViewController: UIViewController {
 
     var gameStateMachine: GameStateMachine!
 
+    var reviveRewarded: Bool = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        gameStateMachine = GameStateMachine()
 
         presentMainMenuScene()
     }
@@ -40,6 +41,19 @@ extension RunViewController {
         presentScene(fileNamed: "MainMenuScene", getSKScene: { gkScene -> MainMenuScene? in gkScene.rootNode as? MainMenuScene })
     }
 
+    func playerDied() {
+
+        if gameStateMachine.revived == false {
+            presentReviveScene()
+        } else {
+            presentGameOverScene()
+        }
+    }
+
+    func presentReviveScene() {
+        presentScene(fileNamed: "ReviveScene", getSKScene: { gkScene -> ReviveScene? in gkScene.rootNode as? ReviveScene })
+    }
+
     func presentGameOverScene() {
         gameStateMachine.getFinalScore { score in
             GameKitManager.shared.submitScore(score)
@@ -47,16 +61,18 @@ extension RunViewController {
         presentScene(fileNamed: "GameOverScene", getSKScene: { gkScene -> GameOverScene? in gkScene.rootNode as? GameOverScene })
     }
 
-    func presentRunScene() {
+    func startGame() {
+        presentRunScene(gameStateMachine: GameStateMachine(initialScore: 0, revived: false))
+    }
 
-        gameStateMachine = GameStateMachine()
+    func presentRunScene(gameStateMachine: GameStateMachine) {
+
+        self.gameStateMachine = gameStateMachine
 
         presentScene(fileNamed: "RunScene") { gkScene -> RunScene? in
             guard let runScene = gkScene.rootNode as? RunScene else { return nil }
 
-            runScene.gameStateMachine = gameStateMachine
-            runScene.entities = gkScene.entities
-            runScene.graphs = gkScene.graphs
+            runScene.builder = RunSceneBuilder(gameStateMachine: gameStateMachine, entities: gkScene.entities, graphs: gkScene.graphs)
 
             return runScene
         }
@@ -91,5 +107,39 @@ extension RunViewController {
 
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+}
+
+// MARK: - Video
+extension RunViewController: GADRewardBasedVideoAdDelegate {
+    func rewardBasedVideoAd(_: GADRewardBasedVideoAd, didRewardUserWith _: GADAdReward) {
+        reviveRewarded = true
+    }
+
+    func rewardBasedVideoAdDidClose(_: GADRewardBasedVideoAd) {
+        GADRewardBasedVideoAd.sharedInstance().load(GADRequest(), withAdUnitID: GoogleAdsConstants.AdUnitId.reviveAd)
+        GADRewardBasedVideoAd.sharedInstance().delegate = nil
+
+        if reviveRewarded == true {
+            gameStateMachine.getFinalScore({ score in
+                presentRunScene(gameStateMachine: GameStateMachine(initialScore: score, revived: true))
+            })
+        }
+    }
+
+    func rewardBasedVideoAd(_: GADRewardBasedVideoAd, didFailToLoadWithError _: Error) {
+        GADRewardBasedVideoAd.sharedInstance().delegate = nil
+        let alert = UIAlertController.singleCancelAlert(title: GoogleAdsConstants.Alert.Revive.title, message: GoogleAdsConstants.Alert.Revive.message, cancelAction: "Okay")
+
+        present(alert, animated: true)
+    }
+
+    func presentRewardAd() {
+        GADRewardBasedVideoAd.sharedInstance().delegate = self
+        if GADRewardBasedVideoAd.sharedInstance().isReady == true {
+            GADRewardBasedVideoAd.sharedInstance().present(fromRootViewController: self)
+        } else {
+            GADRewardBasedVideoAd.sharedInstance().load(GADRequest(), withAdUnitID: GoogleAdsConstants.AdUnitId.reviveAd)
+        }
     }
 }

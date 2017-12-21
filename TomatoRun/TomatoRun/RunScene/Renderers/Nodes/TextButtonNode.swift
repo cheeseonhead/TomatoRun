@@ -11,7 +11,7 @@ import SpriteKit
 class TextButtonNode: SKNode {
 
     override var frame: CGRect {
-        return backgroundNode.frame
+        return backgroundNode.frame.positioned(anchorType: .center, at: position)
     }
 
     let label: TextLabelNode

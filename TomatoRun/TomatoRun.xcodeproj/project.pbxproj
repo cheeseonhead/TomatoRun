@@ -32,7 +32,7 @@
 		3400D9921F6604B200ECD456 /* Positional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D98B1F6604B200ECD456 /* Positional.swift */; };
 		3400D9931F6604B200ECD456 /* IntersectionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D98C1F6604B200ECD456 /* IntersectionComponent.swift */; };
 		3400D9941F6604B200ECD456 /* MoveComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D98D1F6604B200ECD456 /* MoveComponent.swift */; };
-		3400D9991F6609CD00ECD456 /* RunSceneConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9981F6609CD00ECD456 /* RunSceneConstants.swift */; };
+		3400D9991F6609CD00ECD456 /* TomatoRunConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9981F6609CD00ECD456 /* TomatoRunConstants.swift */; };
 		3400D99D1F66178500ECD456 /* LevelFileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D99C1F66178500ECD456 /* LevelFileParser.swift */; };
 		3400D9A01F661B2700ECD456 /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D99F1F661B2700ECD456 /* Segment.swift */; };
 		3400D9A21F661C2700ECD456 /* WoodenBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3400D9A11F661C2700ECD456 /* WoodenBoard.swift */; };
@@ -49,6 +49,8 @@
 		3416E5F61F8EE5890098FF2D /* Spriteful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3416E5F51F8EE5890098FF2D /* Spriteful.swift */; };
 		3416E5F91F8EFA010098FF2D /* UIFont+Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3416E5F81F8EFA010098FF2D /* UIFont+Print.swift */; };
 		3416E5FB1F8EFAA70098FF2D /* TextLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3416E5FA1F8EFAA70098FF2D /* TextLabelNode.swift */; };
+		3420F0821FEB428600B02DB0 /* ReviveScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3420F0811FEB428600B02DB0 /* ReviveScene.sks */; };
+		3420F0841FEB429000B02DB0 /* ReviveScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3420F0831FEB429000B02DB0 /* ReviveScene.swift */; };
 		342DD91F1F772E56006D09E3 /* CGSize+Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DD91E1F772E56006D09E3 /* CGSize+Padding.swift */; };
 		342DD9231F7730A4006D09E3 /* SKNode+Touch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DD9221F7730A4006D09E3 /* SKNode+Touch.swift */; };
 		343BA4251F7BBADC00C905A7 /* FPFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343BA4241F7BBADC00C905A7 /* FPFunctions.swift */; };
@@ -67,7 +69,6 @@
 		347AFA601F777A3B002823AE /* SKNode+RunAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347AFA5F1F777A3B002823AE /* SKNode+RunAction.swift */; };
 		347CC6A51F901C0100D24F92 /* SKNode+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347CC6A41F901C0100D24F92 /* SKNode+Frame.swift */; };
 		3480A6F31F72191C00688B1C /* GameStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480A6F21F72191C00688B1C /* GameStateMachine.swift */; };
-		3480A6F61F72195800688B1C /* GameIdleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480A6F51F72195800688B1C /* GameIdleState.swift */; };
 		3484F1611F9066C500A8E852 /* CGRect+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3484F1601F9066C500A8E852 /* CGRect+Position.swift */; };
 		3484F1631F9076CF00A8E852 /* CGRect+Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3484F1621F9076CF00A8E852 /* CGRect+Math.swift */; };
 		34898C281F67496D00135FA6 /* TouchComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34898C271F67496D00135FA6 /* TouchComponent.swift */; };
@@ -83,6 +84,7 @@
 		349FB93E1F6A058E00F5FE4B /* BebasNeue-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 349FB9321F6A043A00F5FE4B /* BebasNeue-Light.ttf */; };
 		349FB93F1F6A058E00F5FE4B /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 349FB9351F6A043A00F5FE4B /* BebasNeue-Regular.ttf */; };
 		349FB9401F6A058E00F5FE4B /* BebasNeue-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 349FB9361F6A043B00F5FE4B /* BebasNeue-Thin.ttf */; };
+		34B19CDF1FEC506300D9CE4B /* UIAlertController+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B19CDE1FEC506300D9CE4B /* UIAlertController+Convenience.swift */; };
 		34BCB2171F69E59600F16629 /* ScoreComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BCB2161F69E59600F16629 /* ScoreComponent.swift */; };
 		34BCB21A1F69E8A400F16629 /* Double+Rounding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BCB2191F69E8A400F16629 /* Double+Rounding.swift */; };
 		34BCB21C1F69EAE400F16629 /* ScoreLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BCB21B1F69EAE400F16629 /* ScoreLabelNode.swift */; };
@@ -113,9 +115,11 @@
 		9BB60A121F70B9200002A5BF /* level2_v1.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BB60A111F70B9200002A5BF /* level2_v1.json */; };
 		9BCD27AA1F69AD83002DA30F /* level3_v1.json in Resources */ = {isa = PBXBuildFile; fileRef = 9BCD27A91F69AD83002DA30F /* level3_v1.json */; };
 		9CD09EEB4B23B16CA100CF61 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F607A4F811C9042401D5D3BA /* AssetsLibrary.framework */; };
+		CB3FD5CC9797DBBCC25B4267 /* Pods_TomatoRunTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A78A4284C34F636296AC399 /* Pods_TomatoRunTests.framework */; };
 		CF06889EECF290C23632C4C3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D761D4DE07F426B23E1B25C7 /* AVFoundation.framework */; };
 		CFB3B84B8E595CD9D1328469 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C85FFB289A1291AE1201B2 /* SystemConfiguration.framework */; };
 		EA6D0D61AF272226FC4314DC /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C07FB18DF2C69565187750 /* CoreMedia.framework */; };
+		EDFDD04DF8A741315BE04F27 /* Pods_TomatoRun.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D15594CA6C2A31410AE89768 /* Pods_TomatoRun.framework */; };
 		F5D6F2C54284577D5E0321C1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16C4F1EC93C3C6244698D752 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
@@ -131,7 +135,9 @@
 
 /* Begin PBXFileReference section */
 		16C4F1EC93C3C6244698D752 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		1EBD209955A4CB4C3A14A4FC /* Pods-TomatoRun.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TomatoRun.release.xcconfig"; path = "Pods/Target Support Files/Pods-TomatoRun/Pods-TomatoRun.release.xcconfig"; sourceTree = "<group>"; };
 		20CE63C5F127963B120C7F9D /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
+		245C1EDB1BBC73E461B44079 /* Pods-TomatoRun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TomatoRun.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TomatoRun/Pods-TomatoRun.debug.xcconfig"; sourceTree = "<group>"; };
 		3400D9321F65FD7900ECD456 /* ImageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConstants.swift; sourceTree = "<group>"; };
 		3400D9621F65FF2800ECD456 /* MoveStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveStateMachine.swift; sourceTree = "<group>"; };
 		3400D9641F65FF2800ECD456 /* DuringTravelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuringTravelState.swift; sourceTree = "<group>"; };
@@ -145,7 +151,7 @@
 		3400D98B1F6604B200ECD456 /* Positional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Positional.swift; sourceTree = "<group>"; };
 		3400D98C1F6604B200ECD456 /* IntersectionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntersectionComponent.swift; sourceTree = "<group>"; };
 		3400D98D1F6604B200ECD456 /* MoveComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveComponent.swift; sourceTree = "<group>"; };
-		3400D9981F6609CD00ECD456 /* RunSceneConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunSceneConstants.swift; sourceTree = "<group>"; };
+		3400D9981F6609CD00ECD456 /* TomatoRunConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoRunConstants.swift; sourceTree = "<group>"; };
 		3400D99C1F66178500ECD456 /* LevelFileParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelFileParser.swift; sourceTree = "<group>"; };
 		3400D99F1F661B2700ECD456 /* Segment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segment.swift; sourceTree = "<group>"; };
 		3400D9A11F661C2700ECD456 /* WoodenBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WoodenBoard.swift; sourceTree = "<group>"; };
@@ -162,6 +168,8 @@
 		3416E5F51F8EE5890098FF2D /* Spriteful.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spriteful.swift; sourceTree = "<group>"; };
 		3416E5F81F8EFA010098FF2D /* UIFont+Print.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Print.swift"; sourceTree = "<group>"; };
 		3416E5FA1F8EFAA70098FF2D /* TextLabelNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLabelNode.swift; sourceTree = "<group>"; };
+		3420F0811FEB428600B02DB0 /* ReviveScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ReviveScene.sks; sourceTree = "<group>"; };
+		3420F0831FEB429000B02DB0 /* ReviveScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviveScene.swift; sourceTree = "<group>"; };
 		342DD91E1F772E56006D09E3 /* CGSize+Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Padding.swift"; sourceTree = "<group>"; };
 		342DD9221F7730A4006D09E3 /* SKNode+Touch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+Touch.swift"; sourceTree = "<group>"; };
 		343BA4241F7BBADC00C905A7 /* FPFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPFunctions.swift; sourceTree = "<group>"; };
@@ -180,7 +188,6 @@
 		347AFA5F1F777A3B002823AE /* SKNode+RunAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+RunAction.swift"; sourceTree = "<group>"; };
 		347CC6A41F901C0100D24F92 /* SKNode+Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+Frame.swift"; sourceTree = "<group>"; };
 		3480A6F21F72191C00688B1C /* GameStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStateMachine.swift; sourceTree = "<group>"; };
-		3480A6F51F72195800688B1C /* GameIdleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameIdleState.swift; sourceTree = "<group>"; };
 		3484F1601F9066C500A8E852 /* CGRect+Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Position.swift"; sourceTree = "<group>"; };
 		3484F1621F9076CF00A8E852 /* CGRect+Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Math.swift"; sourceTree = "<group>"; };
 		34898C271F67496D00135FA6 /* TouchComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchComponent.swift; sourceTree = "<group>"; };
@@ -196,6 +203,7 @@
 		349FB9341F6A043A00F5FE4B /* BebasNeue-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Book.ttf"; sourceTree = "<group>"; };
 		349FB9351F6A043A00F5FE4B /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
 		349FB9361F6A043B00F5FE4B /* BebasNeue-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Thin.ttf"; sourceTree = "<group>"; };
+		34B19CDE1FEC506300D9CE4B /* UIAlertController+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Convenience.swift"; sourceTree = "<group>"; };
 		34BCB2161F69E59600F16629 /* ScoreComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreComponent.swift; sourceTree = "<group>"; };
 		34BCB2191F69E8A400F16629 /* Double+Rounding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Rounding.swift"; sourceTree = "<group>"; };
 		34BCB21B1F69EAE400F16629 /* ScoreLabelNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreLabelNode.swift; sourceTree = "<group>"; };
@@ -235,6 +243,9 @@
 		34E6E9941F6990A600D38AB6 /* Spider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spider.swift; sourceTree = "<group>"; };
 		34E6E9971F69990100D38AB6 /* Ropable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ropable.swift; sourceTree = "<group>"; };
 		3F3A9D5C85074FB6AED9C9F8 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		4A78A4284C34F636296AC399 /* Pods_TomatoRunTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TomatoRunTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		58AF33C7A620DC30AC3CF381 /* Pods-TomatoRunTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TomatoRunTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TomatoRunTests/Pods-TomatoRunTests.release.xcconfig"; sourceTree = "<group>"; };
+		811B2F6D70430B1DCE9100F4 /* Pods-TomatoRunTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TomatoRunTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TomatoRunTests/Pods-TomatoRunTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9B5B2ABF1F7C402D000C9AF4 /* SidebarEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarEntity.swift; sourceTree = "<group>"; };
 		9B5B2AC51F7DF570000C9AF4 /* Pixeled.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pixeled.ttf; sourceTree = "<group>"; };
 		9B5B2AC71F7EB384000C9AF4 /* TextLabelComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLabelComponent.swift; sourceTree = "<group>"; };
@@ -246,6 +257,7 @@
 		B5DED8898753EDFDC600341C /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		C3C07FB18DF2C69565187750 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		C5C85FFB289A1291AE1201B2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D15594CA6C2A31410AE89768 /* Pods_TomatoRun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TomatoRun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D761D4DE07F426B23E1B25C7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F607A4F811C9042401D5D3BA /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -265,6 +277,7 @@
 				EA6D0D61AF272226FC4314DC /* CoreMedia.framework in Frameworks */,
 				2732A9678378FB08A7751A01 /* CoreVideo.framework in Frameworks */,
 				34BDBC201F88748E0096C67F /* GameKit.framework in Frameworks */,
+				EDFDD04DF8A741315BE04F27 /* Pods_TomatoRun.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +285,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB3FD5CC9797DBBCC25B4267 /* Pods_TomatoRunTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +402,15 @@
 			path = UIFont;
 			sourceTree = "<group>";
 		};
+		3420F0801FEB426000B02DB0 /* ReviveScene */ = {
+			isa = PBXGroup;
+			children = (
+				3420F0811FEB428600B02DB0 /* ReviveScene.sks */,
+				3420F0831FEB429000B02DB0 /* ReviveScene.swift */,
+			);
+			path = ReviveScene;
+			sourceTree = "<group>";
+		};
 		342DD91D1F772E41006D09E3 /* CGSize */ = {
 			isa = PBXGroup;
 			children = (
@@ -462,6 +485,7 @@
 				347543181F75AD06004DA584 /* PlayScene */,
 				347543191F75AD16004DA584 /* GameOverScene */,
 				347849201F772209003A146D /* MainMenuScene */,
+				3420F0801FEB426000B02DB0 /* ReviveScene */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -498,7 +522,6 @@
 		3480A6F41F72192000688B1C /* States */ = {
 			isa = PBXGroup;
 			children = (
-				3480A6F51F72195800688B1C /* GameIdleState.swift */,
 				340917A01F735A2800ACCF07 /* GamePlayingState.swift */,
 				340917A21F735A6300ACCF07 /* GamePausedState.swift */,
 				340917A41F735B5700ACCF07 /* GameOverState.swift */,
@@ -535,6 +558,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		34B19CDD1FEC504300D9CE4B /* UIAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				34B19CDE1FEC506300D9CE4B /* UIAlertController+Convenience.swift */,
+			);
+			path = UIAlertController;
+			sourceTree = "<group>";
+		};
 		34BCB2181F69E89300F16629 /* Double */ = {
 			isa = PBXGroup;
 			children = (
@@ -560,6 +591,7 @@
 				34C2DB661F633C890027EB1F /* Products */,
 				5F72B8E4E49BE4FC81A27E61 /* Frameworks */,
 				A49486FDC8AB7D052C1EBA96 /* Bridging-Header.h */,
+				CFDA8FA287203570D65BD40F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -618,7 +650,7 @@
 				34C2DBAC1F633F880027EB1F /* Entities */,
 				3400D9611F65FF2800ECD456 /* StateMachine */,
 				347849211F772211003A146D /* Scenes */,
-				3400D9981F6609CD00ECD456 /* RunSceneConstants.swift */,
+				3400D9981F6609CD00ECD456 /* TomatoRunConstants.swift */,
 				34C2DB701F633C890027EB1F /* RunViewController.swift */,
 				340917A61F73621C00ACCF07 /* PauseScene.swift */,
 			);
@@ -641,6 +673,7 @@
 				3400D9A91F663E2800ECD456 /* SKCameraNode */,
 				347849261F772952003A146D /* SKNode */,
 				34C2DBA61F633F080027EB1F /* SKSpriteNode */,
+				34B19CDD1FEC504300D9CE4B /* UIAlertController */,
 				9B5C1B321F7C0E9F00FD2F7A /* UIEdgeInsets */,
 				34C2DB9E1F633EA70027EB1F /* MyUtils.swift */,
 				343BA4241F7BBADC00C905A7 /* FPFunctions.swift */,
@@ -726,6 +759,8 @@
 				D761D4DE07F426B23E1B25C7 /* AVFoundation.framework */,
 				C3C07FB18DF2C69565187750 /* CoreMedia.framework */,
 				B5DED8898753EDFDC600341C /* CoreVideo.framework */,
+				D15594CA6C2A31410AE89768 /* Pods_TomatoRun.framework */,
+				4A78A4284C34F636296AC399 /* Pods_TomatoRunTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -738,6 +773,17 @@
 			path = UIEdgeInsets;
 			sourceTree = "<group>";
 		};
+		CFDA8FA287203570D65BD40F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				245C1EDB1BBC73E461B44079 /* Pods-TomatoRun.debug.xcconfig */,
+				1EBD209955A4CB4C3A14A4FC /* Pods-TomatoRun.release.xcconfig */,
+				811B2F6D70430B1DCE9100F4 /* Pods-TomatoRunTests.debug.xcconfig */,
+				58AF33C7A620DC30AC3CF381 /* Pods-TomatoRunTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -745,9 +791,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34C2DB931F633C890027EB1F /* Build configuration list for PBXNativeTarget "TomatoRun" */;
 			buildPhases = (
+				D26C757196AB7F6AAF119099 /* [CP] Check Pods Manifest.lock */,
 				34C2DB611F633C890027EB1F /* Sources */,
 				34C2DB621F633C890027EB1F /* Frameworks */,
 				34C2DB631F633C890027EB1F /* Resources */,
+				3519FF78F541C0284445A4E6 /* [CP] Embed Pods Frameworks */,
+				5AEC4ABF3DE95BB2E982A1C4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -762,9 +811,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34C2DB961F633C890027EB1F /* Build configuration list for PBXNativeTarget "TomatoRunTests" */;
 			buildPhases = (
+				8B394A16616D1167FADD0DE6 /* [CP] Check Pods Manifest.lock */,
 				34C2DB7B1F633C890027EB1F /* Sources */,
 				34C2DB7C1F633C890027EB1F /* Frameworks */,
 				34C2DB7D1F633C890027EB1F /* Resources */,
+				6CE5ADC87B8B92CD51B8D138 /* [CP] Embed Pods Frameworks */,
+				D6C2F1519B446237551B9104 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -839,6 +891,7 @@
 				9BB60A121F70B9200002A5BF /* level2_v1.json in Resources */,
 				9BCD27AA1F69AD83002DA30F /* level3_v1.json in Resources */,
 				349FB93E1F6A058E00F5FE4B /* BebasNeue-Light.ttf in Resources */,
+				3420F0821FEB428600B02DB0 /* ReviveScene.sks in Resources */,
 				9B5B2AC61F7DF574000C9AF4 /* Pixeled.ttf in Resources */,
 				349FB93C1F6A058E00F5FE4B /* BebasNeue-Bold.ttf in Resources */,
 			);
@@ -852,6 +905,105 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3519FF78F541C0284445A4E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TomatoRun/Pods-TomatoRun-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AEC4ABF3DE95BB2E982A1C4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TomatoRun/Pods-TomatoRun-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6CE5ADC87B8B92CD51B8D138 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TomatoRunTests/Pods-TomatoRunTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B394A16616D1167FADD0DE6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TomatoRunTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D26C757196AB7F6AAF119099 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TomatoRun-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D6C2F1519B446237551B9104 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TomatoRunTests/Pods-TomatoRunTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		34C2DB611F633C890027EB1F /* Sources */ = {
@@ -878,13 +1030,14 @@
 				347849251F7727D0003A146D /* TextButtonNode.swift in Sources */,
 				3400D96C1F65FF3000ECD456 /* TravelingToStartState.swift in Sources */,
 				34621D001F69A4A100D04A98 /* UIRenderer.swift in Sources */,
+				3420F0841FEB429000B02DB0 /* ReviveScene.swift in Sources */,
 				3400D9911F6604B200ECD456 /* Framable.swift in Sources */,
 				34E6E9951F6990A600D38AB6 /* Spider.swift in Sources */,
 				3400D96A1F65FF3000ECD456 /* IdleOnStartState.swift in Sources */,
 				340917A31F735A6300ACCF07 /* GamePausedState.swift in Sources */,
 				34E6E98F1F698C9100D38AB6 /* SpiderEntity.swift in Sources */,
 				347543151F75A801004DA584 /* DeathComponent.swift in Sources */,
-				3400D9991F6609CD00ECD456 /* RunSceneConstants.swift in Sources */,
+				3400D9991F6609CD00ECD456 /* TomatoRunConstants.swift in Sources */,
 				3400D9461F65FE7E00ECD456 /* EntityManager.swift in Sources */,
 				34E6E9911F698D6F00D38AB6 /* GKEntity+Positionable.swift in Sources */,
 				3484F1631F9076CF00A8E852 /* CGRect+Math.swift in Sources */,
@@ -900,6 +1053,7 @@
 				3400D9471F65FE8100ECD456 /* RopeEntity.swift in Sources */,
 				3400D96E1F65FF3000ECD456 /* MoveStateMachine.swift in Sources */,
 				3400D9761F65FF5600ECD456 /* GKEntity+Sprite.swift in Sources */,
+				34B19CDF1FEC506300D9CE4B /* UIAlertController+Convenience.swift in Sources */,
 				3400D9A21F661C2700ECD456 /* WoodenBoard.swift in Sources */,
 				34621D021F69AAD800D04A98 /* PauseNode.swift in Sources */,
 				3400D9731F65FF5600ECD456 /* ImageConstants.swift in Sources */,
@@ -928,7 +1082,6 @@
 				348EBE901F8FCE0100029ADE /* SignNode.swift in Sources */,
 				9B5C1B341F7C0EAE00FD2F7A /* UIEdgeInsets+Init.swift in Sources */,
 				3400D96D1F65FF3000ECD456 /* WanderingState.swift in Sources */,
-				3480A6F61F72195800688B1C /* GameIdleState.swift in Sources */,
 				340917A71F73621C00ACCF07 /* PauseScene.swift in Sources */,
 				3400D98E1F6604B200ECD456 /* MoveBehavior.swift in Sources */,
 				3400D9A81F663BBD00ECD456 /* SegmentRenderer.swift in Sources */,
@@ -1096,6 +1249,7 @@
 		};
 		34C2DB941F633C890027EB1F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 245C1EDB1BBC73E461B44079 /* Pods-TomatoRun.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1117,6 +1271,7 @@
 		};
 		34C2DB951F633C890027EB1F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EBD209955A4CB4C3A14A4FC /* Pods-TomatoRun.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1138,6 +1293,7 @@
 		};
 		34C2DB971F633C890027EB1F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 811B2F6D70430B1DCE9100F4 /* Pods-TomatoRunTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1155,6 +1311,7 @@
 		};
 		34C2DB981F633C890027EB1F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58AF33C7A620DC30AC3CF381 /* Pods-TomatoRunTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

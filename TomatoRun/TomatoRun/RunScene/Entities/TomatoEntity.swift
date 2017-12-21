@@ -9,11 +9,11 @@ import SpriteKit
 class TomatoEntity: GKEntity, Positionable {
     var stateMachine: MoveStateMachine!
 
-    init(speed: CGFloat, fittingWidth: CGFloat, entityManager: EntityManager) {
+    init(speed: CGFloat, fittingWidth: CGFloat, initialScore: Int, entityManager: EntityManager) {
         super.init()
 
         initStateMachine()
-        initComponents(speed: speed, fittingWidth: fittingWidth, entityManager)
+        initComponents(speed: speed, fittingWidth: fittingWidth, initialScore: initialScore, entityManager)
     }
 
     required init?(coder _: NSCoder) {
@@ -23,7 +23,7 @@ class TomatoEntity: GKEntity, Positionable {
 
 // MARK: Initialization
 private extension TomatoEntity {
-    func initComponents(speed: CGFloat, fittingWidth: CGFloat, _ entityManager: EntityManager) {
+    func initComponents(speed: CGFloat, fittingWidth: CGFloat, initialScore: Int, _ entityManager: EntityManager) {
         let texture = SKTexture(imageNamed: ImageConstants.TomatoImageName)
         let spriteComponent = SpriteComponent(texture: texture)
 
@@ -32,7 +32,7 @@ private extension TomatoEntity {
 
         addComponent(spriteComponent)
         addComponent(MoveComponent(speed: speed, stateMachine: stateMachine, entityManager: entityManager))
-        addComponent(ScoreComponent())
+        addComponent(ScoreComponent(initialScore: initialScore))
         addComponent(DeathComponent(entityManager: entityManager))
     }
 

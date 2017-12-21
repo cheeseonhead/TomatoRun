@@ -9,9 +9,13 @@
 import GameplayKit
 
 class GameStateMachine: GKStateMachine {
-    init() {
+    let initialScore: Int
+    let revived: Bool
+
+    init(initialScore: Int, revived: Bool) {
+        self.initialScore = initialScore
+        self.revived = revived
         super.init(states: [
-            GameIdleState(),
             GamePlayingState(),
             GamePausedState(),
             GameOverState(),

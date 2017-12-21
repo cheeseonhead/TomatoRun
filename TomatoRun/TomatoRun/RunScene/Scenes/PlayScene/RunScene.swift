@@ -9,6 +9,12 @@
 import SpriteKit
 import GameplayKit
 
+struct RunSceneBuilder {
+    let gameStateMachine: GameStateMachine
+    let entities: [GKEntity]
+    let graphs: [String: GKGraph]
+}
+
 class RunScene: SKScene, RunPresentable {
     let numberOfRopes = RunSceneConstants.numOfRopes
 
@@ -24,6 +30,7 @@ class RunScene: SKScene, RunPresentable {
     var worldNode: SKNode!
 
     var gameStateMachine: GameStateMachine!
+    var builder: RunSceneBuilder!
     weak var runViewController: RunViewController?
 
     var cameraNode: SKCameraNode!
@@ -34,6 +41,8 @@ class RunScene: SKScene, RunPresentable {
 
     override func didMove(to view: SKView) {
         super.didMove(to: view)
+
+        initWithBuilder(builder)
 
         worldNode = SKNode()
         addChild(worldNode)
@@ -47,7 +56,17 @@ class RunScene: SKScene, RunPresentable {
         addRopes()
         addCamera()
         uiRenderer.addUINodes()
-        addTomato()
+        addTomato(initialScore: gameStateMachine.initialScore)
+    }
+
+    func initWithBuilder(_ builder: RunSceneBuilder?) {
+        guard let builder = builder else {
+            fatalError("Cannot initialize RunScene, please set builder property before moving to scene.")
+        }
+
+        entities = builder.entities
+        graphs = builder.graphs
+        gameStateMachine = builder.gameStateMachine
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -96,7 +115,7 @@ class RunScene: SKScene, RunPresentable {
 
             curState.finalScore = score
 
-            runViewController?.presentGameOverScene()
+            runViewController?.playerDied()
         }
 
         segmentRenderer.update(currentTime)
@@ -179,10 +198,10 @@ private extension RunScene {
         cameraNode.position = CGPoint(x: size.width / 2, y: size.height / 2)
     }
 
-    func addTomato() {
+    func addTomato(initialScore: Int) {
         let ropeNumber = 0 // Int.random(min: 0, max: numberOfRopes)
 
-        tomato = TomatoEntity(speed: RunSceneConstants.tomatoSpeed, fittingWidth: ropeSpacing() * RunSceneConstants.WidthRatio.tomato, entityManager: entityManager)
+        tomato = TomatoEntity(speed: RunSceneConstants.tomatoSpeed, fittingWidth: ropeSpacing() * RunSceneConstants.WidthRatio.tomato, initialScore: initialScore, entityManager: entityManager)
         let xPos = ropeXPos(forIndex: ropeNumber)
         tomato.setPosition(CGPoint(x: xPos, y: tomatoBottomPadding))
 
