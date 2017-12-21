@@ -79,10 +79,10 @@ enum GameKitConstants {
 
 enum GoogleAdsConstants {
     enum AdUnitId {
-        //        #if DEBUG
-        static let reviveAd = "ca-app-pub-3940256099942544/1712485313" // Google's universal test ad
-        //        #else
-        //            static let reviveAd = "ca-app-pub-3516485527550211/7097148249"
-        //        #endif
+        #if DEBUG
+            static let reviveAd = "ca-app-pub-3940256099942544/1712485313" // Google's universal test ad
+        #else
+            static let reviveAd = "ca-app-pub-3516485527550211/7097148249"
+        #endif
     }
 }

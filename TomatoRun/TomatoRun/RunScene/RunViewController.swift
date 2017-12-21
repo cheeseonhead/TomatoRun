@@ -111,81 +111,24 @@ extension RunViewController {
 
 // MARK: - Video
 extension RunViewController: GADRewardBasedVideoAdDelegate {
-
     func rewardBasedVideoAd(_: GADRewardBasedVideoAd, didRewardUserWith _: GADAdReward) {
         GADRewardBasedVideoAd.sharedInstance().delegate = nil
-        let alert = UIAlertController(title: "Vid Debug", message: "Was rewarded", preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .cancel) { _ in
-            self.reviveRewarded = true
-        }
-        alert.addAction(action)
-        present(alert, animated: true) {}
+        reviveRewarded = true
     }
 
     func rewardBasedVideoAdDidClose(_: GADRewardBasedVideoAd) {
         GADRewardBasedVideoAd.sharedInstance().load(GADRequest(), withAdUnitID: GoogleAdsConstants.AdUnitId.reviveAd)
-
         if reviveRewarded == true {
-            reviveRewarded = false
-
             gameStateMachine.getFinalScore({ score in
                 presentRunScene(gameStateMachine: GameStateMachine(initialScore: score, revived: true))
             })
         }
     }
 
-    func rewardBasedVideoAdDidReceive(_: GADRewardBasedVideoAd) {
-        let alert = UIAlertController(title: "Vid Debug", message: "Got video", preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .cancel) { _ in
-            if GADRewardBasedVideoAd.sharedInstance().isReady == true {
-
-                let alert = UIAlertController(title: "Vid Debug", message: "It's ready", preferredStyle: .alert)
-                let action = UIAlertAction(title: "OK", style: .cancel) { _ in
-                    GADRewardBasedVideoAd.sharedInstance().present(fromRootViewController: self)
-                }
-
-                alert.addAction(action)
-                self.present(alert, animated: true) {}
-            } else {
-                let alert = UIAlertController(title: "Vid Debug", message: "It's not ready", preferredStyle: .alert)
-                let action = UIAlertAction(title: "OK", style: .cancel) { _ in
-                }
-
-                alert.addAction(action)
-                self.present(alert, animated: true, completion: {
-                })
-            }
-        }
-
-        alert.addAction(action)
-        present(alert, animated: true) {
-        }
-    }
-
     func presentRewardAd() {
         GADRewardBasedVideoAd.sharedInstance().delegate = self
-        let alert = UIAlertController(title: "Vid Debug", message: "Told to present video", preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .cancel) { _ in
-            if GADRewardBasedVideoAd.sharedInstance().isReady == true {
-
-                let alert = UIAlertController(title: "Vid Debug", message: "It's ready", preferredStyle: .alert)
-                let action = UIAlertAction(title: "OK", style: .cancel) { _ in
-                    GADRewardBasedVideoAd.sharedInstance().present(fromRootViewController: self)
-                }
-
-                alert.addAction(action)
-                self.present(alert, animated: true) {}
-            } else {
-                let alert = UIAlertController(title: "Vid Debug", message: "It's not ready", preferredStyle: .alert)
-                let action = UIAlertAction(title: "OK", style: .cancel) { _ in
-                }
-
-                alert.addAction(action)
-                self.present(alert, animated: true, completion: {
-                })
-            }
+        if GADRewardBasedVideoAd.sharedInstance().isReady == true {
+            GADRewardBasedVideoAd.sharedInstance().present(fromRootViewController: self)
         }
-        alert.addAction(action)
-        present(alert, animated: true) {}
     }
 }
