@@ -25,7 +25,7 @@ class ReviveScene: SKScene, RunPresentable {
             scoreLabel.score = score
         }
 
-        watchVideoButton = TextButtonNode(text: "WATCH VID", fontSize: .Large)
+        watchVideoButton = TextButtonNode(text: "Revive", fontSize: .Large)
         cancelButton = TextButtonNode(text: "Cancel", fontSize: .Large)
 
         layoutNodes()
