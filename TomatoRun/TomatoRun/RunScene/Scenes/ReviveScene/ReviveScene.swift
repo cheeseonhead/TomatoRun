@@ -53,7 +53,8 @@ private extension ReviveScene {
         var buttonLayout = CGRect.belowCentered(scoreLabel.frame) >== CGRect.offsetted(by: CGVector(dx: 0, dy: -60))
         watchVideoButton.layoutUsing(buttonLayout)
 
-        buttonLayout = CGRect.belowCentered(watchVideoButton.frame) >== CGRect.offsetted(by: CGVector(dx: 0, dy: -40))
+        buttonLayout = CGRect.belowCentered(watchVideoButton.frame) >== CGRect.offsetted(by: CGVector(dx: 0, dy: -RunSceneConstants.Spacing
+                .Revive.button))
         cancelButton.layoutUsing(buttonLayout)
     }
 }
