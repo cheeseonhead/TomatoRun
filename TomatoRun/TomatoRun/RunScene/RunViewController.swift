@@ -42,10 +42,11 @@ extension RunViewController {
     }
 
     func playerDied() {
-        if gameStateMachine.revived == true {
-            presentGameOverScene()
-        } else {
+
+        if gameStateMachine.revived == false {
             presentReviveScene()
+        } else {
+            presentGameOverScene()
         }
     }
 
@@ -112,12 +113,13 @@ extension RunViewController {
 // MARK: - Video
 extension RunViewController: GADRewardBasedVideoAdDelegate {
     func rewardBasedVideoAd(_: GADRewardBasedVideoAd, didRewardUserWith _: GADAdReward) {
-        GADRewardBasedVideoAd.sharedInstance().delegate = nil
         reviveRewarded = true
     }
 
     func rewardBasedVideoAdDidClose(_: GADRewardBasedVideoAd) {
         GADRewardBasedVideoAd.sharedInstance().load(GADRequest(), withAdUnitID: GoogleAdsConstants.AdUnitId.reviveAd)
+        GADRewardBasedVideoAd.sharedInstance().delegate = nil
+
         if reviveRewarded == true {
             gameStateMachine.getFinalScore({ score in
                 presentRunScene(gameStateMachine: GameStateMachine(initialScore: score, revived: true))
@@ -125,10 +127,21 @@ extension RunViewController: GADRewardBasedVideoAdDelegate {
         }
     }
 
+    func rewardBasedVideoAd(_: GADRewardBasedVideoAd, didFailToLoadWithError _: Error) {
+        GADRewardBasedVideoAd.sharedInstance().delegate = nil
+        let alert = UIAlertController(title: "Sorry!", message: "We could not load an ad video. It's most likely because we ran out of ads!", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Okay", style: .cancel)
+        alert.addAction(action)
+
+        present(alert, animated: true)
+    }
+
     func presentRewardAd() {
         GADRewardBasedVideoAd.sharedInstance().delegate = self
         if GADRewardBasedVideoAd.sharedInstance().isReady == true {
             GADRewardBasedVideoAd.sharedInstance().present(fromRootViewController: self)
+        } else {
+            GADRewardBasedVideoAd.sharedInstance().load(GADRequest(), withAdUnitID: GoogleAdsConstants.AdUnitId.reviveAd)
         }
     }
 }
