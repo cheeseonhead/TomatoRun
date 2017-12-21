@@ -26,4 +26,10 @@ class GameStateMachine: GKStateMachine {
             callback(score)
         }
     }
+
+    func getInitialScore(_ callback: (Int?) -> Void) {
+        if let gameIdleState = currentState as? GameIdleState {
+            callback(gameIdleState.initialScore)
+        }
+    }
 }
