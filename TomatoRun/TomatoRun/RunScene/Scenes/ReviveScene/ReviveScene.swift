@@ -26,10 +26,11 @@ class ReviveScene: SKScene, RunPresentable {
         }
 
         watchVideoButton = TextButtonNode(text: "WATCH VID", fontSize: .Large)
+        cancelButton = TextButtonNode(text: "Cancel", fontSize: .Large)
 
         layoutNodes()
 
-        addChildren([scoreLabel, watchVideoButton])
+        addChildren([scoreLabel, watchVideoButton, cancelButton])
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -39,6 +40,8 @@ class ReviveScene: SKScene, RunPresentable {
 
         if touchedNodes.contains(watchVideoButton) {
             runViewController?.presentRewardAd()
+        } else if touchedNodes.contains(cancelButton) {
+            runViewController?.presentGameOverScene()
         }
     }
 }
@@ -46,7 +49,11 @@ class ReviveScene: SKScene, RunPresentable {
 private extension ReviveScene {
     func layoutNodes() {
         scoreLabel.layoutUsing(CGRect.positioned(anchorType: .center, at: CGPoint.zero))
-        let buttonLayout = CGRect.belowCentered(scoreLabel.frame) >== CGRect.offsetted(by: CGVector(dx: 0, dy: -60))
+
+        var buttonLayout = CGRect.belowCentered(scoreLabel.frame) >== CGRect.offsetted(by: CGVector(dx: 0, dy: -60))
         watchVideoButton.layoutUsing(buttonLayout)
+
+        buttonLayout = CGRect.belowCentered(watchVideoButton.frame) >== CGRect.offsetted(by: CGVector(dx: 0, dy: -40))
+        cancelButton.layoutUsing(buttonLayout)
     }
 }
