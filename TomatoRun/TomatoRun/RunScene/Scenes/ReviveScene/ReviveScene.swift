@@ -31,6 +31,16 @@ class ReviveScene: SKScene, RunPresentable {
 
         addChildren([scoreLabel, watchVideoButton])
     }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else { return }
+
+        let touchedNodes = getTouchedChildren(touch, with: event)
+
+        if touchedNodes.contains(watchVideoButton) {
+            runViewController?.presentRewardAd()
+        }
+    }
 }
 
 private extension ReviveScene {
