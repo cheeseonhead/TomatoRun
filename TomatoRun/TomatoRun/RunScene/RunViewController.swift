@@ -9,10 +9,13 @@
 import UIKit
 import SpriteKit
 import GameplayKit
+import GoogleMobileAds
 
 class RunViewController: UIViewController {
 
     var gameStateMachine: GameStateMachine!
+
+    var reviveRewarded: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,5 +94,29 @@ extension RunViewController {
 
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+}
+
+// MARK: - Video
+extension RunViewController: GADRewardBasedVideoAdDelegate {
+
+    func rewardBasedVideoAd(_: GADRewardBasedVideoAd, didRewardUserWith _: GADAdReward) {
+        reviveRewarded = true
+    }
+
+    func rewardBasedVideoAdDidClose(_: GADRewardBasedVideoAd) {
+        GADRewardBasedVideoAd.sharedInstance().load(GADRequest(), withAdUnitID: GoogleAdsConstants.AdUnitId.reviveAd)
+
+        if reviveRewarded == true {
+            reviveRewarded = false
+            presentRunScene()
+        }
+    }
+
+    func presentRewardAd() {
+        GADRewardBasedVideoAd.sharedInstance().delegate = self
+        if GADRewardBasedVideoAd.sharedInstance().isReady == true {
+            GADRewardBasedVideoAd.sharedInstance().present(fromRootViewController: self)
+        }
     }
 }
