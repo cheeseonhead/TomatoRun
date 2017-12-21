@@ -129,9 +129,7 @@ extension RunViewController: GADRewardBasedVideoAdDelegate {
 
     func rewardBasedVideoAd(_: GADRewardBasedVideoAd, didFailToLoadWithError _: Error) {
         GADRewardBasedVideoAd.sharedInstance().delegate = nil
-        let alert = UIAlertController(title: "Sorry!", message: "We could not load an ad video. It's most likely because we ran out of ads!", preferredStyle: .alert)
-        let action = UIAlertAction(title: "Okay", style: .cancel)
-        alert.addAction(action)
+        let alert = UIAlertController.singleCancelAlert(title: GoogleAdsConstants.Alert.Revive.title, message: GoogleAdsConstants.Alert.Revive.message, cancelAction: "Okay")
 
         present(alert, animated: true)
     }

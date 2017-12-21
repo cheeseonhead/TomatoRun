@@ -85,4 +85,11 @@ enum GoogleAdsConstants {
             static let reviveAd = "ca-app-pub-3516485527550211/7097148249"
         #endif
     }
+
+    enum Alert {
+        enum Revive {
+            static let title = NSLocalizedString("Sorry!", comment: "Revive Alert")
+            static let message = NSLocalizedString("We could not load an ad video. It's most likely because we ran out of ads!", comment: "Revive Alert")
+        }
+    }
 }
