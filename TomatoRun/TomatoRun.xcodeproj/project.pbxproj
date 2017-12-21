@@ -49,6 +49,8 @@
 		3416E5F61F8EE5890098FF2D /* Spriteful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3416E5F51F8EE5890098FF2D /* Spriteful.swift */; };
 		3416E5F91F8EFA010098FF2D /* UIFont+Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3416E5F81F8EFA010098FF2D /* UIFont+Print.swift */; };
 		3416E5FB1F8EFAA70098FF2D /* TextLabelNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3416E5FA1F8EFAA70098FF2D /* TextLabelNode.swift */; };
+		3420F0821FEB428600B02DB0 /* ReviveScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3420F0811FEB428600B02DB0 /* ReviveScene.sks */; };
+		3420F0841FEB429000B02DB0 /* ReviveScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3420F0831FEB429000B02DB0 /* ReviveScene.swift */; };
 		342DD91F1F772E56006D09E3 /* CGSize+Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DD91E1F772E56006D09E3 /* CGSize+Padding.swift */; };
 		342DD9231F7730A4006D09E3 /* SKNode+Touch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DD9221F7730A4006D09E3 /* SKNode+Touch.swift */; };
 		343BA4251F7BBADC00C905A7 /* FPFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343BA4241F7BBADC00C905A7 /* FPFunctions.swift */; };
@@ -166,6 +168,8 @@
 		3416E5F51F8EE5890098FF2D /* Spriteful.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spriteful.swift; sourceTree = "<group>"; };
 		3416E5F81F8EFA010098FF2D /* UIFont+Print.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Print.swift"; sourceTree = "<group>"; };
 		3416E5FA1F8EFAA70098FF2D /* TextLabelNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLabelNode.swift; sourceTree = "<group>"; };
+		3420F0811FEB428600B02DB0 /* ReviveScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ReviveScene.sks; sourceTree = "<group>"; };
+		3420F0831FEB429000B02DB0 /* ReviveScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviveScene.swift; sourceTree = "<group>"; };
 		342DD91E1F772E56006D09E3 /* CGSize+Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Padding.swift"; sourceTree = "<group>"; };
 		342DD9221F7730A4006D09E3 /* SKNode+Touch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+Touch.swift"; sourceTree = "<group>"; };
 		343BA4241F7BBADC00C905A7 /* FPFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPFunctions.swift; sourceTree = "<group>"; };
@@ -398,6 +402,15 @@
 			path = UIFont;
 			sourceTree = "<group>";
 		};
+		3420F0801FEB426000B02DB0 /* ReviveScene */ = {
+			isa = PBXGroup;
+			children = (
+				3420F0811FEB428600B02DB0 /* ReviveScene.sks */,
+				3420F0831FEB429000B02DB0 /* ReviveScene.swift */,
+			);
+			path = ReviveScene;
+			sourceTree = "<group>";
+		};
 		342DD91D1F772E41006D09E3 /* CGSize */ = {
 			isa = PBXGroup;
 			children = (
@@ -472,6 +485,7 @@
 				347543181F75AD06004DA584 /* PlayScene */,
 				347543191F75AD16004DA584 /* GameOverScene */,
 				347849201F772209003A146D /* MainMenuScene */,
+				3420F0801FEB426000B02DB0 /* ReviveScene */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -869,6 +883,7 @@
 				9BB60A121F70B9200002A5BF /* level2_v1.json in Resources */,
 				9BCD27AA1F69AD83002DA30F /* level3_v1.json in Resources */,
 				349FB93E1F6A058E00F5FE4B /* BebasNeue-Light.ttf in Resources */,
+				3420F0821FEB428600B02DB0 /* ReviveScene.sks in Resources */,
 				9B5B2AC61F7DF574000C9AF4 /* Pixeled.ttf in Resources */,
 				349FB93C1F6A058E00F5FE4B /* BebasNeue-Bold.ttf in Resources */,
 			);
@@ -1007,6 +1022,7 @@
 				347849251F7727D0003A146D /* TextButtonNode.swift in Sources */,
 				3400D96C1F65FF3000ECD456 /* TravelingToStartState.swift in Sources */,
 				34621D001F69A4A100D04A98 /* UIRenderer.swift in Sources */,
+				3420F0841FEB429000B02DB0 /* ReviveScene.swift in Sources */,
 				3400D9911F6604B200ECD456 /* Framable.swift in Sources */,
 				34E6E9951F6990A600D38AB6 /* Spider.swift in Sources */,
 				3400D96A1F65FF3000ECD456 /* IdleOnStartState.swift in Sources */,
