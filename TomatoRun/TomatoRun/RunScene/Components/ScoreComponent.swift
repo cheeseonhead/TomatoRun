@@ -12,14 +12,13 @@ class ScoreComponent: GKComponent {
     var score = 0
     var startYPosition: Double?
 
-    required override init() {
+    let initialScore: Int
+
+    required init(initialScore: Int) {
+
+        self.initialScore = initialScore
+
         super.init()
-    }
-
-    convenience init(initialScore: Int) {
-        self.init()
-
-        score = initialScore
     }
 
     required init?(coder _: NSCoder) {
@@ -41,6 +40,6 @@ class ScoreComponent: GKComponent {
 
         guard let startYPosition = startYPosition else { return }
 
-        score = ((curY - startYPosition) * RunSceneConstants.scoreRate).roundedToInt(.toNearestOrAwayFromZero)
+        score = initialScore + ((curY - startYPosition) * RunSceneConstants.scoreRate).roundedToInt(.toNearestOrAwayFromZero)
     }
 }
