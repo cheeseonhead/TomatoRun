@@ -6,17 +6,36 @@
 //  Copyright © 2018 okAy Studios. All rights reserved.
 //
 
+@testable import TomatoRun
 import XCTest
 
 class ScoreComponentTests: XCTestCase {
+}
 
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+// MARK: - Zero InitialScore
+extension ScoreComponentTests {
+
+    func testZeroInitialScoreAndStarting() {
+        let result = ScoreComponent.newScore(initialScore: 0, curY: 100, startYPosition: 0, scoreRate: 1)
+
+        assert(result == 100)
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testZeroInitialScoreDifferentRate() {
+        let result = ScoreComponent.newScore(initialScore: 0, curY: 100, startYPosition: 0, scoreRate: 0.5)
+
+        assert(result == 50)
+    }
+
+    func testDifferentStartingPoint() {
+        let result = ScoreComponent.newScore(initialScore: 0, curY: 100, startYPosition: 50, scoreRate: 1)
+
+        assert(result == 50)
+    }
+
+    func testDifferentInitialScore() {
+        let result = ScoreComponent.newScore(initialScore: 100, curY: 100, startYPosition: 0, scoreRate: 1)
+
+        assert(result == 200)
     }
 }
