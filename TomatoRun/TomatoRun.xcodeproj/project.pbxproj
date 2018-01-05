@@ -54,6 +54,7 @@
 		342DD91F1F772E56006D09E3 /* CGSize+Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DD91E1F772E56006D09E3 /* CGSize+Padding.swift */; };
 		342DD9231F7730A4006D09E3 /* SKNode+Touch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DD9221F7730A4006D09E3 /* SKNode+Touch.swift */; };
 		343BA4251F7BBADC00C905A7 /* FPFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343BA4241F7BBADC00C905A7 /* FPFunctions.swift */; };
+		344209411FFF20F700CDD9B6 /* ScoreComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344209401FFF20F700CDD9B6 /* ScoreComponentTests.swift */; };
 		3458A4491F8980FC00E4C823 /* SKNode+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3458A4481F8980FC00E4C823 /* SKNode+Layout.swift */; };
 		34621D001F69A4A100D04A98 /* UIRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34621CFF1F69A4A100D04A98 /* UIRenderer.swift */; };
 		34621D021F69AAD800D04A98 /* PauseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34621D011F69AAD800D04A98 /* PauseNode.swift */; };
@@ -173,6 +174,7 @@
 		342DD91E1F772E56006D09E3 /* CGSize+Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Padding.swift"; sourceTree = "<group>"; };
 		342DD9221F7730A4006D09E3 /* SKNode+Touch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+Touch.swift"; sourceTree = "<group>"; };
 		343BA4241F7BBADC00C905A7 /* FPFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPFunctions.swift; sourceTree = "<group>"; };
+		344209401FFF20F700CDD9B6 /* ScoreComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreComponentTests.swift; sourceTree = "<group>"; };
 		3458A4481F8980FC00E4C823 /* SKNode+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+Layout.swift"; sourceTree = "<group>"; };
 		34621CFF1F69A4A100D04A98 /* UIRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRenderer.swift; sourceTree = "<group>"; };
 		34621D011F69AAD800D04A98 /* PauseNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseNode.swift; sourceTree = "<group>"; };
@@ -421,6 +423,23 @@
 			path = CGSize;
 			sourceTree = "<group>";
 		};
+		3442093C1FFF20A600CDD9B6 /* RunScene */ = {
+			isa = PBXGroup;
+			children = (
+				3442093D1FFF20B000CDD9B6 /* Components */,
+			);
+			path = RunScene;
+			sourceTree = "<group>";
+		};
+		3442093D1FFF20B000CDD9B6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				349E51D71F7BFDA800D94B5F /* IntersectionComponentTests.swift */,
+				344209401FFF20F700CDD9B6 /* ScoreComponentTests.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		34621CFE1F69A48900D04A98 /* Renderers */ = {
 			isa = PBXGroup;
 			children = (
@@ -624,10 +643,10 @@
 		34C2DB821F633C890027EB1F /* TomatoRunTests */ = {
 			isa = PBXGroup;
 			children = (
+				3442093C1FFF20A600CDD9B6 /* RunScene */,
 				349E51D91F7C01C900D94B5F /* Shared */,
 				34C2DB831F633C890027EB1F /* TomatoRunTests.swift */,
 				34C2DB851F633C890027EB1F /* Info.plist */,
-				349E51D71F7BFDA800D94B5F /* IntersectionComponentTests.swift */,
 			);
 			path = TomatoRunTests;
 			sourceTree = "<group>";
@@ -1102,6 +1121,7 @@
 			files = (
 				349E51DB1F7C01D700D94B5F /* QuickCheck.swift in Sources */,
 				349E51D81F7BFDA800D94B5F /* IntersectionComponentTests.swift in Sources */,
+				344209411FFF20F700CDD9B6 /* ScoreComponentTests.swift in Sources */,
 				34C2DB841F633C890027EB1F /* TomatoRunTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

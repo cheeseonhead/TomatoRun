@@ -40,15 +40,15 @@ class ScoreComponent: GKComponent {
 
         guard let startYPosition = startYPosition else { return }
 
-        score = newScore(initialScore: initialScore, curY: curY, startYPosition: startYPosition,
-                         scoreRate: RunSceneConstants.scoreRate)
+        score = ScoreComponent.newScore(initialScore: initialScore, curY: curY, startYPosition: startYPosition,
+                                        scoreRate: RunSceneConstants.scoreRate)
     }
 }
 
 // MARK: - Pure Functional
 extension ScoreComponent {
 
-    func newScore(initialScore: Int, curY: Double, startYPosition: Double, scoreRate: Double) -> Int {
+    static func newScore(initialScore: Int, curY: Double, startYPosition: Double, scoreRate: Double) -> Int {
         return initialScore + ((curY - startYPosition) * scoreRate).roundedToInt(.toNearestOrAwayFromZero)
     }
 }
