@@ -10,7 +10,7 @@ import GameplayKit
 
 class ScoreComponent: GKComponent {
     var score = 0
-    var lastTimestamp: TimeInterval?
+    var startYPosition: Double?
 
     required override init() {
         super.init()
@@ -26,13 +26,21 @@ class ScoreComponent: GKComponent {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func update(deltaTime seconds: TimeInterval) {
-        if lastTimestamp == nil {
-            lastTimestamp = seconds
+    override func update(deltaTime _: TimeInterval) {
+
+        guard let positionalEntity = entity as? Positional else {
             return
         }
 
-        let addScore = (seconds * RunSceneConstants.scoreRate).roundedToInt(.toNearestOrAwayFromZero)
-        score += addScore
+        let curY = Double(positionalEntity.getPosition().y)
+
+        if startYPosition == nil {
+            startYPosition = curY
+            return
+        }
+
+        guard let startYPosition = startYPosition else { return }
+
+        score = ((curY - startYPosition) * RunSceneConstants.scoreRate).roundedToInt(.toNearestOrAwayFromZero)
     }
 }

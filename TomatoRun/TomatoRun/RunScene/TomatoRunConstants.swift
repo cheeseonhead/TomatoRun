@@ -16,7 +16,7 @@ enum RunSceneConstants {
     static let tomatoSpeed = CGFloat(300)
 
     // MARK: Rates
-    static let scoreRate = 1000.0 // Score per second
+    static let scoreRate = 0.09487 // Score per pixel distance
 
     // MARK: Misc
     static let scoreLength = 10
