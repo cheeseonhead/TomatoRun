@@ -149,6 +149,7 @@ extension CGFloat {
 // MARK: Points and vectors
 extension CGPoint {
     init(_ point: float2) {
+        self.init()
         x = CGFloat(point.x)
         y = CGFloat(point.y)
     }
