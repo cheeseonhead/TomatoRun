@@ -42,4 +42,97 @@
          "rope": 3
      }],
      "length": 1200
+ }, {
+     "wooden_boards": [{
+         "height_ratio": 0.0625,
+         "rope": 0
+     }, {
+         "height_ratio": 0.65,
+         "rope": 0,
+         "hasText": true
+     }, {
+         "height_ratio": 0.15,
+         "rope": 1
+     }, {
+         "height_ratio": 0.4375,
+         "rope": 1
+     }, {
+         "height_ratio": 0.0625,
+         "rope": 2
+     }, {
+         "height_ratio": 0.375,
+         "rope": 2
+     }, {
+         "height_ratio": 0.5625,
+         "rope": 2
+     }, {
+         "height_ratio": 0.85,
+         "rope": 2
+     }],
+     "spiders": [{
+         "height_ratio": 0.5,
+         "rope": 0
+     }, {
+         "height_ratio": 0.8125,
+         "rope": 1
+     }, {
+         "height_ratio": 0.25,
+         "rope": 2
+     }, {
+         "height_ratio": 0.1875,
+         "rope": 3
+     }, {
+         "height_ratio": 0.6875,
+         "rope": 3
+     }],
+     "length": 1200
+ }, {
+     "wooden_boards": [{
+         "height_ratio": 0.1,
+         "rope": 0
+     }, {
+         "height_ratio": 0.37,
+         "rope": 0
+     }, {
+         "height_ratio": 0.57,
+         "rope": 0
+     }, {
+         "height_ratio": 0.2,
+         "rope": 1
+     }, {
+         "height_ratio": 0.43,
+         "rope": 1
+     }, {
+         "height_ratio": 0.8,
+         "rope": 1
+     }, {
+         "height_ratio": 0.05,
+         "rope": 2
+     }, {
+         "height_ratio": 0.5,
+         "rope": 2
+     }],
+     "spiders": [{
+         "height_ratio": 0.22,
+         "rope": 0
+     }, {
+         "height_ratio": 0.68,
+         "rope": 0
+     }, {
+         "height_ratio": 0.91,
+         "rope": 1
+     }, {
+         "height_ratio": 0.3,
+         "rope": 2
+     }, {
+         "height_ratio": 0.7,
+         "rope": 2
+     }, {
+         "height_ratio": 0.24,
+         "rope": 3
+     }, {
+         "height_ratio": 0.76,
+         "rope": 3
+     }],
+     "length": 1200
  }]

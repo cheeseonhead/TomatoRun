@@ -9,6 +9,6 @@
 import SpriteKit
 
 protocol RunPresentable {
-    weak var runViewController: RunViewController? { get set }
+    var runViewController: RunViewController? { get set }
     var gameStateMachine: GameStateMachine! { get set }
 }

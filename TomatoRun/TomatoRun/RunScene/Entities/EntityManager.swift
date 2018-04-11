@@ -69,7 +69,7 @@ extension EntityManager {
 // MARK: Access
 extension EntityManager {
     func entities<EntityType>(ofType _: EntityType.Type) -> [EntityType] {
-        return entities.flatMap { entity in
+        return entities.compactMap { entity in
             if let matched = entity as? EntityType {
                 return matched
             }
